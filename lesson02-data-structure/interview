@@ -1,0 +1,31 @@
+1.	Phân biệt kiểu dữ liệu nguyên thủy và đối tượng
++ Giống nhau: Sử dụng để lưu trữ dữ liệu
++ Khác nhau:
+	- Kiểu nguyên thủy: Primitive data type
+	- Lưu trữ dữ liệu --> single value
+	- Gía trị được lưu trữ ở cùng nhớ: STACK
+	
+	+ Kiểu đối tượng: Object type
+	- Lưu trữ dữ liệu --> với nhiều thông tin bên trong
+	- Giá trị được lưu trữ ở cùng nhớ: HEAP
+	- Hỗ trợ các phương thức giúp xử lý yêu cầu bài toán
+
+2. Khi truyền 1 tham số (biến) qua 1 hàm (phương thức) thì JAVA sẽ dùng khái niệm pass by value hay pass by reference
+-->Cho ví dụ
++ Pass by value
+
+3. Hàm khởi tạo là gì
++ Tạo ra một ô nhớ ở HEAP với các thuộc tính mang giá trị mặc định
+
+4. Từ khóa thí là gì
+
+5. Khác nhau giữa kiểu dữ liệu đối tượng có sẵn của JAVA như 
+String, Integer, Float và đối tượng tự tạo ra như Item, Employee, Student
++ Đôi lúc việc lưu đối tượng thì JAVA chỉ hổ trợ 1 số cái đơn giản
++ Kiểu đối tượng custom thì có thể lưu đối tượng 1 hoặc nhiều tham số, và để khởi tạo cũng đối tượng đó
+thì bắt buộc dùng từ khóa (new) 
+
+
+6. Giải thích từ khóa final, final có thể thay đổi giá trị không
+
+7. Phân biệt phạm vi truy cập của public và private

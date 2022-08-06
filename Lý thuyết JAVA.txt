@@ -1,0 +1,12 @@
+	
+	JDK: Java Development Kit
+	- Chứa JRE & JVM
+	– Cung cấp các công cụ để thực thi chương trình Java
+	JRE: Java Runtime Enviroment
+	- Chứa JVM và thư viện
+	JVM: Java Virtual Machine
+	- Là 1 máy ảo
+	- Nó được dùng để thực thi các chương trình Java hay hiểu nôm na là trình thông dịch của Java. 
+	Nó cung cấp môi trường để code java có thể được thực thi. 
+	Chương trình Java khi biên dịch sẽ tạo ra các mã máy gọi là bytecodes
+	

@@ -1,0 +1,24 @@
+Cấu trúc dữ liệu 
+	- Gồm biến, thuộc tính
+	- Tập hợp các cú pháp giúp mình khai báo và lưu trữ dữ liệu
+
+Kiểu dữ liệu:
+	+ Kiểu nguyên thủy: Primitive data type
+	- JAVA: int, float, double, char, boolean
+	- Lưu trữ dữ liệu --> single value
+	- Gía trị được lưu trữ ở cùng nhớ: STACK
+	
+	+ Kiểu đối tượng: Object type
+	- JAVA: String, Integer, Float
+	- Custom: Item, Employee, Student... --> new
+	- Lưu trữ dữ liệu --> với nhiều thông tin bên trong
+	- Gía trị được lưu trữ ở cùng nhớ: HEAP
+	- Hỗ trợ các phương thức giúp xử lý yêu cầu bài toán
+	
+Thuật toán
+	- Gồm các hàm, phương thức
+	- Nhận dữ liệu đầu vào, xử lý và cho ra kết quả
+	+ Nếu phương thức mà không cần dữ liệu trả về thì cho kiểu trả về là void
+	+ Nếu phương thức cần kiểu trả về thì cho kiểu dữ liệu phù hợp với yêu cầu
+	
+fackages bean: là nơi chứa class do mình tự define ra
