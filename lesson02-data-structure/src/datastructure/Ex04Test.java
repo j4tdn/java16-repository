@@ -1,0 +1,18 @@
+package datastructure;
+
+public class Ex04Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int a =1;
+        update(a);
+        System.out.println("a3: " + a);
+	}
+	private static void update(int a)
+	{
+		System.out.println("a1: " + a);
+		a = 2;
+		System.out.println("a2: " + a);
+	}
+
+}
