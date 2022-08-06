@@ -1,0 +1,21 @@
+11 Phân biệt kiểu dữ liệu nguyên thuỷ và kiểu đối tượng
+2+ Giống nhau
+3+ khác nhau
+4 --> Lưu trữ
+5 --> Hỗ trợ xử lý ...
+6
+7. Khi truyền 1 tham số(biến) qua 1 hàm(phương thức) thì JAVA sẽ dùng khái niệm pass
+ by value hay pass by refence
+8--> cho ví dụ
+
+9.Hàm khởi tạo là gì
+
+10 Từ khoá this là gì
+
+11 khác nhau giữa kiểu dữ liệu đối tượng 
++ có sẵn của JAVA như String, Integer, Float và
++ đối tượng tự tạo ra như Item, Employee, Student
+
+12 Giải thích từ khoá final, final có thể thay đổi giá trị hay không
+
+13 Phân biệt phạm vi truy cập public và private
