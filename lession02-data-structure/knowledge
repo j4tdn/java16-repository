@@ -1,0 +1,20 @@
+cấu trúc dữ liệu
+-> gồm biến, thuộc tính
++ tập hợp các cú pháp giúp mình khai báo và lưu trữ dữ liệu
+
+kiểu dữ liệu
++kiểu nguyên thủy: primitive data type
+--> int, float, double, char, boolean
+--> lưu dữ liệu--> single value
+--> GIÁ TRỊ DỮ LIỆU Ở vùng nhớ STACK
++kiểu đối tượng: object type
+--> string, Item, employee
+--> lưu trữ dữ liệu với nhiều thông tin bên trong
+...
+--> giá trị dữ liệu được lưu trữ ở vùng nhớ: HEAP
+
+thuật toán
+--> gồm các hàm, phương thức
+--> nhận dữ liệu đầu vào--> xử lý cho ra kết quả
+nếu phương thức không cần dữ liệu trả về thì cho kiểu trả về là void
+---------------cần dữ liệu trả về thì cho kiểu dữ liệu phù hợp với yêu cầu 
