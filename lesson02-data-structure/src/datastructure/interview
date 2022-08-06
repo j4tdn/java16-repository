@@ -1,0 +1,20 @@
+1. Phan biet kieu giu lieu nguyen thuy va kieu doi tuong
++ Giong nhau
++ Khac nhau
+--> Luu tru
+--> Ho tro xu ly ...
+
+2. Khi truyen 1 tham so (bien) qua 1 ham (phuoong thuc) thi JAVA se dung 
+khai niem pass by value hay pass by reference
+--> Cho vi du
+
+3. Ham khoi tao la gi
+4. Tu khoa this la gi
+
+5. Khac nhau giua kieu du lieu doi tuong
++ co san cua JAVA nhu String, Integer, Float va 
++ doi tuong tu tao ra nhu Item, Employee, Student
+
+6. Giai thich tu khoa final, final co the thay doi gia tri khong
+
+7. Phan biet pham vi truy cap public va private
