@@ -1,0 +1,16 @@
+Phân biệt kiểu dữ liệu nguyên thuỷ và đối tượng
+Giống nhau
+Khác nhau
+lưu trữ
+hỗ trợ xử lý
+
+Khi truyền tham số( biến) qua 1 hàm thì Java sẽ dùng khái niệm pass by value hay pass by reference
+--> cho ví dụ
+
+Hàm khởi tạo là gì
+Từ khoá this là gì
+
+Khác nhau giữa kiểu dữ liệu đối tượng có sẵn của Java như String, Integer, Float và đối tượng tự tạo ra như Item, Employee, Student
+
+Giải thích từ khoá Final, final có thể thay đổi giá trị không
+Phân biệt phạm vi truy cập public và static
