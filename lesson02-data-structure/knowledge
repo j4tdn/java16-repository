@@ -1,0 +1,10 @@
+Cấu trúc dữ liệu
+-> Gồm biến, thuộc tính
+-> Tập hợp các cú pháp giúp mình khai báo dữ liệu
+
+Thuật toán
+--> gồm các hàm, phương thức
+--> Nhân dữ liệu đầu vào --> xử lý và cho ra kết quả
++ Nếu phương thức không cần dữ liệu trả về thì cho ra kiểu trả về là void
++ Ngược lại nếu phương thức cần kiểu trả về thì cho ra kiểu dữ liệu phù hợp với yêu cầu
+Kieu doi tuong: pbject type -> gia tri duoc luu o HEAP
