@@ -1,0 +1,22 @@
+1. Phân biệt kiểu dữ liệu nguyên thủy và kiểu đối tượng? 
+	a. Giống nhau
+	b. Khác nhau
+		- Lưu trữ
+		- Hỗ trợ xử lý ...
+
+2. Khi truyền 1 tham số qua 1 hàm, thì Java sẽ khái niệm pass by value hay 
+pass by reference?
+=> value
+=> Cho ví dụ: Swap
+
+3. Hàm khởi tạo là gì?
+
+4. Từ khóa this là gì?
+
+5. Khác nhau giữa kiểu dữ liệu đối tượng có sẵn (String, Intger,...) và kiểu
+đối tượng mình tạo ra (Item, Employee,...)?
+
+6. Giải thích từ khóa final, final có thể thay đổi giá trị không?
+
+7. Phân biệt phạm vi truy cập public và private
+
