@@ -8,9 +8,15 @@ import java.util.regex.Pattern;
 
 public class bt2 {
 	public static void main(String[] args) {
-		equivalent_Primes(12, 60);
+		//equivalent_Primes(12, 60);
+		System.out.println(maxOf3(5,4,3));
 	}
 
+	public static int maxOf3(int a, int b, int c) {
+		return a>b||c>b?a>c?a:c:b;
+	}
+	
+	
 	public static void equivalent_Primes(int A, int B) {
 		ArrayList<Integer> listA = phanTichSoNguyen(A);
 		ArrayList<Integer> listB = phanTichSoNguyen(B);
