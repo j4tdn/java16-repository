@@ -1,6 +1,9 @@
 # Ignore .metadata folder
 .metadata
 
+# Ignore _pasted_code_ folder
+_pasted_code_
+
 # Ignore Eclipse configuration file
 *.project
 *.classpath
