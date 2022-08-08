@@ -1,0 +1,22 @@
+1. Phân biệt kiểu dữ liệu nguyên thuỷ và đối tượng
++ Giống nhau
++ Khác nhau
+--> Lưu trữ
+--> Hỗ trợ xử lý
+
+2. Khi truyền 1 tham số(biến) qua 1 hàm(phương thức) thì JAVA sẽ dùng khái niệm 
+pass by value hay pass by reference
+--> Cho ví dụ
+
+3. Hàm khởi tạo là gì?
+
+4. Từ khoá this là gì?
+
+5. Khác nhau giữa KDL đối tượng
++ Có sẵn của JAVA như String, Integer, Float và
++ Đối tượng tự tạo ra như Item, Employee, Student
+
+6. Giải thích từ khoá final, final có thể thay đổi giá trị không?
+
+7. Phân biệt phạm vi truy cấp public và private
+
