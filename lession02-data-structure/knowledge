@@ -20,3 +20,5 @@ Thuật toán:
 
 + Nếu phương thức không cần dữ liệu trả về thì cho kiểu trả về là void
 + Nếu phương thức cần dữ liệu trả về thì cho kiểu dữ liệu phù hợp với yêu cầu
+
+- sequences.length: Độ dài mảng
