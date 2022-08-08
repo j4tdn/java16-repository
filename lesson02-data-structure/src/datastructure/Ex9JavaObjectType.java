@@ -8,7 +8,7 @@ public class Ex9JavaObjectType {
 		Integer o3=99;
 		String o4="bye";
 		//custom
-		Item item = new Item(1,"Item 1", 222);
+		//Item item = new Item(1,"Item 1", 222);
 		//Item itemX=1,"Item 1", 222;
 	}
 
