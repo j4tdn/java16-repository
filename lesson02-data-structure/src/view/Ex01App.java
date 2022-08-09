@@ -8,8 +8,8 @@ public class Ex01App {
 	public static void main(String[] args) {
 		System.out.println("lesson02 demo");
 		System.out.println("publis date: " + LocalDate.now());
-		
-		//Class.staticAttribute
+
+		// Class.staticAttribute
 		System.out.println("LargeNumber: " + Ex01Declare.largeNumber);
 	}
 }
