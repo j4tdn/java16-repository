@@ -1,17 +1,28 @@
 1. Phân biệt kiểu nguyên thuỷ và đối tượng
 +Giống nhau
+
 +Khác nhau
+. Kiểu nguyên thuỷ:khi giá trị luôn luôn có giá trị bắt buộc, không được phép NULL
+. Kiểu đối tượng :không bắt buộc có thể NULL, có giá trị không bắt buộc
++ lưu trữ 1 hoặc nhiều thông tin bên trong 
++chứa các thuộc tính, hàm bên trong
 -->Lưu trữ
 --> Hỗ trợ xử lý...
 
 2. Khi truyền 1 tham số (biến) qua 1 hàm(phương thức)
 Thì JAVA sẽ dùng khái niệm pass by value hay pass by reference
 -->cho ví dụ
-3. Hàm khởi tạo là gì
-4. Từ khoá this là gì
+
+3. Hàm khởi tạo là gì?
+
+4. Từ khoá this là gì?
+
 5 Khác nhau giữa kiểu dữ liệu đối tượng
+
 +có sẵn của JAVA như String ,Interger, Student
+
 +đối tượng tự tạo ra như Item, Employee,Student
 6. Giải thích từ khoá Final, final có thể thay đổi giá trị không
+
 7. Phân biệt phạm vi truy cập public và private
 
