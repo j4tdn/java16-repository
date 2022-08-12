@@ -1,0 +1,21 @@
+cấu trúc dữ liệu:
++ gồm biến, thuộc tính
++ tập hợp các cú pháp giúp khai báo và lưu trữ dữ liệu
+
+kiểu dữ liệu:
++ kiểu nguyên thuỷ: primitive data type
+-->JAVA: int, float,double, char, boolean
+--> Lưu trữ dữ liệu --> single value
+--> giá trị được lưu trữ ở vùng nhớ: STACK 
+
++ kiểu đối tượng: Object type
+--> JAVA: String, Integer, Float 
+--> Custom: Item, Employee, Student ... --> new
+--> Lưu trữ dữ liệu --> với nhiều thông tin bên 
+...
+--> giá trị được lưu trữ ở vùng nhớ: HEAP
+
+thuật toán:
+--> gồm các hàm, phương thức
+--> nhận dữ liệu đầu vào --> xử lí và cho kết quả
+phương thức không cần kiểu dữ liệu trả về thì kiểu dữ liệu sẽ là 

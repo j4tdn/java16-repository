@@ -1,0 +1,27 @@
+1. phân biệt kiểu dữ liệu nguyên thuỷ và kiểu đối tượng
+	+ giống nhau
+	+ khác nhau
+-->  nơi lưu trữ 
+--> hỗ trợ xử lí ...
+=====
+nguyên thuỷ --> STACK
+đối tượng --> giá trị lưu ở HEAP
+địa chỉ để trỏ đến tối tượng lưu ở STACK
+
+kiểu đối tượng hỗ trợ xử lí các kiểu dữ liệu phức tạp, gần gũi với cuộc sống
+
+2. khi truyền 1 tham số(biến) qua 1 hàm(phương thức) thì JAVA sẽ dùng khái niệm pass by value
+hay pass by reference(truyền giá trị hay truyền địa chỉ)
+--> cho ví dụ
+
+3. hàm khởi tạo là gì
+
+4. từ khoá this là gì
+
+5. khác nhau giữa kiểu dữ liệu đối tượng 
++ có sẵn của JAVA như String, Integer, Float và
++ đối tượng tự tạo ra như Item, Employee, Student
+
+6. giải thích từ khoá final, final có thể thay đổi giá trị không
+
+7. phân biệt phạm vi truy cập public và private
