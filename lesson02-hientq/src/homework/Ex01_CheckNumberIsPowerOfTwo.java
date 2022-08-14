@@ -20,18 +20,22 @@ public class Ex01_CheckNumberIsPowerOfTwo {
         return true;
 
     }
+    private static boolean isPowerOf(int a, int b){
+        if(b <= 0){
+            return false;
+        }
+        double n = Math.log(b) / Math.log(a);
+        return Math.ceil(n) == Math.round(n);
+    }
     public static void main(String[] args){
 //        for(int i = 0; i <= 30; i++){
 //            if(isPowerOfTwo(i)){
 //                System.out.println(i + " is power of 2");
 //            }
 //        }
-        System.out.println("14 is power of 2? " + isPowerOfTwo(14));
-        System.out.println("12 is power of 2? " + isPowerOfTwo(12));
-        System.out.println("4 is power of 2? " + isPowerOfTwo(4));
-        System.out.println("6 is power of 2? " + isPowerOfTwo(6));
-        System.out.println("512 is power of 2? " + isPowerOfTwo(512));
-        System.out.println("30 is power of 2? " + isPowerOfTwo(30));
-        System.out.println("32 is power of 2? " + isPowerOfTwo(32));
+        int[] numbers = {1, 2, 3, 4, 8};
+        for(int i = 0; i < numbers.length; i++){
+            System.out.println(numbers[i] + " is power of 2? " + isPowerOf(2, numbers[i]));
+        }
     }
 }

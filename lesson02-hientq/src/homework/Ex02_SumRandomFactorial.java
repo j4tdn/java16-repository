@@ -10,20 +10,29 @@ public class Ex02_SumRandomFactorial {
         }
         return n * convertToFactorial(n - 1);
     }
-    public static void main(String[] args) {
-        long sum = 0;
-        int amount = 4;
-        String outputString = "";
-        for(int i = 1; i <= amount; i++){
-            int n = generateRandomInt(4, 18);
-            sum += convertToFactorial(n);
-            if(!(i == amount)){
-                outputString += n+"! + ";
-                continue;
-            }
-            outputString += n+"!";
+
+    private static long sumFactorial(int... numbers){
+        int sum = 0;
+        for(int number : numbers){
+            sum += convertToFactorial(number);
         }
-        System.out.println(outputString + " = " +sum);
+        return sum;
+    }
+    public static void main(String[] args) {
+//        long sum = 0;
+//        int amount = 4;
+//        String outputString = "";
+//        for(int i = 1; i <= amount; i++){
+//            int n = generateRandomInt(4, 18);
+//            sum += convertToFactorial(n);
+//            if(!(i == amount)){
+//                outputString += n+"! + ";
+//                continue;
+//            }
+//            outputString += n+"!";
+//        }
+        long sum = sumFactorial(3, 4, 2, 3, 7);
+        System.out.println("Result: " + sum);
     }
 
     private static int generateRandomInt(int start, int finish){

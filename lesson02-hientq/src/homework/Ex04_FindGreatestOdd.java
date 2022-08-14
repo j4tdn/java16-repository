@@ -27,7 +27,10 @@ public class Ex04_FindGreatestOdd {
             System.out.print("Enter number: ");
             nums[i] = Integer.parseInt(sc.nextLine());
         }
-
+        if(countOddNum(nums) == 0){
+            System.out.println("There are no odd numbers");
+            return;
+        }
         oddNums = new int[countOddNum(nums)];
         int indexOfOddNums = 0;
         for(int x : nums){
