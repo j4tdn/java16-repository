@@ -16,7 +16,7 @@ public class Ex01PowerOf2 {
 	}
 
 	private static boolean checkPower(int n) {
-		while (n > 2) {
+		while (n != 2) {
 			if (n % 2 != 0)
 				return false;
 			n = n / 2;
