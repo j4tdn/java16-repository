@@ -7,7 +7,7 @@ public class Ex06Loop {
 		//1st-->using for
 		for (int i = 0; i< 10;i+=2) {
 			if ( i % 4 == 0) {
-			System.out.print(i+ " ");-
+			System.out.print(i+ " ");
 			}
 		}
 		
