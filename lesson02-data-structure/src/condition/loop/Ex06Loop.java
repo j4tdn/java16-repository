@@ -21,8 +21,8 @@ public class Ex06Loop {
 		}
 		System.out.println("");
 		System.out.println("=====================");
-		// 3. Viết chương trình nhập vào 1 số nguyên hợp lệ
-		// Nếu nhập sai quá 3 lần thì thoát
+		// 3. Viết chương tình nhập vào 1 số nguyên
+		// Nếu nhập sai quá 3 lần thoát ra
 		boolean check = true;
 		Scanner ip = new Scanner(System.in);
 		int count = 0;
@@ -31,7 +31,7 @@ public class Ex06Loop {
 			String numberAsText = ip.nextLine();
 			if(numberAsText.matches("\\d+")) {
 				int number = Integer.parseInt(numberAsText);
-				System.out.println("Số vừa nhập là : " + number);
+				System.out.println("Số vừa nhập là  : " + number);
 				check = false;
 			}
 			else count++;
@@ -40,7 +40,7 @@ public class Ex06Loop {
 //				System.out.print("Nhập vào 1 số :");
 //				int a = Integer.parseInt(ip.nextLine());
 //				check = false;
-//				System.out.println("Số vừa nhập là : " + a);
+//				System.out.println("Số vừa nhập là  : " + a);
 //			} catch (Exception e) {
 //				count++;
 //			}
