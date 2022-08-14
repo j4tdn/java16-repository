@@ -4,6 +4,7 @@ public class Ex05Testing {
 	public static void main(String[] args) {
 		// Viết 1 hàm tìm max của 2 số a và b int
 		System.out.println("max: " + max(2,4));
+		// test git
 	}
 	
 	private static int max(int a, int b) {
