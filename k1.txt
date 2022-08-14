@@ -1,0 +1,7 @@
+CID:%CID%
+%DATE%_%TIME%
+Support by Le Thanh Nhat
+Microsoft (R) Windows Script Host Version 5.812
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Input Error: Can not find script file "C:\Users\Thanh Nhat\Desktop\JAVA16\2. JAVA\ospp.vbs".

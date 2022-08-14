@@ -21,5 +21,17 @@ public class Ex02Factorial {
 		}
 		System.out.println("Tổng là: " + sum);
 	}
+	/*
+	 * cách 2
+	 *
+	 * public class abjjs { public static void main(String[] args) {
+	 * System.out.println(sumOfFactorial(5,5)); } private static int
+	 * sumOfFactorial(int... numbers) { int sum =0; for (int number: numbers) { sum
+	 * += factorial(number); } return sum; } private static int factorial(int n) {
+	 * int result = n; while (n>1) { result *= --n; } return result; }
+	 * 
+	 * }
+	 * 
+	 */
 
 }
