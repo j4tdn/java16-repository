@@ -1,16 +1,20 @@
 package bean;
 
 public class Car {
-	public String model;
-	public String color;
+	//object's scope
 	public int  serial;
+	public String color;
+	
+	//class's scope
+	public static String model;
+	
 	
 	public Car() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public Car(int serial,String model, String color) {
-		this.model = model;
+	
+	public Car(int serial, String color) {
+	
 		this.color = color;
 		this.serial = serial;
 	}
