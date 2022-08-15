@@ -17,12 +17,12 @@ public class Ex06 {
 		Scanner ip = new Scanner(System.in);
 		String numberAsText = "";
 		do {
-			System.out.print("Nhập vào vị trí số nguyên tố : ");
+			System.out.print("Nhap vao 1 so nguyen to : ");
 			numberAsText = ip.nextLine();
 		}while(!numberAsText.matches("\\d+"));
 		int range = Integer.parseInt(numberAsText);
 		int count = 0;
-		System.out.print("Số nguyên tố thứ " + range + " là : ");
+		System.out.print("So nguyen thu " + range + " la` : ");
 		for(int i = 0; i < Eratosthenes.length; i++) {
 			if(Eratosthenes[i]) {
 				count++;

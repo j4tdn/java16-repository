@@ -19,7 +19,7 @@ public class Ex02 {
 		Scanner ip = new Scanner(System.in);
 		Boolean check = true;
 		do {
-			System.out.print("Nhập "+ num +" : ");
+			System.out.print("nhap "+ num +" : ");
 			String numberAsText = ip.nextLine();
 			if(numberAsText.matches("\\d+")) {
 				check = false;

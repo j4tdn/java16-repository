@@ -8,11 +8,11 @@ public class Ex05 {
 		int number = 0;
 		String numberAsText = "";
 		do {
-			System.out.print("Nhập vào 1 số (Hệ 10) : ");
+			System.out.print("nhap vao 1 so` (he 10) : ");
 			numberAsText = ip.nextLine();
 		} while (!numberAsText.matches("\\d+"));
 		number = Integer.parseInt(numberAsText);
-		System.out.println("Chuyển đổi " + number + " (Hệ 10) về (Hệ 2) : " + convertDEXtoBIN(number));
+		System.out.println("chuyen? hoa` " + number + " (he 10) sang (he 22) : " + convertDEXtoBIN(number));
 	}
 	
 	private static String convertDEXtoBIN(int dexNumber) {

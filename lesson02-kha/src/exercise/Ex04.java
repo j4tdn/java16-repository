@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Ex04 {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
-		System.out.print("Nhập vào 1 dãy số nguyên :");
+		System.out.print("nhap vao 1 day so` nguyen :");
 		String text = ip.nextLine();
 		String[] arrAstext = text.split(" ");
-		System.out.println("Số lẻ lớn nhất là : " + findBiggerOddNumber(arrAstext));
+		System.out.println("so le? lon` nhat la`  : " + findBiggerOddNumber(arrAstext));
 		
 	}
 	
