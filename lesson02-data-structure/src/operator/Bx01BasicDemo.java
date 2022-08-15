@@ -6,6 +6,7 @@ public class Bx01BasicDemo {
 		int a = 6;
 		int b = 3;
 		int c = 8;
+		System.out.println();
 		a += b-- + c++ + ++c;
 		System.out.println("A= " + a);
 		b = a-- + ++b - ++c - b;
