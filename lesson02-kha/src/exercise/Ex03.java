@@ -7,10 +7,10 @@ public class Ex03 {
 		String numberAsText = "";
 		Scanner ip = new Scanner(System.in);
 		do {
-			System.out.print("Nhập vào 1 số : ");
+			System.out.print("nhap vao` 1 so : ");
 			numberAsText = ip.nextLine();
 		} while (!numberAsText.matches("\\d+"));
-		System.out.println(isRevertNumber(numberAsText) ? numberAsText + " là số đối xứng" : numberAsText + " không là số đối xứng");
+		System.out.println(isRevertNumber(numberAsText) ? numberAsText + " la` so doi xung" : numberAsText + " khong la` so doi xung");
 		System.out.println("Finish...");
 	}
 	

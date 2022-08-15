@@ -9,7 +9,7 @@ public class Ex07 {
 		int count = 0;
 		String[] text = {};
 		do {
-			System.out.print("Nhập vào khoảng muốn Rand(Eg:20 30) :");
+			System.out.print("nhap vao` khoang muon Rand(Eg:20 30) :");
 			Scanner ip = new Scanner(System.in);
 			text = ip.nextLine().split(" ");
 		}while(text.length<2 || text.length>2);
