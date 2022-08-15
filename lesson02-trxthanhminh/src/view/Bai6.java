@@ -4,20 +4,29 @@ public class Bai6 {
 	public static void main(String[] args) {
 		int n = 1000;
 		soNguyenTo(n);
+		int x=0;
 		
-		for (int count = 0; count<= n /2; count++) {
-			if(count == 200) {
-				count = soNguyenTo(n);
+			if( soNguyenTo(n) == true) {
+				x++;
+				if(x==199) {
+					System.out.println(i);
+				}
 			}
+	
 	}
-	}
-	private static int soNguyenTo(int n) {
-		boolean snt = false;
-		for (int i = 0; i <= n/2; i++) {
-			if (n%i == 0) {
-				snt = true;
-				break;
-			}
+	private static boolean soNguyenTo(int n) {
+		if(n<2) {
+			return false;
 		}
-	}
+		
+		for (int i = 3; i <n; i++) {
+			if (n%i == 0) {
+				return false;
+				
+			}
+			
+		}
+		return true;
+	
+}
 }

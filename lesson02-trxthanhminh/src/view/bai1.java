@@ -1,26 +1,35 @@
 package view;
 
-import java.util.Scanner;
+// class name: noun
+// method name: [phase]verb
+// naming convention: camel case
+// first letter of class --> Upper
+// first letter of variable, method --> lower
+// package-name: lower
+// project-name: lower
+// Bài 1: Viết chương trình kiểm tra 1 số có phải là lũy thừa của 2 hay không
 
 public class bai1 {
 	public static void main(String[] args) {
-		Scanner number = new Scanner(System.in);
+		int[] numbers = {0, 2, 4, 8, 9, 12, 16, 20, 32, 100, 128};
 		
-		System.out.print("Số cần kiểm tra là: "  );
-		int nb = number.nextInt();
+		for (int number: numbers) {
+			System.out.println(number + " ==> " + isPowerOf2(number) );
 		
-		int a = nb/2;
-		int b = nb%2;
-		
-		if (nb == 0 || nb == 1) {
-			System.out.println(nb + " không là lũy thừa của 2");
-		
-		} else if (b == 1) {
-			System.out.println(nb + " không là lũy thừa của 2");
 		}
 		
-		else if (a == a/2 && b == a%2 && b == 0) 
-			System.out.println(nb + " là lũy thừa của 2");
+}
+	private static boolean isPowerOf2(int number) {
+		if(number <= 0) {
+			return false;
 		}
+		while(number != 1) {
+			if(number %2 != 0) {
+			return false;
+		}
+		number /= 2;
+		}
+	return true;
+	}
 }
 	
