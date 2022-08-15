@@ -4,28 +4,29 @@ import java.util.Scanner;
 
 public class Ex01 {
 	public static void main(String[] args) {
-		Scanner ip = new Scanner(System.in);
-		System.out.print("Enter your number: ");
-		int number = ip.nextInt();
-		if (isPowerOfTwo(number)) {
-			System.out.println(number + " is number of two");
-		} else {
-			System.out.println(number + " is not number of two");
+		int[] numbers = {2,0,1,3,4,5,6,7,8};
+		for(int number:numbers) {
+			System.out.println(number + " ==> " + isPowerOfTwo(number));
 		}
 	}
 
-	private static boolean isPowerOfTwo(int number) {
-		if (number == 0) {
+	private static boolean isPoerof2(int a, int b) {
+		if (b <= 0) {
 			return false;
-		} else if (number == 1) {
-			return true;
-		} else {
-			while (number > 2) {
-				if (number % 2 != 0) {
-					return false;
-				}
-				number = number / 2;
+		}
+		double n = Math.log(b) / Math.log(a);
+		return Math.ceil(n) == Math.floor(n);
+	}
+
+	private static boolean isPowerOfTwo(int number) {
+		if (number <= 0) {
+			return false;
+		}
+		while (number != 1) {
+			if (number % 2 != 0) {
+				return false;
 			}
+			number /= 2;
 		}
 		return true;
 	}
