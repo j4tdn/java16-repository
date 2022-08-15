@@ -15,26 +15,42 @@ public class Ex04LargestOddNumber {
     	 System.out.println("a[" + i + "] = ");
     	 a[i] = sc.nextInt();
      }
-     System.out.println("Largest odd number: " + checklargestoddnumber(a));
+     System.out.println("Largest odd number: " + findMaxOddElement(a));
 	}
-	private static int checklargestoddnumber(int[] a)
+//	private static int checklargestoddnumber(int[] a)
+//	{
+//		int[] b = new int[a.length];
+//		for(int i = 0 ;i < a.length ;i++)
+//		{
+//			if(a[i] %2 != 0)
+//			{
+//				b[i] = a[i];
+//			}
+//		}
+//		int max = b[0];
+//		for(int n = 0 ; n < b.length ; n++)
+//		{
+//			if(b[n] >= max)
+//			{
+//				max = b[n];
+//			}
+//		}
+//		return max;
+//	}
+	private static int findMaxOddElement(int[] elements)
 	{
-		int[] b = new int[a.length];
-		for(int i = 0 ;i < a.length ;i++)
+		int max = Integer.MIN_VALUE;
+		for(int element: elements)
 		{
-			if(a[i] %2 != 0)
+			if(isOdd(element) && element > max)
 			{
-				b[i] = a[i];
-			}
-		}
-		int max = b[0];
-		for(int n = 0 ; n < b.length ; n++)
-		{
-			if(b[n] >= max)
-			{
-				max = b[n];
+				max = element;
 			}
 		}
 		return max;
+	}
+	private static boolean isOdd(int number)
+	{
+		return number % 2!= 0;
 	}
 }
