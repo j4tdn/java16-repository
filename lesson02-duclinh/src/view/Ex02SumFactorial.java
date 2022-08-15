@@ -9,6 +9,7 @@ public class Ex02SumFactorial {
 		int number = 0;
 		long fsum = sum(number);
 		System.out.println("\n" + fsum);
+		System.out.println("2nd way: "+ sumOfFactorial2nd(8,3,16,4));
 
 	}
 
@@ -28,6 +29,22 @@ public class Ex02SumFactorial {
 			System.out.print(number + " + ");
 			long a = factorial(number);
 			sum += a;
+		}
+		return sum;
+	}
+
+	private static int factorial2nd(int n) {
+		int result = n;
+		while (n > 1) {
+			result *= --n;
+		}
+		return result;
+	}
+
+	private static int sumOfFactorial2nd(int... numbers) {
+		int sum = 0;
+		for (int number : numbers) {
+			sum += factorial(number);
 		}
 		return sum;
 	}

@@ -39,7 +39,7 @@ public class Ex04LargestOddNumber {
 	}
 
 	private static void oddMax(int[] arr) {
-		sort(arr);
+		//sort(arr);
 		int max = arr[0];
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] % 2 != 0 && arr[i] >= max) {
@@ -47,5 +47,24 @@ public class Ex04LargestOddNumber {
 			}
 		}
 		System.out.println("số lẻ lớn nhất là: " + max);
+	}
+	// Tuple: countOdd, maxOld;
+	private static int findMaxOddElement2nd(int[] elements) {
+		int max = Integer.MIN_VALUE;
+		int countOdd = 0;
+		for(int element: elements) {
+			if(isOdd(element) && element > max) {
+				max = element;
+				countOdd++;
+			}
+		}
+		if(countOdd == 0) {
+			System.out.println("Array has on odd element !!!");	
+			System.exit(0);
+		}
+		return max;
+	}
+	private static boolean isOdd(int number) {
+		return number % 2 == 0;
 	}
 }
