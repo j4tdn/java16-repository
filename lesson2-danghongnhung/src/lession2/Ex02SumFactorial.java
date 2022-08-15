@@ -3,12 +3,26 @@ package lession2;
 public class Ex02SumFactorial {
 
 	public static void main(String[] args) {
-		long sum = Factorial(4) + Factorial(7) + Factorial(12) + Factorial(18);
-		System.out.println("Tổng giai thừa của 4! +7! + 12! + 18! là :" +sum);
+		System.out.println(SumOfFactorial(new int [] {5}));
+		System.out.println(SumOfFactorial(4,5));
+	}
+	public static long SumOfFactorial(int... numbers) {
+		int sum =0;
+		for(int number: numbers) {
+			sum += factorial(number);
+		}
+		return sum;
 	}
 	
-	public static long Factorial(int n) {
+	public static long factorial(int n) {
 		if(n == 0 || n ==1 ) return 1;
-		return n * Factorial(n -1);
+		return n * factorial(n -1);
+		/*
+		int result = n;
+		while(n > 1) {
+			result *= --n;
+		}
+		return result;
+		*/
 	}
 }
