@@ -7,30 +7,29 @@ public class Ex08ValidateNumber {
 		//enter and validate a number
 		//if number of wrong time exceed 3-->exit system
 		Scanner ip =new Scanner(System.in);
-		String numberAsTest="";
-		int wrongtime=0;
+		String numberAsTest= "";
+		
+		//validation
+		int wrongTimes=0;
 		do {
 			System.out.println("Enter valid number ");
 			numberAsTest = ip.nextLine();
-			if(!numberAsTest.matches("\\d+")) {
-				wrongtime++;
-       
-				if(wrongtime==3) {
-				System.out.println("wrong times >3");
-				return;
+			
+			if(numberAsTest.matches("\\d+")) {
+				break;
 			}
-				continue;
+			wrongTimes++;
+			if(wrongTimes==3) {
+				System.out.println("EXIT  ");
+				return;//dừng lại hàm có kdl trả về là void
+				//System.exit(0);//thoát khỏi chương trình
 			}
-			break;
+
 		} while (true);
 		
-		System.out.print("enter a valid number");
-		String numberAsString =ip.nextLine();
-		//validation
-		
-		int number=Integer.parseInt(numberAsString);
-		System.out.println("number" + number);
+
+		int number=Integer.parseInt(numberAsTest);//chuyển chuỗi qua số
+		System.out.println("valid: " +number);
 		
 	}
-
 }
