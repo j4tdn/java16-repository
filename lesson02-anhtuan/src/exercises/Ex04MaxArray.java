@@ -9,16 +9,16 @@ public class Ex04MaxArray {
 		boolean check = true;
 
 		do {
-			System.out.println("Nhap vao phan tu cua mang: ");
+			System.out.print("Nhap vao phan tu cua mang: ");
 			n = scanner.nextInt();
 		} while (n <= 0);
 
 		int A[] = new int[n];
 
-		System.out.println("nhap cac so cho mang  ");
+		System.out.print("nhap cac so cho mang  ");
 
 		for (int i = 0; i < n; i++) {
-			System.out.print("A" +i);
+			System.out.print("A" +"["+ i+"]= ");
 			A[i] = scanner.nextInt();
 		}
 		Sort(A, n);
