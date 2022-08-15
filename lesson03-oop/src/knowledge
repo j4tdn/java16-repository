@@ -1,0 +1,9 @@
+khái niệm static
+A. static cho thuộc tính
++ Khi một thuộc tính không phụ thuộc và bất kỳ đối tượng nào 
++ Các đối tượng đều có chung giá trị của thuôc tính nàu
+==> Thì cho thuộc tính đó là static
++ Khi thuọc tính phụ thuộc/ có giá trị riêng cho mỗi đối tượng
+==. thì cho thuộc tính đó là non-static
+VD: Car # Model
+B Static non method
