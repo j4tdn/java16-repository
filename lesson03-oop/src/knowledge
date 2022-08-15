@@ -1,0 +1,10 @@
+1. Khai niem static
+A. Cho thuoc tinh
++ Khi 1 thuoc tinh ma khong phu thuoc vao bat ki doi tuong nao
+--> Cac doi tuong deu co chung gia tri cua thuoc tinh nay
+==> Thi cho thuoc tinh do la static
+
++ Khi thuoc tinh phu thuoc hay co gia tri rieng cho moi doi tuong
+==> Thi cho thuoc tinh do la non-static
+
+VD: Car#model 
