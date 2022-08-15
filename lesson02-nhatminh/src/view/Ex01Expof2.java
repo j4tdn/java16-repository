@@ -10,7 +10,7 @@ public class Ex01Expof2 {
 		while (Try-- != 0) {
 			System.out.print("Nhap so muon xet: ");
 			int n = Integer.parseInt(sc.nextLine());
-			if (IsExpof2(n))
+			if (IsExpof2_Logarith(n))
 				System.out.println(n + " la luy thua cua 2!");
 			else
 				System.out.println(n + " khong la luy thua cua 2!");
@@ -19,13 +19,19 @@ public class Ex01Expof2 {
 	}
 
 	public static boolean IsExpof2(int n) {
+		if (n == 1)
+			return true;
 		if (n % 2 == 0) {
 			n /= 2;
-			if (n == 1)
-				return true;
-
 		} else
 			return false;
 		return IsExpof2(n);
+	}
+
+	public static boolean IsExpof2_Logarith(int n) {
+		if (n <= 0)
+			return false;
+		double temp = Math.log(n) / Math.log(2);
+		return Math.ceil(temp) == Math.floor(temp);
 	}
 }
