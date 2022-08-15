@@ -8,7 +8,8 @@ public class Ex04MaxOdd {
 		System.out.print("Enter the length of array: ");
 		int length = sc.nextInt();
 		int[] number = new int[length];
-		int max = -1;
+		int max = Integer.MIN_VALUE;
+		int countOdd = 0;
 		for (int i = 0; i < length; i++) {
 			System.out.print("Enter number[" + i + "]: ");
 			number[i] = sc.nextInt();
@@ -16,8 +17,12 @@ public class Ex04MaxOdd {
 				if (number[i] > max)
 					max = number[i];
 			}
+			countOdd++;
 		}
-		System.out.println("Max odd number: " + max);
+		if (countOdd != 0)
+			System.out.println("Max odd number: " + max);
+		else 
+			System.out.println("All numbers here are even");
 		sc.close();
 	}
 }

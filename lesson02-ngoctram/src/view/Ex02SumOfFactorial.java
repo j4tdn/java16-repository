@@ -9,7 +9,17 @@ public class Ex02SumOfFactorial {
 		else
 			return number * factorial(number - 1);
 	}
-
+	
+	// using variables ... instead of array in some cases
+	// That means you can pass into methods an array, a certain amount of variables, 
+	// even nothing.
+	private static int sumOfFactorial(int... numbers) {
+		int sum = 0;
+		for(int number : numbers) {
+			sum += factorial(number);
+		}
+		return sum;
+	}
 	public static void main(String[] args) {
 		Random rd = new Random();
 		int number1 = rd.nextInt(10);
@@ -20,6 +30,7 @@ public class Ex02SumOfFactorial {
 		System.out.println("Number 2 : " + number2);
 		System.out.println("Number 3 : " + number3);
 		System.out.println("Number 4 : " + number4);
-		System.out.println(factorial(number1) + factorial(number2) + factorial(number3) + factorial(number4));
+		System.out.println(sumOfFactorial(number1, number2, number3, number4));
+		System.out.println(sumOfFactorial(number1, number2, number3));
 	}
 }
