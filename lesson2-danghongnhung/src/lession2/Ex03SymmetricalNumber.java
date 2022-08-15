@@ -19,7 +19,7 @@ public class Ex03SymmetricalNumber {
 		if(n >= 0 && n <= 9) return false;
 		int a = n;
 		int tmp = 0;
-		while(a > 0) {
+		while(a != 0) {
 			tmp = tmp*10 + a % 10;
 			a /=  10;
 		}
