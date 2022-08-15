@@ -8,7 +8,7 @@ public class Ex03CheckNumber {
 		System.out.println("Enter the number: ");
 		int n;
 		n = sc.nextInt();
-		if(checknumber(n) == n)
+		if(checknumber(n))
 		{
 			System.out.println(n + " is a symmetric number");
 		}
@@ -17,7 +17,7 @@ public class Ex03CheckNumber {
 			System.out.println(n + " not a symmetric number");
 		}
 	}
-	private static int checknumber(int number)
+	private static boolean checknumber(int number)
 	{
 		int m  = 0;
 		while(number > 0)
@@ -25,6 +25,6 @@ public class Ex03CheckNumber {
 			m = m*10 + number % 10;
 			number /= 10;
 		}
-		return m;
+		return number == m;
 	}
 }
