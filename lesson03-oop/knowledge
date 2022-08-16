@@ -11,3 +11,8 @@ VD: Car#model
 
  
 B. Static cho method
++ Hàm chỉ phụ thuộc vào tham số truyền vào, không phụ thuộc vào đối tượng đang gọi
+==> Cho hàm static
+
++ Hàm phụ thuộc vào đối tượng đang gọi
+==> Cho hàm non-static
