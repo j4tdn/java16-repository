@@ -2,7 +2,7 @@ package datastructure;
 
 import bean.Number;
 
-public class Exercises01 {
+public class ExerciseHomework {
 	public static void swap(Number a, Number b) {
 		int temp = a.num;
 		a.num = b.num;
