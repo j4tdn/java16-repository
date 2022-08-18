@@ -1,0 +1,11 @@
+1. khai niem static
+
+A. Static cho thuoc tinh
++Khi mot thuoc tinh khong phu thuoc vao bat ki doi tuong nao
+--> cac doi tuong deu co chung gia tri cua thuoc tinh nay
+==>Thi cho thuoc tinh do la static
+
++ Khi thuoc tinh phu thuoc/co gia tri rieng cho moi doi tuong
+==> thi cho thuoc tinh do la non-static
+
+B. Static cho method
