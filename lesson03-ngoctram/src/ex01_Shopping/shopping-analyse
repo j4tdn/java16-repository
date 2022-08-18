@@ -1,0 +1,16 @@
+- Class
++ Customer: id, name, phone, address
++ Item : id, os, color, cost
+
+- Step
+1. Create an array of customers 
+2. Create an array of items in store
+3. Shopping functions
+	+ Who buys?
+	+ List of items?
+	+ Amount of each item?
+	+ DateTime?
+4. Create a new class Order & ItemDetail and hence create a function export
+=> ItemDetail: item, quantity
+=> Order: customer, item_details[], date_time 
+=> Function: export(order) => void: totalOfAmount
