@@ -1,5 +1,6 @@
-package view;
-
+package homework2;
+// Viết chương trình tính tổng S = 4! +7! + 12!
+// với 4 7 12 là số ngẫu nhiên nhập từ bàn phím
 import java.util.Scanner;
 
 public class Ex02 {
@@ -30,4 +31,18 @@ public class Ex02 {
 		     }
 		     return sum;
 		}
+	 	/*private static int sumOfFactorial(int...is number) {
+	 		int sum = 0; 
+		    for(int number: numbers) {
+		          sum += factorial(number);
+		     }
+		     return sum;
+	 	}*/
+	 /*private static int factorial(int n){
+		 int result = n;
+		 while(n > 1) {
+			 result *= --n;
+		 }
+		 return result;
+	 }*/
 }
