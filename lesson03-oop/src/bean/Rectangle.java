@@ -12,7 +12,7 @@ public class Rectangle {
 	
 	//constructor
 	//new Rectangle(6,3)
-	public Rectangle(int width,int height) {
+	public Rectangle(int width,int height) { //hàm khởi tạo 2 tham số
 		this.width = width;
 		this.height = height;
 	}

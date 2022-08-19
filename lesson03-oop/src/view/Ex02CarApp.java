@@ -13,9 +13,9 @@ public class Ex02CarApp {
 		Car[] cars = new Car[100];
 		Car.model = "Audi";
 		for (int i = 0; i < cars.length; i++) {
-			Car car = new Car(i, "Audi", color[rd.nextInt(color.length)]);
+			Car car = new Car(i,  color[rd.nextInt(color.length)]);//random 1 số index ngẫu nhiên trong các phần tử của mảng color(0-4) sau đó lấy color thứ số đó
 			cars[i] = car;
-			System.out.println(car);
+
 		}
 
 		// yêu cầu: Số lượng xe còn lại đổi model thành MG
