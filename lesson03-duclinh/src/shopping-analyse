@@ -1,0 +1,22 @@
++ class:	
+Customer: id, name, phone, address
+Item	: id, os, color, cost
+
+B1: Create list of customers
+B2: Create array of items in store
+B3: Shoping function
++ who is buying
++ List of items
++ Amount of each item
++ Time
+==> Oder: customer, item_details[], quantity, datetime,
+
+C1: KH1, Peter, 123, NewYork
+C2: KH2, Alice, Andoird, Green, 840
+
+i1: IP4, IOS, White, 280
+i2: SS22U, Android, Green, 840
+i3: IP13, IOS, Green, 840
+
+C. Function
++export(order) => TotalOfAmount:Void
