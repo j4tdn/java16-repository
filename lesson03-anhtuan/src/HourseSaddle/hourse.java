@@ -53,6 +53,7 @@ public class hourse {
 		}
 		if(max==min) {return max;}
 		}
+		return n;
 		}
 		
 		
