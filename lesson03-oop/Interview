@@ -1,0 +1,17 @@
+có nên được phép khởi tạo là private không
+--> được
+Helper/Utility class
+Buider pattern
+Tại sao khai báo các thuộc tính trong class là private chứ không phải là public?
++đảm bảo quy tắc của oop, mỗi class chỉ chứa hay quan lí thông tin của riêng nó--> Fop: share data
++ hạn chế truy cập từ những đối tượng không cần thiế
+ví dụ: nhân viên ==> company
+nhân viên hàng tháng sẽ nhận được lương từ công ty
+noney của nhân viên sẽ tăng
+quỹ lương của công ty sẽ giảm
+nhưng emp và cmp kh biết tài khoản của người còn lại
+Khái niệm this?
+Đối tượng hiện tại đang gọi đến hàm non-static
+từ khoá static 
+static attribute
+static method
