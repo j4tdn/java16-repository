@@ -8,6 +8,8 @@ public class Ex01RectApp {
 		Rectangle r1 = new Rectangle();
 		r1.setWidth(10);
 		r1.setHeight(5);
+		
+		// r1.setWidth(10).setHeight(5);
 		System.out.println("r1 --> " + r1); // r1.toString()
 		
 		// 2. Create an instance of Rectangle has width=8, height=4
