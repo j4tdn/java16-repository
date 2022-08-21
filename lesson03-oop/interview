@@ -1,0 +1,22 @@
+ 1. Co nen/duoc phep khai bao ham khoi tao la private khong
+ --> Duoc
+ 	+ Helper/Utility class
+ 	+ Builder pattern
+ 	
+ 2. Tai sao khai bao cac thuoc tinh trong class la private chu khong
+ phai la public
+ 	+ Dam bao quy tac cua OOP, moi class chi chua/quan ly thong tin cua rieng class do
+ 		--> FOP: share data
+ 	+ Han che truy cap tu nhung doi tuong khong can thiet
+ Vi du: Employee <--> Company
+ Nhan vien hang thang se nhan duoc luong tu cong ty
+ + Money cua nhan vien se tang 
+ + Quy luong cua cong ty se giam
+ + Nhung emp va comp khong biet tai khoan cua nguon con lai
+ 
+ 3. Khai niem tu khoa this ?
+ --> Doi tuong hien tai dang goi den ham non-static
+ 
+ 4. Tu khoa static 
+ + static attribute
+ + static method
