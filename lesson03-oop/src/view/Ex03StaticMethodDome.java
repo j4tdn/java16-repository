@@ -9,7 +9,7 @@ public class Ex03StaticMethodDome {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(sum(1, 2)) ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+		System.out.println(sum(1, 2)) ;
 		System.out.println("===============================");
 		Ex03StaticMethodDome o1 = new Ex03StaticMethodDome(5, 8);
 		Ex03StaticMethodDome o2 = new Ex03StaticMethodDome(5, 8);

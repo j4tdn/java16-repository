@@ -1,0 +1,19 @@
+1. Co' nen khai bao ham` khoi tao la private khong ? 
+---> khong nen nha 
+	+ Helper/ Utility class
+	+ Build Pattern
+	
+2. Tai sao khai bao' cac' thuoc tinh' trong class la` private thay vi` public ?
+---> vi` 
+	+ Dam bao quy tac OOP(moi class chi chua' thong tin rieng cua no)/// =>> !FOP : share data
+	+ Han che truy cap tu` nhung doi' tuong khong can` thiet' -- VD : Employee <--> Company
+																		- Money cua cong ty se giam
+																		- Luong nhan vien se tang
+																		- Nhung nhan vien & cong ty khong biet tai khoan cua nguoi` con` lai
+
+3. Khai' niem this ? 
+	+ Doi tuong current dang call function non-static
+	
+4. Tu` khoa' static ?
+	+ static attribute
+	+ static method
