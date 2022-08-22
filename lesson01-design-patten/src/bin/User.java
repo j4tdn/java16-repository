@@ -9,28 +9,37 @@ public class User {
 	private String phone;
 	private String  address;
 	
-	public User(Builder builder) {
+	private User(Builder builder) {
 		this.firstName=builder.firstName;
 		this.lastName=builder.lastName;
 		this.age=builder.age;
 		this.phone=builder.phone;
 		this.address=builder.address;
+	}
+	public static Builder builder() {
+		return new Builder();
+	}
 		//getter
-		private User(Builder builder) 
-			this.firstName=builder.firstName;
-			this.lastName=builder.lastName;
-			this.age=builder.age;
-			this.phone=builder.phone;
-			this.address=builder.address;
-			
-		}
-		public static Builder builder() {
-			return new Builder();
-		}
-	
-	
-	
-	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public String getAddress() {
+		return address;
+	}
 	public String toString() {
 		return "User [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", phone=" + phone
 				+ ", address=" + address + "]";

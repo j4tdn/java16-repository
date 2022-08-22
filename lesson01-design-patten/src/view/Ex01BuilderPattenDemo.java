@@ -19,14 +19,18 @@ import bin.UserDetail;
 
 public class Ex01BuilderPattenDemo {
 	public static void main(String[] args) {
-		User uA = User.Builder()
-		    .withFirstName("Teo");
-		    .build();
-		    
-		UserDetail uC= new UserDetail();
-		    .withAge(22);
-		    .withPhone("123445");
-		    System.out.println(uC);
+               User uA = User.builder()
+                    .withFirstName("teo")
+                    .withLastName("le")
+                    .withphone("123456")
+                    .build();
+               System.out.println(uA);
+               
+               UserDetail uC=new UserDetail()
+            		   .withAge(22)
+            		   .withPhone("12345");
+               System.out.println(uC);
+ 
 	}
 
 }
