@@ -1,17 +1,19 @@
 package view;
 
-import java.util.Scanner;
-
 public class Ex05BinaryNumber {
-public static void main(String[] args) {
-	Scanner ip = new Scanner(System.in);
-	System.out.println("nhap so can chuyen doi:");
-	int number = ip.nextInt();
-	String binary="";
-	while(number>0) {
-		binary=(number%2) + binary;
-		number/=2;
+	public static void main(String[] args) {
+		System.out.println("12--->" + convertDecToString(12));
+		System.out.println("15--->" + convertDecToString(15));
+		System.out.println("20--->" + convertDecToString(20));
 	}
-	System.out.print("so nhan duoc sau khi chuyen="+binary);
-}
+
+	private static String convertDecToString(int decimal) {
+		String binary = "";
+		while (decimal != 0) {
+			binary = (decimal % 2) + binary;
+			decimal /= 2;
+		}
+
+		return binary;
+	}
 }
