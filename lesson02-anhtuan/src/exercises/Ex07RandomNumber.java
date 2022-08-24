@@ -1,28 +1,31 @@
 package exercises;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Ex07RandomNumber {
 	public static void main(String[] args) {
 		
 		Random rd = new Random();
-		int arr[] = new int [6];
-		arr[0]= 20+ rd.nextInt(11);
-		
-		for ( int i = 0; i < 6;i++){
-			
-			if(arr[i]!=arr[i+1]) {
-				arr[i+1]= 20+ rd.nextInt(11);
-			System.out.println(arr[i]);
+		int numbers[] = new int [5];
+		int count = 0;
+		while(count < numbers.length){
+			int rand = 20 +rd.nextInt(11);
+			if(!isExists(numbers,rand)){
+				numbers[count++] = rand;
+				
 			}
-			else {
-				System.out.println("Finish");
-			}
-		
 		}
-		
+		System.out.println(Arrays.toString(numbers));
 		
 	}
-	
+	private static boolean isExists(int[] numbers, int testedNumber) {
+		for(int number: numbers){
+			if(number == testedNumber) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 }
