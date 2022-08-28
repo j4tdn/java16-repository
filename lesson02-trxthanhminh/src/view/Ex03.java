@@ -2,7 +2,7 @@ package view;
 
 import java.util.Scanner;
 
-public class Bai3 {
+public class Ex03 {
 	public static void main(String[] args) {
 		Scanner number = new Scanner(System.in);
 	

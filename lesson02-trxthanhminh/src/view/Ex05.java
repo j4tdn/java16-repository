@@ -2,7 +2,7 @@ package view;
 
 import java.util.Scanner;
 
-public class Bai5 {
+public class Ex05 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Nhập số n hệ cơ số 10 là: ");

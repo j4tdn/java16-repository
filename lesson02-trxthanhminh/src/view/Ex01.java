@@ -9,7 +9,7 @@ package view;
 // project-name: lower
 // Bài 1: Viết chương trình kiểm tra 1 số có phải là lũy thừa của 2 hay không
 
-public class bai1 {
+public class Ex01 {
 	public static void main(String[] args) {
 		int[] numbers = {0, 2, 4, 8, 9, 12, 16, 20, 32, 100, 128};
 		

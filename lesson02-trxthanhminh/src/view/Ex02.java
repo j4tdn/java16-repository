@@ -2,7 +2,7 @@ package view;
 
 import java.util.Random;
 
-public class Bai2 {
+public class Ex02 {
 	public static void main(String[] args) {
 		Random rd = new Random();
 		int nb1 = rd.nextInt(10);
