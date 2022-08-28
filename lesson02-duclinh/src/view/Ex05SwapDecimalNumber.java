@@ -12,7 +12,9 @@ public class Ex05SwapDecimalNumber {
 		} while (!numberAsText.matches("\\d+"));
 		int decimalNumber = Integer.parseInt(numberAsText);
 		long binaryNumber = dec2Bin(decimalNumber);
+		String binaryNumber2 = convertDectoBin(decimalNumber);
 		System.out.println("Số nhị phân là: " + binaryNumber);
+		System.out.println("Số nhị phân là: " + binaryNumber2);
 	}
 
 	public static long dec2Bin(int decimalNumber) {
@@ -24,5 +26,13 @@ public class Ex05SwapDecimalNumber {
 			decimalNumber /= 2;
 		}
 		return binaryNumber;
+	}
+	private static String convertDectoBin(int decimal) {
+		String binary= "";
+		while(decimal != 0) {
+			binary = decimal % 2 + binary;
+			decimal /= 2;		
+		}
+		return binary;
 	}
 }

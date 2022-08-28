@@ -16,7 +16,7 @@ public class Ex07Random5Number {
 		sort(arr);
 		show(arr);
 	}
-
+	
 	private static void input(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = 20 + rd.nextInt(11);
@@ -45,7 +45,6 @@ public class Ex07Random5Number {
 	public static void duplicates(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = 20 + rd.nextInt(11);
-			;
 			for (int j = 0; j < i; j++) {
 				if (arr[i] == arr[j]) {
 					i--;
