@@ -1,0 +1,23 @@
+object 1: customer: name, number, id, address
+object 2: item: id, os, color, price
+
+B1: create a list of customer
+B2: create array of items
+B3: shopping function
+- who is buying?
+-list of items?
+-amount of each item?
+-Date time?
+==> class Order: customer, item detail[], date time 
+=>item detail: item, quantity
+
+i1: ss10+, Android, Black, 620
+i2: SS20U, android, green, 840
+i3: ip4, ios, white, 280
+i4: ip12,ios, black, 880
+i5: wp8,windowphone, blue, 560
+
+order1= c1,{id1(i1,3), id2(i4,1),id3(i2, 1)},10:10:10 08,05,2022
+order2= c2,{id1(i3,2), id2(i5,1)},20:10:12 07,05,202
+order3= c2,{id1(i4,1)},09:28:32 08,05,202
+function export(order)

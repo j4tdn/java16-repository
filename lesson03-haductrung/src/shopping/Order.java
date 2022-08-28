@@ -4,10 +4,10 @@ import java.time.LocalDateTime;
 
 import java.util.Arrays;
 
-public class Order {
-	private Customer customer;
-	private ItemDetail[] itemDetail;
-	private LocalDateTime orderDate;
+public class Order {//khách hàng nào?
+	private Customer customer; 
+	private ItemDetail[] itemDetail;//mảng Itemdetail[] 
+	private LocalDateTime orderDate;//lưu ngày tháng năm
 
 	public Order() {
 	}

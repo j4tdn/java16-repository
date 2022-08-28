@@ -1,7 +1,7 @@
 package shopping;
 
 public class ItemDetail {
-	private Item item;
+	private Item item; //item có kiểu dữ liệu là Item
 	private int quantity;
 	
 	public ItemDetail() {

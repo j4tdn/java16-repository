@@ -1,6 +1,6 @@
 package shopping;
 
-public class Customer {
+public class Customer {      //thuộc tính-->hàm khởi tạo rỗng-->hàm khởi tạo-->getter,setter-->toString
 	private String id;
 	private String name;
 	private String phone;
