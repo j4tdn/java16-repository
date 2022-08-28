@@ -7,5 +7,6 @@ public class ExternalEmployee extends EmpInfo{
 		ExternalEmployee outside = new ExternalEmployee();
 		System.out.println(outside.name);
 		System.out.println(outside.skills);
+	
 	}
 }
