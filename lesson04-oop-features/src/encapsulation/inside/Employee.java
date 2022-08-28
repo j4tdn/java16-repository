@@ -1,4 +1,4 @@
-package encapsulation.inside;
+extendpackage encapsulation.inside;
 
 public class Employee extends EmpInfo{
 	// .java ==> class A ==> A.class
