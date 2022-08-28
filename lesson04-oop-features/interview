@@ -1,0 +1,25 @@
+1. Tinh chat dong goi la gi. Ap dung o dau trong code?
+--> Tinh dong goi duoc the hien qua cac access modifier
++ Private: Class
++ Public: Anywhere
++ Default & Protected: Package
++ Protected: Can be used in defferent package with sub classes
+
+--> Public: Tao ra cac ham utilities su dung o bat ky noi nao
+--> default: clearUI --> Su dung trong package view (code giao dien
+2. Tinh chat da hinh
++ Phuong thuc
+--> Overload: Hai hoac nhieu phuong thuc goi la overloading neu:
+	+Cung 1 class
+	+Trung ten
+	+Khac nhau so luong tham so || kieu du lieu truyen vao cua tham so
+	
+--> Override: Hai hoac nhieu phuong thuc goi la overriding neu:
+	+Thuoc 2 hoac nhieu class co quan he thua ke
+	+Override de dinh nghia lai noi dung trong class con
+	+VD: toString
+	
++ Doi tuong: 1 doi tuong nhung co nhieu the hien
+--> Vi du: Person-->Student, Employee, Child
+--> Muc dich: Tao ra 1 tap cac doi tuong luu chung 1 mang, danh sach 
+			: De dang convert KDL trong pham vi cha con
