@@ -1,0 +1,28 @@
+1. Tính chất đóng gói là gì?
+-->dduocj thể hiện qua access modified
++private: class
++public: anywhere
++default& protected: package
+protected: can be used in different package with sub classes
+
+--> Áp dụng ở đâu trong code?
++public: tạo ra các hàm utilities sử dụng ở bất kỳ nơi nào
++default: cleaUI--> sử dụng trong package view(code giao diện)
+
+2. tính chất đa hình
++Phương thức: 1 phương thức(sum, sub) nhưng có nhiều thể hiện,chức năng
+-->Overload: 2 hoặc nhiều phương thức gọi là over loading
++ cùng 1 class
++ trùng tên
++ khác nhau số lượng tham số|| kiểu dữ liệu truyền vào
+
+
+-->Override:2 hoặc nhiều phương thức gọi là override
++ Thuộc 2 hoặc nhiều class có quan hệ thừa kế
++Override để định nghĩa lại nội dung trong class con
++Ví dụ: toString
+
++Đối tượng: 1 đối tượng nhưng có nhiều thể hiện
+-->ví dụ: Person-->student, employee, child
+--> mục đích: tạo ra 1 tập các đối tượng luwuchung 1 mảng, danh sách
+            : dễ dàng convert KDL trong phạm vi cha con
