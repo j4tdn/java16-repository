@@ -1,0 +1,5 @@
+1. Tinh chat dong goi la gi? Encapsulation?
+--> Ap dung o dau trong code?
++ Private: Class
++ Public: Anywhere
++ Default & Protected
