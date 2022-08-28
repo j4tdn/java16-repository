@@ -1,6 +1,7 @@
 package encapsulation.inside;
 
 public class Employee extends EmpInfo{
+	// extends: thừa kế
 	// .java ==> class A ==> A.class
 	// .java ==> class B ==> B.class
 	public static void main(String[] args) {
