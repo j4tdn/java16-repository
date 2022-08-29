@@ -1,4 +1,9 @@
+=== Tu version JAVA07 tro ve truoc ===
+
+
 tinh chat dong goi
+
+
 - duoc the hien qua cac access modifier
 private : class
 public : anywhere
@@ -23,3 +28,32 @@ vi du : tostring
 --> vi du : Person --> Student, Employee, CHild
 --> Muc dich : Tao ra 1 tap cac doi tuong luu chung 1 mang, danh sach
      : De dang convert KDL trong pham vi cha con
+3. Kế thừa
++ Múc đích: tăng khả năng reuse code
+KDL cha: Class, Abtract Class, Interface
+KDL con: Class, Abstract Class, Interface
+
+Class extends Class, Abstract Class
+Class implement Interface
+
+Abstract Class extend Abstract Class
+Abstract Class implement Interface
+
+Interface extend Interface
+
+?? Phan biet abtracst class va interface
++ Abtract class " chứa hàm trừu tượng và hàm bình thường
+chỉ extends được từ du nhất 1 class, abstract class
+
++ Interface : chỉ chứa hàm trừu tượng
+ Có thể implement từ nhiều interface
+
+=== Tu version JAVA08 tro ve truoc ===
+
++ Interface : chỉ chứa hàm trừu tượng và hàm bình thường
+ Có thể implement từ nhiều interface
+ 
+ 
+ 
++Vi sao tu JAVA08 hỗ trợ non-abstract methods trong interface
++Mục đích và khác gì giữa abstract class và interface
