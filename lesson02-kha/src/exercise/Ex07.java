@@ -1,5 +1,6 @@
 package exercise;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -27,21 +28,18 @@ public class Ex07 {
 		int[] rsArr = new int[5];
 		while(count<=4) {
 			int tmp =  randomRange(start, end);
-			if(!contains(rsArr, tmp)) {
-				rsArr[count] = tmp;
-				count++;
-			}else continue;
+			if(!contains(rsArr, tmp, count)) {
+				rsArr[count++] = tmp;
+			}
 		}
 		
 		System.out.print("Result : ");
-		for (int i : rsArr) {
-			System.out.print(i + " ");
-		}
+		System.out.println(Arrays.toString(rsArr));
 	}
 	
-	private static boolean contains(int[] arr, int number) {
-		for (int i : arr) {
-			if(i == number) return true;
+	private static boolean contains(int[] arr, int number, int valid) {
+		for (int i=0 ; i < valid ; i++) {
+			if(arr[i] == number) return true;
 		}
 		return false;
 	}

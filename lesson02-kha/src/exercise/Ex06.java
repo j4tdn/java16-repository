@@ -32,4 +32,6 @@ public class Ex06 {
 			else continue;
 		}
 	}
+
+
 }

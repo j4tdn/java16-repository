@@ -19,7 +19,7 @@ public class Ex05 {
 		String result = "";
 		while(dexNumber != 0) {
 			result += dexNumber%2;
-			dexNumber = dexNumber/2;
+			dexNumber /= 2;
 		}
 		return bitFormat(revert(result));
 	}
