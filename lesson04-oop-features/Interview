@@ -1,3 +1,5 @@
+
+============Từ JAVA07 trở về trước
 Override: Chỉ override cho phương thức, không override được cho thuộc tính
 
 1. Tính chất đóng gói là gì ?
@@ -29,7 +31,31 @@ Mục đích:
  + Giúp tạo ra 1 tập hợp các kiểu dữ liệu cha, con vào 1 tập hợp dễ dàng
  + Giúp dễ dàng chuyển đổi kiểu dữ liệu cho nhau
  
- 3. Tính thừa kế
+ 3. Tính kế thừa
+ + Mục đích: tăng khả năng reuse code
+ KDL Cha: Class, Interface, Abstract class
+ KDL Con: Class, Interface, Abstract class
+ 
+ Class extends Class, Abstract Class
+ Class Implements Interface
+ 
+ Abstract Class extends Abstract Class
+ Abstract Class Implements Interface
+ 
+ Interface extends Interface
+ 
  + Khi con kế thừa cha, nên override lại (hoặc thông báo lỗi)
  Ví dụ: Square, Rectangle bắt buộc phải override lại phương thức draw, cals từ Shape
  Hàm Draw, cals bên trong Shape vô nghĩa nên mong muốn hàm draw, calS không có thân hàm
+ **** Phân biệt Abstract class và Interface: 
+ + Interface: chỉ có hàm trừu tượng, Abstract có cả hàm trừu tượng, hàm bình thường
+ + Abstract chỉ có thể extends từ 1 class/abstract class, Interface
+ có thể implements từ nhiều interface
+ ===============Từ version JAVA08 trở về trước
+ 
+ + Interface: Chứa hàm trừu tượng và hàm bình thường
+  có thể implement từ nhiều interface
+  
+  + Vì sao JAVA08 hỗ trợ non-abstract methods trong interface
+  + Mục đích và khác gì giữa abstract class và interface
+ 
