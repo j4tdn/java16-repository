@@ -1,0 +1,25 @@
+tinh chat dong goi
+- duoc the hien qua cac access modifier
+private : class
+public : anywhere
+defaul protected : package
+protected : can be used in defferent package with sub classes
+
+tinh chat da hinh
+--overload : hai hoac nhieu phuong thuc goi la overloadding neu
++cung class
++trung ten
++khac nhau so luong tham so
++cung class
++trungten
++khac nhau so luong tham so
+--override :hai hoac nhieu phuoc thuc goi la overriding 
++ Khi han la cha con ( hoac lop con ke thua tu lop cha)
++ thuoc 2 hoac nhieu class co quan he thua` ke'
+vi du : tostring
+
++ Doi tuong : 1 doi tuong nhung co nhieu the hien
+
+--> vi du : Person --> Student, Employee, CHild
+--> Muc dich : Tao ra 1 tap cac doi tuong luu chung 1 mang, danh sach
+     : De dang convert KDL trong pham vi cha con
