@@ -2,8 +2,10 @@ package view;
 
 import bean.User;
 import bean.UserDetail;
+import bean.UserDraft;
 
 public class Ex01BuilderPatternDemo {
+
 	/**
 	 * Đặt vấn đề -->Builder patterm được sử dụng để tạo ra các đối tượng phức tạp
 	 * -->phức tạp: Nhiều thuộc tính 
@@ -20,10 +22,11 @@ public class Ex01BuilderPatternDemo {
 		System.out.println(uA);
 		User uB = User.builder().withLastName("Le").withFirstName("Hoang").withAge(25).builder();
 		System.out.println(uB);
-
+		
 		UserDetail uC = new UserDetail()
 						.withAge(22)
 						.withPhone("123456789");
 		System.out.println(uC);
 	}
+
 }

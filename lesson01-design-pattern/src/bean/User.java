@@ -1,28 +1,28 @@
 package bean;
 
 public class User {
+	// why need to declare set private
+	// mandatory: firstName,lastName,the rest is optional
 	private String firstName;
 	private String lastName;
 	private int age;
 	private String phone;
 	private String address;
-	
-	public User() {
-		
-	}
-	
+
 	private User(Builder builder) {
-		this.firstName = builder.firstName;
-		this.lastName = builder.lastName;
-		this.age = builder.age;
-		this.phone = builder.phone;
-		this.address = builder.address;
+		this.firstName=builder.firstName;
+		this.lastName=builder.lastName;
+		this.age=builder.age;
+		this.phone=builder.phone;
+		this.address=builder.address;
 	}
 	
 	public static Builder builder() {
 		return new Builder();
 	}
 	
+	// getter
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -49,51 +49,48 @@ public class User {
 				+ ", address=" + address + "]";
 	}
 
-	// nested class -> class trong class 
+	// nested class
 	public static class Builder {
 		private String firstName;
 		private String lastName;
 		private int age;
 		private String phone;
 		private String address;
-		
+
 		private Builder() {
-			
+
 		}
-		
-		// setter 
+
+		// setter
 		public Builder withFirstName(String firstName) {
 			this.firstName = firstName;
 			return this;
 		}
-		
-		public Builder withlastName(String lastName) {
+
+		public Builder withLastName(String lastName) {
 			this.lastName = lastName;
 			return this;
 		}
-		
+
 		public Builder withAge(int age) {
 			this.age = age;
 			return this;
 		}
-		
+
 		public Builder withPhone(String phone) {
 			this.phone = phone;
 			return this;
 		}
-		
+
 		public Builder withAddress(String address) {
 			this.address = address;
 			return this;
 		}
-		
-		public User build() {
+
+		public User builder() {
+			// this = current BUilder
 			return new User(this);
 		}
 	}
 
-	
-	
-	
-	
 }
