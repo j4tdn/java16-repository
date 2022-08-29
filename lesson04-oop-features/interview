@@ -1,0 +1,16 @@
+1.Tính chất đóng gói là gì?
+-->Áp dụng ở đâu trong code ?
+***> tính đóng gói đc thể hiện qua phạm vi truy cập-access modifier
++private in class
++public
++default :in Package
++protected :in package and trong class con đc kế thừa có thể sử dụng
+---- public --- để làm các utilyti sử dụng ở khắp chương trình
+====default----clearUI--- sử dụng 
+2.Tính chất đa hình 
++Phương thức :1 phương thức (sub,sum...) nhưng có nhiều thể hiện
+--Overload : Hai hoặc nhiều phương thức được goi là overloading nếu 
++cùng 1 class
++trùng tên 
++khác nhau số lượng tham số hoặc kiểu dữ liệu truyền vào của tham số
+
