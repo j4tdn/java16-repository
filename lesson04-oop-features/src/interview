@@ -2,7 +2,7 @@
 --> Tín chất đóng gói được thể hiện qua các access modifier
 + Private: Class
 + Public: Anywhere
-+ Default & Pritected: Packge
++ Default & Protected: Package
 + Protected: Can be used in different package with sub class
 
 --> Public: Tạo ra các hàm utilities sử dụng bất kỳ nơi nào
