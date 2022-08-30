@@ -13,5 +13,7 @@ public class Rectangle implements Shape{
 	@Override
 	public void cals() {
 		System.out.println("Rectangle --> cals ...");
+		
 	}
+	
 }

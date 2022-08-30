@@ -5,7 +5,7 @@ public class ShapeDemo {
 		Shape rect = new Rectangle();
 		rect.draw();
 		rect.cals();
-
+		
 		//Shape: interface
 		// Anonymous class: lớp ẩn danh
 		Shape shape = new Shape() {
@@ -13,7 +13,7 @@ public class ShapeDemo {
 			public void draw() {
 				System.out.println("X --> draw ...");
 			}
-
+			
 			@Override
 			public void cals() {
 				System.out.println("X --> cal S ...");
@@ -21,7 +21,7 @@ public class ShapeDemo {
 		};
 		shape.draw();
 		shape.cals();
-
+		
 		Shape shapex = new X();
 		shapex.draw();
 		shapex.cals();

@@ -1,4 +1,4 @@
- package encapsulation.outside;
+package encapsulation.outside;
 
 import encapsulation.inside.EmpInfo;
 
