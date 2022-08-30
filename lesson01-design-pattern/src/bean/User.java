@@ -16,7 +16,7 @@ public class User {
 		this.address = builder.address;
 	}
 
-	public static Builder builder() {
+	public static builder() {
 		return new Builder();
 	}
 	// getter
