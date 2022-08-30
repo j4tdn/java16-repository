@@ -1,3 +1,6 @@
+===== từ Java07 trở về trước
+
+
 1. Tính chất đóng gói là gì?
 -->dduocj thể hiện qua access modified
 +private: class
@@ -26,3 +29,29 @@ protected: can be used in different package with sub classes
 -->ví dụ: Person-->student, employee, child
 --> mục đích: tạo ra 1 tập các đối tượng luwuchung 1 mảng, danh sách
             : dễ dàng convert KDL trong phạm vi cha con
+
+3.kế thừa
++Mục đích: Tăng khả năng rếu code
+KDL cha: Class, Abstract class, Interface
+KDL CON: Class, Abstract class, Interface
+Class extends Class, Abstract Class
+Class implement Intergace
+
+Abstract Class Extends Abstract Class
+Abstract Class Extends Interface
+
+
+??????VD: khác nhau giữa abstract và interface
+abstract class chứa đc hàm bình thường vs trừu tượng, chỉ extends đc từ duy nhất 1 class, abstract class
+
+interface chỉ có hàm trừu tượng và có thể implement từ nhiều interface
+
+
+============Từ JAva 8 trở về trước=============
+
++Interface: chứa hàm trừu tượng và hàm bình thường
+có thể implement từ nhiều interface
+
++Vì sao từ java 8 java hỗ trợ non abstract methods trong interface
++Mục đích và khác gì giữa Adstract class và interface
+

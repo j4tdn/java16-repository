@@ -38,7 +38,7 @@ public class ShapeDemo {
     		  shapeItem.calS();
     		  
     		  if(shapeItem != null && shapeItem.getClass()==Square.class) {
-    			  Square runtimeShape =(square)ShapeItem;
+    			  Square runtimeShape =(Square)shapeItem;
     			  runtimeShape.clear();
     		  }
     	  }
