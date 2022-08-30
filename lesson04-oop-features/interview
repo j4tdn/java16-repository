@@ -1,3 +1,6 @@
+==== Từ version JAVA07 trở về trước ====
+
+
 1. Tính chất đóng gói là gì. Áp dụng ở đâu trong code ?
 --> Tính được đóng gọi được thể hiện qua các access modifier
 + Private: Class
@@ -24,3 +27,31 @@
 --> Ví dụ: Person --> Student, Employee, Child
 --> Mục đích: Tạo ra 1 tập các đối tượng lưu chung 1 mảng, danh sách
             : Dễ dàng convert KDL trong phạm vi cha con  
+            
+
+3. Kế thừa
++ Mục đích: Tăng khả năng reuse code
+KDL Cha : Class ,Abstract class ,Interface
+KDL Con : Class ,Abstract class ,Interface
+
+Class extends Class, Abstract Class
+Class implement Interface
+
+Abstract Class extends Abstract Class
+Abstract Class implement Interface
+
+Interface extends Interface
+
+??? Phân biệt interface v/s abstract class :
+ 	+ Abstract Class : Chứa hàm trừu tượng và hàm bình thường, chỉ extend từ duy nhất 1 class, abstract class
+ 	+ Interface 	 : Chỉ chứa hàm trừu tượng, có thể implement nhiều interface
+
+==== Từ version JAVA08 trở về trước ====
+
+??? Phân biệt interface v/s abstract class :
+ 	+ Abstract Class : Chứa hàm trừu tượng và hàm bình thường, chỉ extend từ duy nhất 1 class, abstract class
+ 	+ Interface 	 : *Chứa hàm trừu tượng và hàm bình thường, có thể implement nhiều interface
+
++ Vì sao từ JAVA8 java hỗ trợ non-abstract methods trong Interface
++ Mục đích và khác gì giữa abstract class và interface
+
