@@ -18,9 +18,16 @@ public class Ex01BuilderPatternDemo {
 	 */
 
 	public static void main(String[] args) {
-		User uA = User.builder().withFirstName("Teo").withLastName("Le").withPhone("03333333333").builder();
+		User uA = User.builder()
+				.withFirstName("Teo")
+				.withLastName("Le")
+				.withPhone("03333333333").builder();
 		System.out.println(uA);
-		User uB = User.builder().withLastName("Le").withFirstName("Hoang").withAge(25).builder();
+		User uB = User.builder()
+				.withLastName("Le")
+				.withFirstName("Hoang")
+				.withAge(25)
+				.builder();
 		System.out.println(uB);
 		
 		UserDetail uC = new UserDetail()

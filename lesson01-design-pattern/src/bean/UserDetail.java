@@ -1,14 +1,12 @@
 package bean;
 
-
 public class UserDetail {
-	 private String firstName;
-	 private String lastName;
-	 private int age;
-	 private String phone;
-	 private String address;
-
-	 
+	// Ở lớp UserDetail -> là 1 lớp đầy đủ ~ User
+	private String firstName;
+	private String lastName;
+	private int age;
+	private String phone;
+	private String address;
 
 	public String getFirstName() {
 		return firstName;
@@ -60,6 +58,5 @@ public class UserDetail {
 		return "UserDetail [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", phone=" + phone
 				+ ", address=" + address + "]";
 	}
-	 
-	 
+
 }

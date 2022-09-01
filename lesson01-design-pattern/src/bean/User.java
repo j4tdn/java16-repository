@@ -10,17 +10,17 @@ public class User {
 	private String address;
 
 	private User(Builder builder) {
-		this.firstName=builder.firstName;
-		this.lastName=builder.lastName;
-		this.age=builder.age;
-		this.phone=builder.phone;
-		this.address=builder.address;
+		this.firstName = builder.firstName;
+		this.lastName = builder.lastName;
+		this.age = builder.age;
+		this.phone = builder.phone;
+		this.address = builder.address;
 	}
-	
+
 	public static Builder builder() {
 		return new Builder();
 	}
-	
+
 	// getter
 
 	public String getFirstName() {
@@ -88,9 +88,7 @@ public class User {
 		}
 
 		public User builder() {
-			// this = current BUilder
 			return new User(this);
 		}
 	}
-
 }
