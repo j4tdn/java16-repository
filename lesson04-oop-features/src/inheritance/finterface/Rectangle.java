@@ -15,5 +15,4 @@ public class Rectangle implements Shape{
 		System.out.println("Rectangle --> cals ...");
 		
 	}
-	
 }
