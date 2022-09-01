@@ -1,0 +1,46 @@
+
+===từ JAVA07 trở về trước=====
+1.tính chất đóng gói là gì. áp dụng ở đâu trong code ?
+-->được thể hiện qua accsess modifier
++private : class
++public : Anywhere
++default & Protected : Package
++Protected :có thể sử dụng khi có kế thừa
+--> Public tạo ra các hàm utilities sử dụng ở bất kì nơi nào
+-->default :clear UI --> sử dụng trong package view(code giao diện)
+tính chất đa hình
++phương thức
+-->Overload: Hai hoặc nhiều phương thức gọi là overloading nếu
++cùng 1 class
++trùng tên
++khác nhau số lượng tham số|| kiểu dữ liệu truyền vào của tham số
+-->Override: hai hoặc nhiều phương thức gọi là overriding nếu
++ khi những phương thức thuộc 2 hoặc nhiều class có quan hệ thừa kế
++Override để định nghĩa lại nội dung trong class con
++ví dụ: toString
+2.đa hình trong đối tượng
+là 1 đối tượng nhưng có nhiều thể hiện
+--> ví dụ: person --> student, employee, child
+---> tạo ra 1 tập hợp các đối tượng lưu chung 1 danh sách, mảng
+-->Dễ dàng convert KDL trong phạm vi cha con
+3.Kế thừa
++Mục đích tăng khả năng reuse code
+KDL cha: Class, abstract class, interface
+KDL con: Class, abstract class, interface
+Class extends Class, Abstract Class
+Class implements Interface
+
+Abstract Class extends Abstract Class
+Abstract Class implements Interface
+
+Interface extends Interface
+
+Phân biệt abstract class: hàm trừu tượng và hàm bình thường
+chỉ extend được từ 1 class duy nhất
++Interface class: chứa hàm trừ tượng và hàm bth
+có thể implement từ nhiều interface
+
+====từ version JAVA08======
+
+vì sao từ JAVA08 Java hỗ trợ non-abstract methods trong interface
++ mục đích và khác gì giữa abstract class và interface
