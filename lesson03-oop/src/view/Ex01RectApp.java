@@ -20,7 +20,5 @@ public class Ex01RectApp {
 		// static attributes thuộc phạm vi của class
 		// => class sẽ gọi được những thuộc tính static
 		// => đối tượng gọi được nhưng sẽ hiện warning
-		
-		
 	}
 }
