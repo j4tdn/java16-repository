@@ -1,0 +1,3 @@
+1.Lớp con (Square , rectangle) bắt buộc phải override phương thức draw , cals từ Shape 
+2.Hàm draw ,calS trong Shape vô nghĩa nên mong muốn 
+hàm draw,cals không có thân hàm .

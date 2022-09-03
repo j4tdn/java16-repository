@@ -3,13 +3,14 @@ package homework;
 public class Factorial {
 	public static void main(String[] args) {
 
+	}
+
 	private static int factorial(int n) {
 		int result = n;
 		while (n > 1) {
 			result *= --n;
 		}
 		return result;
-
 	}
 
 //using variables .. instead of array in some case
@@ -21,5 +22,4 @@ public class Factorial {
 		return sum;
 	}
 
-}
 }
