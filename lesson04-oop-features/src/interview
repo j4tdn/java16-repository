@@ -23,3 +23,28 @@ Doi tuong: 1 doi tuong nhung co nhieu the hien
 nd : Person --> student , employee , child
 muc dich: tao ra 1 tap cac doi tuong luu chung 1 mang , danh sach
 		De dang convert KDL trong pham vi cha con
+		
+		
+3. Ke thua
+Muc dich: Tang kha nang reuse code
+KDL Cha: Class, abtract Class , interface
+KDL Con
+
+Class extends class , Abstract Class
+Class implements interface
+Abstrac class extends Abstract class
+				implements interface
+				
+Interface extends Interface
+??? phan biet abstract class va interface
+ab ckass chua ham truu tuong va ham binh thuong
+chi entends duoc tu duy nhat 1 class , abstract class
+inter : chi chua ham truu tuong
+co the implement tu nhieu interface
+
+==== Tu version JAVA08 tro ve truoc =====
+interface: chu ham truu tuong va ham binh thuong
+co the implement tu nhieu interface
+
+vi sao tu JAVA08 java ho tro non-abstract methods trong interface 
+Muc dich va khac gi giua abstract class va interface

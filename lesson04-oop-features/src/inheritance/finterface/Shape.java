@@ -1,12 +1,13 @@
 package inheritance.finterface;
 
-public class Shape {
-	void draw() {
-		System.out.println("shape -->draw..." );
-	}
+public interface Shape {
+	// method: declaration: khai bao
+	//		: implementation: thuc thi
 	
-	void calS() {
-		System.out.println("shapre -->cal S...");
-	}
+	//JAVA07 tro ve truoc: 1 ham trong interface la khong co than ham
+	// ham truu tuong: abstract method
+	void draw();
+	
+	void calS();
 	
 }

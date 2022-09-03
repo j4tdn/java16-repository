@@ -6,7 +6,7 @@ public class Shape {
 	}
 	
 	void calS() {
-		System.out.println("shapre -->cal S...");
+		System.out.println("shape -->cal S...");
 	}
 	
 }
