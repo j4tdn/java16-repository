@@ -16,7 +16,7 @@ public class ArrageNumberHelper {
         return randomArray;
     }
 
-    public static void arrangeNumberBy(int[] numbers, int firstNum, int secondNum){
+    public static int[] arrangeNumberBy(int[] numbers, int firstNum, int secondNum){
         int[] result = new int[numbers.length];
 
         int countingNumberDivisibleFirstNum = 0;
@@ -50,6 +50,23 @@ public class ArrageNumberHelper {
             }
         }
 
+        int indexBoth = indexFirstNum;
+        System.out.println(indexBoth);
+        for(int i = 0; i < numbers.length; i++){
+            if((numbers[i] % firstNum) == 0 && (numbers[i] % secondNum) == 0){
+                result[indexBoth] = numbers[i];
+                indexBoth++;
+            }
+        }
+
+        int indexNotBoth = indexBoth;
+        for(int i = 0; i < numbers.length; i++){
+            if((numbers[i] % firstNum) != 0 && (numbers[i] % secondNum) != 0){
+                result[indexNotBoth] = numbers[i];
+                indexNotBoth++;
+            }
+        }
+        return result;
         
     }
 }
