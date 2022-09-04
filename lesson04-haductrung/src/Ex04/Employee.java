@@ -45,7 +45,7 @@ public class Employee {
 	public String toString() {
 		return "director [Fullname=" + Fullname + ", birthday=" + birthday + ", HSL=" + HSL + ", HSCV=" + Department + "]";
 	}
-	public double salary() {
+	public int salary() {
 		return this.HSL*1250000;
 	}
 	

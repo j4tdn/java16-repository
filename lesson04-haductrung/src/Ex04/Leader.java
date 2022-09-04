@@ -45,7 +45,7 @@ public class Leader {
 	public String toString() {
 		return "director [Fullname=" + Fullname + ", birthday=" + birthday + ", HSL=" + HSL + ", HSCV=" + NumberOfEmployee + "]";
 	}
-	public double salary() {
+	public int salary() {
 		return this.HSL*2200000;
 	}
 	
