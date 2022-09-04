@@ -32,19 +32,19 @@ public class student {
 		this.name = name;
 	}
 
-	public float getScoreTH() {
+	public float getTH() {
 		return TH;
 	}
 
-	public void setScoreTH(float scoreTH) {
+	public void setTH(float TH) {
 		this.TH = TH;
 	}
 
-	public float getScoreLT() {
+	public float getLT() {
 		return LT;
 	}
 
-	public void setScoreLT(float scoreLT) {
+	public void setLT(float LT) {
 		this.LT = LT;
 	}
 
