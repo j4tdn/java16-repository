@@ -6,8 +6,8 @@ public class main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		student sv1 = new student(3007, "Na", 9, 9);
-		student sv2 = new student(0000, "Nam", 7, 8);
+		student sv1 = new student(1234, "Na", 10, 10);
+		student sv2 = new student(4567, "Nam", 9, 8);
 		student sv3 = new student();
 		
 		System.out.println("Enter information student 3: ");
@@ -16,9 +16,9 @@ public class main {
 		System.out.print("Enter name: ");
 		sv3.setName(sc.nextLine());
 		System.out.print("Enter score TH: ");
-		sv3.setScoreTH(sc.nextFloat());
+		sv3.setTH(sc.nextFloat());
 		System.out.print("Enter score LT: ");
-		sv3.setScoreLT(sc.nextFloat());
+		sv3.setLT(sc.nextFloat());
 		
 		System.out.println(sv1);
 		System.out.println(sv2);
