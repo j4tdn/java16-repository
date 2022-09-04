@@ -1,0 +1,8 @@
+package example;
+
+public abstract class Student implements Person{
+	@Override
+	public void gender() {
+		System.out.println("Student");
+	}
+}

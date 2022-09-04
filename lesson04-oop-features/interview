@@ -1,3 +1,6 @@
+==== Từ version JAVA 07 trở về trước 
+
+
 1. Tính chất đóng goi là gì
 --> Áp dụng ở đâu trong code ?
 --> Tính dc đóng gói được thể hiện qua các access modifier
@@ -24,4 +27,31 @@
  + Đối tượng: 1 đối tượng nhưng có nhiều thể hiện
  --> Ví dụ: Person --> Student, Employee, Child
  --> Mục đích: Tạo ra 1 tập các đối tượng lưu chung 1 mảng 
- 			 : Dễ dàng convert KDL trong phạm vi cha con 		
+ 			 : Dễ dàng convert KDL trong phạm vi cha con 	
+ 			 
+ 3. Kế thừa:
+ + Mục đích tăng khả năng reuse code
+ KDL Cha: class, abstract class, interface
+ KDL Con: class, abstract class, interface
+ 
+ Class extends Class, Abstract class
+ Class implement Inteface
+ 
+ Abstract Class extends Abstract Class
+ Abstract Class implements Interface
+ 
+ Interface extends Interface
+ 
+ ??? Phân biệt abstract class và interface
+ + Abstract class: chứa hàm trừu tượng và hàm bình thường
+ 	chỉ extends dc từ duy nhất 1 class, abstract class ---> single extends
+ 	
+ + Interface: chỉ chứa hàm trừu tượng
+ 	có thể implements từ nhiều interface ---> multiple implements
+ 	
+ ==== Từ version JAVA08 trở về trước ====
+ + Interface : chứa hàm trừu tượng và hàm bình thường 
+ 	có thể implements từ nhiều interface
+ 	
+ + Vì sao từ JAVA08 Java hỗ trợ non-abstract methods trong interface
+ + Mục đích và khác gì giữa abstract class và interface	
