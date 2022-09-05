@@ -1,0 +1,52 @@
+==== TỪ JAVA07 TRỞ VỀ TRƯỚC ====
+
+1. tính chất đóng gói là gì
+--> áp dụng ở đâu trong code
+  + Được thể hiện qua các access modifier 
+  	- Private: class
+  	- Public: Anywhere
+  	- Default & protected: package 
+  	- protected: can be use in different package with sub classes
+  	
+  	--> public: tạo ra các hàm utilities sử dụng ở bất cứ nơi nào
+  	--> default: clearUI --> sử dụng trong package view(code giao diện)
+  	
+ 2. tính chất đa hình
+  		+ phương thức: 1 phương thức(sum, sub) nhưng có nhiều thể hiện, chức năng
+  		--> OverLoading: hai hoặc nhiều phương thức gọi là overloading nếu:
+  			- cùng 1 class
+  			- trùng tên
+  			- khác nhau số lượng tham số hoặc kiểu dự liệu truyền vào của tham số 
+  		--> Overiding: hai hoặc nhiều phương thức gọi là overriding nếu:
+  			- thuộc hai hoặc nhiều class có quan hệ thừa kế
+  			-  định nghĩa lại nội dung trong class con
+  			- ví dụ: hàm toString();
+  			
+  		+ Đối tượng: 1 đối tượng nhưng có nhiều thể hiện
+  		--> ví dụ: Person --> Student, Employee, Child
+  		--> Mục Đích: tạo ra 1 tập hợp các đối tượng lưu chung 1 mảng, danh sách
+  					: dễ dàng convert kiểu dữ liệu trong phạm vi cha con
+ 
+ 3. kế thừa
+ 	+ Mục đích: Tăng khả năng reuse code
+ 		KDL cha: Class, Abstract Class, Interface
+ 		KDL con: Class, Abstract Class, Interface
+ 	+ Class extends Class, Abstract Class
+ 	+ Class Implements Interface
+ 	
+ 	+ Abstract Class extends Abstract Class
+ 	+ Abstract Class implements Interface	
+ 		
+ 	+ Interface extends Interface	
+ 	
+ ??? Phân biệt abstract class và Interface
+ ==> + Abstract class chứa được hàm trừu tượng và hàm bình thường
+ 		chỉ extend được từ duy nhất 1 class, abstract class --> single extend
+ 		
+ 	 + Interface chỉ chứa hàm trừu tượng 
+ 		có thể implement từ nhiều Interface --> multiple implements
+ 		
+ ==== TỪ VERSION JAVA08 TRỞ VỀ TRƯỚC ====		
+ 
+ 
+ 
