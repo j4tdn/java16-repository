@@ -12,25 +12,26 @@ public class Dad implements GrandFather, GrandMother {
 	@Override
 	public void swimming() {
 		
-		
 	}
 
 	@Override
 	public void smoking() {
 		
-		
 	}
+	
 	@Override
 	public void adn() {
-
 		GrandFather.super.adn();
 		GrandMother.super.adn();
 	}
+
 	public static void main(String[] args) {
-		Dad dad= new Dad();
+		Dad dad=new Dad();
 		dad.adn();
-		
+
 	}
+
+
 	
 
 }
