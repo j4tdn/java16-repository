@@ -4,6 +4,7 @@ public class UniqueNumber {
 	public static void main(String[] args) {
 		int[] arr = {3, 15, 21, 0, 15, 17, 21};
 		showArrayElements(arr);
+		
 	}
 	public static void showArrayElements(int []arr) {
 		int i, j;
