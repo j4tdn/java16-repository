@@ -49,7 +49,7 @@ chỉ extends được duy nhất từ 1 class, abstract class - single extend
 
 +InterFace: chỉ chứa hàm trừu tượng
 có thể implement từ nhiều interface -mutiple implements
-
+	
 ==== Từ version JAVA08 trở về trước ====
 +Interface: Chưa hàm trừu tượng và hàm bt 
 có thể implement từ nhiều interface
