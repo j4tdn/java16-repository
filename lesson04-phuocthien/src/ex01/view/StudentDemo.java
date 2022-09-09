@@ -1,8 +1,8 @@
-package view;
+package ex01.view;
 
 import java.util.Scanner;
 
-import bean.Student;
+import ex01.bean.Student;
 
 public class StudentDemo {
 

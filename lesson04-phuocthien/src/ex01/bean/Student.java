@@ -1,4 +1,4 @@
-package bean;
+package ex01.bean;
 
 public class Student {
 	private int id;
