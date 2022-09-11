@@ -19,8 +19,10 @@
 --> Cho vd
 
 3. Ham khoi tao la gi
++ Tạo ra một ô nhớ ở HEAP với các thuộc tính mang giá trị mặc định
 
 4. Tu khoa this la gi
++ đại diện cho địa chỉ, ô nhớ hiện tại đang gọi, đang khởi tạo
 
 5. Khac nhau giua kieu du lieu doi tuong
 + co san cua JAVA nhu String, Integer, Float va doi tuong duoc tao ra nhu Item, Employee, Student

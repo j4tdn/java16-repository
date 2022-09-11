@@ -19,3 +19,7 @@ Thuat toan
 --> Nhan du lieu dau vao --> xu ly va cho ra ket qua
 + Neu phuong thuc khong can du lieu tra ve thi cho kieu tra ve la void
 + Neu phuong thuc can du lieu tra ve thi cho kieu du lieu phu hom voi yeu cau
+
+
+Tu khoa this la gi
++ đại diện cho địa chỉ, ô nhớ hiện tại đang gọi, đang khởi tạo
