@@ -16,25 +16,7 @@ public class Demoooo {
 	    
 		}
 	}
-	private static int UCLN(int a , int b) {
-		if(a==b) return a;
-	    if(a>b) 
-	        UCLN(a-b ,b);
-	    else
-	        UCLN(a, b-a);
-		return b;
-	}
-	private static int BCNN(int a, int b) {
-		return (a*b/UCLN(a,b));
-	}
-	private static int BCNN_Array(int a[] int n) {
-		
-	        int temp = BCNN(a[0], a[1] );
-	        for(int i=2;i<n;i++){
-	            temp = BCNN(temp, a[i]);    
-	        }
-	        return temp;
-	    }
-	}
+}
+	
 
 

@@ -1,9 +1,9 @@
 package ex05;
 
 public class Father {
-	private String id;
-	private int price;
-	private String publishingCompany;
+	protected String id;
+	protected int price;
+	protected String publishingCompany;
 	
 	public Father() {
 		

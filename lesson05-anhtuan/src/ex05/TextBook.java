@@ -22,8 +22,10 @@ public class TextBook extends Father {
 
 	@Override
 	public String toString() {
-		return "TextBook [status=" + status + "]";
+		return "TextBook [status=" + status + ", id=" + id +", price=" + price + ", pushlishingCompany="  + publishingCompany +"]";
 	}
+
+	
 	
 
 }
