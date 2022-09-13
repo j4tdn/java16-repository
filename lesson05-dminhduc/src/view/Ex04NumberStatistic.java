@@ -8,36 +8,27 @@ public class Ex04NumberStatistic {
 	public static void main(String[] args) {
 		int[] numbers = { 3, 15, 21, 0, 15, 17, 21 };
 		
-		NbrStas[] nbrStases = groupBy(numbers);
-		
-
-		for(NbrStas nbrStas : nbrStases )
-		{
-			if(nbrStas.getCount() == 1)
-			{
-				System.out.println(nbrStas);
-			}
-		}
+	
+		int[] res = statistic(numbers);
+		Arrays.sort(res);
+		System.out.println(Arrays.toString(res));
+	
 	}
 
 
-	private static NbrStas[] groupBy(int[] numbers)
+	private static int[] statistic(int[] numbers)
 	{
-		NbrStas[] nbrStases = new NbrStas[numbers.length];
+		NbrStas[] nbrStases = groupBy(numbers);
 		int k = 0;
-		for(int number : numbers)
+		int[] valid = new int[numbers.length];
+		for(NbrStas nbrStas : nbrStases)
 		{
-			int indexOf = indexOf(nbrStases, number, k);
-			if(indexOf == -1)
+			if(nbrStas.getCount() == 1)
 			{
-				nbrStases[k ++] = new NbrStas(number, 1);
-			}
-			else
-			{
-				nbrStases[indexOf].plusCount();
+				valid[k++] = nbrStas.getNumber();
 			}
 		}
-		return Arrays.copyOfRange(nbrStases, 0, k);//copy [0,k) 
+		return Arrays.copyOfRange(valid, 0, k);//copy [0,k) 
 	}
 	// i >= 0 --> number existed in nbrStases
 	// i = -1 --> not exist
