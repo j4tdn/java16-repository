@@ -15,7 +15,7 @@ public class Ex03LCM {
 
 	private static int getLeastCommonMultile(int[] elements) {
 		if (elements.length == 0) {
-			throw new IllegalAccessException("At least 1 elements");
+			throw new IllegalArgumentException("At least 1 elements");
 		}
 		if (elements.length == 1) {
 			return elements[0];
@@ -24,7 +24,7 @@ public class Ex03LCM {
 		for (int i = 2; i < elements.length; i++) {
 			result = lcm(result, elements[i]);
 		}
-
+		return result;
 	}
 
 	private static int lcm(int a, int b) {

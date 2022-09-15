@@ -9,62 +9,70 @@ import bean.ReferenceBook;
 public class Ex05BookApp {
 	public static void main(String[] args) {
 		Book[] books = initial();
-		Book[] booksByPublisher = findBooks(books, "Nhi đồng");
+		Book[] booksByPublisher = findbooks(books, "Nhi Đồng");
 		printf(booksByPublisher);
-		System.out.println("============");
-		Book[] booksByLtPrice = findBooks(books, 50);
+
+		System.out.println("=========");
+		Book[] booksByLtPrice = findbooks(books, 50);
 		printf(booksByLtPrice);
-		System.out.println("============");
-		Book[] booksFromUntil = findBooks(books, 100, 200);
+		
+		System.out.println("=========");
+		Book[] booksFromUntil = findbooks(books, 100,200);
 		printf(booksFromUntil);
-		System.out.println("============");
-		double totalOfMonet = bill(booksByLtPrice);
-
+		
+		System.out.println("=========");
+		double totalOfMoney = bill(booksByLtPrice);
+		System.out.println(totalOfMoney);
 	}
-
-	private static double bill(Book... books) {
+	// bill
+	private static double bill(Book ...books) {
 		double totalOfMoney = 0;
-		for (Book book : books) {
+		for (Book book:books) {
 			double price = book.getPrice();
 			if (book.getId().startsWith("SGK")) {
-				ClassicalBook cBook = (ClassicalBook) book;
-				if (!cBook.isStatus()) {
-					price *= 0.7;
-				} else {
-					ReferenceBook rBook = (ReferenceBook) book;
-					price *= (1 + rBook.getTax() / 100);
+				ClassicalBook cBook = (ClassicalBook)book;
+				if (cBook.isStatus()) {
+					price*=0.7;
 				}
+			} else {
+				ReferenceBook rBook = (ReferenceBook)book;
+				price*=(1+rBook.getTax()/100);
 			}
+			totalOfMoney += price;
 		}
+		
 		return totalOfMoney;
 	}
-
-	// Tìm sách NXB đơn giá từ 100 đến 200
-	private static Book[] findBooks(Book[] books, double priceFrom, double priceUntil) {
+	
+	// Tìm toàn bộ sách có đơn giá nhỏ hơn 200 và lớn hơn 100
+	// book instanceof ClassicalBook
+	// book.getClass()==ClassicalBook.class
+	
+	private static Book[] findbooks(Book[] books, double priceFrom, double priceUntil) {
 		Book[] result = new Book[books.length];
 		int k = 0;
 		for (Book book : books) {
-			if (book instanceof ClassicalBook && book.getPrice() >= priceFrom && book.getPrice() <= priceUntil) {
+			if (book.getId().startsWith("SGK") && book.getPrice() >= priceFrom && book.getPrice() <= priceUntil) {
 				result[k++] = book;
 			}
 		}
+
 		return Arrays.copyOfRange(result, 0, k);
 	}
-
-	// Tìm sách NXB đơn giá nhỏ hơn 50
-	private static Book[] findBooks(Book[] books, double ltPrice) {
+// Tìm toàn bộ sách có giá nhỏ hơn 50
+	private static Book[] findbooks(Book[] books, double ltPice) {
 		Book[] result = new Book[books.length];
 		int k = 0;
 		for (Book book : books) {
-			if (book.getPrice() < ltPrice) {
+			if (book.getPrice() < ltPice) {
 				result[k++] = book;
 			}
 		}
+
 		return Arrays.copyOfRange(result, 0, k);
 	}
-
-//Tìm sách NXB Nhi Đồng
-	private static Book[] findBooks(Book[] books, String publisher) {
+// Tìm toàn bộ sách thuộc NXB Nhi Đồng
+	private static Book[] findbooks(Book[] books, String publisher) {
 		Book[] result = new Book[books.length];
 		int k = 0;
 		for (Book book : books) {
@@ -72,14 +80,18 @@ public class Ex05BookApp {
 				result[k++] = book;
 			}
 		}
+
 		return Arrays.copyOfRange(result, 0, k);
 	}
 
 	private static Book[] initial() {
-		return new Book[] { new ClassicalBook("SGK1", 12d, "Nhi đồng", false),
-				new ClassicalBook("SGK2", 68d, "Lạc việt", true), new ClassicalBook("SGK3", 55d, "Lạc hồng", false),
-				new ClassicalBook("SGK4", 46d, "Nhi đồng", true), new ReferenceBook("STK1", 44d, "Nhi đồng", 5),
-				new ReferenceBook("STK2", 61d, "Sao mai", 7), new ReferenceBook("STK3", 33d, "Lạc việt", 8) };
+		return new Book[] { new ClassicalBook("SGK1", 44d, "Nhi Đồng", true),
+				new ClassicalBook("SGK2", 65d, "Sao Mai", false), new ClassicalBook("SGK3", 12d, "Lạc Việt", true),
+				new ClassicalBook("SGK4", 108d, "Nhi Đồng", true), new ReferenceBook("STK1", 66, "Nhi Đồng", 4),
+				new ReferenceBook("STK2", 22, "Lạc Việt", 2), new ReferenceBook("STK3", 33, "Sao Mai", 5),
+				new ReferenceBook("STK4", 45, "Nhi Đồng", 3)
+
+		};
 	}
 
 	private static void printf(Book[] books) {
