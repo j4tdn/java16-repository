@@ -9,7 +9,7 @@ Kieu du lieu
 --> Gia tri duoc luu tru o vung nho: STACK
 
 +Kieu doi tuong: Object type
---> JAVA: String, Integer, Float
+--> JAVA: String, Integer, Float --> cần thông tin lúc lưu trữ lúc không thì dùng hàm đối tượng
 --> Custom: Item, Employee, Student ... --> new
 --> Luu tru du lieu voi nhieu thong tin ben trong
 --> Gia tri duoc luu tru o vung nho: HEAP
