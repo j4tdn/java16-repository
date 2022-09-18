@@ -9,7 +9,6 @@ public class Ex07DecimalTest {
 		// 12.5 -> 125/10
 		  double d = 0.05d;
 			System.out.println(division(d));
-			
 			System.out.println(glc(int denominator, int numerator));
 	}
 	public static String division(double d){
