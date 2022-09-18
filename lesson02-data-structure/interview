@@ -25,11 +25,21 @@
 + đại diện cho địa chỉ, ô nhớ hiện tại đang gọi, đang khởi tạo
 
 5. Khac nhau giua kieu du lieu doi tuong
-+ co san cua JAVA nhu String, Integer, Float va doi tuong duoc tao ra nhu Item, Employee, Student
++ co san cua JAVA nhu String, Integer, Float : lưu trữ 1 thông tin
++ doi tuong duoc tao ra nhu Item, Employee, Student : lưu trữ nhiều thông tin
 
 6. Giai thich tu khoa final, final co the thay doi gia tri k
++ Khi biến có từ khoá final thì trở thành hằng số
++ Lưu trữ những giá trị k đổi
+
++ Biến thì mình không thể gán lại những giá trị thông qua toán tử bằng (cannot reassign value at stack) --> KHÔNG THỂ THAY ĐỔI GIÁ TRỊ Ở STACK
++ Chỉ final ở STACK, ở HEAP vẫn cập nhật thông tin bình thường (xem b12)
+
 
 7. Phan biet pham vi truy cap public va private
 	. public: duoc phep su dung trong moi class
 	
 	. privte: duoc phep su dung trong class hien tai dang chua chinh no
+	
+8. Toán tử & hoặc toán tử |
++ Không ai dùng trong thực tế
