@@ -19,7 +19,7 @@ public class Ex02DivideThrows {
 	// Nếu chỗ gọi không bắt lỗi thfi vẫn bị crash app
 	// throws runtime exception --> chỗ gọi không bắt buộc xủ lý
 	// throws compile exception --> chỗ gọi bắt buộc xử lý
-	public static int divide(int a, int b) /* throws Exception */ {
+	public static int divide(int a, int b) throws ArithmeticException {
 		return a / b;
 	}
 }
