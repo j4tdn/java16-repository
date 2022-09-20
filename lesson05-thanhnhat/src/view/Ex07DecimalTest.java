@@ -7,9 +7,9 @@ public class Ex07DecimalTest {
 		// 0.2 -> 2/10
 		// 1.0 -> 10/10
 		// 12.5 -> 125/10
-		  double d = 0.05d;
+		  double d = 12.5d;
 			System.out.println(division(d));
-			System.out.println(glc(int denominator, int numerator));
+		
 	}
 	public static String division(double d){
         String result="";
@@ -19,24 +19,18 @@ public class Ex07DecimalTest {
         int denominator = (int)Math.pow(10, fraction[1].length());
         int numerator = Integer.parseInt(fraction[0] + "" + fraction[1]);
        
-        result = numerator + "/" + denominator;
+        result = numerator/gcd(numerator, denominator) + "/" + denominator/gcd(numerator, denominator);
         
         return result;
     }
-	private static String glc(int denominator, int numerator) {
-	 while (denominator != numerator) {
-			if (denominator > numerator) {
-				denominator = denominator - numerator;
+	private static int gcd(int a, int b) {
+		while (a != b) {
+			if (a > b) {
+				a = a - b;
 			} else {
-				numerator = numerator - denominator;
+				b = b - a;
 			}
-		} 
-     for (int i = 2; i <= 9; i++) {
-    	if (denominator % i == 0 && numerator  % i == 0) {
-    		denominator = denominator/i;
-    		numerator = numerator/i;
-    	}
-     }
-     return numerator + "/" + denominator;
+		}
+		return a;
 	}
 }
