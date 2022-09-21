@@ -55,3 +55,8 @@ Interface extends Interface
 + Vì sao từ JAVA8 java hỗ trợ non-abstract methods trong Interface
 + Mục đích và khác gì giữa abstract class và interface
 
+3. super và this
+	this: đối tượng hiện tại
+		- Gọi các thuộc tính, hàm ở class hiện tại và class/interface cha
+	super: đối tượng cha
+		- Gọi các thuộc tính, hàm ở class cha
