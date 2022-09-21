@@ -40,8 +40,14 @@ public class Ex07FileWriterFinally {
 			e.printStackTrace();
 		} finally {
 			// save and close
+			// block code luôn được thực thi
+			// dù try block có bị axception hay không
 			close(fw);
 		}	
+		
+		// try catch
+		// try finally
+		// try catch finally
 		
 		return true;
 	}
