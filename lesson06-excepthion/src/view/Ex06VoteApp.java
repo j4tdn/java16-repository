@@ -7,6 +7,7 @@ import exception.InvalidAgeException;
 public class Ex06VoteApp {
 	public static void main(String[] args) {
 		int age = 15 + new Random().nextInt(6);
+		System.out.println(age);
 
 		boolean isValid;
 		try {
