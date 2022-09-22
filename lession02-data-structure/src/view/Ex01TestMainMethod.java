@@ -1,6 +1,8 @@
 package view;
 // debugging
+
 public class Ex01TestMainMethod {
+	public static int largeNumber=0;
 	// data structure: attributes, variables
 	// algorithm: function, method
 	public static void main(String[] args) {

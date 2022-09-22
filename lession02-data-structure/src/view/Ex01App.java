@@ -2,7 +2,7 @@ package view;
 
 import java.time.LocalDate;
 
-import datastructure.Ex01Declcare;
+
 
 public class Ex01App {
 	
@@ -10,6 +10,6 @@ public class Ex01App {
 	System.out.println("lession02 demo");
     System.out.println("publish date: " + LocalDate.now());
     
-    System.out.println("LargeNumber: " + Ex01Declcare.largeNumber);
+    System.out.println("LargeNumber: " + Ex01TestMainMethod.largeNumber);
    }
 }
