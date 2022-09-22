@@ -7,7 +7,7 @@ public class Ex05MultipleException {
 
 	public static void main(String[] args) {
 		System.out.println("x1= " + findX());
-		System.out.println("x2= " +findXLevel2());
+		System.out.println("x2= " + findXLevel2());
 	}
 
 	private static float findXLevel2() {
@@ -33,7 +33,7 @@ public class Ex05MultipleException {
 	}
 
 	private static float findX() {
-		//Scanner ip = new Scanner(System.in);
+		// Scanner ip = new Scanner(System.in);
 
 		try {
 			System.out.println("Enter a: ");
