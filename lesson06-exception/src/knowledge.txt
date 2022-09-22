@@ -1,0 +1,10 @@
+1. tiền xử lý -> validate
+2. bắt lỗi -> try catch
+3. ném lỗi -> throw throws
+-> throws only compile exception
+-> throw by condition
+
+phân biệt checked (runtime) & unchecked (compile) exception
+
+try/catch/finally
+custom exception
