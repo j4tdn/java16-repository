@@ -6,10 +6,10 @@
    + throws only compile exceptions
    + throw by condition
 
-Phân biệt 
+Phân biệt
 	+ runtime(unchecked) exception 
     + compile(checked) exception
-    
-    
+
+  
 try/catch/finally
 custom exception
