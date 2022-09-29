@@ -1,7 +1,7 @@
  1.Có nên/được phép khai báo hàm khởi tạo là private không?
  --> Được
  	+ Helper/Utility class
- 	+ Bulder pattern
+ 	+ Builder pattern
  	
  2. Tại sao khai báo các thuộc tính trong class là private chứ không phải là public?
  + Đảm bảo quy tắc của OOP, mỗi class chỉ chứa/quản lý thông tin của riêng nó
