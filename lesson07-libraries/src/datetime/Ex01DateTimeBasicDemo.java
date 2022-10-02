@@ -92,29 +92,27 @@ public class Ex01DateTimeBasicDemo {
 		Calendar c1 = Calendar.getInstance(new Locale("vi", "VN"));
 		System.out.println("VN FDOW: " + c1.getFirstDayOfWeek());
 		System.out.println("=============");
-		
+
 		// 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
-		
-		Calendar c7 = Calendar.getInstance();
-		c7.set(Calendar.DAY_OF_WEEK, c7.getFirstDayOfWeek());
-		while (cNow.get(Calendar.DAY_OF_WEEK) > c7.getFirstDayOfWeek()) {
-			c7.set(Calendar.DAY_OF_WEEK, -1);
-		}
-		System.out.println("First day of current week: " + c7.getTime());
+
+		/*
+		 * Tự làm Calendar c7 = Calendar.getInstance();
+		 * 
+		 * while (cNow.get(Calendar.DAY_OF_WEEK) > c7.getFirstDayOfWeek()) {
+		 * c7.set(Calendar.DAY_OF_WEEK, -1); }
+		 * System.out.println("First day of current week: " + c7.getTime());
+		 */
+		Locale.setDefault(Locale.FRANCE);
+		System.out.println("default locale: " + Locale.getDefault());
+		Calendar today = Calendar.getInstance();
+		today.set(2022, Calendar.OCTOBER, 19);
+		int tfdow = today.getFirstDayOfWeek();
+		int tdow = today.get(Calendar.DAY_OF_WEEK);
+
+		today.add(Calendar.DAY_OF_MONTH, tfdow - tdow);
+		System.out.println("today: " + today);
+
 		System.out.println("=============");
-		
-		// 8. In ra danh sách các ngày trong tuần hiện tại -> ngày đầu tuần , vòng lặp
-		// for -> +7
-		Calendar c8 = Calendar.getInstance();
-		c8.set(Calendar.DAY_OF_WEEK, c7.getFirstDayOfWeek());
-		while (cNow.get(Calendar.DAY_OF_WEEK) > c8.getFirstDayOfWeek()) {
-			c8.set(Calendar.DAY_OF_WEEK, -1);
-		}
-		for (int i = 1; i <= 7; i++) {
-			System.out.println("Days in week: " + c8.getTime());
-			c8.set(Calendar.DAY_OF_WEEK, Calendar.DAY_OF_WEEK +1);
-		}
-		
-		System.out.println("Finish");
+
 	}
 }
