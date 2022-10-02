@@ -8,7 +8,6 @@ import java.util.Locale;
 public class Ex01DateTimeBasicDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//  Ex01: Lấy thông tin thời gian với timezone
 		//	now: Mon Sep 26 19:53:16 ICT 2022
 		//	ICT: Indochina time = UTC+7 ==>TimeZone
@@ -93,7 +92,21 @@ public class Ex01DateTimeBasicDemo {
 		
 		
     //		+ 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
-        //==> In ra danh sách các ngày trong tuần hiện tại   
+		
+		Calendar today = Calendar.getInstance();
+		System.out.println("default locale: " + Locale.getDefault());
+		today.set(2022, Calendar.OCTOBER, 19);
+		System.out.println("today fdow: " + today.getFirstDayOfWeek());
+		int tfdow = today.getFirstDayOfWeek();
+		int tdow = today.get(Calendar.DAY_OF_WEEK);
+		
+		today.add(Calendar.DAY_OF_MONTH, tfdow-tdow);
+		System.out.println("today: " + today);
+        //	+  In ra danh sách các ngày trong tuần hiện tại   
+		for (int i=0;i<=6;i++) {
+			System.out.println(tfdow + " ");
+			//today.add(Calendar.DAY_OF_MONTH, 1);
+		}
 //=>>> Epoch time
 		
 	}
