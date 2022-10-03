@@ -110,15 +110,28 @@ public class Ex01DateTimeBasicDemo {
 //		+ 6. Ngày đầu tiên trong tuần là thứ mấy với locale ( phụ thuộc )
 		Calendar c1 = Calendar.getInstance(new Locale("vi", "VN"));
 		System.out.println("US FDOW: " + c1.getFirstDayOfWeek());
-		
+		System.out.println("=========================================================");
 		
 		
 //============================================================================
 //	    + 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
+	   
+		System.out.println("Default locale: " + Locale.getDefault());
+		Locale.setDefault(Locale.FRANCE);
+		Calendar today = Calendar.getInstance();
+		today.set(2022, Calendar.OCTOBER, 19);
 		
+		
+		//Cách 1
+		int tfdow = today.getFirstDayOfWeek();
+		int tdow = today.get(Calendar.DAY_OF_WEEK);
+		today.add(Calendar.DAY_OF_MONTH, tfdow - tdow);
+		System.out.println("today: " + today);
 		
 //	    + 8. In ra danh sách các ngày trong tuần hiện tại   
-	//=>>> Epoch time
+		System.out.println("=========== Curent week days ============");
+		//Ex02
+	//=>>> Epoch time : liên kết giữa date và calendar
 		
 		
 		
