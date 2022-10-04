@@ -11,7 +11,7 @@ Ex01: Lấy thông tin thời gian với timezone
 =>>> Epoch time
 
 Ex02: Chuyển đổi kiểu dữ liệu với SimpleDateFormat
-        + String
+    + String
 	+ Date : Lưu trữ
 	+ Calendar : Lưu trữ + hàm xử lí
 	
