@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class Ex01Numbers {
 	public static void main(String[] args) {
-		String da = "aa2b03456b0478";
+		String da = "1aa2b03456b0478";
 		String[] da1 = da.split("[a-z]+");
 		int[] da2 = new int[da1.length]; 
 		int count = 0;
