@@ -10,6 +10,7 @@ public class Ex05LocalDateTime {
 		// LocalDtae + LocalTime = LocalDateTime
 		LocalDateTime now = LocalDateTime.now();
 		System.out.println("now: " + now);
+		System.out.println("Day of week: " + now.getDayOfWeek());
 		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		System.out.println("formatted: " + df.format(now));
 
