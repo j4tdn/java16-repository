@@ -90,9 +90,18 @@ public class Ex01DateTimeBasicDemoMain {
 		Calendar c1 = Calendar.getInstance(new Locale("vi", "VN"));
 		// Locale (language, country)
 		System.out.println("VN FDOW: " + c1.getFirstDayOfWeek());
+		System.out.println("================================================");
 		// + 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
-		// + 8. In ra danh sách các ngày trong tuần 
-		// ==> In ra danh sách các ngày trong tuần hiện tại
+		Locale.setDefault(Locale.FRANCE);
+		System.out.println("default locale: " + Locale.getDefault());
+		Calendar today = Calendar.getInstance();
+		today.set(2022, Calendar.OCTOBER, 5);
+		int tfdow = today.getFirstDayOfWeek();
+		int tdow = today.get(Calendar.DAY_OF_WEEK);
+		
+		today.add(Calendar.DAY_OF_MONTH, tfdow-tdow);
+		System.out.println("Today: " + today);
+		
 		// =>>> Epoch time
 
 	}
