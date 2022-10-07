@@ -13,4 +13,5 @@ public class Ex04LocalTimeDuration {
 		System.out.println("duration: " + dr);
 		System.out.println("toString:\n" + dr.toHoursPart() + " hours\n" + dr.toMinutesPart() + " minutes\n" + dr.toSecondsPart() + " seconds\n");
 	}
+	//3
 }

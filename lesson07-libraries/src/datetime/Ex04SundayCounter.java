@@ -70,4 +70,5 @@ public class Ex04SundayCounter {
 		DateFormat df = new SimpleDateFormat(pattern);
 		System.out.println(df.format(c.getTime()));
 	}
+	//3
 }

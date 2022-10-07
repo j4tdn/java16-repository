@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class Ex01LocalDate {
 	private static final String PATTERN = "dd/MM/yyyy E";
 	public static void main(String[] args) {
-        LocalDate now = LocalDate.now();  //lấy thời gian hiện tại
+        LocalDate now = LocalDate.now();  //láº¥y thá»�i gian hiá»‡n táº¡i
         
         System.out.println("time now: " + now);
         
@@ -15,4 +15,5 @@ public class Ex01LocalDate {
        System.out.println("formatted date: " + text);
 		
 	}
+	//1
 }

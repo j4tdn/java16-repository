@@ -10,28 +10,28 @@ import javax.print.attribute.standard.Fidelity;
 
 public class Ex01DateTimeBasicDemo {
 	public static void main(String[] args) {
-//	Lấy thông tin thời gian với timezone
-//	+ 1. Ngày, Tháng, Năm hiện tại
+//	Láº¥y thÃ´ng tin thá»�i gian vá»›i timezone
+//	+ 1. NgÃ y, ThÃ¡ng, NÄƒm hiá»‡n táº¡i
 		
 		Date now = new Date();
 		System.out.println("date now: "  + now);
 		
-	   // ICT: Indochina time - giờ âm dương = UTC+7 ==>TimeZone
+	   // ICT: Indochina time - giá»� Ã¢m dÆ°Æ¡ng = UTC+7 ==>TimeZone
 		
 		//@Deprecated = OutDate ==> Should not use
 		// Epoch = Unix Time = January 1, 1970, 00:00:00 GMT
 		
 		Date notNow = new Date(72000000);
 		
-		//7200 là milliseconds since epoch time
+		//7200 lÃ  milliseconds since epoch time
 		
 		System.out.println("not Now : " + notNow);
 		
-		// Date ==> sử dụng chủ yếu để lưu trữ
-		// phương thức xử lí --> Deprecated
+		// Date ==> sá»­ dá»¥ng chá»§ yáº¿u Ä‘á»ƒ lÆ°u trá»¯
+		// phÆ°Æ¡ng thá»©c xá»­ lÃ­ --> Deprecated
 		
 		//singleton design pattern
-		// idea: một class chỉ cho phép tạo ra duy nhất một đối tượng
+		// idea: má»™t class chá»‰ cho phÃ©p táº¡o ra duy nháº¥t má»™t Ä‘á»‘i tÆ°á»£ng
 		
 		Calendar cNow = Calendar.getInstance();
 		
@@ -51,7 +51,7 @@ public class Ex01DateTimeBasicDemo {
 		// Set specify fields
 		
 		//cNotNow.setTimeInMillis(cNotNow.getTimeInMillis());
-		// Nếu không setTime (--> computeFields()) --> toString sẽ in ra thông tin lỗi
+		// Náº¿u khÃ´ng setTime (--> computeFields()) --> toString sáº½ in ra thÃ´ng tin lá»—i
 		
 		System.out.println("cNotNOw: " + cNotNow);
 		
@@ -65,7 +65,7 @@ public class Ex01DateTimeBasicDemo {
 		
 			
 //============================================================================		
-//		+ 2. Giờ 12-24, Phút, Giây
+//		+ 2. Giá»� 12-24, PhÃºt, GiÃ¢y
 		String hms = "" + cNotNow.get(Calendar.HOUR_OF_DAY) + ":" 
                         + cNotNow.get(Calendar.MINUTE) +":"
                         + cNotNow.get(Calendar.SECOND);
@@ -73,14 +73,14 @@ public class Ex01DateTimeBasicDemo {
 		System.out.println("=========================================================");
 			
 //=============================================================================		
-//		+ 3. Thứ ngày, tuần trong tháng, năm
-//        3.1 --> In ra thứ ngày hiện tại
-//		  3.2 --> In ra tuần thứ mấy trong tháng/năm hiện tại
+//		+ 3. Thá»© ngÃ y, tuáº§n trong thÃ¡ng, nÄƒm
+//        3.1 --> In ra thá»© ngÃ y hiá»‡n táº¡i
+//		  3.2 --> In ra tuáº§n thá»© máº¥y trong thÃ¡ng/nÄƒm hiá»‡n táº¡i
 		
 		int dow = cNow.get(Calendar.DAY_OF_WEEK);
 		
 		// TODO: Enumeration
-		String[] weekdays = {"Chủ nhật", "Thứ hai", " Thứ ba", " Thứ năm", "Thứ sáu","Thứ bảy"};
+		String[] weekdays = {"Chá»§ nháº­t", "Thá»© hai", " Thá»© ba", " Thá»© nÄƒm", "Thá»© sÃ¡u","Thá»© báº£y"};
 		System.out.println("dow: " + weekdays[dow-1]);
 		System.out.println("weekOfMonth: " + cNotNow.get(Calendar.WEEK_OF_MONTH));
 		System.out.println("weekOfYear: " + cNotNow.get(Calendar.WEEK_OF_YEAR));
@@ -88,33 +88,33 @@ public class Ex01DateTimeBasicDemo {
 		System.out.println("=========================================================");
 
 //============================================================================
-//	    + 4. Đếm số ngày tháng, năm hiện tại >> Calendar
+//	    + 4. Ä�áº¿m sá»‘ ngÃ y thÃ¡ng, nÄƒm hiá»‡n táº¡i >> Calendar
 		int cMonth = cNow.get(Calendar.MONTH) + 1;
 		
-		//getActualMaximum(field) --> lấy giá trị lấn nhất của field thông qua dữ liệu trong c
+		//getActualMaximum(field) --> láº¥y giÃ¡ trá»‹ láº¥n nháº¥t cá»§a field thÃ´ng qua dá»¯ liá»‡u trong c
 		int daysInMonth = cNow.getActualMaximum(Calendar.DAY_OF_MONTH);
 		System.out.println("Month " + cMonth + " has " + daysInMonth + " days");
 		System.out.println("=========================================================");
 //============================================================================
-//		+ 5. Kiểm tra năm hiện tại có phải năm nhuận không
+//		+ 5. Kiá»ƒm tra nÄƒm hiá»‡n táº¡i cÃ³ pháº£i nÄƒm nhuáº­n khÃ´ng
 		
-		//Trái đất: 365 ngày 6 giờ --> Tây
-		//2023: Dương lịch -> ko phải năm nhuận
-		//      Âm lịch -> năm nhuận
+		//TrÃ¡i Ä‘áº¥t: 365 ngÃ y 6 giá»� --> TÃ¢y
+		//2023: DÆ°Æ¡ng lá»‹ch -> ko pháº£i nÄƒm nhuáº­n
+		//      Ã‚m lá»‹ch -> nÄƒm nhuáº­n
 		
 		GregorianCalendar gc = new GregorianCalendar();
 		System.out.println("isLeapYear: " + gc.isLeapYear(2020));
 		System.out.println("=========================================================");
 		
 //============================================================================
-//		+ 6. Ngày đầu tiên trong tuần là thứ mấy với locale ( phụ thuộc )
+//		+ 6. NgÃ y Ä‘áº§u tiÃªn trong tuáº§n lÃ  thá»© máº¥y vá»›i locale ( phá»¥ thuá»™c )
 		Calendar c1 = Calendar.getInstance(new Locale("vi", "VN"));
 		System.out.println("US FDOW: " + c1.getFirstDayOfWeek());
 		System.out.println("=========================================================");
 		
 		
 //============================================================================
-//	    + 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
+//	    + 7. NgÃ y Ä‘áº§u tiÃªn trong tuáº§n hiá»‡n táº¡i lÃ  ngÃ y máº¥y
 	   
 		System.out.println("Default locale: " + Locale.getDefault());
 		Locale.setDefault(Locale.FRANCE);
@@ -122,19 +122,19 @@ public class Ex01DateTimeBasicDemo {
 		today.set(2022, Calendar.OCTOBER, 19);
 		
 		
-		//Cách 1
+		//CÃ¡ch 1
 		int tfdow = today.getFirstDayOfWeek();
 		int tdow = today.get(Calendar.DAY_OF_WEEK);
 		today.add(Calendar.DAY_OF_MONTH, tfdow - tdow);
 		System.out.println("today: " + today);
 		
-//	    + 8. In ra danh sách các ngày trong tuần hiện tại   
+//	    + 8. In ra danh sÃ¡ch cÃ¡c ngÃ y trong tuáº§n hiá»‡n táº¡i   
 		System.out.println("=========== Curent week days ============");
 		//Ex02
-	//=>>> Epoch time : liên kết giữa date và calendar
+	//=>>> Epoch time : liÃªn káº¿t giá»¯a date vÃ  calendar
 		
 		
-		
+		//1
 		
 	}
 }

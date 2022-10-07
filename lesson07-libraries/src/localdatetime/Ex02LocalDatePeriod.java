@@ -18,4 +18,5 @@ public class Ex02LocalDatePeriod {
 		+ period.getMonths() + " month\n" + period.getDays() + " days\n");
 		
 	}
+	//2
 }

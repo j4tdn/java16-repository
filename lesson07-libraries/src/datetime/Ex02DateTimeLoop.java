@@ -6,7 +6,7 @@ import java.util.Locale;
 public class Ex02DateTimeLoop {
 
 	public static void main(String[] args) {
-		// In ra các ngày trong tuần hiện tại
+		// In ra cÃ¡c ngÃ y trong tuáº§n hiá»‡n táº¡i
 		// Today: 19.10.2022
 		Locale.setDefault(new Locale("vi", "VN"));
 		Calendar now = gettime(2022, Calendar.OCTOBER, 31);
@@ -15,7 +15,7 @@ public class Ex02DateTimeLoop {
 		printTime(now);
 		printTime(getStartDayOfWeek(now));
 		
-		System.out.println("========================Cách 1=================================");
+		System.out.println("========================CÃ¡ch 1=================================");
 		Calendar running = gettime(startDayOfWeek);
 		
 		
@@ -24,7 +24,7 @@ public class Ex02DateTimeLoop {
 			printTime(running);
 			running.add(Calendar.DAY_OF_MONTH, 1);
 		}
-		System.out.println("========================Cách 2=================================");
+		System.out.println("========================CÃ¡ch 2=================================");
 		System.out.print("Start: ");printTime(startDayOfWeek);
 		
 		System.out.print("End: ");printTime(endDayOfWeek);
@@ -58,7 +58,7 @@ public class Ex02DateTimeLoop {
 	private static Calendar getStartDayOfWeek(Calendar c)
 	{
 		Calendar result = Calendar.getInstance();
-		result.setTimeInMillis(c.getTimeInMillis());//copy thời gian của c đến result
+		result.setTimeInMillis(c.getTimeInMillis());//copy thá»�i gian cá»§a c Ä‘áº¿n result
 		
 		result.add(Calendar.DAY_OF_MONTH, result.getFirstDayOfWeek() - result.get(Calendar.DAY_OF_WEEK));
 		return result;
@@ -71,5 +71,6 @@ public class Ex02DateTimeLoop {
 		
 		
 	}
+	//2
 	
 }
