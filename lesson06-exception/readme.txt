@@ -1,12 +1,12 @@
-1. Tiền xử lý --> Validate
-2. Bắt lỗi --> try catch
-3. Ném lỗi --> throw/throws
+1. Tiá»�n xá»­ lÃ½ --> Validate
+2. Báº¯t lá»—i --> try catch
+3. NÃ©m lá»—i --> throw/throws
 	+ throws only compile exception
 	+ throw by condition
 
-Phân biệt 
+PhÃ¢n biá»‡t 
 	+ runtime(unchecked) exception
 	+ compile(checked) exception
 	
-try/catch/finally
+try/catch/finally 
 custom exception
