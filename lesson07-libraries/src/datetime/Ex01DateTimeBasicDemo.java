@@ -109,9 +109,22 @@ public class Ex01DateTimeBasicDemo {
 		System.out.println("US FDOW: " + c1.getFirstDayOfWeek());
 		
 		// "10/10/1990"
-		
+		System.out.println("=======================");
 		// + 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
+		Locale.setDefault(Locale.FRANCE);
+		System.out.println("default locale: " + Locale.getDefault());
+		Calendar today = Calendar.getInstance();
+		today.set(2022, Calendar.OCTOBER, 19);
+		int tfdow = today.getFirstDayOfWeek();
+		int tdow = today.get(Calendar.DAY_OF_WEEK);
+		
+		today.add(Calendar.DAY_OF_MONTH, tfdow-tdow);
+		System.out.println("today: " + today);
+		
 		// + 8. In ra danh sách các ngày trong tuần hiện tại
+		System.out.println("========== Current week days ==========");
+		
+		
 		// =>>> Epoch time
 		
 	}
