@@ -1,10 +1,8 @@
 package datetime;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-public class Ex04SundayCountry {
+public class Ex04SundayCounter {
 	private static final String PATTERN = "dd/MM/yyyy E";
 
 	public static void main(String[] args) {

@@ -1,13 +1,9 @@
 package datetime;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
-import javax.swing.text.SimpleAttributeSet;
-
 public class Ex03DateFormat {
 	public static void main(String[] args) {
 		// Calendar, Date, String
