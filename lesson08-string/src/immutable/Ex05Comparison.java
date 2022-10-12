@@ -13,6 +13,8 @@ public class Ex05Comparison {
 		// zero: s1 = s2
 		// positive: s1 > s2
 		System.out.println("Compare to: "+ s1.compareTo(s2));
+		// final variable --> final stack
+		// final class - final at heap -> immutable type
 	}
 
 }
