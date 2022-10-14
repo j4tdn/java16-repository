@@ -3,7 +3,7 @@ package view;
 import java.time.Year;
 import java.util.Scanner;
 
-public class ExDateOfBirthValidate {
+public class Ex01DateOfBirthValidate {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		// Validation

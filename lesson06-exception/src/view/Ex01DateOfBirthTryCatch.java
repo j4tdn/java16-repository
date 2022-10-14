@@ -3,7 +3,7 @@ package view;
 import java.time.Year;
 import java.util.Scanner;
 
-public class ExDateOfBirthTryCatch {
+public class Ex01DateOfBirthTryCatch {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		// Validation
@@ -13,21 +13,24 @@ public class ExDateOfBirthTryCatch {
 		// cách 2 : Sử dụng khối try catch để bắt ngoại lệ --> Để chương trình tiếp tục
 		// thực thi
 		// khi ngoại tệ xảy ra.
-		// khi khối tty catch bị nhiều exception -->sử dụng excreption cha để cover
+		// khi khối try catch bị nhiều exception -->sử dụng excreption cha để cover
+
+		// Validation
+		// int yob = Integer.parseInt(ip.nextLine());
 		int yob = 0;
 		do {
 			try {
-				System.out.println("Year of birth:");
+				System.out.println("Enter year of birth");
 				yob = Integer.parseInt(ip.nextLine());
 				break;
 			} catch (NumberFormatException e) {
-				System.out.println("Invalid input !!");
+				System.out.println("Invalid input!!!");
 				e.printStackTrace();
 			}
 		} while (true);
 
 		int curYear = Year.now().getValue();
-		System.out.println("He is" + (curYear - yob + 1) + "year old");
+		System.out.println("He is " + (curYear - yob + 1) + " years old");
 		ip.close();
 	}
 }
