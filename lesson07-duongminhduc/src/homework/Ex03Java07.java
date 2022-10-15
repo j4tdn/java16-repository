@@ -2,6 +2,8 @@ package homework;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Period;
+import java.time.Year;
 import java.util.Calendar;
 import java.util.Scanner;
 import java.util.TimeZone;
@@ -14,7 +16,8 @@ public class Ex03Java07 {
 	
 	public static void main(String[] args) {
 	System.out.println("\n");
-		line1();
+	//
+		//line1();
 		
 		line2();
 		
@@ -22,12 +25,11 @@ public class Ex03Java07 {
 		
 		line4();
 		
-		line5();
+		line5();	
 		
+		line6();
 		
-		
-		
-		
+		line7();
 	}
 	public static void line1()
 	{
@@ -56,7 +58,7 @@ public class Ex03Java07 {
 		datetime.getFirstDayOfWeek();
 		datetime.add(Calendar.DAY_OF_YEAR, 6);
 		
-		System.out.println("Firt Last Of Week: " + datetime.DAY_OF_YEAR);
+		System.out.println("Last Day Of Week: " + datetime.get(Calendar.DAY_OF_YEAR));
 		
 	}
 	public static void line5()
@@ -69,5 +71,33 @@ public class Ex03Java07 {
 		Calendar c = Calendar.getInstance();
 		c.add(Calendar.DAY_OF_YEAR, 20);
 		System.out.println("Next 20 days: " + df3.format(c.getTime()));
+	}
+	public static void line7()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter day: ");
+		int day = sc.nextInt();
+		System.out.println("Enter month: ");
+		int month = sc.nextInt();
+		System.out.println("Enter year: ");
+		int year = sc.nextInt();
+		
+		Calendar DateOfBirth = Calendar.getInstance();
+		DateOfBirth.set(year, month, day);
+		Calendar now = Calendar.getInstance();
+		
+		int bdoy = DateOfBirth.get(Calendar.DAY_OF_YEAR);
+		now.add(Calendar.MONTH, 1);
+		int ndoy = now.get(Calendar.DAY_OF_YEAR);
+		System.out.println("n: " + ndoy);
+		System.out.println("b: " + bdoy);
+		if(ndoy < bdoy)
+		{
+			ndoy += 365;
+			DateOfBirth.add(Calendar.YEAR, 1 );
+		}
+		int numyear = now.get(Calendar.YEAR) - DateOfBirth.get(Calendar.YEAR);
+		System.out.println("You lived: " + ((ndoy - bdoy) + numyear*365 ) + " days" );
+		
 	}
 }
