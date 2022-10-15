@@ -77,9 +77,22 @@ public class Ex01DateTimeBasicDemo {
 		Calendar c1 = Calendar.getInstance(new Locale("vi","VN"));
 		System.out.println("US FDOW: "+ c1.getFirstDayOfWeek());
     //+ 7. Ngày đầu tiên trong tuần hiện tại là ngày mấy
-    // ==> In ra danh sách các ngày trong tuần hiện tại   
+		
+		System.out.println("default locale: "+ Locale.getDefault());
+		Locale.setDefault(Locale.FRANCE);
+		Calendar today = Calendar.getInstance ();
+	    today.set ( 2022 , Calendar.OCTOBER , 5 ) ;
+	    int tfdow = today.getFirstDayOfWeek();
+	    int tdow = today.get(Calendar.DAY_OF_WEEK);
+	    
+	    today.add(Calendar.DAY_OF_MONTH, tfdow-tdow);
+	    System.out.println("today fdow :" + today ) ;
+
+	//+8 . In ra danh sách các ngày trong tuần hiện tại 
+	    
+	    System.out.println("========Current week days========");
+	    
     //=>>> Epoch time
-		 
 	}
 
 }
