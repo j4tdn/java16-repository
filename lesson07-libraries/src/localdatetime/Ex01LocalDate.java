@@ -1,14 +1,14 @@
 package localdatetime;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Ex01LocalDate {
-	private static final String PATTERN = "dd/MM/yyyy E";
+	private static final String PATTERN = "dd/MM/yyy HH:mm:ss";
 
 	public static void main(String[] args) {
 		// day, month, year -> LocalDate
-		LocalDate now = LocalDate.now();
+		LocalDateTime now = LocalDateTime.now();
 		System.out.println("now: " + now);
 
 		DateTimeFormatter df = DateTimeFormatter.ofPattern(PATTERN);
