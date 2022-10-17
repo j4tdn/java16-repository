@@ -1,38 +1,28 @@
 package de02;
 
+import java.util.Scanner;
+
 public class Ex04 {
 	public static void main(String[] args) {
 
-		int arr[] = {8, 5 ,9, 20};
-		 int temp = arr[0];
-		 int a,b;
-	        for (int i = 0 ; i < arr.length - 1; i++) {
-	            for (int j = i + 1; j < arr.length; j++) {
-	            	a = arr[i];
-	            	b = arr[j];
-					if (UC(a) > UC(b)) {
-	                    temp = arr[j];
-	                    arr[j] = arr[i];
-	                    arr[i] = temp;
-	                }
-	            }
-	        }
-	        for(int i = 0;i<arr.length;i++)
-	        {
-	        	System.out.println(arr[i] + " ");
-	        }
+		String s =  "xyz";
+		
+		
 	}
-	private static int UC(int n)
+	public static void permutation(String s)
 	{
-		int dem= 0;
-		for(int i = 1;i <= n;i++)
+		 char[]ch = s.toCharArray();
+		for(int i = 0;i < ch.length-1;i++)
 		{
-			if(n % i == 0)
+			for(int j = 0 ; j <ch.length;j++)
 			{
-				dem ++;
+				swapArray(ch, i, j);
 			}
 		}
-		return dem;
 	}
-	
+	public static  void swapArray(char arr[], int i, int j){
+	        char temp = arr[i];
+	        arr[i] = arr[j];
+	        arr[j] = temp;
+	    }
 }
