@@ -2,27 +2,28 @@ package view;
 
 public class Ex03RevertString {
 	public static void main(String[] args) {
-		String n = "aa6b546c6e22h";
-
-		System.out.println(findLargestNumbers(n));
+		String input = "Welcome to JAVA10 class";
+		revertString(input);
 	}
 
-	public static int findLargestNumbers(String n) {
-
-		String[] stringNumber = n.split("[^\\d]+");
-		int[] numbers = new int[stringNumber.length];
-
-		for (int i = 0; i < stringNumber.length; i++) {
-			numbers[i] = Integer.parseInt(stringNumber[i]);
+	private static String revertString(String input) {
+		String output = input.trim().replaceAll("\\s+", " ");
+		System.out.println(output);
+		
+		String[] words = output.split(" ");
+		output = "";
+		for(int i=0; i < words.length; i++) {
+			String word = words[i];
+			
+			String revertWord = "";
+			for(int j=word.length() - 1; j >= 0; j--) {
+				revertWord += word.charAt(j);
+			}
+			output+=revertWord + " ";
 		}
-
-		int max = numbers[0];
-		for (int i = 1; i < numbers.length; i++) {
-			max = (max > numbers[i]) ? max : numbers[i];
-		}
-
-		return max;
-
+		System.out.println("Chuỗi sau khi đảo là: ");
+		System.out.println(output);
+		return output;
 	}
 
 }
