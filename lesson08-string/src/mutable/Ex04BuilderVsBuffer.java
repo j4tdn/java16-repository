@@ -20,12 +20,13 @@ public class Ex04BuilderVsBuffer {
 	}
 
 	private static class Task implements Runnable {
-//		private StringBuffer sb;
-		private StringBuilder sb;
+		private StringBuffer sb;
+//		private StringBuilder sb;
 		private static int count = 50000;
 
 		public Task() {
-			sb = new StringBuilder();
+//			sb = new StringBuilder();
+			sb = new StringBuffer();
 		}
 
 		@Override
