@@ -24,7 +24,7 @@ public class Ex06Split {
 		//tìm các số hợp lệ trong chuỗi ab123bx09aa222
 		
 		String numberAsString ="ab123bx09aa222";
-		tokens=numberAsString.split("a-zA-Z+");
+		tokens=numberAsString.split("[a-zA-Z]+");
 		printf(tokens);
 		
 	}
