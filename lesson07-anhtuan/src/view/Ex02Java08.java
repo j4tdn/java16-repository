@@ -8,6 +8,7 @@ public class Ex02Java08 {
 	public static void main(String[] args) {
 		LocalDate lc = LocalDate.of(1995, 9, 25);
 		System.out.println("Day of year: "+ lc.getDayOfYear());
+		System.out.println(lc.getDayOfWeek());
 		System.out.println("sss"+ countMonday(lc));
 		
 	}
