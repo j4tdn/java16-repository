@@ -1,47 +1,44 @@
 package view;
-//da
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
 
 public class Ex07 {
 	public static void main(String[] args) {
-		String da = "a";
-		System.out.println(Arrays.toString(getLargestNumbers(da)));
-	}
+		String text = "aaabaaabbaaaaa";
+		int longestString = Integer.MIN_VALUE;
+		int shortestString = Integer.MAX_VALUE;
+		int count = 1;
+		int dem = 1;
+		String shortestValue = "";
+		String tmp = "";
+		String longestValue = "";
+		text += " ";
+		for (int i = 1; i < text.length(); i++) {
 
-	private static String[] spitNumber(String s) {
-		String[] da = s.split("[a-z]+");
-
-		System.out.println("Spit number : " + Arrays.toString(da));
-
-		return (String[]) da;
-	}
-
-	private static Object[] getLargestNumbers(String s) {
-		Object[] da3 = Arrays.asList(spitNumber(s)).stream().filter(o -> !o.equals("")).toArray();
-
-		BigInteger[] da4 = new BigInteger[da3.length];
-		if (da3.length == 0) {
-			return new BigInteger[] { BigInteger.ZERO };
+			if (text.charAt(i) == text.charAt(i - 1)) {
+				tmp += text.charAt(i - 1);
+				count++;
+				dem++;
+			} else {
+				if (count > longestString) {
+					longestString = count;
+					longestValue = i + "";
+				}
+				if (dem < shortestString) {
+					shortestString = dem;
+					shortestValue = i + "";
+              
+				}
+				dem = 1;
+				tmp = "";
+				count = 1;
+			}
 		}
-		for (int i = 0; i < da4.length; i++) {
-			da4[i] = new BigInteger((String) da3[i]);
-		}
-
-		List<BigInteger> tmp = Arrays.asList(da4);
-		tmp.sort(new Comparator<BigInteger>() {
-			public int compare(BigInteger o1, BigInteger o2) {
-				return o1.compareTo(o2);
-			};
-		});
-		System.out.println("Sort Number : " + tmp);
-
-		System.out.println("Bigest Number : " + tmp.get(tmp.size() - 1));
-
-		return tmp.toArray();
+		System.out.println(longestString + " "
+				+ text.substring((Integer.parseInt(longestValue) - longestString), Integer.parseInt(longestValue)));
+		System.out.println(shortestString + " "
+				+ text.substring((Integer.parseInt(shortestValue)) - shortestString, Integer.parseInt(shortestValue)));
 	}
+
+	
+	
 
 }
