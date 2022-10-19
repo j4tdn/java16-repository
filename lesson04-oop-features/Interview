@@ -1,6 +1,22 @@
+1. hướng chức năng: sample data k có access modifier=> function nào cũng có thể sử dung dữ liêu => no authorization( k phân quyền)
+- dữ liêu lỗi thì có khả năng các function phu thuôc lỗi theo
+- khi fuction lỗi dễ kéo theo các fuction khác lỗi
+ system = algorithms + data structure(biến)
+ 
+2. OOP: chia bài toán theo những đối tương: tâp đối tương
+môiz đối tương gồm thuât toán và phương thức riêng\
+- đối tương dùng đẻ mô tả các thưc thể tồn tai trong thế giới thưc
+chứa các ía tri cu thể và có thể phân biêt đươc với đối tương khác
+- Class là khái niêm trừu tương để chỉ tâp hơp các đối tương có chung thuôc tính và phương thức
+- mỗi đối tương có giá tri thuôc tính riêng 
+Class obect
+Attribute method
+access modifier
+getter setter constructor destructor
+static
 ==== Từ version JAVA07 trở về trước===
 
-1. Tính đóng gói là gì? ENSCAPSULATION
+1. Tính đóng gói là gì? ENSCAPSULATION=> private dùng để lưu trữ thông tin riêng của nó vì để public thì bất kỳ class nào ở nơi nào cung có thể truy câp đươc thông tin đó, k có phân quyên truy câp như hướng chức năng như là dữ diêu chung => lỗi thì dễ đến lõi theo
 --> Áp dụng ở đâu trong code: thể hiên qua các access modifier
  + private : class
  + public: anywhere
@@ -63,6 +79,32 @@ abstract class: chứa hàm trừu tượng và hàm bth
  + mục đích và khác gì giưa abstract và interface
  
  có thể chứa hàm bình thường vì giúp giảm trùng lặp code
+
+
+3. Static: non-static: thuôc pham vi của đổi tương. đối tương or biến trỏ đến đối tương mới goi đc giá tri non static
+static
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
