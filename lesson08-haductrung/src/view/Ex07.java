@@ -1,38 +1,55 @@
 package view;
 
-import java.util.Arrays;
-
 public class Ex07 {
 	public static void main(String[] args) {
-		String string = "aaabaaabbbaaaaa";
-		commonString(string);
-	}
-
-	private static void commonString(String s) {
-		int strA = 0, strB = 0;
-		int max = Integer.MIN_VALUE;
-		int min = Integer.MAX_VALUE;
-		int index = 0;
-		while (index < s.length()) {
-			int count = 0;
-			for (int j = index; j < s.length(); j++) {
-				if (s.charAt(index) == s.charAt(j)) {
+		String s="aaabaabbbaaaaa";
+		CheckMax(s);
+		CheckMin(s);
+		
+}
+	private static void CheckMax(String s) {
+		int index=0;
+		int max=Integer.MIN_VALUE;
+		int a=0;
+		do {
+			int count=0;
+			for(int i=index;i<s.length();i++) {
+				if(s.charAt(index)==s.charAt(i)) {//index=begin of max String
 					count++;
-				} else {
+				}else {
 					break;
 				}
 			}
-			if (count > max) {
-				max = count;
-				strA = index;	
+			if(count>max) {
+				max=count;
+				a=index;
 			}
-			if (count < min) {
-				min = count;
-				strB = index;
+			index=index+count;
+			
+		}while(index<s.length());
+		System.out.println(a + " String max: "+s.substring(a, a+max));
+		
+	}
+	private static void CheckMin(String s) {
+		int index=0;
+		int min=Integer.MAX_VALUE;
+		int a=0;
+		while(index<s.length()) {
+			int count=0;
+			for(int i=index; i<s.length();i++) {
+				if(s.charAt(index)==s.charAt(i)) {
+					count++;
+				}else {
+					break;
+				}
 			}
-			index = index + count;
+			if(count<min) {
+				min=count;
+				a=index;
+				
+			}
+			index=index+count;
 		}
-		System.out.println(max + " \"" + s.substring(strA, strA + max) + "\" [" + strA + "]");
-		System.out.println(min + " \"" + s.substring(strB, strB + min) + "\" [" + strB + "]");
+		System.out.println(a + " String min: " +s.substring(a, a+ min));
 	}
 }
