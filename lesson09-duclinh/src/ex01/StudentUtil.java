@@ -25,17 +25,18 @@ public class StudentUtil {
 		return Arrays.copyOfRange(rs, 0, k);
 	}
 
-	private static Student[] findsStudentRankAgain(Student[] students, String rank) {
+	private static Student[] findsStudentRankAgain(Student students[], String rank) {
 		Student[] rs  = new Student[students.length];
-		int k = 0;
-		int count = 0;
-		for(Student student:students) {
-			if(student.getClassification() == Classification.F && count == 2) {
-				rs[k++] = student;
-			}
-		}
-		 	
-		return Arrays.copyOfRange(rs, 0 , k);
+		int k =	0;
+		for(int i=0; i < students.length-1;i++){
+	        for(int j = 0; j < i; j++){
+	            if(students[i].getId() == students[j].getId()){	 
+	            	rs[k++] = students[i];
+	            }
+	        }
+	    }
+			 	
+		return Arrays.copyOfRange(rs, 0, k);
 	}
 
 	private static Student[] init() {
@@ -49,6 +50,7 @@ public class StudentUtil {
 	private static void printf(Student[] students) {
 		for (Student student : students) {
 			System.out.println(student);
+			System.out.println("=======================");
 		}
 	}
 
