@@ -1,38 +1,48 @@
 package mutable;
 
+import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
 public class Ex03MutipleThread {
+	private static long start;
 	public static void main(String[] args) {
-		Task task01 = new Task(0, 0)
+		Task task01 = new Task(3, TimeUnit.SECONDS);
+		Task task02 = new Task(5, TimeUnit.SECONDS);
+		Task task03 = new Task(4, TimeUnit.SECONDS);
+		
+		Thread tA = new Thread(task01, "TA");
+		Thread tB = new Thread(task02, "TB");
+		Thread tC = new Thread(task03,"TC");
+		start = System.currentTimeMillis();
+		tA.start();
+		tB.start();
+		tC.start();
 		
 	}
+	
 	private static void printfThreadName() {
-		System.out.println("");
+		System.out.println(Thread.currentThread().getName()+ "is running....");
 	}
 	private static class Task implements Runnable{
 		private int time;
-		private int tu;
-		public Task(int time, int tu) {
+		private TimeUnit tu;
+		public Task(int time, TimeUnit tu) {
 			this.time=time;
 			this.tu=tu;
 		}
 		@Override
 		public void run() {
-			// task's content
-			//this method will be called when Thread call start() method
-			System.out.println(getCurrentThreadName() + "is running");
 			
-			dotask(5);
-			doSomething();
+			printfThreadName();
+			dotask(5, tu);
+			System.out.println(Thread.currentThread().getName() + " takes" + (System.currentTimeMillis() - start));
+			
 		}
 	}
-	private static void doSomething() {
-		System.out.println("doSomething.....");
-	}
-	private static void dotask(int seconds) {
+	
+	private static void dotask(int seconds, TimeUnit tu) {
 		try {
-			TimeUnit.SECONDS.sleep(seconds);
+			tu.sleep(seconds);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
