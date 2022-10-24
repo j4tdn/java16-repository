@@ -9,30 +9,49 @@ public class Ex02Java08 {
 		LocalDate lc = LocalDate.of(1995, 9, 25);
 		System.out.println("Day of year: "+ lc.getDayOfYear());
 		System.out.println(lc.getDayOfWeek());
-		System.out.println("sss"+ countMonday(lc));
 		
+		System.out.println("Monday of year: "+ countMonday(lc));
+		System.out.println("Monday of month: "+ countMonday(lc));
 	}
 	private static int countMonday(LocalDate lc) {
 		int count = 0;
-		LocalDate c = copy(lc);
 		
-		LocalDate start = c.with(TemporalAdjusters.firstDayOfYear());
 		
-		for(LocalDate st = start;st.getDayOfYear() <= c.getDayOfYear();) {
+		LocalDate start = lc.with(TemporalAdjusters.firstDayOfMonth());
+		LocalDate end = lc.with(TemporalAdjusters.lastDayOfMonth());
+		
+		for(LocalDate st = start;st.isBefore(end);) {
 			if(st.getDayOfWeek() == DayOfWeek.MONDAY) {
 				count ++;
-				st.plusDays(7);
+				st = st.plusDays(7);
 			}else {
-				st.plusDays(1);
+				st = st.plusDays(1);
 			}
 			
 		}
 		return count;
 		
 	}
-	private static LocalDate copy(LocalDate lc) {
-		LocalDate c = LocalDate.now();
-		return c;
+	private static int countMondayYear(LocalDate lc) {
+		int count = 0;
+		
+		
+		LocalDate start = lc.with(TemporalAdjusters.firstDayOfYear());
+		
+		
+		
+		for(LocalDate st = start;st.isBefore(lc.withDayOfYear(268));) {
+			if(st.getDayOfWeek() == DayOfWeek.MONDAY) {
+				count ++;
+				st = st.plusDays(7);
+			}else {
+				st = st.plusDays(1);
+			}
+			
+		}
+		return count;
+		
 	}
+	
 
 }
