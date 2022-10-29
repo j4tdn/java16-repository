@@ -42,7 +42,7 @@ static
 --> ví dụ: Person --> Studen, Employee, Child
 --> Mục địch: Tạo ra 1 tập các đối tượng lưu chung 1 mảng, danh saach. Dễ dạng conver KDL trong phạm vi cha con
 
-3, KẾ THỪA INHERITANCE
+3,  INHERITANCE
 Tính chất trừu tượng thể hiện quathể hện qua Class, Abstract Class, Interface, Abstract method
 vd khi muốn tạo ra hàm trong KDL, hàm đó chưa có nội dung cụ thể
   * ==> tạo ra hàm trừu tượng trong Abstract Class, Interface,
