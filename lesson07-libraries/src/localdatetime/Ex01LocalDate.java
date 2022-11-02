@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Ex01LocalDate {
-	private static final String  PATTERN= "dd/mm/yy";
+	private static final String  PATTERN= "dd/MM/yy";
 
 	public static void main(String[] args) {
 		LocalDate now = LocalDate.now();
