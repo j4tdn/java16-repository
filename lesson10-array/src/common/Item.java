@@ -1,6 +1,6 @@
 package common;
 
-public class Item {
+public class Item implements Comparable<Item>{
 	private int id;
 	private String name;
 	private double price;
@@ -52,5 +52,10 @@ public class Item {
 	@Override
 	public String toString() {
 		return id + "," + name + ", " + price + ", " + storeId + "\n";
+	}
+
+	@Override
+	public int compareTo(Item i) {
+		return this.getStoreId() - i.getStoreId();
 	}	
 }
