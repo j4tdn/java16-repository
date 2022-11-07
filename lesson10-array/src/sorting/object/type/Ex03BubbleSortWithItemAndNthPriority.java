@@ -15,10 +15,12 @@ public class Ex03BubbleSortWithItemAndNthPriority {
 		bubbleSort(items);
 		ArrayUtils.printf("sorted items", items);
 	}
+
 	// bubble sort with default is NULL_FIRST
-	 private static void bubbleSort(Item[] elements) {
-		 bubbleSort(elements, NullOption.NULL_FIRST);
-	 }
+	private static void bubbleSort(Item[] elements) {
+		bubbleSort(elements, NullOption.NULL_FIRST);
+	}
+
 	private static void bubbleSort(Item[] elements, NullOption no) {
 		for (int round = 0; round < elements.length; round++) {
 			for (int i = 0; i < elements.length - round - 1; i++) {
@@ -59,25 +61,45 @@ public class Ex03BubbleSortWithItemAndNthPriority {
 				// sort items by storeID(ASC) and itemsID(DESC)
 				// storeID 1 > storeID2 --> swap
 				// storeID1 = storeID2
-				//      ItemId1 < ItemId2 --> swap
-				//      other no
+				// ItemId1 < ItemId2 --> swap
+				// other no
 				// storeId1 < storeId2 --> no
 
-				if (i1.getStoreId() - i2.getStoreId() < 0) {
-					// swap
-					Item temp = elements[i];
+				/*
+				 * if (i1.getStoreId() - i2.getStoreId() < 0) {
+				 * 	// swap
+				 * Item temp = elements[i];
 					elements[i] = elements[i + 1];
 					elements[i + 1] = temp;
 
 				} else if (i1.getStoreId() - i2.getStoreId() == 0) {
-			if (i1.getId() - i2.getId() > 0) {
-				Item temp = elements[i];
-				elements[i] = elements[i + 1];
-				elements[i + 1] = temp;
-			}
+					if (i1.getId() - i2.getId() > 0) {
+						Item temp = elements[i];
+						elements[i] = elements[i + 1];
+						elements[i + 1] = temp;
+					}
 				}
+				 */	
+				if (compareTo(i1,i2) > 0) {
+					Item temp = elements[i];
+					elements[i] = elements[i + 1];
+					elements[i + 1] = temp;
+				}
+				
 			}
 		}
+	}
+	private static int compareTo(Item i1, Item i2) {
+		int storeId1 = i1.getStoreId();
+		int storeId2 = i2.getStoreId();
+		if (storeId1 < storeId2) {
+			return 1;
+		}
+		if (storeId1 > storeId2) {
+			return -1;
+		}
+		// storeId1 == storeId2
+		return i1.getId() - i2.getId();
 	}
 
 	private static Item[] getItems() {
