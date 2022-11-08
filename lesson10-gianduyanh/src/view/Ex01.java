@@ -8,9 +8,11 @@ import java.util.function.Predicate;
 
 public class Ex01 {
 	public static void main(String[] args) {
-		int[] numbers = { 7, 8, 8, 8, 6, 2, 2, 2, 2, 5, 1 };
-		System.out.println(Arrays.stream(numbers).boxed().filter(o -> count(numbers, o) == 1).toList());
+		int[] numbers = { 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1 };
+		System.out.println(Arrays.toString(numbers));
 		System.out.println("max la " + max(numbers));
+		System.out.println(Arrays.stream(numbers).boxed().filter(o -> count(numbers, o) == 1).toList());
+		
 		System.out.println(number3rdLargest(numbers));
 	}
 
@@ -20,11 +22,34 @@ public class Ex01 {
 	}
 
 	private static float max(int[] input) {
-		float first = input[0] / 2;
-		float last = input[input.length - 1] / 2;
+		float first = 0;
+		float last = 0;
+		int mid = (0 + input.length) / 2;
+		System.out.println(mid);
+		if (input.length % 2 == 0) {
+			for (int i = 0; i < mid; i++) {
+				first += input[i];
+			}
+			first = first / mid;
+			for (int i = mid; i <= input.length - 1; i++) {
+				last += input[i];
+			}
+			last = last / mid;
+		} else {
+			for (int i = 0; i <= mid - 1; i++) {
+				first += input[i];
+			}
+			first = first / mid;
+			for (int i = mid + 1; i <= input.length - 1; i++) {
+				last += input[i];
+			}
+			last = last / mid;
 
+		}
 		return first > last ? first : last;
 	}
+	
+	
 
 	private static int number3rdLargest(int[] input) {
 		return Arrays.stream(input).boxed().filter(deleteSameNumber(o -> o)).sorted((o1, o2) -> o1 - o2).toList()
