@@ -7,7 +7,7 @@ import java.util.List;
 public class Ex04 {
 
 	public static void main(String[] args) {
-		String[] strings = { "-2 ", "-6", "-10", null, "4", "8", null, "#", "a", "b", "c", "xx" };
+		String[] strings = { "-2", "-6", "-10", null, "4", "8", null, "&&*^&", "a", "b", "c", "xx" };
 		Arrays.sort(strings, Comparator.nullsLast(Comparator.comparing(o -> o)));
 		System.out.println("cach nay khong phai luc nao cung dung : " + Arrays.toString(strings));
 		sortStringUp(strings);
@@ -25,6 +25,9 @@ public class Ex04 {
 				}
 				if (o2 == null) {
 					return 1;
+				}
+				if(o1.matches("-?\\d+") && o2.matches("-?\\d+")) {
+					return Integer.compare(Integer.parseInt(o2), Integer.parseInt(o1));
 				}
 				
 				return o2.compareTo(o1);
@@ -45,6 +48,9 @@ public class Ex04 {
 				}
 				if (o2 == null) {
 					return -1;
+				}
+				if(o1.matches("-?\\d+") && o2.matches("-?\\d+")) {
+					return Integer.compare(Integer.parseInt(o1), Integer.parseInt(o2));
 				}
 				
 				return o1.compareTo(o2);
