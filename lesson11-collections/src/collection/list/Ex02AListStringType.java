@@ -48,10 +48,14 @@ public class Ex02AListStringType {
 		//sequences.cotains("d4");
 	}
 	
+	//--> Khi môt phần tử đang đươc thao tác bơi 1 process thì k thể truy câp bởi phần tử khác
 	private static boolean removeIf(List<String> elements, Condition c) {
 		boolean removed =false;
 		Iterator<String> iterator = elements.iterator();
 		while(iterator.hasNext()) {
+			//test() strategy method
+			//String each = interator.next(); 
+			//c.test(each){iterator.remove();}
 			if(c.test(iterator.next())) {
 				iterator.remove();
 				removed = true;
@@ -71,6 +75,8 @@ public class Ex02AListStringType {
 		System.out.println();
 	}
 }
+
+//strategy --> interface, abstract class. interface có 1 hàm trừu tuoqng => functional interface => dùng lambda
 
 @FunctionalInterface
 interface Condition {
