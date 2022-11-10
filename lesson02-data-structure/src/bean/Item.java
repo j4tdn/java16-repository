@@ -1,28 +1,31 @@
 package bean;
 
-// Class --> Kieu du lieu doi tuong chua nhieu thong tin ben trong
-// Moi thong tin minh goi la mot thuoc tinh, dac diem cua class nay
+// Class --> Kiểu dữ liệu đối tượng
+// Chứa nhiều thông tin bên trong
+// Mỗi thông tin mình gọi là một thuộc tính, đặc điểm của class này
 public class Item {
 	
-	// thuoc tinh, attributes
+	// thuộc tính, attributes
 	public int id;
 	public String name;
 	public double price;
 	
-	// parameter: tham so
-	// Ham: [access_modifier] [static] return_type function_name(parameters)
-	// Ham khoi tao: [access_modifier] function_name(parameters) --> function_name = class_name
-	// empty constructor
+	// Empty constructor --> Hàm khởi tạo rỗng
 	public Item() {
 		
 	}
 	
-	// this: dai dien cho dia chi, o nho hien tai dang goi, dang khoi tao
+	// this: đại diện cho địa chỉ, ô nhớ hiện tại đang gọi, đang khởi tạo
 	public Item(int pId, String pName) {
-		id = pId;
-		name = pName;
-		
+		this.id = pId;
+		this.name = pName;
 	}
+	
+	// parameter: tham số
+	// Hàm: [access_modifier] [static] return_type function_name(parameters)
+	// Hàm khởi tạo: [access_modifier] function_name(parameters) --> function_name = class_name
+	// Item itemC = new Item(55, "Item 55", 440);
+	// new Item(1, "Item 1", 222)
 	public Item(int pId, String pName, double pPrice) {
 		id = pId;
 		name = pName;

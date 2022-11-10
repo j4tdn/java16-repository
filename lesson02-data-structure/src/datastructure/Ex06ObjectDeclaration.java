@@ -1,58 +1,57 @@
 package datastructure;
 
-// chi import type khi khac package
+// chỉ import type khi khác package
 import bean.Item;
 
 public class Ex06ObjectDeclaration {
 	public static void main(String[] args) {
-		//khai bao KDL nguyen thuy
-		// number, itemA: bien, tham chieu --> luon nam o STACK
-		// gia tri cua kieu nguyen thuy --> STACK
+		// Khai báo KDL nguyên thủy
+		// number, itemA: biến, tham chiếu --> luôn nằm ở STACK
+		// giá trị của KNT --> STACK
 		int number = 10;
 		
-		// khai bao KDL doi tuong ==> default: Null
+		// Khai báo KDL đối tượng  ==> default: NULL
 		// Item: id, name, price
-		// gia tri luu tru o HEAP
-		// new item() --> goi ham khoi tao cua class Item
-		// Tao ra mot o nho o HEAP voi cac thuoc tinh mang gia tri mac dinh
+		// giá trị lưu trữ ở HEAP
+		// Item itemA = 1, "Item 1", 100;
+		// new Item() --> gọi hàm khởi tạo của class Item
+		// Tạo ra một ô nhớ ở HEAP với các thuộc tính mang giá trị mặc định
 		Item itemA = new Item(101, "Item 101", 220);
 		
-
+		System.out.println("itemA id: " + itemA.id);
+		System.out.println("itemA name: " + itemA.name);
+		System.out.println("itemA price: " + itemA.price);
 		
-		System.out.println("item id: " + itemA.id);
-		System.out.println("item name: " + itemA.name);
-		System.out.println("item price: " + itemA.price);
+		System.out.println("========================");
 		
-		System.out.println("==========================");
-		
-		// itemC: id=55, name="Item 55", price=440;
+		// itemC: id=55, name="Item 55", price=440
 		Item itemC = new Item(55, "Item 55", 440);
+		System.out.println("itemC id: " + itemC.id);
+		System.out.println("itemC name: " + itemC.name);
+		System.out.println("itemC price: " + itemC.price);
 		
-		System.out.println("item id: " + itemC.id);
-		System.out.println("item name: " + itemC.name);
-		System.out.println("item price: " + itemC.price);
+		System.out.println("========================");
 		
-		System.out.println("==========================");
-		//itemB: id = 7, name = "Item 7"
+		// itemB: id=7, name="Item 7"
 		Item itemB = new Item();
-		
 		itemB.id = 7;
 		itemB.name = "Item 7";
 		
-		System.out.println("item id: " + itemB.id);
-		System.out.println("item name: " + itemB.name);
+		System.out.println("itemB id: " + itemB.id);
+		System.out.println("itemB name: " + itemB.name);
 		
-		System.out.println("==========================");
-		//
+		System.out.println("========================");
+		
+		// itemB: id=7, name="Item 7"
 		Item itemD = new Item(33, "Item 33");
 		
-		// System.out.println("item id: " + itemD.id);
-		// System.out.println("item name: " + itemD.name);
-		// Mac dinh khi in ra bien kieu doi tuong --> tu dong goi la ham toString cua class Object
-		// Vi Object mac dinh la class cha cua moi class trong JAVA
-		System.out.println("item D " + itemD);
-		System.out.println("item C " + itemC);
-		//System.out.println("item D " + itemD.toString());
+		// System.out.println("itemD id: " + itemD.id);
+		// System.out.println("itemD name: " + itemD.name);
+		// Mặc định khi in ra biến kiểu đối tượng --> tự động gọi hàm toString của class Object
+		// Vì Object mặc định là class cha của mọi class trong JAVA
+		System.out.println("itemD: " + itemD);
+		System.out.println("itemC: " + itemC);
+		// System.out.println("itemD: " + itemD.toString());
 		
 	}
 }

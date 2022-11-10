@@ -1,76 +1,85 @@
 package operator;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
-
 public class Ex01BasicDemo {
 	public static void main(String[] args) {
 		int a = 10;
 		int b = 22;
 		
-		// = += *= /=
+		// = += -= *= /=
 		a = a + b;
 		b = b * 4;
 		b += 12;
-		System.out.println("a: " + a);//32
-		System.out.println("b: " + b);//100
+		System.out.println("a: " + a); // 32 33 32
+		System.out.println("b: " + b); // 100 101 100
 		
 		// int x = 5;
 		// int z = 5;
-		// ++(+=1) --(-=1) --> prefix(tien to), suffix(hau to)
-		// tien to: int y = 7 + ++x --> 13
-		// hau to: int y = 7 + z++ + ++z --> 12
-		System.out.println("a++ suffix" + a++);
-		System.out.println("++b prefix " + ++b);
-		System.out.println("--a suffix" + --a);
-		System.out.println("b-- prefix " + b--);
+		// ++(+=1) --(-=1) --> prefix(tiền tố), suffix(hậu tố)
+		// tiền tố: int y = 7 + ++x --> 13
+		// hậu tố:  int y = 7 + z++ + ++z --> 12
+		System.out.println("a++ suffix: " + (a++)); // 32
+		System.out.println("++b prefix: " + (++b)); // 101
+		System.out.println("--a prefix: " + (--a)); // 32
+		System.out.println("b-- suffix: " + (b--)); // 101
 		System.out.println("b : " + b);
 		
 		int x = 7;
 		int z = 2;
 		int k = 3;
-		//int v = x++ + --z + k++ + ++z + ++k
+		// int v = x++ + --z + k++ + ++z - x-- - --k;
+		z = z + z-- + z++ - --z + k++ + ++k;
+		System.out.println("x: " + x); // 7
+		System.out.println("z: " + z); // 2
+		System.out.println("k: " + k); // 3
+		// System.out.println("v: " + v); // 2 
 		
+		a = 32;
+		b = 100;
 		// == != >=
-		// 1. Kiem tra 1 so co phai  la boi cua 5 khong
+		// 1. Kiểm tra 1 số có phải là bội của 5 không
 		boolean isPowerOf5 = (a % 5 == 0);
-		System.out.println(a + "isPowerOf5: " + isPowerOf5);
-
-		isPowerOf5 = (b % 5 == 0);
-		System.out.println(b + "isPowerOf5: " + isPowerOf5);
-		// 2. Kiem tra 1 so co phai la so chan khong
-		boolean isPowerOf2 = (a % 2 == 0);
-		System.out.println( "isPowerOf5: " + isPowerOf2);
-		// 3. Kiem tra 1 so co phai la boi cua 10 va be hon 100 khong
-		boolean isValid = (a % 10 == 0 && a < 100);
-		System.out.println(a + "isPowerOf5: " + isValid);
+		System.out.println(a + " isPowerOf5: " + isPowerOf5);
 		
-		b = 90;
-		isValid = isPowerOf10LessThan100(b);
+		isPowerOf5 = (b % 5 == 0);
+		System.out.println(b + " isPowerOf5: " + isPowerOf5);
+		
+		// 2. Kiểm tra 1 số có phải là số chẵn không
+		boolean isPowerOf2 = (a % 2 == 0);
+		System.out.println("isPowerOf2: " + isPowerOf2);
+		
+		// && ||
+		// 3. Kiểm tra 1 số có phải là bội của 10 "và" bé hơn 100 không
+		boolean isValid = isPowerOf10AndLessThan100(a);
 		System.out.println("isValid: " + isValid);
 		
-		// Neu ma so X ma chia het cho 10 va be hon 100 thi se in ra dong chu la hop le
-		// Bieu thuc dieu kien
+		b = 90;
+		isValid = isPowerOf10AndLessThan100(b);
+		System.out.println("isValid: " + isValid);
+		
+		// Nếu mà số X mà chia hết cho 10 và bé hơn 100 thì sẽ in ra dòng chữ là hợp lệ
+		// Biểu thức điều kiện
 		/* 
-		 if (bieu thuc dung sai){
-		 	thuc hien neu bieu thuc dung --> BT tra ve true
-		 } else {
-		 	thuc hien neu bieu thuc sai --> BT tra ve false
+		 if (biểu thức đúng sai) {
+		    thực hiện nếu biểu thức đúng --> BT trả về true
+		 } else { 
+		    thực hiện nếu biểu thức sai --> BT trả về false
 		 }
-		 */
-		// if (booleanExpression) --> if (booleanExpression == true) 
-		// if (booleanExpression) --> if (booleanExpression == false) 
-		if (isValid) {
-			System.out.println(" So hop le");
+		*/
+		// if(booleanExpression) --> if(booleanExpression == true)
+		// if(!booleanExpression) --> if(booleanExpression == false)
+		if (!isValid) {
+			System.out.println("Số không hợp lệ");
 		} else {
-			System.out.println(" so khong hop le");
+			System.out.println("Số hợp lệ");
 		}
 	}
-	// Ham 
-	// --> pham vi truy cap: private
+	
+	// Hàm 
+	// --> phạm vi truy cập: private 
 	// --> static
-	// Kieu tra ve: boolean
-	// tham so truyen vao: so dau vao
-	private static boolean isPowerOf10LessThan100(int number) {
+	// kiểu trả về: boolean
+	// tham số truyền vào: số đầu vào
+	private static boolean isPowerOf10AndLessThan100(int number) {
 		return number % 10 == 0 && number < 100;
 	}
 }

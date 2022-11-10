@@ -1,19 +1,21 @@
 package datastructure;
 
+import bean.Item;
+
 public class Ex09JavaObjectType {
 	public static void main(String[] args) {
 		int a = 5;
 		
 		// Float, Double, Long, Character
-		Integer 01 = new Integer(10);
-		Integer 02 = new String("hello");
+		Integer o1 = new Integer(10);
+		String  o2 = new String("hello");
 		
-		Integer 03 = 99;
-		Integer 04 = "bye";
+		Integer o3 = 99;
+		String o4 = "bye";
 		
 		// Custom
 		Item item = new Item(1, "Item 1", 222);
-		Item itemX = 1, "Item 1", 222;Integer 01 = new Integer(10);
-		Integer 02 = new String("hello");
+		// Item itemA = 1;
+		// Item itemX = 1, "Item 1", 222;
 	}
 }

@@ -1,15 +1,15 @@
 package bean;
 
 public class CustomInteger {
-	public int value;
+	public int value; // HEAP
 	
+	// constructor ==> không có KDL trả về 
 	public CustomInteger(int value) {
 		this.value = value;
 	}
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "" + value;
+		return "" + this.value;
 	}
 }

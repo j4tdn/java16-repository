@@ -1,0 +1,60 @@
+==== Từ version JAVA07 trở về trước ====
+
+1. Tính chất đóng gói là gì. Áp dụng ở đâu trong code ?
+--> Tính được đóng gọi được thể hiện qua các access modifier
++ Private: Class
++ Public: Anywhere
++ Default & Protected: Package
++ Protected: Can be used in different package with sub classes
+
+--> public: Tạo ra các hàm utilities sử dụng ở bất kỳ nơi nào
+--> default: clearUI --> Sử dụng trong package view(code giao diện)
+
+2. Tính chất đa hình
++ Phương thức: 1 phương thức(sum, sub) nhưng có nhiều thể hiện, chức năng
+--> Overload: Hai hoặc nhiều phương thức gọi là overloading nếu
+   + Cùng 1 class
+   + Trùng tên
+   + Khác nhau số lượng tham số || kiểu dữ liệu truyền vào của tham số
+   
+--> Override: Hai hoặc nhiều phương thức gọi là overriding nếu
+   + Thuộc 2 hoặc nhiều class có quan hệ thừa kế
+   + Override để định nghĩa lại nội dung trong class con
+   + Ví dụ: toString
+   
++ Đối tượng: 1 đối tượng nhưng có nhiều thể hiện
+--> Ví dụ: Person --> Student, Employee, Child
+--> Mục đích: Tạo ra 1 tập các đối tượng lưu chung 1 mảng, danh sách
+            : Dễ dàng convert KDL trong phạm vi cha con  
+            
+            
+3. Kế thừa
++ Mục đích: Tăng khả năng reuse code
+KDL Cha: Class, Abstract Class, Interface
+KDL Con: Class, Abstract Class, Interface
+
+Class extends Class, Abstract Class
+Class implements Interface
+
+Abstract Class extends Abstract Class
+Abstract Class implements Interface
+
+Interface extends Interface
+
+??? Phân biệt abstract class và interface
++ Abstract class: Chứa hàm trừu tượng và hàm bình thường
+  Chỉ extend được từ duy nhất 1 class, abstract class - single extend
+  
++ Interface: Chỉ chứa hàm trừu tượng
+  Có thể implement từ nhiều interface - multiple implements
+
+==== Từ version JAVA08 trở về trước ====
++ Interface: Chứa hàm trừu tượng và hàm bình thường
+  Có thể implement từ nhiều interface
+
++ Vì sao từ JAVA08 Java hỗ trợ non-abstract methods trong interface
++ Mục đích và khác gì giữa abstract class và interface
+
+
+
+           

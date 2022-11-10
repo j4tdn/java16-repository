@@ -2,22 +2,23 @@ package datastructure;
 
 public class Ex05NamingConvention {
 	public static void main(String[] args) {
-		// Ten class: Camel case --> Chu cai dau tien viet hoa
-		// Ten bien: Camel case --> Chu cai dau tien la viet thuong
-		// Ten ham: Camel case --> Chu cai dau tien la viet thuong
-		//						Tu dau tien la dong tu
+		// Tên class: Camel case --> Chữ cái đầu tiên viết hoa
+		// Tên biến: Camel case --> Chữ cái đầu tiên là viết thường
+		// Tên hàm: Camel case --> Chữ cái đầu tiên là viết thường
+		//                     --> Từ đầu tiên là động từ
 		
 		int length = 10;
-		int salePrice = 100;
-	
+		int salesPrice = 100;
+		
 		int a = 5;
 		int b = 10;
 		int result = sum(a, b);
 		System.out.println("result: " + result);
+		
 	}
 	
 	private static int sum(int a, int b) {
-		// ham ma kieu tra ve khac voi --> minh phai dung return
+		// hàm mà kiểu tra về khác void --> mình phải dùng return
 		return a + b;
 	}
 }
