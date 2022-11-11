@@ -23,7 +23,6 @@ public class Ex06SortingItemWithShortVersion {
 
 			@Override
 			public int compare(Item o1, Item o2) {
-				// TODO Auto-generated method stub
 				return o1.getId();
 			}
 			
