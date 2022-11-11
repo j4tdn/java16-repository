@@ -82,7 +82,7 @@ public class Ex03BubleSortWithItemAndNthPriority {
 			}
 		}	
 	
-	public static int compareTo(Item i1, Item i2) {
+	public static int compareTo(Item i1, Item i2) {	
 		int storeCompare = i1.getStoreId() - i2.getStoreId();
 		if (storeCompare > 0) {
 			return -1;

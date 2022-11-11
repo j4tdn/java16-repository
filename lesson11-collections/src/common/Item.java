@@ -52,7 +52,7 @@ public class Item implements Comparable<Item>{
 
 	@Override
 	public String toString() {
-		return id +", " + name + ", " + price + ", " + storeId + "\n";
+		return id +", " + name + ", " + price + ", " + storeId;
 	}
 
 	@Override
@@ -63,6 +63,19 @@ public class Item implements Comparable<Item>{
 		Item i2 = that;
 		return i2.getStoreId() - i1.getStoreId();
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof Item)) {
+			return false;
+		}
+		Item that = (Item)o;
+		return this.getId() == that.getId();
+	}
+	
 	
 	
 	
