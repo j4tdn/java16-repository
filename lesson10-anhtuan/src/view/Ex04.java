@@ -12,12 +12,16 @@ public class Ex04 {
 			@Override
 			public int compare(String s1, String s2) {
 				
-				if(s1 == null && s2 != null) {
+				if(s1 == null) {
 					return 1;
+				}if(s1 != null) {
+					if(s2 == null) {
+						return -1;
+					}if(s2 == "Special") {
+						return 1;
+					}
 				}
-				if(s2 == null) {
-					return -1;
-				}
+				
 
 				if(s1.matches("\\d+") && s2.matches("\\d+")) {
 					return Integer.compare(Integer.parseInt(s1), Integer.parseInt(s2));
