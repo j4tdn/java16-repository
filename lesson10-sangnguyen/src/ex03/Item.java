@@ -48,7 +48,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [itemId=" + itemId + ", name=" + name + ", salesPrice=" + salesPrice + ", storyId=" + storyId
+			return "Item [itemId=" + itemId + ", name=" + name + ", salesPrice=" + salesPrice + ", storyId=" + storyId
 				+ "]" +"\n";
 	}
 	

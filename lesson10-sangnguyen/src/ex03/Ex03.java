@@ -50,7 +50,7 @@ public class Ex03 {
 			new Item(3, "C", 88, 107),
 			new Item(4, "D", 0, 108),
 			new Item(5, "E", 60, 101),
-			new Item(6, "F", 18, 105),
+			new Item(6, "F", 18, 104),
 			new Item(7, "G", 100, 103),
 			new Item(8, "H", 302, 102),
 			new Item(9, "I", 184, 108),
