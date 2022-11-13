@@ -1,0 +1,22 @@
+1. Phan biet List va ArrayList
+
+2. Phan biet Array va LinkedList
+
+3. Phan biet ArrayList va LinkedList
+GET:       ArrayList > LinkedList
+SET:       ArrayList > LinkedList
+
+ArrayList: shift right, left
+LinkedList: iterate, find 
+
+ADD LAST:  ArrayList ~ LinkedList
+ADD FIRST: ArrayList < LinkedList
+ADD MID:   ArrayList > LinkedList
+
+REMOVE LAST:  ArrayList ~ LinkedList
+REMOVE FIRST: ArrayList < LinkedList
+REMOVE MID:   ArrayList > LinkedList
+
+
+ArrayList  : GET, SET
+LinkedList :
