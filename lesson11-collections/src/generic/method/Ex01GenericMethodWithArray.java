@@ -4,7 +4,7 @@ package generic.method;
  * 
  * --> người dùng muốn in ra dữ liệu từ các mảng 
  */
-public class Ex01GenericMothoWithArray {
+public class Ex01GenericMethodWithArray {
 	public static void main(String[] args) {
 		Double[] dArray = {1d, 2d, 4d, 4d};
 		String[] sArray = {"hello", "halla", "hollo"};

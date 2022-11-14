@@ -12,7 +12,7 @@ import java.util.List;
  * 
  * sau đó giở hạn E bởi super type
  */
-public class Ex0GenericMethodWithList {
+public class Ex02GenericMethodWithList {
 	public static void main(String[] args) {
 		//new ArrayList<>();
 		//	--> java.util.ArrayList --> array with dynamic size
@@ -23,9 +23,16 @@ public class Ex0GenericMethodWithList {
 		List<String> sList = Arrays.asList("hello", "halla", "hollo");
 		List<Integer> iList = Arrays.asList(1, 2, 3, 4);
 		
-		printList("dList", dList);
+		printListWildCard("dList", dList);
 		//printList("sList", sList); ERROR --> string not extends Number
 		printList("iList", iList);
+	}
+	private static void printListWildCard(String prefix, List<? extends Number> array) {
+		System.out.print(prefix + " --> ");
+		for (Number item: array) {
+			System.out.print(item + " ");
+		}
+		System.out.println();
 	}
 	//<E> --> no limitation
 	//<E extends Number> --> limit by Number (Number or sub types of Number) 
