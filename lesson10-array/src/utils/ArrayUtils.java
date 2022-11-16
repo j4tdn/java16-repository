@@ -18,6 +18,9 @@ public class ArrayUtils {
 		System.out.println(prefix + "-->" + Arrays.toString(intput));
 	}
 	
+	public static <E>void printf(String prefix, E[] intput) {
+		System.out.println(prefix + "-->" + Arrays.toString(intput));
+	}
 	public static void printf(String prefix, Item[] intput) {
 		System.out.println(prefix + "-->" + Arrays.toString(intput));
 	}
