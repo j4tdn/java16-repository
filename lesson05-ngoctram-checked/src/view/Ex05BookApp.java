@@ -14,7 +14,7 @@ public class Ex05BookApp {
 	public static void main(String[] args) {
 		Book[] books = initial();
 
-		Book[] booksByPublisher = findBooks(books, "Nhi Đồng");
+		Book[] booksByPublisher = findBooks(books, "Nhi Ä�á»“ng");
 		printf(booksByPublisher);
 
 		System.out.println("------------------------");
@@ -27,7 +27,7 @@ public class Ex05BookApp {
 
 	}
 
-	// 1. Tìm toàn bộ sách thuộc NXB Nhi Đồng
+	// 1. TĂ¬m toĂ n bá»™ sĂ¡ch thuá»™c NXB Nhi Ä�á»“ng
 	private static Book[] findBooks(Book[] books, String publisher) {
 		Book[] result = new Book[books.length];
 		int k = 0;
@@ -39,7 +39,7 @@ public class Ex05BookApp {
 		return Arrays.copyOfRange(result, 0, k);
 	}
 
-	// 2. Tìm toàn bộ sách có đơn giá nhỏ hơn 50
+	// 2. TĂ¬m toĂ n bá»™ sĂ¡ch cĂ³ Ä‘Æ¡n giĂ¡ nhá»� hÆ¡n 50
 	private static Book[] findBooks(Book[] books, double ltPrice) {
 		Book[] result = new Book[books.length];
 		int k = 0;
@@ -51,7 +51,7 @@ public class Ex05BookApp {
 		return Arrays.copyOfRange(result, 0, k);
 	}
 
-	// 3. Tìm toàn bộ sách có đơn giá nhỏ từ 100 đến 200
+	// 3. TĂ¬m toĂ n bá»™ sĂ¡ch cĂ³ Ä‘Æ¡n giĂ¡ nhá»� tá»« 100 Ä‘áº¿n 200
 	private static Book[] findBooks(Book[] books, double priceFrom, double priceTo) {
 		Book[] result = new Book[books.length];
 		int k = 0;
@@ -63,6 +63,7 @@ public class Ex05BookApp {
 		return Arrays.copyOfRange(result, 0, k);
 	}
 
+	@SuppressWarnings("unused")
 	private static double bill(Book... books) {
 		double totalOfMoney = 0;
 		for (Book book : books) {
@@ -83,10 +84,10 @@ public class Ex05BookApp {
 	}
 
 	private static Book[] initial() {
-		return new Book[] { new ClassicalBook("SGK01", 23d, "Nhi Đồng", true),
-				new ClassicalBook("SGK02", 37d, "Lạc Việt", false), new ClassicalBook("SGK03", 49d, "Nhi Đồng", false),
+		return new Book[] { new ClassicalBook("SGK01", 23d, "Nhi Ä�á»“ng", true),
+				new ClassicalBook("SGK02", 37d, "Láº¡c Viá»‡t", false), new ClassicalBook("SGK03", 49d, "Nhi Ä�á»“ng", false),
 				new ReferenceBook("STK01", 66d, "Sao Mai"), new ReferenceBook("STK02", 159d, "Sao Mai"),
-				new ReferenceBook("STK03", 39d, "Nhi Đồng"), };
+				new ReferenceBook("STK03", 39d, "Nhi Ä�á»“ng"), };
 	}
 
 	private static void printf(Book[] books) {
