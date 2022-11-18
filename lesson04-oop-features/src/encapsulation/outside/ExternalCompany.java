@@ -4,7 +4,7 @@ import encapsulation.inside.Company;
 
 public class ExternalCompany {
 	public String name;
-	private String policy;
+//	private String policy;
 	
 	public static void main(String[] args) {
 		Company company = new Company();
