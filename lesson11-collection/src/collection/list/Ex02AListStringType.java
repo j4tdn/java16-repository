@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.lang.model.util.Elements;
-
 public class Ex02AListStringType {
 	// interface: list
 	// implementation: ArrayList& LinkList

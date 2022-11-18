@@ -1,7 +1,5 @@
 package common;
 
-import java.util.Objects;
-
 public class Item implements Comparable<Item>{
 	private int id;
 	private String name;

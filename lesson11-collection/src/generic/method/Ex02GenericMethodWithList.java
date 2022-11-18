@@ -20,13 +20,21 @@ public class Ex02GenericMethodWithList {
 //		although Object is the base class of Double, String, Intger,...
 //		Hence we must use generic type with List.
 		printList("dList", dList);
-		printList("sList", sList);
+//		printList("sList", sList);
 		printList("iList", iList);
 	}
 	
-	private static <E> void printList(String prefix, List<E> list) {
+//	private static <E> void printList(String prefix, List<E> list) {
+//		System.out.print(prefix + ": ");
+//		for (Object item : list) {
+//			System.out.print(item + "   ");
+//		}
+//		System.out.println();
+//	}
+	
+	private static void printList(String prefix, List<? extends Number> list) {
 		System.out.print(prefix + ": ");
-		for (Object item : list) {
+		for (Number item : list) {
 			System.out.print(item + "   ");
 		}
 		System.out.println();
