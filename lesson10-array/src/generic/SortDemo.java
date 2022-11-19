@@ -7,6 +7,8 @@ import common.Tuple;
 public class SortDemo {
 	public static void main(String[] args) {
 		String[] sequence = { "A", "B" };
+		
+		// sequence extends from Comparable -> compareTo
 		Arrays.sort(sequence);
 		System.out.println(Arrays.toString(sequence));
 
