@@ -22,17 +22,22 @@ public class Ex02GenericMethodWithList {
 		printList("dList", dList);
 //		printList("sList", sList);
 		printList("iList", iList);
+		
+		System.out.println("=====================");
+		printListWildcard("dList", dList);
+		printList("sList", sList);
+		printListWildcard("iList", iList);
 	}
 	
-//	private static <E> void printList(String prefix, List<E> list) {
-//		System.out.print(prefix + ": ");
-//		for (Object item : list) {
-//			System.out.print(item + "   ");
-//		}
-//		System.out.println();
-//	}
+	private static <E> void printList(String prefix, List<E> list) {
+		System.out.print(prefix + ": ");
+		for (Object item : list) {
+			System.out.print(item + "   ");
+		}
+		System.out.println();
+	}
 	
-	private static void printList(String prefix, List<? extends Number> list) {
+	private static void printListWildcard(String prefix, List<? extends Number> list) {
 		System.out.print(prefix + ": ");
 		for (Number item : list) {
 			System.out.print(item + "   ");

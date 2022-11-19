@@ -1,6 +1,8 @@
 package generic.type;
 
 import java.lang.reflect.Array;
+import java.util.Iterator;
+import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -10,7 +12,6 @@ public class JavaListImpl<E> implements IList<E> {
 	private int size = 0;
 	private E[] elementData;
 
-	
 //	@SuppressWarnings("unchecked")
 //	public JavaListImpl() {
 //		this(DEFAULT_CAPACITY);
@@ -20,15 +21,11 @@ public class JavaListImpl<E> implements IList<E> {
 
 	public JavaListImpl() {
 		this(DEFAULT_CAPACITY);
-		// we cant create elementData = E[];
-		// as compiler cant understand what E is, so it can't create space for E[]
 	}
 
 	public JavaListImpl(int capacity) {
 		int newCapacity = capacity > DEFAULT_CAPACITY ? capacity : DEFAULT_CAPACITY;
 		elementData = newInstance(newCapacity);
-		// we cant create elementData = E[];
-		// as compiler cant understand what E is, so it can't create space for E[]
 	}
 
 	@Override
@@ -53,14 +50,23 @@ public class JavaListImpl<E> implements IList<E> {
 	}
 
 	@Override
-	public boolean removeIf(Predicate<E> predicate) {
-		// TODO Auto-generated method stub
+	public boolean removeIf(Predicate<E> filter) {
+//		Objects.requireNonNull(filter);
+//		boolean removed = false;
+//		final Iterator<E> each = iterator();
+//		while (each.hasNext()) {
+//			if (filter.test(each.next())) {
+//				each.remove();
+//				removed = true;
+//			}
+//		}
+//		return removed;
 		return false;
 	}
 
 	@Override
 	public E get(int i) {
-		if (i<0 || i >=size) {
+		if (i < 0 || i >= size) {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 		return elementData[i];
@@ -68,7 +74,7 @@ public class JavaListImpl<E> implements IList<E> {
 
 	@Override
 	public void set(int i, E e) {
-		if (i<0 || i >=size) {
+		if (i < 0 || i >= size) {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 		elementData[i] = e;
@@ -102,7 +108,7 @@ public class JavaListImpl<E> implements IList<E> {
 
 	@Override
 	public void printf() {
-		for (int i=0; i<size; i++) {
+		for (int i = 0; i < size; i++) {
 			System.out.print(elementData[i] + "    ");
 		}
 		System.out.println();
@@ -110,7 +116,7 @@ public class JavaListImpl<E> implements IList<E> {
 
 	@Override
 	public void forEach(Consumer<E> consumer) {
-		for (int i=0; i<size; i++) {
+		for (int i = 0; i < size; i++) {
 			// body -> strategy -> (E element) -> void
 			consumer.accept(elementData[i]);
 		}
