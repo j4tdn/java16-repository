@@ -1,6 +1,8 @@
 package common;
 
-public class Tuple {
+import java.util.Comparator;
+
+public class Tuple implements Comparable<Tuple>{
 	private int left;
 	private int right;
 
@@ -28,7 +30,12 @@ public class Tuple {
 	public void setRight(int right) {
 		this.right = right;
 	}
-
+@Override
+public int compareTo(Tuple o) {
+	Tuple t1 = this;
+	Tuple t2 = o;
+	return t1.getRight() - t2.getRight();
+}
 	@Override
 	public String toString() {
 		return "Tuple [left=" + left + ", right=" + right + "]";
