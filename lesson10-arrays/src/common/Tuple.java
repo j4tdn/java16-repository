@@ -1,6 +1,6 @@
 package common;
 
-public class Tuple {
+public class Tuple implements Comparable<Tuple> {
 	private int left;
 	private int right;
 	
@@ -33,4 +33,11 @@ public class Tuple {
 		return "Tuple [left=" + left + ", right=" + right + "]";
 	}
 	
+	@Override
+	public int compareTo(Tuple o) {
+		Tuple t1 = this;
+		Tuple t2 = o;
+		
+		return t1.getRight() - t2.getRight();
+	}
 }
