@@ -21,9 +21,8 @@ public class Ex02SetInside {
 
 		System.out.println("size: " + company.size());
 	}
-	
-	
-	private static Employee comparing() {
+
+	private static Employee comparing(Set<Employee> ) {
 		// sort desc by name, asc by salary
 
 		Comparator cmp = new Comparator<Employee>() {
@@ -42,5 +41,3 @@ public class Ex02SetInside {
 	}
 	
 	}
-
-}
