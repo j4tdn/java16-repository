@@ -1,0 +1,27 @@
+PHAN BIET ARRAY VA LIST ?
+PHAN BIET ARRAY VA ARRAYLIST ?
+PHAN BIET ARRAYLIST VA LINKEDLIST ?
+
+GET:       ArrayList > LinkedList
+SET:       ArrayList > LinkedList
+
+ArrayList: shift right, left
+LinkedList: iterate, find 
+
+ADD LAST:  ArrayList ~ LinkedList
+ADD FIRST: ArrayList < LinkedList
+ADD MID:   ArrayList > LinkedList
+
+REMOVE LAST:  ArrayList ~ LinkedList
+REMOVE FIRST: ArrayList < LinkedList
+REMOVE MID:   ArrayList > LinkedList
+
+
+ArrayList  : GET, SET
+LinkedList :
+
+
+==> GENERIC --> VD: LIST<E> ArrayList<T> Function<? extends Comparable<T>>
+
+--> tham so nhan kieu du lieu khi gọi nó
+--> cơ bản --> T,E tạm giống như Object

@@ -12,8 +12,8 @@ public class ArraysUtils {
 	}
 	
 
-	public static void printf(String prefix, String[] input) {
-		System.out.println(prefix + " --> " +  Arrays.toString(input));
+	public static <E> void printf( E[] input) {
+		System.out.println(" --> " +  Arrays.toString(input));
 	}
 	public static void printf(String prefix, Object[] input) {
 		System.out.println(prefix + " --> " +  Arrays.toString(input) + "\n");
