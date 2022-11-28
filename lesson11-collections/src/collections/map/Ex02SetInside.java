@@ -1,5 +1,7 @@
 package collections.map;
 
+import static java.util.Comparator.*;
+
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -9,7 +11,7 @@ import bean.Employee;
 
 public class Ex02SetInside {
 	public static void main(String[] args) {
-		Comparator<Employee> cmp = new Comparator<Employee>() {
+		/*Comparator<Employee> cmp = new Comparator<Employee>() {
 
 			@Override
 			public int compare(Employee e1, Employee e2) {
@@ -21,7 +23,11 @@ public class Ex02SetInside {
 				}
 				return e1.getSalary().compareTo(e2.getSalary());
 			}
-		};
+		};*/
+		//sort desc name, asc salary
+		
+		Comparator<Employee> cmp = comparing(Employee::getName,reverseOrder())
+				.thenComparing(Employee::getSalary);
 		
 		Set<Employee> company = new TreeSet<>(cmp);
 		company.add(new Employee(1,"E1",100d));
