@@ -18,9 +18,9 @@ public class Ex02GenericMethodWithList {
 		List<Double> dList = Arrays.asList(1d,2d,3d,4d);
 		List<String> sList = Arrays.asList("hello", "halla", "hollo");
 		List<Integer> iList = Arrays.asList(2,4,4,2);
-		printListWildCard("dList", dList);
-		printListWildCard("sList", sList);
-		printListWildCard("iList", iList);
+		//printListWildCard("dList", dList);
+		//printListWildCard("sList", sList);
+		//printListWildCard("iList", iList);
 		
 		printListGenerics("sList", sList);
 		
@@ -29,13 +29,13 @@ public class Ex02GenericMethodWithList {
 	// <E extends Number> --> limit by Number (Number or sub type of Number)
 	// <E extends CharSequence> limit by CharSequence (CharSequence or sub type of CharSequence)
 	
-	private static void printListWildCard(String prefix, List<? super Integer> objects) {
-		System.out.print(prefix + " --> ");
-		for (Number object: objects) {
-			System.out.print(object + " ");
-		}
-		System.out.println("\n");
-	}
+	//private static void printListWildCard(String prefix, List<? super Integer> objects) {
+		//System.out.print(prefix + " --> ");
+		//for (Number object: objects) {
+		//	System.out.print(object + " ");
+		//}
+		//System.out.println("\n");
+	//}
 	private static <E extends CharSequence> void printListGenerics(String prefix, List<E> objects) {
 		System.out.print(prefix + " --> ");
 		for (E object: objects) {

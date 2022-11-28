@@ -23,3 +23,6 @@ REMOVE MID:   ArrayList > LinkedList
 --> E, T: Generic type
 --> Tham số, nhận 'kiểu dữ liệu' khi gọi nó
 --> Cơ bản --> T,E tạm giống Object
+
+
+khai báo kiểu dữ liệu kiểu đối tượng --> Lúc có lúc không
