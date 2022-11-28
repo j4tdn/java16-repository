@@ -30,7 +30,7 @@ public class Ex02GenericMethodWithList {
 
 	private static void printListWildCard(String prefix, List<? super Integer> objects) {
 		System.out.print(prefix + " ---> ");
-		for (Number object : objects) {
+		for (Object object : objects) {
 			System.out.print(object + " ");
 		}
 		System.out.println();
