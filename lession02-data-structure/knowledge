@@ -6,7 +6,7 @@ Kiểu dữ liệu:
 - Kiểu nguyên thủy: Primitive data type
 --> int, double, char, boolean
 --> Lưu trữ dữ liệu --> single value 
---> Giá trị được lư trữ ở vùng nhớ: STACK
+--> Giá trị được lưu trữ ở vùng nhớ: STACK
 
 - Kiểu đối tượng: Object type
 --> string, Item, employee

@@ -4,14 +4,15 @@
 		+ Builder pattern
 		
 2. Tạo sao khai báo các thuộc tính trong class là private chứ không phải là public ?
-- Đảm bảo quy tắc cảu OOP, mỗi class chỉ chứa/quản lí các thông tin của riêng nó 
+- Đảm bảo quy tắc của OOP, mỗi class chỉ chứa/quản lí các thông tin của riêng nó 
 --> FOP: share data
+
 - Hạn chế truy cập từ những đối tượng không cần thiết
 ví dụ: Employee <--> Company
 Nhân viên hàng tháng nhận được lương từ công ty
-+ money cảu nhân viên tăng
++ money của nhân viên tăng
 + quỹ lương của công ty giảm
-+ nhưng employee và company không biết ài khoản của người còn lại
++ nhưng employee và company không biết tài khoản của người còn lại
 
 3. Khái niệm từ khóa this ?
 --> Đối tượng hiện tại đang gọi đến hàm non-static

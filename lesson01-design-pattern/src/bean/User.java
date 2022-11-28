@@ -107,7 +107,7 @@ public class User {
 		
 		public User build() {
 			// this = current Builder
-			return new = User(this);
+			return new User(this);
 		}
 	}
 

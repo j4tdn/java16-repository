@@ -6,3 +6,6 @@ A. Static cho thuộc tính
 
 + Khi thuộc tính phụ thuộc/có giá trị riêng cho mỗi đối tượng 
 ==> thì cho thuộc tính đó là non-static
+
+Lập trình hướng đối tượng (Object Oriented Programing – OOP) là 
+một phương pháp để thiết kế một chương trình bởi sử dụng các lớp và các đối tượng.
