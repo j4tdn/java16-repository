@@ -1,0 +1,4 @@
+khi lưu một danh sách có trước số lượg phần tử --> Array
+khi lưu một danh sách không biết trước số lượng, k quan tâm vị trí index --> List
+khi lưu một danh sách có giá trị key cho mỗi phần tử để dễ dàng tìm kiếm --> Map
+vào trước ra sau --> Stack
