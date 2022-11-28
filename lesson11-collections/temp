@@ -1,0 +1,19 @@
+1. Phân biệt List và ArrayList
+
+2. Phân biệt Array và ArrayList
+
+3. Phân biệt ArrayList và LinkList
+GET:
+SET:
+4.
+5.
+6.
+7.
+8.
+9.
+ArrayList:
+LinkedList:
+
+===> GENERIC --> Ví dụ: List<E> ArrayList<T> Function<? extends Comarable<T>>
+	--> E, T, .. --> generic type
+	--> Tham số 

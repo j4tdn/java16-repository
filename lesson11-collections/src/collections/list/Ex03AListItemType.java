@@ -3,6 +3,7 @@ package collections.list;
 import java.util.List;
 
 import common.Item;
+import model.DataModel;
 
 public class Ex03AListItemType {
 	public static void main(String[] args) {

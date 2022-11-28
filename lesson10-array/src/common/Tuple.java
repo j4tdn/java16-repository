@@ -43,5 +43,6 @@ public class Tuple {
 		return "Tuple [left=" + left + ", right=" + right + "]";
 	}
 	
+	
 
 }
