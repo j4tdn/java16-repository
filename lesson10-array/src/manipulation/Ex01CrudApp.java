@@ -24,6 +24,7 @@ public class Ex01CrudApp {
 		// System.out.println("newRemoveArray: " + Arrays.toString(remove(numbers, 2)));
 
 		System.out.println("newDeleteArray: " + Arrays.toString(delete(numbers, 2)));
+
 	}
 
 	private static int sum(int[] numbers) {
@@ -80,5 +81,4 @@ public class Ex01CrudApp {
 
 		return Arrays.copyOfRange(source, 0, source.length - 1);
 	}
-
 }
