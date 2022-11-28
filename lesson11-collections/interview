@@ -1,4 +1,6 @@
 1.phân biệt List và ArrayList
+List là một cấu trúc dữ liệu của java
+	 là một interface con của collection
 
 2. phân biệt Array và ArrayList
 
