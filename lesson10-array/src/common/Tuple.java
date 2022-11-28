@@ -1,6 +1,6 @@
 package common;
 
-public class Tuple {
+public class Tuple<E>  implements Comparable<E>{
 	private int left;
 	private int right;
 	
@@ -33,6 +33,13 @@ public class Tuple {
 	@Override
 	public String toString() {
 		return "Tuple [left=" + left + ", right=" + right + "]";
+	}
+
+	@Override
+	public int compareTo(E o) {
+		Tuple e1 = this;
+		Tuple e2 =  (Tuple) o;
+		return e1.getRight() - e2.getRight();
 	}
 	
 
