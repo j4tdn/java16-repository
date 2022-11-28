@@ -26,3 +26,8 @@ REMOVE MID:   ArrayList > LinkedList
 
 
 khai báo kiểu dữ liệu kiểu đối tượng --> Lúc có lúc không
+
+
+1. List -> Interface con của collections, các phần tử có thể trùng nhau
+ Phải override hàm equals khi thực hiện remove, contains( -> so sánh địa chỉ)
+ 
