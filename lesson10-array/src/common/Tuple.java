@@ -1,6 +1,6 @@
 package common;
 
-public class Tuple {
+public class Tuple implements Comparable<Tuple> {
 	private int max = Integer.MAX_VALUE;
 	private int min = Integer.MIN_VALUE;
 	
@@ -29,6 +29,11 @@ public class Tuple {
 	@Override
 	public String toString() {
 		return max + " " + min ;
+	}
+
+	@Override
+	public int compareTo(Tuple o) {
+		return this.max - o.max;
 	}
 		
 }
