@@ -4,7 +4,9 @@ import common.Item;
 import common.NullOPtion;
 import utils.ArrayUtils;
 
-public class Ex02BubbleSortWithItem {
+//Ex03 gọn hơn
+
+public class Ex02BubbleSortWithItemAndComparable {
 	public static void main(String[] args) {
 		Item[] item=getItems();
 		ArrayUtils.printf("item", item);
@@ -48,20 +50,8 @@ public class Ex02BubbleSortWithItem {
 						continue;
 					}
 				}
-				// step 1 end
-				//gọi được hàm compareTo vì
-				//String implement Comparable<String>
-				//hoán vị từng Item
-				//so sánh Item price thôi
 				
-				//case1: xắp xếp bằng giá :if (i1.getPrice()-i2.getPrice()  > 0)
-				
-				//case 2: bằng ItemId:	if (i1.getId()-i2.getId()  > 0)
-				
-				//case 3: giảm dần theo name
-				
-				//case4: Store tăng--> Store trùng thì ItemId tăng
-				if (i1.getName().compareTo(i2.getName())  < 0) {
+				if (compareTo(i1, i2)  < 0) {
 
 					Item tmp = elements[i];
 					elements[i] = elements[i + 1];
@@ -70,6 +60,19 @@ public class Ex02BubbleSortWithItem {
 			}
 		}
 	}
+	//name1<name2 -> âm
+	//name1>name2-> dương
+	//0 -> name1=name2
+	//so sánh name1 và name2 --> trả về >< hặng =0
+	/*public static int compareTo(Item i1, Item i2) {
+		return i1.getName().compareTo(i2.getName());
+	}*/
+	
+	
+	public static int compareTo(Item i1, Item i2) {
+		return i1.getId()-i2.getId();
+	}
+	
 	public static Item[] getItems() {
 		return new Item[] {
 				new Item(1,"Item1",350,101),

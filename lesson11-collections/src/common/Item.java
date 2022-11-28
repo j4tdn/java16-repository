@@ -45,15 +45,18 @@ public class Item implements Comparable<Item>{
 	public int getStoreId() {
 		return storeId;
 	}
+	//i1.equals(i2)--> i1 là this; i2 là that
+	//-->trùng địa chỉ thì true(trùng địa chỉ ở stack-->trỏ trùng ô nhớ ở heap)
+	// -->bằng nhau
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
 			return true;
-		}
+		}//nếu that lúc runtime không phải item thì false
 		if (!(o instanceof Item)) {
 			return false;
 		}
-		Item that = (Item) o;
+		Item that = (Item) o;//convert sang item để lấy đc id của o
 		return this.getId() == that.getId();
 	}
 

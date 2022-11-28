@@ -6,7 +6,7 @@ import java.util.List;
 public class Ex01RawTypeDemo {
 	public static void main(String[] args) {
 		//before = JDK 1.5
-		//raw type-->kiểu dữ liệu càn 1 kiểu generic type
+		//raw type-->kiểu dữ liệu cầu 1 kiểu generic type
 		//--> mình không khai báo generic type
 		//-->raw type --> tự hiểu object
 		
@@ -22,6 +22,8 @@ public class Ex01RawTypeDemo {
 		}
 		
 		//From JDK 1.5
+		//List <E> : generic type: kiểu dữ liệu chung
+		//bắt lỗi tại compipe thay vì runtime
 		List<Integer> numbers = new ArrayList<>();
 		numbers.add(5);
 		//numbers.add("hello");

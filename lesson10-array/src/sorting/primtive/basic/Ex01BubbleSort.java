@@ -16,9 +16,9 @@ public class Ex01BubbleSort {
 		// Array has N elements -->N rounds
 		// each round--> find max, min(asc/desc) per round
 		
-		//loop left --> right
-		//if(a[left]>a[right]--> swap-->ASC
-		//if(a[left]<a[right]--> swap-->DESC
+		//loop left --> right duyệt trái sang phải
+		//if(a[left]>a[right]--> swap-->ASC nếu trái> phải--> hoán vị--. tăng dần
+		//if(a[left]<a[right]--> swap-->DESCngược lại
 		
 		for (int round = 0; round < elements.length; round++) {
 			for (int i = 0; i < elements.length - round - 1; i++) {

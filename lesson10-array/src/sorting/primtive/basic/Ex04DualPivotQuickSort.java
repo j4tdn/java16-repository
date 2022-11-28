@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 import utils.ArrayUtils;
 
-public class Ex04MergeSort {
+public class Ex04DualPivotQuickSort {//dual pivot: dùng quichSort dùng 2 điểm chốt
 	public static void main(String[] args) {
 		int[] digits = { 1, 5, 11, 9, 4, 6 };
-		Arrays.sort(digits);
+		Arrays.sort(digits);//dùng sort tăng dần của java
 		//due pivot quick sort
-		//default(unique): asc
+		//default(unique): asc chỉ hỗ trợ duy nhất sort tăng dần
 		reverse(digits);
 
 		ArrayUtils.printf("digist ", digits);
