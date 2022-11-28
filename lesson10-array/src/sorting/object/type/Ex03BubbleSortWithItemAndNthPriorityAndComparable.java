@@ -9,12 +9,12 @@ public class Ex03BubbleSortWithItemAndNthPriorityAndComparable {
 		Item[] items = getItems();
 		ArrayUtils.printf("items", items);
 		// sort items by storeId(DESC), itemId(ASC)
-		
+
 		System.out.println("====================");
 		bubbleSort(items);
 		ArrayUtils.printf("sorted items", items);
 	}
-	
+
 	// bubble sort with default is NULL_FIRST
 	private static void bubbleSort(Item[] elements) {
 		bubbleSort(elements, NullOption.NULL_FIRST);
@@ -49,23 +49,21 @@ public class Ex03BubbleSortWithItemAndNthPriorityAndComparable {
 					}
 				}
 				// step 1 --> end
-				
+
 				// step 2 --> handle non-null values --> ASC
 				// storeId1 < storeId2 --> swap
 				// storeId1 = storeId2
-				//    itemId1 > itemId2 --> swap
-				//    other no
-				/*if (i1.getStoreId() - i2.getStoreId() < 0) {
-					Item tmp = elements[i];
-					elements[i] = elements[i + 1];
-					elements[i + 1] = tmp;
-				} else if (i1.getStoreId() - i2.getStoreId() == 0) {
-					if (i1.getId() - i2.getId() > 0) {
-						Item tmp = elements[i];
-						elements[i] = elements[i + 1];
-						elements[i + 1] = tmp;
-					}
-				}*/
+				// itemId1 > itemId2 --> swap
+				// other no
+				/*
+				 * if (i1.getStoreId() - i2.getStoreId() < 0) { Item tmp = elements[i];
+				 * elements[i] = elements[i + 1]; elements[i + 1] = tmp; } else if
+				 * (i1.getStoreId() - i2.getStoreId() == 0) { if (i1.getId() - i2.getId() > 0) {
+				 * Item tmp = elements[i]; elements[i] = elements[i + 1]; elements[i + 1] = tmp;
+				 * } }
+				 */
+				// storeId(DESC), itemId(ASC)
+
 				if (compareTo(i1, i2) > 0) {
 					Item tmp = elements[i];
 					elements[i] = elements[i + 1];
@@ -74,18 +72,19 @@ public class Ex03BubbleSortWithItemAndNthPriorityAndComparable {
 			}
 		}
 	}
-	
+
 	// storeId(DESC), itemId(ASC)
-	public static int compareTo(Item i1, Item i2) {
-		if (i1.getStoreId() < i2.getStoreId()) {
-			return 1; // positive
-		} else if (i1.getStoreId() > i2.getStoreId()){
-			// can be removed
-			return -1;
-		} else {
-			// explain again
-			return i1.getId() - i2.getId();
+	private static int compareTo(Item i1, Item i2) {
+		int storeId1 = i1.getStoreId();
+		int storeId2 = i2.getStoreId();
+		if (storeId1 < storeId2) {
+			return 1;
 		}
+		if (storeId1 > storeId2) {
+			return -1;
+		}
+		// storeId1 = storeId2
+		return i1.getId() - i2.getId();
 	}
 
 	public static Item[] getItems() {

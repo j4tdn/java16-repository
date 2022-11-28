@@ -48,6 +48,19 @@ public class Item implements Comparable<Item>{
 		this.storeId = storeId;
 	}
 	
+	// i1.equals(i2)
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof Item)) {
+			return false;
+		}
+		Item that = (Item)o;
+		return this.getId() == that.getId();
+	}
+	
 	// this: previous
 	// that: next
 	@Override
@@ -59,7 +72,7 @@ public class Item implements Comparable<Item>{
 
 	@Override
 	public String toString() {
-		return id + ", " + name + ", " + price + ", " + storeId + "\n";
+		return id + ", " + name + ", " + price + ", " + storeId;
 	}
 
 }

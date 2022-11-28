@@ -13,6 +13,10 @@ public class ArrayUtils {
 		System.out.println(prefix + " --> " + Arrays.toString(input));
 	}
 	
+	public static <E> void printf(String prefix, E[] input) {
+		System.out.println(prefix + " --> " + Arrays.toString(input));
+	}
+	
 	public static void printf(String prefix, String[] input) {
 		System.out.println(prefix + " --> " + Arrays.toString(input));
 	}
