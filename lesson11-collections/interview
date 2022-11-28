@@ -1,0 +1,29 @@
+1.phân biệt List và ArrayList
+
+2. phân biệt Array và ArrayList
+
+3.phân biệt ArrayList và LinkedList
+GET:       ArrayList > LinkedList
+SET:       ArrayList > LinkedList
+
+ArrayList: shift right, left
+LinkedList: iterate, find 
+
+ADD LAST:  ArrayList ~ LinkedList
+ADD FIRST: ArrayList < LinkedList
+ADD MID:   ArrayList > LinkedList
+
+REMOVE LAST:  ArrayList ~ LinkedList
+REMOVE FIRST: ArrayList < LinkedList
+REMOVE MID:   ArrayList > LinkedList
+
+
+ArrayList  : GET, SET
+LinkedList :
+
+
+===> Generic--> ví dụ: List<E> ArrayList<T> Function<? extends comparable<T>>
+	--> E, T .. --> generic type
+	--> tham số, nhận kểu dữ liệu khi gọi nó
+	--> cơ bản --> T, E tạm thời giống như object (chỉ đại diện cho kiểu đối tượng,kiểu nguyên thủy không được)
+	
