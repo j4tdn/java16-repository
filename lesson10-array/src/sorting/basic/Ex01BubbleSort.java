@@ -1,7 +1,5 @@
 package sorting.basic;
 
-import java.util.Arrays;
-
 import utils.ArrayUtils;
 
 public class Ex01BubbleSort {
