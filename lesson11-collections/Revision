@@ -1,0 +1,39 @@
+###Collection:
+- Là cấu trúc dữ liệu cho lưu trữ và thao tác tập hợp các đối tượng
+- Thành phần trong Collection:
+	+ Interface: Chứa các hàm trừu tượng
+	+ Implementation classes: Chứa các phần thực thi các hàm trừu tượng (VD: Iterable->Collection->List, Set->ArrayList, Vector, LinkedList//HashSet, TreeSet)
+	+ Algorithm: Thuật toán có sẵn hỗ trợ sorting, shuffle
+	
+- Collection thì bao gồm (chính):
+	+ List: Có thể lặp lại và có thứ tự 
+	+ Set: Không thể lặp lại và không có thứ tự -> Không thể truy cập vào vị trí gì đó cụ thể.
+	+ Map: <Key, Value> Key có thể là bất kỳ kiểu dữ liệu nào chứ không bắt buộc phải là int ~ Pair.
+	
+##List:
+- interface: List
+- implementation: ArrayList & LinkList
+	#ArrayList 
+	- Sử dụng bản chất như mảng với số lượng phần tử có thể thay đổi được
+	- Không bắt buộc phải khai báo trước số lượng phần tử
+	- Có thể khai báo trước sức chứa (opacity) cho lần khởi tạo mảng đầu tiên với ArrayList
+	- Phương thức size, isEmpty, get, set, iterator được thực thi với thời gian cố định O(1)
+	- Phương thức add, remove sẽ phụ thuộc vào vị trí xử lý. Cách hoạt động tương tự với mảng. Và sẽ có sự nhanh/chậm hơn khi so sánh với LinkedList
+	
+	==============
+	- Raw type (Trước JDK1.5): có thể không khai báo theo kiểu generic nhưng sẽ khiến cho lúc compile không lỗi mà lúc runtime sẽ bị lỗi khiến debug khó khăn (List list = new ArrayList();)
+	- Generic type (Từ JDK1.5)
+		List<Integer> numbers = new ArrayList<>();
+	==============
+	- ArrayList khi add không phải chỉ tăng kích thước lên 1 mà tăng lên 1 số lượng hợp lý để không phải cấp phát lại nhiều khi add những lần sau.
+	==============
+	- ConcurrentModificationException
+		+ Khi 1 phần tử đang được thao tác/xử lý bới 1 process thì không để được truy cập bởi process khác (Không thể vừa forEach vừa remove)
+		+ Vì vậy ta phải sử dụng iterator. VD:
+			Iterator<String> iterator = elements.iterator();
+			while(iterator.hasNext()){	
+				String each = iterator.next();
+				if(each.compareTo("E")>0)
+					iterator.remove();
+			}
+		
