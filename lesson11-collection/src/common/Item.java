@@ -47,6 +47,17 @@ public class Item implements Comparable<Item>{
 	public void setStoreId(int storeId) {
 		this.storeId = storeId;
 	}
+	@Override
+	public boolean equals(Object o) {
+		if(this == o) {
+			return true;
+		}
+		if(!(o instanceof Item)){
+			return false;
+		}
+		Item that = (Item)o;
+		return this.getId() == that.getId();
+	}
 	
 	@Override
 	public int compareTo(Item that) {
@@ -54,9 +65,7 @@ public class Item implements Comparable<Item>{
 		Item i2 = that;
 		return i2.getStoreId() - i1.getStoreId();
 	}
-	public boolean equal() {
-		
-	}
+	
 	
 	@Override
 	public String toString() {
