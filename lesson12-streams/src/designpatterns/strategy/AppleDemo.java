@@ -26,7 +26,7 @@ import model.DataModel;
 /*
  * Predicate: T trả về kiểu boolean
  * Consumer: T trả về kiểu void
- * Callable: 
+ * Callable,supplier:
  * 	   truyền vào () trả về T
  * Function <T,R>
  *  truyền vào T trả về R 

@@ -11,7 +11,11 @@ public class Apple {
 	public Apple() {
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	public Apple(String id) {
+		this.id = id;
+	}
+		
 	public Apple(String id, String color, double weight, String original) {
 		super();
 		this.id = id;
