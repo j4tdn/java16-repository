@@ -10,6 +10,10 @@ public class Apple {
 
 	public Apple() {
 	}
+	
+	public Apple(String id) {
+		this.id = id;
+	}
 
 	public Apple(String id, String color, double weight, String origin) {
 		super();
