@@ -1,0 +1,8 @@
+1. Funcitnal Interface la` gi`
++ La interface chua duy nhat 1 ham tru tuong
+VD : Supplier<T> , Consumer<T> , Function<T,R> 
++ Dev co the tu tao ra funciton interface
+2. Khi nao su dung functional interface
++ khi minh muon mit ham/ chuc nang la 1 tham so o ham khac
++ --> su dung trong strategy pattern
++ strategy method 
