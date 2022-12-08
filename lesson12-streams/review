@@ -1,0 +1,6 @@
+1.Functional Interface la gi
++ la 1 interface chua duy nhat mot ham truu tuong
+VD: Consumer<T>,
+
++ Developer co the tu tao ra : custom functional interface 
+2. 
