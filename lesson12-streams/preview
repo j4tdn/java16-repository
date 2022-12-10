@@ -1,0 +1,36 @@
+1. Functional Interface là gì?
+ + Là 1 interface chứa duy nhất một hàm trừu tượng
+  VD: Supplier <T>, Consumer<T>, Function<T, R>
+  
+  
+   + Developer có thể tự tạo ra custom functional interface
+   
+2. Khi nào sử dụng Functional Interface
+
+  + Khi mình muốn một hàm/ chức năng là 1 tham số ở hàm khác
+  + --> Sử dụng trong strategy pattern 
+  + strategy pattern --> strategy method
+  + strategy method --> input, output
+  
+  ==> Interface
+          + strategy method
+      return_type method_name (Interface interface)
+      {
+         ... interface.strategy_method(....)
+      }
+      
+      
+      + Gọi method_name
+      
+      + anonymos class --> đoạn code giúp mình tạo ra một đối towngj cho biến kiểu dữ liệu
+        Interface
+        
+       + anonymos class: code dài --> thay thế thành : anonymos function(lambda expression)
+      
+3. Khi nào dùng anonymos function được sự dụng?
+    + Khi hàm anonymos  class chỉ có 1 hàm trừu tượng
+    
+    lambda: (parameters) -> {}
+    
+    + --> 
+       
