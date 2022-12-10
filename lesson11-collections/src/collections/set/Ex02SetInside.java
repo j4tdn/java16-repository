@@ -1,4 +1,4 @@
-package collections.map;
+package collections.set;
 
 import static java.util.Comparator.*;
 

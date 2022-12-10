@@ -1,0 +1,8 @@
+1. Functional Interface là 1 interface chứa duy nhất 1 hàm trừu tượng
+VD: Supplier<T>, Consumer<T>, Function<T,R>
+
++ có thể tự tạo ra: custom functional interface
+
+2. Functional Interface để làm gì?
+ +Khi muốn một hàn/chức năng là 1 tham số ở hàm khác
+ +--> Sử dụng trong strategy pattern

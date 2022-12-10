@@ -8,10 +8,10 @@ public class Ex09JavaObjectType {
 		
 		//Float, Double, Long, Character
 		Integer o1 =new Integer(10);
-		String o2-new String("Hello");
+		String o2=new String("Hello");
 		
 		Integer  o3 = 99;
-		String 04= "bye";
+		String o4= "bye";
 		
 		// Custom
 		Item item = new Item(1, "Item 1", 222);
