@@ -7,8 +7,8 @@ public class Ex11StringSpeedTest {
 		long start = System.currentTimeMillis();
 		for (int i = 1; i <= COUNT; i++) {
 			// STACK = 200000, HEAP = 200000
-			//String s1 = new String("hello");
-			//String s2 = new String("hello");
+			// String s1 = new String("hello");
+			// String s2 = new String("hello");
 			
 			// STACK = 200000, HEAP = 1
 			String s1 = "hello";

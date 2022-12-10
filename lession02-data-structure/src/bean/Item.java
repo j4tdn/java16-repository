@@ -11,7 +11,7 @@ public class Item {
 	public String name;
 	public double price;
 	
-	// Empty construtor --> hàm khỏi tạo rỗng
+	// Empty constructor --> hàm khỏi tạo rỗng
 	public Item() {
 		
 	}

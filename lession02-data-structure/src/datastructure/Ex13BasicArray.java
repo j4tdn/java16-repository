@@ -3,8 +3,8 @@ package datastructure;
 public class Ex13BasicArray {
 	public static void main(String[] args) {
 		// Mảng là kiểu dữ liệu đối tượng
-		// 5 là độ dài length cảu mảng
-		// Tạo ra 1 ổ nhớ ở vùng nhớ HEAP lưu 5 giá trị mặc định cảu kiểu int
+		// 5 là độ dài length của mảng
+		// Tạo ra 1 ổ nhớ ở vùng nhớ HEAP lưu 5 giá trị mặc định của kiểu int
 		
 		
 		int [] digits = new int[5];

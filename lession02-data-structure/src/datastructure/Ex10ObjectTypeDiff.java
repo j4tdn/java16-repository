@@ -4,8 +4,8 @@ public class Ex10ObjectTypeDiff {
 	public static void main(String[] args) {
 		// String, Integer, Double, Float, Long, Character
 		// kiểu đối tượng và chỉ có duy nhất 1 thông tin (thuộc tính) bên trong
-		// drectly assign
-		// lưu trữ giá trị ở HEAD --> constant pool
+		// directly assign
+		// lưu trữ giá trị ở HEAP --> constant pool
 		String s1 = "hello"; // H1
 		String s2 = "welcome";// H2
 		String s3 = "hello";// H1

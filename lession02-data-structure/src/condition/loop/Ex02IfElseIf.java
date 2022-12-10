@@ -10,11 +10,11 @@ public class Ex02IfElseIf {
 		System.out.println("point: " + point);
 		
 		// nếu điểm < 5 ==> hoc lực yếu
-		if (point <8) {
-			System.out.println("Học lực yếu "); }
-		
+		if (point <5) {
+			System.out.println("Học lực yếu "); 
+			}
 		// nếu điểm >= 8 và < 8  ==> học lực trung bình
-		else ( point >= 5 && point < 8) {
+		else if ( point >= 5 && point < 8) {
 			System.out.println("Học lực trung bình");
 		}
 		
@@ -26,5 +26,5 @@ public class Ex02IfElseIf {
 		
 		System.out.println("Finish...!!!");
 		
-			}
+		}
 }

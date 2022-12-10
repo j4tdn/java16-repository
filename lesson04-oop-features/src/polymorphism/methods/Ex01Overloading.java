@@ -28,5 +28,6 @@ public class Ex01Overloading {
 		for (int number:numbers) {
 		sum += number;
 		}
+		return sum;
 	}
 	}
