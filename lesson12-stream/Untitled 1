@@ -1,0 +1,14 @@
+1. Functional Interface là gì ?
+ 	+ ...
+ 	VD: Supplier<T>, Consumer<T>, Function<T,R> 
+ 
+ 	+ Developer có thể tự tạo ra custom functional interface
+ 
+ 
+2. Khi nào sử dụng Functional Interface
+	+ Khi mình muốn một hàm/ chức năng là 1 tham số ở hàm khác
+	+ --> Sử dụng trong strategy method
+	+ strategy pattern --> strategy method
+	+ strategy method --> input, output
+	==> Interface
+		+ strategy method
