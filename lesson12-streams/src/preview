@@ -1,0 +1,7 @@
+1. Functional Interface là gì
++ Là 1 interface chứa duy nhất 1 hàm trừu tượng 
+vd: Supplier<T>, Consumer<T>, Function<T,R>
+
++ Developer có thể tự tạo ra custom functional interface
+2 . Khi nào sử dụng FI
++ Khi mình muốn hàm / chức năng là tham số của hàm khác
