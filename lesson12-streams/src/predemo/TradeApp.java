@@ -34,8 +34,9 @@ public class TradeApp {
 
 		System.out.println(" ========== ex03 ===========");
 		// ex03 : listTrade.add(new Trade("Mario", "Milan"));
-		//trade.stream().map( o -> distinctByKey(o.getCity())).forEach(o -> System.out.println(o));
-		trade.stream().filter(distinctByKey( o -> o.getCity())).forEach(o -> System.out.println(o));
+		// trade.stream().map( o -> distinctByKey(o.getCity())).forEach(o ->
+		// System.out.println(o));
+		trade.stream().filter(distinctByKey(o -> o.getCity())).forEach(o -> System.out.println(o));
 
 		System.out.println(" ========== ex04 ===========");
 //		// ex04 : Find all traders from Cambridge and sort them by name desc.
@@ -46,10 +47,8 @@ public class TradeApp {
 //		// ex05 : Return a string of all traders’ names sorted alphabetically.
 
 		System.out.println(" ========== ex06 ===========");
-		trade.stream()
-		.filter(distinctByKey(o -> o.getName()))
-		.sorted((o1,o2) -> o1.getName().compareTo(o2.getName()))
-		.forEach(o -> System.out.println(o));
+		trade.stream().filter(distinctByKey(o -> o.getName())).sorted((o1, o2) -> o1.getName().compareTo(o2.getName()))
+				.forEach(o -> System.out.println(o));
 		System.out.println(" ========== ex06 ===========");
 //		
 //
@@ -58,10 +57,10 @@ public class TradeApp {
 		trade.stream().filter(o -> o.getCity().equals("Milan")).forEach(o -> System.out.println(o));
 //		// ex07 Count the number of traders in Milan.
 		System.out.println(" ========== ex07 ===========");
-		Integer a  = (int) trade.stream().filter(o -> o.getCity().equals("Milan")).count();
-		System.out.println("count of milan : " +a);
-		
-        System.out.println(" ========== ex08 ===========");
+		Integer a = (int) trade.stream().filter(o -> o.getCity().equals("Milan")).count();
+		System.out.println("count of milan : " + a);
+
+		System.out.println(" ========== ex08 ===========");
 //		// ex08
 //
 		transactions.stream().filter(o -> o.getTraders().getCity().equals("Cambridge"))
@@ -69,9 +68,9 @@ public class TradeApp {
 //
 		// ex09
 		System.out.println(" ========== ex09 ===========");
-		trade2 = transactions.stream().map(o -> o.getPrice()).sorted((o1,o2) -> (o1 - o2)).toList();
-		System.out.println("the highest value of all the transactions: " + trade2.get(trade2.size() -1));
-		
+		trade2 = transactions.stream().map(o -> o.getPrice()).sorted((o1, o2) -> (o1 - o2)).toList();
+		System.out.println("the highest value of all the transactions: " + trade2.get(trade2.size() - 1));
+
 		System.out.println(" ========== ex010 ===========");
 		System.out.println("transaction with the smallest value: " + trade2.get(0));
 
@@ -106,9 +105,10 @@ public class TradeApp {
 		return listTransaction;
 
 	}
+
 	public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) {
-        Set<Object> set = new HashSet<>();
-        return t -> set.add(keyExtractor.apply(t)) == true;
-    }
+		Set<Object> set = new HashSet<>();
+		return t -> set.add(keyExtractor.apply(t)) == true;
+	}
 
 }
