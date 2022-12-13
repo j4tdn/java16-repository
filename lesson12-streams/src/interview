@@ -6,3 +6,6 @@
 2. Lambda: là một cách viết ngắn gọn để tạo ra 1 thể hiện/đối tượng cho 1 functional interface
 
 
+
+Q: Why we don't store data in stream
+
