@@ -1,0 +1,33 @@
+1. Phan biet kieu du lieu nguyen thuy va kieu doi tuong
++ Giong nhau
+	Deu luu tru du lieu
++ Khac nhau
+	. Kieu nguyen thuy: Primitive data type
+	  JAVA: int, double, char, boolean
+	  Luu tru du lieu --> single value
+	  Gia tri duoc luu tru o vung nho: STACK
+	
+	. Kieu doi tuong: Object type
+	  JAVA: String, Integer, Float
+	  Custom: Item, Employee, Student ... --> new
+	  Luu tru du lieu voi nhieu thong tin ben trong
+	  Gia tri duoc luu tru o vung nho: HEAP
+--> Luu tru o dau
+--> Ho tro xu ly o dau
+
+2. Khi truyen 1 tham so(bien) qua 1 ham(phuong thuc) thi Java se dung khai niem pass by value hay pass by reference
+--> Cho vd
+
+3. Ham khoi tao la gi
+
+4. Tu khoa this la gi
+
+5. Khac nhau giua kieu du lieu doi tuong
++ co san cua JAVA nhu String, Integer, Float va doi tuong duoc tao ra nhu Item, Employee, Student
+
+6. Giai thich tu khoa final, final co the thay doi gia tri k
+
+7. Phan biet pham vi truy cap public va private
+	. public: duoc phep su dung trong moi class
+	
+	. privte: duoc phep su dung trong class hien tai dang chua chinh no
