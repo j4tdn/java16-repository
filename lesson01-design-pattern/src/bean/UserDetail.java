@@ -56,5 +56,5 @@ public class UserDetail {
 	public String toString() {
 		return "UserDetail [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", phone=" + phone
 				+ ", address=" + address + "]";
-	}i
+	}
 }
