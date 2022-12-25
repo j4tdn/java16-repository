@@ -31,7 +31,7 @@ public class Trader {
 
 	@Override
 	public String toString() {
-		return "Trader [name=" + name + ", city=" + city + "]";
+		return "name=" + name + ", city=" + city +"\n";
 	}
 	
 	
