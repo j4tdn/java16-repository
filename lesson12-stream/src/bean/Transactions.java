@@ -1,0 +1,53 @@
+package bean;
+
+import java.util.Arrays;
+import java.util.List;
+
+import predit.Trader;
+import predit.Transaction;
+
+public class Transactions {
+	private Trader trader;
+	private int year;
+	private int value;
+//	public Transaction(Trader trader, int year, int value) {
+//		this.trader= trader;
+//		this.year = year;
+//		this.value = value;
+//	}
+
+	public Trader getTrader() {
+		return trader;
+	}
+
+	public Transactions( Trader trader, int year, int value) {
+		this.trader = trader;
+		this.year = year;
+		this.value = value;
+	}
+
+	public void setTrader(Trader trader) {
+		this.trader = trader;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Transaction [trader=" + trader.getName() + ", year=" + year + ", value=" + value + "]" + "\n";
+	}
+}

@@ -18,9 +18,9 @@
 	+ Trùng tên;
 	+ Khác nhau số lượng tham số || kiểu dữ liệu truyền vào của tham số
 
--->Override: Hai hoặc nhiều phương thưc sogij là override nếu
+-->Override: Hai hoặc nhiều phương thưc gọi là override nếu
  	+ Thuộc 2 hoặc nhiều class có quan hệ thừa kế
- 	+ Overide để định nghĩa  lại nội dung class cha trong class con
+ 	+ Overide để định nghĩa lại nội dung class cha trong class con
  	+ Ví dụ : toString 
 + Đối tượng: 1 đối tượng nhưng có nhièu thể hiện 
 --> ví dụ: Person --> student,Employee, Child
