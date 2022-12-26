@@ -13,8 +13,12 @@ public class AppleMethodReference {
 		List<Apple> inventory= DataModel.getApples();
 		
 		//getCountry(inventory).forEach(System.out::println);
-		//		getCountry(inventory, apple -> apple.getWeight()).forEach(System.out::println);
-		getCountry(inventory,AppleMethodReference::getstaticWeight).forEach(System.out::println);
+		// (Apple apple) -> apple.getWeight() ---> Apple::getWeight -> non static method
+		getCountry(inventory, apple -> apple.getWeight()).forEach(System.out::println); 
+		
+		
+		getCountry(inventory,AppleMethodReference::getstaticWeight)
+		.forEach(System.out::println);//static method
 		
 	}
 	private static<T,R> Set<R> getCountry(List<T> elements,Function<T, R> function){
@@ -22,9 +26,12 @@ public class AppleMethodReference {
 		for(T t : elements) {
 			result.add(function.apply(t));
 		}
+		/*elements.forEach(t->{
+			result.add(function.apply(t));
+		});*/
 		return result;
 	}
-	
+	//in ra các cân nặng của Apple
 	public static Double getstaticWeight(Apple apple) {
 		return apple.getWeight()
 ;	}

@@ -63,7 +63,7 @@ public class Apple {
 		if(!(o instanceof Apple)) {
 		return false;}
 		Apple that = (Apple)o;
-		return getId().equals(that.getId());
+		return getId().equals(that.getId());//phân biệt được 2 Apple
 	}
 	@Override
 	public int hashCode() {
