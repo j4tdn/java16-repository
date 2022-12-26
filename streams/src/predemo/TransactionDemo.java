@@ -71,7 +71,7 @@ public class TransactionDemo {
 
 	}
 
-	private static <E> void printList(List<E> list) {
+	public static <E> void printList(List<E> list) {
 		for (E element : list) {
 			System.out.println(element);
 		}
