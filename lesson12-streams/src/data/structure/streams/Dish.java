@@ -26,6 +26,7 @@ public class Dish {
 		budget.put("task-e", 333);
 		budget.put("task-f", 134);
 		budget.put("task-g", 660);
+		return budget;
 		
 	}
 	
