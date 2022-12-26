@@ -48,7 +48,6 @@ public class TradeApp {
         tmp.sort((o1, o2) -> o2.getTraders().getName().compareTo(o1.getTraders().getName()));
 		tmp.forEach(System.out::println);
 		System.out.println();
-        
         System.out.println("5. Return a string of all trader's names sorted alphabetically.");
         // 5. Return a string of all trader's names sorted alphabetically.
         tmp = transactions;
