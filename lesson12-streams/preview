@@ -1,0 +1,29 @@
+1. Functional Interface là gì
+   + Là 1 interface chứa duy nhất 1 hàm trừu tượng
+   VD: Supplier<T>, Consumer<T>, Function<T, R>
+   
+   + Developer có thể tự tạo ra custom functional interface 
+   
+   
+2. Khi nào sử dụng Functional Interface
+   + Khi mình muốn một hàm/chức năng là 1 tham số ở hàm khác
+   + --> Sử dụng trong strategy pattern
+   + strategy pattern --> strategy method
+   + strategy method --> input, output
+   ==> Interface
+   	      + strategy_method
+   return_type method_name(Interface interface) {
+       ... interface.strategy_method(....)
+   }
+   
+   
+   + Gọi method_name
+   
+   + anonymous class --> đoạn code giúp mình tạo ra một đối tượng
+   cho biến kiểu dữ liệu interface
+   
+   + anonymous class(dài) --> anonymous function(lambda expression)
+   
+   + lambda: (parameters) -> {} 
+   + --> override abstract method(no name) in function interface
+   
