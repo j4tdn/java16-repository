@@ -151,5 +151,16 @@ Stream.iterate và Stream.generate
 	generate sẽ khởi tạo phần tử mà không cần phải đưa vào bất cứ gì cả (Supplier)
 	+ iterate(int seed, IntUnaryOperator f)
  	+ generate(IntSupplier s)
-	
-
+========================
+int[]					--> IntStream
+double[] 				--> DoubleStream
+			--> Arrays.stream(..)
+Integer[]				--> Stream<Integer>
+String[] 				--> Stream<String>
+========================
+List<T>		.stream() --> Stream<T>
+Set<T>		.stream() --> Stream<T>
+Map<K, V> 	.entrySet()-> Set<Entry<K, V>>.stream()
+					  --> Stream<Entry<K, V>>
+			...intermediate operations...
+			...terminal operation...--> #stream
