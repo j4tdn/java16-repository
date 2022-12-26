@@ -1,6 +1,7 @@
 package live.demo;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -11,25 +12,8 @@ import model.Transaction;
 
 public class Ex01TransactionApp {
 	public static void main(String[] args) {
-		List<Trader> traders = new ArrayList<>();
-		Trader raoul = new Trader("Raoul", "Cambridge");
-		Trader mario = new Trader("Mario", "Milan");
-		Trader alan = new Trader("Alan", "Cambridge");
-		Trader brian = new Trader("Brian", "Cambridge");
-
-		traders.add(raoul);
-		traders.add(mario);
-		traders.add(alan);
-		traders.add(brian);
-
-		List<Transaction> transactions = Arrays.asList(
-				new Transaction(brian, 300, 2011),
-				new Transaction(raoul, 1000, 2012), 
-				new Transaction(raoul, 400, 2011),
-				new Transaction(mario, 710, 2012), 
-				new Transaction(mario, 700, 2012), 
-				new Transaction(alan, 950, 2012)
-				);
+		List<Trader> traders = DemoLive.getTraders();
+		List<Transaction> transactions =DemoLive.getTransactions();
 		//1. Find all transactions in the year 2011 and sort them by value (small to high).
         List<Transaction> transactionsInTheYear2011 = transactions.stream()
                 .filter(transaction -> transaction.getYear() == 2011)
@@ -70,6 +54,13 @@ public class Ex01TransactionApp {
             System.out.println(sortedAlphabetically);
             System.out.println("===========================================");
 		//6. Are any traders based in Milan?
+       boolean tradersBasedInMilan =
+		            transactions.stream()
+		                        .anyMatch(transaction -> transaction.getTrader()
+		                                                            .getCity()
+		                                                            .equals("Milan")
+		                                 );
+		        System.out.println(tradersBasedInMilan);
          
 		//7. Count the number of traders in Milan.
                 
