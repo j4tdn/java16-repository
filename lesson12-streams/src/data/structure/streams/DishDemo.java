@@ -18,7 +18,7 @@ import model.DataModel;
 
 public class DishDemo {
 	public static void main(String[] args) {
-		List<Dish> menu = DataModel.getDish();
+		List<Dish> menu = DataModel.getDishes();
 		
 		//B1. convert current data structure --> stream
 		//List<T>.stream() --> Stream<T>
