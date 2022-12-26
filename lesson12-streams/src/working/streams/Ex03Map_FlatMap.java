@@ -34,7 +34,7 @@ public class Ex03Map_FlatMap {
 			List<Integer> v= new ArrayList<>(v1);
 			v.addAll(v2);
 			return v;
-		})).forEach((k,v)->System.out.println());
+		})).forEach((k,v)->System.out.println(k + ", " + v));
 				   
 		   
 		
