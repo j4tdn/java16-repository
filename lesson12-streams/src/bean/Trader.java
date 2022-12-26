@@ -1,14 +1,13 @@
-package predemo;
+package bean;
 
-public class Trader implements Comparable<Trader> {
+public class Trader {
 	private String name;
 	private String city;
-	
+
 	public Trader() {
 	}
 
 	public Trader(String name, String city) {
-		super();
 		this.name = name;
 		this.city = city;
 	}
@@ -32,17 +31,6 @@ public class Trader implements Comparable<Trader> {
 	@Override
 	public String toString() {
 		return "Trader [name=" + name + ", city=" + city + "]";
-	}
-	
-	@Override
-	public int compareTo(Trader trader) {
-		if (name == trader.name)
-			return 0;
-		else if (name != trader.name) {
-			return 1; 
-		}
-		else
-			return -1;
 	}
 
 }

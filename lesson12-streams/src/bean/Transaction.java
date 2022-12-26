@@ -1,6 +1,6 @@
-package predemo;
+package bean;
 
-public class Transaction implements Comparable<Transaction> {
+public class Transaction {
 	private Trader trader;
 	private int year;
 	private int value;
@@ -9,7 +9,6 @@ public class Transaction implements Comparable<Transaction> {
 	}
 
 	public Transaction(Trader trader, int year, int value) {
-		super();
 		this.trader = trader;
 		this.year = year;
 		this.value = value;
@@ -42,12 +41,6 @@ public class Transaction implements Comparable<Transaction> {
 	@Override
 	public String toString() {
 		return "Transaction [trader=" + trader + ", year=" + year + ", value=" + value + "]";
-	}
-
-	public int compareTo(Transaction that) {
-		Transaction t1 = this;
-		Transaction t2 = that;
-		return t2.getValue() - t1.getValue();
 	}
 
 }

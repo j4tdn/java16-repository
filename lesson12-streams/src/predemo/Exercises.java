@@ -11,8 +11,9 @@ import designpatterns.strategy.Apple;
 import model.DataModel;
 
 public class Exercises {
-	public static void main(String[] args) {
-		List<Trader> traders = DataModel.getTraders();
+//	public static void main(String[] args) {
+		/*
+		 * 	List<Trader> traders = DataModel.getTraders();
 		List<Transaction> transactions = DataModel.getTransactions();
 
 		// 1. Find all transactions in the year 2011 and sort them by value.
@@ -78,7 +79,8 @@ public class Exercises {
 		
 		// Find the transaction with the smallest value
 		System.out.println("The transaction with the smallest value is: " + getSmallestValue(transactions));
-	}
+		
+		}
 	
 	private static Transaction getSmallestValue(List<Transaction> transactions) {
 		int min = Integer.MAX_VALUE;
@@ -177,4 +179,7 @@ public class Exercises {
 		return results;
 	}
 
+		 */
+	
+	
 }

@@ -51,7 +51,7 @@ public class Dish {
 
 	@Override
 	public String toString() {
-		return "Dish [id=" + id + ", name=" + name + ", calories=" + calories + ", category=" + category + "]";
+		return "Dish [id=" + id + ", name=" + name + ", calories=" + calories + ", category=" + category + "]\n";
 	}
 	
 	

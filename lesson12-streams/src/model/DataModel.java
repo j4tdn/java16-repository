@@ -1,15 +1,17 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import bean.Trader;
+import bean.Transaction;
+import bean.Warehouse;
 import data.structure.streams.Dish;
 import data.structure.streams.FoodCategory;
 import designpatterns.strategy.Apple;
-import predemo.Trader;
-import predemo.Transaction;
 
 public class DataModel {
 	private DataModel() {
@@ -33,11 +35,11 @@ public class DataModel {
 		return List.of(
 				new Dish("1", "D01", 120, FoodCategory.FISH),
 				new Dish("2", "D02", 360, FoodCategory.FISH),
-				new Dish("3", "D03", 240, FoodCategory.FISH),
+				new Dish("3", "D03", 880, FoodCategory.FISH),
 				new Dish("4", "D04", 880, FoodCategory.MEAT),
 				new Dish("5", "D05", 970, FoodCategory.MEAT),
 				new Dish("6", "D06", 650, FoodCategory.MEAT),
-				new Dish("7", "D07", 10, FoodCategory.VEGGIE),
+				new Dish("7", "D07", 30, FoodCategory.VEGGIE),
 				new Dish("8", "D08", 30, FoodCategory.VEGGIE)	
 				);
 	}
@@ -57,21 +59,42 @@ public class DataModel {
 	}
 
 	public static List<Trader> getTraders() {
-		return Arrays.asList(
-				new Trader("Raoul", "Cambridge"), 
-				new Trader("Mario", "Milan"),
-				new Trader("Alan", "Cambridge"), 
-				new Trader("Brian", "Cambridge"));
+		List<Trader> traders = new ArrayList<>();
+		Trader raoul = new Trader("Raoul", "Cambridge");
+		Trader mario = new Trader("Mario", "Milan");
+		Trader alan = new Trader("Alan", "Cambridge");
+		Trader brian = new Trader("Brian", "Cambridge");
+		
+		traders.add(raoul);
+		traders.add(mario);
+		traders.add(alan);
+		traders.add(brian);
+		
+		return traders;
 	}
 
 	public static List<Transaction> getTransactions() {
-		List<Trader> traders = getTraders();
-		return Arrays.asList(
-				new Transaction(traders.get(3), 2011, 300), 
-				new Transaction(traders.get(0), 2012, 1000),
-				new Transaction(traders.get(0), 2011, 400), 
-				new Transaction(traders.get(1), 2012, 710),
-				new Transaction(traders.get(1), 2012, 700),
-				new Transaction(traders.get(2), 2012, 950));
+		Trader raoul = new Trader("Raoul", "Cambridge");
+		Trader mario = new Trader("Mario", "Milan");
+		Trader alan = new Trader("Alan", "Cambridge");
+		Trader brian = new Trader("Brian", "Cambridge");
+		List<Transaction> transactions = Arrays.asList(
+			new Transaction(brian, 2011, 300),
+			new Transaction(raoul, 2012, 1000), 
+			new Transaction(raoul, 2011, 400),
+			new Transaction(mario, 2012, 710), 
+			new Transaction(mario, 2012, 700), 
+			new Transaction(alan, 2012, 950)
+		);
+		return transactions;
+	}
+	
+	public static List<Warehouse> getWhs() {
+		return List.of(
+				new Warehouse(11, "WH-11",1,List.of(1,2,3,4,5)),
+				new Warehouse(12, "WH-12",1,List.of(6,7,8,9,10)),
+				new Warehouse(21, "WH-21",2,List.of(11,12,13,14,15)),
+				new Warehouse(22, "WH-22",2,List.of(16,17,18,19,20))				
+				);
 	}
 }
