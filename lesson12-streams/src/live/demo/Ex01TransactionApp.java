@@ -63,8 +63,15 @@ public class Ex01TransactionApp {
 		        System.out.println(tradersBasedInMilan);
          
 		//7. Count the number of traders in Milan.
-                
+		long milan = traders.stream().filter(trader -> trader.getCity()=="Milan")
+				.count();
+            System.out.println(milan);  
+            System.out.println("===========================================");
 		//8. Print all transactions’ values from the traders living in Cambridge.
+         List<Integer> value =transactions.stream().filter(c->c.getTrader().getCity()=="Cambridge")
+        		 .map(transaction->transaction.getYear()).collect(Collectors.toList());
+         value.forEach(v->System.out.println(v));
+         System.out.println("===========================================");
 
 		//9. What’s the highest value of all the transactions?
          int highestValue = 
@@ -74,6 +81,13 @@ public class Ex01TransactionApp {
                 System.out.println(highestValue);   
                 System.out.println("===========================================");
 		//10. Find the transaction with the smallest value.
+         transactions.stream()
+        		                          .sorted(Comparator.comparing(Transaction::getValue))
+        		                          .limit(1)
+        		                          .forEach(t->System.out.println(t));
+         System.out.println("10. The transaction with the smallest value: ");
+
+
 	}
 
 }
