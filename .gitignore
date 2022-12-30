@@ -5,7 +5,8 @@
 *.project
 *.classpath
 *.settings
-
+# Intelij configuration file
+*.iml
 # Ignore .gitignore in project
 */.gitignore
 
@@ -21,6 +22,9 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# Intelij
+.idea/
 
 # Package Files #
 *.jar

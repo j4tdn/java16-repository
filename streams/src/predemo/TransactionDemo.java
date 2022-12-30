@@ -1,9 +1,6 @@
 package predemo;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import model.DataModel;
@@ -12,28 +9,28 @@ public class TransactionDemo {
 	public static void main(String[] args) {
 		System.out.println("------Default list transaction-----");
 		List<Transacions> transListDefault = DataModel.getTransaction();
-		printList(transListDefault);
+		printList_set(transListDefault);
 
 		System.out.println("--1--Find all transactions in 2011 sort value (small to high).------");
 		List<Transacions> transIn2011 = filter(transListDefault, ts -> ts.getYear() == 2011);
 		transIn2011.sort((o1, o2) -> o1.getValue() - o2.getValue());
-		printList(transIn2011);
+		printList_set(transIn2011);
 
 		System.out.println("--2--Find transactions have value greater than 300 and sort them by trader’s city----");
 		List<Transacions> transGreater300 = filter(transListDefault, ts -> ts.getValue() > 300);
 		transGreater300.sort((s1, s2) -> s1.getTrader().getCity().compareTo(s2.getTrader().getCity()));
-		printList(transGreater300);
+		printList_set(transGreater300);
 
 		System.out.println("--3--all city of trader----");
 		List<String> lcity = getListStringFrom(transListDefault, ts -> ts.getTrader().getCity());
-		printList(lcity);
+		printList_set(lcity);
 
 		System.out.println("--4--Find all traders from Cambridge and sort them by name desc.------");
 		List<Transacions> transInCambridge = filter(transListDefault,
 				ts -> "Cambridge".equals(ts.getTrader().getCity()));
 		List<String> lname = getListStringFrom(transInCambridge, ts -> ts.getTrader().getName());
 		lname.sort((s1, s2) -> s1.compareTo(s2));
-		printList(lname);
+		printList_set(lname);
 
 		System.out.println("--5-- Return a string of all traders’ names sorted alphabetically.------");
 		List<String> namelist = getListStringFrom(transListDefault, ts -> ts.getTrader().getName());
@@ -71,7 +68,7 @@ public class TransactionDemo {
 
 	}
 
-	public static <E> void printList(List<E> list) {
+	public static <E> void printList_set(Collection<E> list) {
 		for (E element : list) {
 			System.out.println(element);
 		}
@@ -92,8 +89,7 @@ public class TransactionDemo {
 		for (Transacions t : ltrans) {
 			setString.add(f.apply(t));
 		}
-		List<String> listResult = new ArrayList<String>(setString);
-		return listResult;
+		return new ArrayList<String>(setString);
 	}
 
 	private static Transacions getTransactionMin(List<Transacions> ltrans) {
