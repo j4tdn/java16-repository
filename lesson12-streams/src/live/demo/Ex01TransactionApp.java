@@ -66,7 +66,8 @@ public class Ex01TransactionApp {
 		
 		System.out.println("============");
 		// 10. Find the transaction with the smallest value
-		Transaction minValue = transactions.stream().reduce(Integer.MAX_VALUE, ( t1,t2) -> t1.getValue() < t2.getValue() ? t1 : t2);
+		transactions.sort((t1, t2) -> t1.getValue()-t2.getValue());
+	    transactions.stream().limit(1).forEach(System.out::println);
 	}
 
 	private static <T> List<T> filter(List<T> transactions, Predicate<T> predicate) {
