@@ -1,15 +1,13 @@
-package predemo;
+package bean;
 
 public class Trader {
 	private String name;
 	private String city;
 	
 	public Trader() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Trader(String name, String city) {
-		super();
 		this.name = name;
 		this.city = city;
 	}
@@ -29,14 +27,9 @@ public class Trader {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
-
 
 	@Override
 	public String toString() {
 		return "Trader [name=" + name + ", city=" + city + "]";
 	}
-	
-	
-	
 }

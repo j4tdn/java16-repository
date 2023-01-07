@@ -90,7 +90,7 @@ public class JavaListImpl<E> implements IList<E> {
 		return size;
 	}
 
-	@SuppressWarnings("unused")
+//	@SuppressWarnings("unused")
 	private E[] grow(int newCapacity) {
 		E[] newArray = newInstance(newCapacity);
 		for (int i = 0; i < size; i++) {

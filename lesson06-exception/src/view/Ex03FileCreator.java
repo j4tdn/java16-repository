@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Ex03FileCreator {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		try {
 			boolean isSuccess = createFile("readme.md");
 			System.out.println(isSuccess);
@@ -13,8 +13,11 @@ public class Ex03FileCreator {
 		}
 	}
 	
-	private static boolean createFile(String pathname) throws IOException {
+	private static boolean createFile(String pathname) throws Exception {
 		File file = new File(pathname);
-		return file.createNewFile();
+		if (pathname != null) {
+			return file.createNewFile();
+		}
+		else throw new Exception("Hello");
 	}
 }

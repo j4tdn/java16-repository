@@ -19,9 +19,9 @@ public class Ex03ListItemType {
 		items.removeIf(new Predicate<Item>() {
 
 			@Override
-			public boolean test(Item t) {
+			public boolean test(Item s) {
 				// TODO Auto-generated method stub
-				return false;
+				return s.getId() > 5;
 			}
 		});
 		items.removeIf(s -> s.getId() > 5);

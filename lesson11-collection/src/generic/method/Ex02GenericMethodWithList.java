@@ -20,18 +20,18 @@ public class Ex02GenericMethodWithList {
 //		although Object is the base class of Double, String, Intger,...
 //		Hence we must use generic type with List.
 		printList("dList", dList);
-//		printList("sList", sList);
+		printList("sList", sList);
 		printList("iList", iList);
 		
-		System.out.println("=====================");
-		printListWildcard("dList", dList);
-		printList("sList", sList);
-		printListWildcard("iList", iList);
+//		System.out.println("=====================");
+//		printListWildcard("dList", dList);
+//		printList("sList", sList);
+//		printListWildcard("iList", iList);
 	}
 	
 	private static <E> void printList(String prefix, List<E> list) {
 		System.out.print(prefix + ": ");
-		for (Object item : list) {
+		for (E item : list) {
 			System.out.print(item + "   ");
 		}
 		System.out.println();

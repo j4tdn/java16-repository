@@ -20,16 +20,17 @@ public class Ex03MapSorting {
 		CollectionUtils.printf(sort(model));
 	}
 
-	private static Map<Integer, String> sort(Map<Integer, String> map) {
+	private static Map<Integer, String> sort(Map<Integer, String> map){
 		Set<Entry<Integer, String>> set = map.entrySet();
 		List<Entry<Integer, String>> list = new LinkedList<>(set);
 		list.sort((e1, e2) -> e1.getValue().compareTo(e2.getValue()));
 		Map<Integer, String> sortedMap = new LinkedHashMap<>();
-		for (Entry<Integer, String> entry : list)
-			sortedMap.put(entry.getKey(), entry.getValue());
+		for (Entry<Integer, String> e : list) {
+			sortedMap.put(e.getKey(), e.getValue());
+		}
 		return sortedMap;
 	}
-
+	
 	private static Map<Integer, String> getModel() {
 		return new HashMap<>() {
 			private static final long serialVersionUID = 1L;
