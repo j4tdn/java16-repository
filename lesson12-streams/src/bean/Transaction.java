@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Transaction {
 	private Trader trader;
 	private int year;
@@ -42,4 +44,23 @@ public class Transaction {
 	public String toString() {
 		return "Transaction [trader=" + trader + ", year=" + year + ", value=" + value + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(trader, value, year);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Transaction other = (Transaction) obj;
+		return Objects.equals(trader, other.trader) && value == other.value && year == other.year;
+	}
+	
+	
 }
