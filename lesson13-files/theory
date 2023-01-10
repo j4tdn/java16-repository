@@ -1,0 +1,15 @@
+DDL: data definition language
+=> File create, delete, copy, rename, info #
+
+DML: data manipulation language
+=> File read/write
+  + readable   -> text
+  --> line by line
+  --> đọc/ghi từng dòng(String) thông qua iterable
+  syntax: File[Buffer]Writer, File[Buffer]Reader
+          Files#readAllLines, File#write
+  
+  + unreadable -> serializable
+  --> object[s]
+  --> đọc/ghi 1 hoặc nhiều đối tượng cùng lúc vào serialized file
+  syntax: streaming
