@@ -23,7 +23,8 @@ public class DishDemo {
 		getDishes(menu, d -> d.getCalories() > 250).forEach(System.out::println);
 
 		// B1. Convert current data structure --> stream
-
+		// List<T>.stream() --> Stream<T>
+		
 		// B2. Using streams's methods(API) --> .m1() --> stream<X>
 		// --> builder pattern
 

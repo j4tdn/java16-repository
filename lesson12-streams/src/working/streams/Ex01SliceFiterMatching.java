@@ -10,14 +10,22 @@ public class Ex01SliceFiterMatching {
 	public static void main(String[] args) {
 		List<Integer> numbers = Arrays.asList(1,1,2,2,3,4);
 		
-		// 1. Select unique elements
-		numbers.stream()
-			.distinct()
+		// 1. Select unique elements --> 1 2 3 4
+		numbers.stream() // Stream<Integer>
+			.distinct()  // Stream<Integer> --> hashcode , equals
 			.forEach(number -> System.out.print(number + ", "));
 		
 		// 2. Select elements which appear one time in list --> 3,4
+		// map<Number,Count>
+		// 1 2
+		// 2 2
+		// 3 1
+		// 4 1
+		
 		Map<Integer , List<Integer>> map = numbers.stream()
 				.collect(Collectors.groupingBy(number -> number));
+		
+		System.out.println("\n ONE TIME --->>>");
 		
 		map.entrySet()
 		.stream()

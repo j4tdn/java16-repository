@@ -19,10 +19,10 @@ public class DataModel {
 	
 	public static List<WereHouse> getWhs() {
 		return List.of(
-				new WereHouse(11 , "WH-11" , 1, List.of(1,2,3,4,5)),
-				new WereHouse(11 , "WH-11" , 1,List.of(1,2,3,4,5)),
-				new WereHouse(11 , "WH-11" , 1,List.of(1,2,3,4,5)),
-				new WereHouse(11 , "WH-11" , 1,List.of(1,2,3,4,5))
+				new WereHouse(11 , "WH-11" , 1, List.of(2,3,4,5)),
+				new WereHouse(12 , "WH-12" , 1,List.of(6,7,8,9,10)),
+				new WereHouse(21 , "WH-21" , 2,List.of(11,12,13,14,15)),
+				new WereHouse(22 , "WH-22" , 2,List.of(16,17,18,19,20))
 				);
 				
 	}
