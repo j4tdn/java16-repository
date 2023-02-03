@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ex01RawTypeDemo {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		// before jdk 1.5
 		// raw type --> KDL cần một generic type
 		// --> mình không khai báo generictype
 		// --> raw type --> tự hiểu Object
+		
 		List list = new ArrayList<>();
 
 		// RUNTIME error(not good)

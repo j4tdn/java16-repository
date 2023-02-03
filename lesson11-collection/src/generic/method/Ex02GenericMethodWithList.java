@@ -36,7 +36,8 @@ public class Ex02GenericMethodWithList {
 		}
 		System.out.println();
 	}
-	
+
+	@SuppressWarnings("unused")
 	private static void printListWildcard(String prefix, List<? extends Number> list) {
 		System.out.print(prefix + ": ");
 		for (Number item : list) {

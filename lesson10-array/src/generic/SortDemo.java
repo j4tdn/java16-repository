@@ -17,6 +17,7 @@ public class SortDemo {
 		System.out.println(Arrays.toString(tuples));
 	}
 	
+	@SuppressWarnings("unused")
 	private static <E extends Comparable<E>> void sort(E[] o) {
 		Arrays.sort(o);
 	}

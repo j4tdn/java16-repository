@@ -15,6 +15,7 @@ public class Ex01Overloading {
 		return a + b + c;
 	}
 
+	@SuppressWarnings("unused")
 	private static int sum(int... numbers) {
 		int sum = 0;
 		for (int number : numbers) {

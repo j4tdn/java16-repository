@@ -1,12 +1,8 @@
 package working.finding_matching;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.function.IntPredicate;
-import java.util.function.Predicate;
 
 public class Ex01BasicDemo {
 	public static void main(String[] args) {
