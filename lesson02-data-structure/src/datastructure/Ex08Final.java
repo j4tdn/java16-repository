@@ -8,7 +8,7 @@ public class Ex08Final {
 		// cannot reassign value at stack
 		final int a = 20;
 		int b = 40;
-		// a = 40;
+		//  a = 40;
 		
 		final Item itemA = new Item(111, "Item A", 111);
 		Item itemB = new Item(222, "Item B", 222);

@@ -12,12 +12,11 @@ public class Ex02BasicTest {
 		}
 		if (i++ < 4 || ++i > 5) {
 			System.out.println(i);
-
 		}
+		System.out.println(i);
 		// i = 8 --> & | --> AND OR BIT
 		// & | thực hiện tất cả
 		if (i++ > 20 & ++i > 5) {
-
 		}
 		System.out.println("i after: " + i);
 	}
