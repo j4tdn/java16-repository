@@ -1,0 +1,21 @@
+1. Functinal Interface là gì
++ Là 1 interface chứa duy nhất 1 hàm trừu tượng
+VD: Supplier<T>, Consumer<T>, Function<T,R>
+ + Developer có thể tự tạo ra costom functional interface
+ 
+ 
+ 
+ 2. Khi nào cần sử dụng Functional Interface
+ + Khi mình muốn một hàm/ chức năng là 1 tham số ở hàm khác
+ +--> Sử dụng trong strategy pattern
+ + strategy pattern --> strategy method
+ + strategy method --> input, output 
+ => Interface 
+ 	+ strategy_method 
+ return_type method_name(Interface interface){
+ ...interface.strategy_method(...)
+ }
+ 
+ + Gọi method_name 
+ 
+ +ano
