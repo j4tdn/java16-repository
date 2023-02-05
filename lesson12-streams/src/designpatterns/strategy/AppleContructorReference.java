@@ -42,7 +42,7 @@ public class AppleContructorReference {
 //		};
 		
 		//Supplier<Apple> sp2 = Apple::new;
-		/Supplier<Apple> sp2 = () -> new Apple();
+		Supplier<Apple> sp2 = () -> new Apple();
 		
 //       test01(() ->  new Apple());		
 		

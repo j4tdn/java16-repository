@@ -22,7 +22,7 @@
       
       + Gọi method_name
       
-      + anonymos class --> đoạn code giúp mình tạo ra một đối towngj cho biến kiểu dữ liệu
+      + anonymos class --> đoạn code giúp mình tạo ra một đối tượng cho biến kiểu dữ liệu
         Interface
         
        + anonymos class: code dài --> thay thế thành : anonymos function(lambda expression)
@@ -34,3 +34,12 @@
     
     + --> 
        
+       
+4. Why we don't store data in stream ?
+
+5. Collection vs stream
+Collection tập trung lưu trữ dữ liệu (có xử lý dữ liệu)
+Stream tập trung thao tác và xử lí dữ liệu ( có lưu trữ dữ liệu)
+
+Stream: Chỉ hỗ trọ duyệt một lần duy nhất - Traversable once
+Stream operations: các hàm hỗ trợ để thao tác
