@@ -9,16 +9,15 @@ public class Ex07DecimalTest {
 		// 12.5 -> 125/10
 		  double d = 12.5d;
 			System.out.println(division(d));
+			
 		
 	}
 	public static String division(double d){
         String result="";
         String dString = Double.toString(d);        
         String[] fraction = dString.split("\\.");
-
         int denominator = (int)Math.pow(10, fraction[1].length());
-        int numerator = Integer.parseInt(fraction[0] + "" + fraction[1]);
-       
+        int numerator = Integer.parseInt(fraction[0] + "" + fraction[1]);      
         result = numerator/gcd(numerator, denominator) + "/" + denominator/gcd(numerator, denominator);
         
         return result;
