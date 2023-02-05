@@ -75,5 +75,11 @@ public class Ex01TransactionApp {
 		                        .map(Transaction::getValue)
 		                        .reduce(0, Integer::max);
 		        System.out.println(highestValue);	
+		       // 8. Print all transactions’ values from the traders living in Cambridge.
+		        
+		       //  9. What’s the highest value of all the transactions?
+		        
+		       //10. Find the transaction with the smallest value.
+		        
 	}
 }
