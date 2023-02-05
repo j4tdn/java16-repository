@@ -1,0 +1,7 @@
+DDL: data definition language
+=> file,create,delete,copy,rename,info #
+
+DML: data manipulation language
+=> File read/write (gồm 2 file)
+ + readable  --> text
+ + un-readable --> serializable
