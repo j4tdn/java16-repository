@@ -27,7 +27,7 @@ public class TransactionDemo {
 		System.out.println("2. All transactions have value greater than 300 and sort them by trader’s city: ");
 		transaction.stream()
 			.filter(t -> t.getValue() > 300)
-			.sorted((t1, t2) -> t1.getTrader().getCity().compareTo(t2.getTrader().getCity()))
+			.sorted(Comparator.comparing(t -> t.getTrader().getCity()))
 			.forEach(System.out::println);
 		
 		// 3. What are all the unique cities where the traders work?
@@ -39,33 +39,33 @@ public class TransactionDemo {
 		// 4. Find all traders from Cambridge and sort them by name desc.
 		System.out.println("4. All traders from Cambridge and sort them by name desc: ");
 		trader.stream()
-			.filter(t -> t.getCity() == "Cambridge")
-			.sorted((t1, t2) -> t2.getName().compareTo(t1.getName()))
+			.filter(t -> "Cambridge".equals(t.getCity()))
+			.sorted(Comparator.comparing(Trader::getName))
 			.forEach(System.out::println);
 		
 		// 5. Return a string of all traders’ names sorted alphabetically.
 		System.out.println("5. All traders’ names sorted alphabetically: ");
 		trader.stream()
-			.sorted((t1, t2) -> t1.getName().compareTo(t2.getName()))
+			.sorted(Comparator.comparing(Trader::getName))
 			.forEach(System.out::println);
 		
 		// 6. Are any traders based in Milan?
 		System.out.println("6. Traders based in Milan: ");
 		trader.stream()
-			.filter(t -> t.getCity() == "Milan")
+			.filter(t -> "Milan".equals(t.getCity()))
 			.forEach(System.out::println);
 		
 		// 7. Count the number of traders in Milan.
 		System.out.println("7. Amount of traders in Milan: ");
 		long result = trader.stream()
-			.filter(t -> t.getCity() == "Milan")
+			.filter(t -> "Milan".equals(t.getCity()))
 			.count();
 		System.out.println(result);
 		
 		// 8. Print all transactions’ values from the traders living in Cambridge.
 		System.out.println("8. All transactions’ values from the traders living in Cambridge: ");
 		transaction.stream()
-			.filter(t -> t.getTrader().getCity() == "Cambridge")
+			.filter(t -> "Cambridge".equals(t.getTrader().getCity()))
 			.map(Transaction::getValue)
 			.forEach(System.out::println);
 		
@@ -79,7 +79,7 @@ public class TransactionDemo {
 		// 10. Find the transaction with the smallest value.
 		System.out.println("10. The transaction with the smallest value: ");
 		transaction.stream()
-			.sorted((t1,t2) -> t1.getValue() - t2.getValue())
+			.sorted(Comparator.comparing(Transaction::getValue))
 			.limit(1)
 			.forEach(System.out::println);
 	}

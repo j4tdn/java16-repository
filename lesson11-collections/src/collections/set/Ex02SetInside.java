@@ -10,7 +10,7 @@ import bean.Employee;
 public class Ex02SetInside {
 	public static void main(String[] args) {
 		
-		Comparator<Employee> cmp =  comparing(Employee::getName);
+		Comparator<Employee> cmp =  Comparator.comparing(Employee::getName);
 			
 		
 		

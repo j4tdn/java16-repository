@@ -28,6 +28,19 @@ public class Trader {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj){
+			return true;
+		}
+		if (!(obj instanceof Trader)) {
+			return false;
+		}
+		Trader that = (Trader) obj;
+		return getCity().equals(that.getCity());
+		
+	}
 
 	@Override
 	public String toString() {
