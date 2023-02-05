@@ -6,7 +6,7 @@ import java.util.Comparator;
 public class Ex02LimitSkip {
 	public static void main(String[] args) {
 		//collection(list/set)  -->  .stream() --> stream 
-		//array => Arrays.streaa(array)
+		//array => Arrays.stream(array)
 		
 		//Primitive Stream: IntStream, Double, LongStream
 		//additional --> sum, sub, mul, div, avg

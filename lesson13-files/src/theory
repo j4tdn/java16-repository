@@ -1,0 +1,19 @@
+Kind of file: text readable & Serializable-Unreadable
+DDL: data definition language
+   => 	File create, delete, copy, rename, info #
+DML: data manipulation language
+   => 	File read/write
+        + readable: text
+           --> line by line
+           --> đọc ghi từng dòng(String) thông qua interable
+           Syntax: File[buffer]Writer, File[Buffer]Reader
+                 File#readAllLines, Files#Write
+        + unreadable: Serializable
+           --> object[s]
+           --> Đọc/ ghi 1 hoặc nhiều đối tượng cùng lúc vào serializable(dạng dữ liệu convert sang stream) file
+           Syntax: streaming,,,,,
+           
+ //Save as nomal, dont want to save it in serialize(File/data)
+	//name --> 
+	//get --> null
+	private transient String name;	

@@ -43,3 +43,50 @@ Functional interface là gì:
 	
 	+lamda: (parameters) --> {} ---> override abstract method() in functional interface
 	Tao đối tương cho functional interface
+
+3. Stream
+- cấu trúc dữ liêu cho phép khia báo , lưu trữ dữ liêu. Hỗ trơ cái powerful function. 
+- why we dont store data in stream? VÌ STREAM CHỈ ĐƯỢC THAO TÁC XỬ LÝ TRUY CẬP 1 LẦN(TRAVERSABLE ONCE) còn lưu trong mảng, list,,, thì xử lý đc nhiều lần
+-=>  stream tập hợp tất cả các phần tử từ cái source  -> hỗ trợ tập hợp thao tác dữ liệu
+Giông collection cung tập interface tập hợp các giá trị của nó. tập trung tính toán mạnh hơn (computations)
+- 3 phầnchính trong stream:
+ + data source : nguồn đâu vào để, dữ liệu để chuyern sang stream
+ + a chain of intermediate operation: that form a stram pipeline:  thao tác trung gian(map, filter, ,,,)
+ + a terminal operation: that executes the stram pipeline and produces a resul: collect, foreach,...
+Collection tập trung manh ở cấu trúc dữ liệu data structure mạnh hơn
+4.
+findAny() findFirst  //khoong truyeen -> optional
+allMatch, nonMatch //truyenf dk(predicate) --> boolean
+5. int[] -> IntStream
+double[] -> DoubleStream
+Integer[] -> Stream<Integer>
+String[] -> Stream<String>
+List<T>.stream() -> Stream<T>
+Set<T>.stream() -> Stream<T>
+Map<K,V>.entrySet() --> Set<Entry<K,V>>.stream--> Stream<Entry<K,v>>
+
+...intermediate operations ...
+...terminal operation... --> #stream
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

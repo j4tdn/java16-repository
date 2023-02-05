@@ -5,12 +5,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.xml.validation.Validator;
+
 public class Ex01SliceFilterMatching {
 	public static void main(String[] args) {
 		List<Integer> numbers =  Arrays.asList(1,1,2,2,3,4);
 		//1. Select unique element -> 1,2,3,4
 		numbers.stream() //Stream<Integer>
-		.distinct()
+		.distinct() //hashcode, equals
 		.forEach(number -> System.out.print(number + " "));
 		
 		//2. Select elements which appear one time -> 4
