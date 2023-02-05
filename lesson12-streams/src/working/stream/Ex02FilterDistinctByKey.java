@@ -18,28 +18,19 @@ public class Ex02FilterDistinctByKey {
 		List<Dish> menu = DataModel.getDish();
 		
 		// distinct dishes by calories
-		Map<Integer, Dish> result = menu.stream()
-		.collect(Collectors.toMap(
-				Dish::getCalories, 
-				Function.identity(),
-				(v1, v2) -> v1,
-				LinkedHashMap::new)
-		);
-		
+		Map<Integer,Dish> result =  menu.stream()
+		        .collect(Collectors
+				.toMap(Dish::getCalories, Function.identity(),
+				(v2 , v1) -> v2,
+				LinkedHashMap::new));
 		result.values().forEach(System.out::println);
-		
-		System.out.println("Otp2 --> ...");
-		
-		// set: 120, 360, 880, 970,...
-		// stream: d1, d2, d3, d5,...
-		
-		menu.stream()
-		.filter(distinctByKey(Dish::getName))
+		System.out.println("=================");
+		Set<Integer> set = new HashSet<>();
+		menu.stream().filter(distinctByKey(Dish::getName))
 		.forEach(System.out::println);
 	}
-	
-	public static <T, R> Predicate<T> distinctByKey(Function<T, R> function ) {
-		Set<R> set = new HashSet<>();
-		return d -> set.add(function.apply(d));
+	private static <T, R> Predicate<T> distinctByKey(Function<T, R> func){
+		Set<R> result = new HashSet<>();
+		return d-> result.add(func.apply(d));
 	}
 }

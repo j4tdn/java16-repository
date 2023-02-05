@@ -1,5 +1,7 @@
 package stream;
 
+import java.util.Objects;
+
 public class Dish {
 	private String id;
 	private String name;
@@ -39,9 +41,9 @@ public class Dish {
 	public void setCategory(FoodCategory category) {
 		this.category = category;
 	}
-	@Override
+	
 	public String toString() {
-		return "Dish [id=" + id + ", name=" + name + ", calories=" + calories + ", category=" + category + "]";
+		return "Dish [id=" + id + ", name=" + name + ", calories=" + calories + ", category=" + category + "]\n";
 	}
 	
 
