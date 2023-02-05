@@ -75,7 +75,7 @@ public class Apple {
 	
 	@Override
 	public int hashCode() {
-		// TODO Auto-generated method stub
+		
 		return Objects.hash(getId());
 	}
 	

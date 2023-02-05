@@ -3,9 +3,9 @@ package view;
 import bean.User;
 import bean.UserDetail;
 
-// Sử dụng
-//1.Class có nhiều hơn 5 tham số
-//2.Class yêu cầu hàm tạo ra nhiều hàm khởi tạo khác nhau
+// Sá»­ dá»¥ng
+//1.Class cĂ³ nhiá»�u hÆ¡n 5 tham sá»‘
+//2.Class yĂªu cáº§u hĂ m táº¡o ra nhiá»�u hĂ m khá»Ÿi táº¡o khĂ¡c nhau
 
 public class Ex01BuilderPattternDemo {
 	public static void main(String[] args) {
@@ -15,6 +15,8 @@ public class Ex01BuilderPattternDemo {
 				.withAge(21)
 				.build();
 		System.out.println(user1);
+		User user3 = User.builder().withFirstName("Anh").withLastName("Duy").withAge(21).build();
+		System.out.println(user3);
 		User user2 =  User.builder()
 				.withFirstName("Anh")
 				.withLastName("Gian")

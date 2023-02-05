@@ -19,6 +19,7 @@ public class Ex01SliceFilterMatching {
 //		.stream()
 //		.filter(e -> e.getValue() == 1)
 //		.forEach(e -> System.out.println(e));
+		
 	}
 
 	private static int count(List<Integer> list, int count) {

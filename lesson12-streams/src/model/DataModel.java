@@ -45,7 +45,7 @@ public class DataModel {
 				new Dish("1", "Hamberger", 300, FoodCategory.MEAT),
 				new Dish("2", "Hamberger1", 200, FoodCategory.FISH),
 				new Dish("3", "Banh Xeo", 100, FoodCategory.MEAT),
-				new Dish("4", "BunTHITNuong", 150, FoodCategory.FISH),
+				new Dish("4", "BunTHITNuong", 200, FoodCategory.FISH),
 				new Dish("5", "BanhCanh", 300, FoodCategory.MEAT),
 				new Dish("6", "BunRieu", 200, FoodCategory.MEAT),
 				new Dish("7", "RAU MUONG", 50, FoodCategory.RAU),

@@ -101,9 +101,7 @@ public class TradeApp {
 		listTransaction.add(new Transaction(new Trade("Raou3", "Macau"), 700, 145000));
 		listTransaction.add(new Transaction(new Trade("Raou5", "Thai"), 2011, 5351000));
 		listTransaction.add(new Transaction(new Trade("Raou6", "Milan"), 900, 11000));
-
 		return listTransaction;
-
 	}
 
 	public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) {
