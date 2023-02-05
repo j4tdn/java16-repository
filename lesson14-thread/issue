@@ -1,0 +1,8 @@
+buổi 1: có 3 task thì cho 3 thread
+
+buổi 2: có 1000 task thì giải quyết như thế nào?
+
+-làm 1 app cho siêu thị: 1 ngày tính tiền rất nhiều-->bill sai--> 21h đêm 
+chạy 1 job xem có bill sai không?
+
+==>Quartz-Cron Job:cho thực thi 1 job trong 1 khoảng thời gian cố định

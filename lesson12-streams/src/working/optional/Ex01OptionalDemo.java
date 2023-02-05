@@ -7,8 +7,11 @@ public class Ex01OptionalDemo {
 		Integer nonNullValue = 10;
 		Integer nullvalue =null;
 		
-		Optional.ofNullable(nullvalue).ifPresent(System.out::println);
-		Optional.ofNullable(nonNullValue).ifPresent(System.out::println);
+		Optional.ofNullable(nullvalue)//đưa opt vào opt
+		.ifPresent(System.out::println);
+		
+		Optional.ofNullable(nonNullValue)
+		.ifPresent(System.out::println);
 		
 		
 	}

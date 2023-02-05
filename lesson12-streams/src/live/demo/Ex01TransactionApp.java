@@ -1,8 +1,5 @@
 package live.demo;
 
-import java.util.ArrayList;
-
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -87,7 +84,7 @@ public class Ex01TransactionApp {
         		                          .forEach(t->System.out.println(t));
          System.out.println("10. The transaction with the smallest value: ");
 
-
+       
 	}
 
 }

@@ -1,20 +1,12 @@
 package model;
 
-
-public class Transaction implements Comparable<Transaction>{
+public class Transaction implements Comparable<Transaction> {
 	private Trader Trader;
-	private Integer value;
 	private Integer year;
-	
+	private Integer value;
+
 	public Transaction() {
 		// TODO Auto-generated constructor stub
-	}
-
-	public Transaction(Trader trader, Integer value, Integer year) {
-		super();
-		Trader = trader;
-		this.value = value;
-		this.year = year;
 	}
 
 	public Trader getTrader() {
@@ -25,6 +17,14 @@ public class Transaction implements Comparable<Transaction>{
 		Trader = trader;
 	}
 
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
+	}
+
 	public Integer getValue() {
 		return value;
 	}
@@ -33,26 +33,22 @@ public class Transaction implements Comparable<Transaction>{
 		this.value = value;
 	}
 
-	public Integer getYear() {
-		return year;
+	public Transaction(model.Trader trader, Integer year, Integer value) {
+		super();
+		Trader = trader;
+		this.year = year;
+		this.value = value;
 	}
 
-	public void setYear(Integer year) {
-		this.year = year;
-	}
 	public int compareTo(Transaction that) {
 		Transaction t1 = this;
 		Transaction t2 = that;
 		return t2.getValue() - t1.getValue();
 	}
 
-
 	@Override
 	public String toString() {
-		return "Transaction [Trader=" + Trader + ", value=" + value + ", year=" + year + "]";
+		return "Transaction [Trader=" + Trader + ", year=" + year + ", value=" + value + "]";
 	}
-
-	
-	
 
 }
