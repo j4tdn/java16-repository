@@ -1,5 +1,7 @@
 package data.structure.streams;
 
+import java.util.Objects;
+
 public class Dish {
 	private String id;
 	private String name;
@@ -49,6 +51,7 @@ public class Dish {
 	public void setCatelory(FoodCategory catelory) {
 		this.catelory = catelory;
 	}
+
 
 	@Override
 	public String toString() {

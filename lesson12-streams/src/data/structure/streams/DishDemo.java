@@ -42,37 +42,39 @@ public class DishDemo {
 		Set<String> nameOfDished = menu.stream().map(d -> d.getName()).collect(Collectors.toSet());
 		nameOfDished.forEach(name -> System.out.print(name + " "));
 
+		System.out.println();
+
 		// 3. Get name of dishes which is veggie food
 		menu.stream()// stream<Dish>
 				.filter(d -> FoodCategory.VEGGIE.equals(d.getCatelory())) // Stream<Dish>
 				.map(Dish::getName) // Stream<String>
 				.forEach(name -> System.out.println(name + "")); // void
 
+		System.out.println();
+
 		// 4. Sort a budget map
 		// map --> set<entry<k,v>> --> list<entry<k,v>> -->sortByValue -->linkedhasMap
 		Map<String, Integer> budget = sort(DataModel.getBubget());
 		budget.forEach((k, v) -> System.out.println(k + ", " + v));
 		
-		Map<String, Integer> sortedMap = DataModel.getBubget().entrySet()
-				.stream()
-				.sorted(Entry.comparingByValue())
-				.collect(Collectors.toMap(Entry::getKey, Entry::getValue,(e1,e2) -> e1,LinkedHashMap::new));
+		System.out.println("-------------");
 
-		sortedMap.forEach((k,v) -> System.out.println(k+" "+v));
+		Map<String, Integer> sortedMap = DataModel.getBubget().entrySet().stream().sorted(Entry.comparingByValue())
+				.collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
+		sortedMap.forEach((k, v) -> System.out.println(k + " " + v));
 	}
 
 	public static Map<String, Integer> sort(Map<String, Integer> budget) {
-		List<Entry<String, Integer>> budgetList = new LinkedList<>(budget.entrySet());
-
-		budgetList.sort(Comparator.comparing(Entry::getValue));
-
-		Map<String, Integer> sortedMap = new LinkedHashMap<>();
-
+		Set<Entry<String, Integer>> budgetSet = budget.entrySet();
+		List<Entry<String, Integer>> budgetList = new LinkedList<>(budgetSet);
+		budgetList.sort(Comparator.comparing(e -> e.getValue()));
+		Map<String, Integer> soterdMap = new LinkedHashMap<>();
 		for (Entry<String, Integer> entry : budgetList) {
-			sortedMap.put(entry.getKey(), entry.getValue());
+			soterdMap.put(entry.getKey(), entry.getValue());
 		}
-		return sortedMap;
+		return soterdMap;
+
 	}
 
 	// not use stream --> stream filter
@@ -90,6 +92,7 @@ public class DishDemo {
 	public static <R> Set<R> getNames(List<Dish> menu, Function<Dish, R> function) {
 		Set<R> result = new LinkedHashSet<>();
 		for (Dish dish : menu) {
+			// dish--> ....
 			result.add(function.apply(dish));
 		}
 		return result;
