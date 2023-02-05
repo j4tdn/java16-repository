@@ -1,0 +1,15 @@
+DDL: data definition language
+ => File create, delete, copy, rename, info #
+ 
+ DML: data manipulation data
+  --> File read/write
+   + readable --> text
+   	 --> line by line
+   	 --> doc/ghi tung dong(String) thong qua iterable
+   	 syntax: File[Buffer]Write, File[Buffer]Reader
+   	 		 Files#readAllLines, Files#write
+   	 		 
+   + un-readable --> serializable		
+    --> object[s]
+    --> doc/ghi 1 hoac nhieu doi tuong cung luc vao serialized file
+    syntax: streaming ...
