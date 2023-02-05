@@ -2,7 +2,6 @@ package thread.core;
 
 import static utils.ThreadUtils.*;
 
-import java.util.concurrent.TimeUnit;
 
 public class Ex03 {
 	public static void main(String[] args) {
