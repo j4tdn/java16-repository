@@ -1,0 +1,51 @@
+===> 1. Cấu trúc dự liệu của lập trình
+     2. Thư viện, function xử lý của ngôn ngữ JAVA
+		--> Kết quả
+			+ Xử lý và in dữ liệu ra console
+			+ Dữ liệu trước/sau khi xử lý không được lưu trữ lại
+			  . Lưu trữ/Xử lý lúc ứng dụng đang chạy
+			  . Lưu trữ trong memory --> ram
+			  
+===> C, C++, JAVA, Python,...
+
+ |
+ |
+ --> Lưu trữ dữ liệu trước/sau khi xử lý
+ --> Mở app/web lên thì vẫn có thông tin xử lý trước đó
+ 
+ 1. Lữu trữ dự liệu trong FILE
+    * txt
+	* properties
+	* excel(VBA)
+	--> Lưu trữ những dữ liệu cơ bản
+	Hạn chế
+	  + Không hỗ trợ ngôn ngữ truy vấn
+	    . Đọc dữ liệu và lấy từng hàng từ trên xuống
+		. Không thể lấy trực tiếp data mong muốn từ file
+      + Dữ liệu lưu trữ không có ràng buộc KDL
+	    . Không đồng nhất dữ liệu
+		. VD --> DateTime, Number --> String
+	  + Dữ liệu trong file không được liên kết với nhau
+	    . Dễ xảy ra sai sót dữ liệu
+		. VD --> Lớp và Sinh Viên
+		     --> Sinh Viên thuộc lớp nhưng lớp không tồn tại
+  2. Cơ sở dữ liệu - database
+     + Nơi lưu trữ dữ liệu có cấu trúc, ràng buộc
+	 Hỗ trợ
+	    --> Hỗ trợ ngôn ngữ truy vấn cơ sở dữ liệu
+		--> Hỗ trợ khai báo, ràng buộc KDL
+		--> Hỗ trợ liên kết dữ liệu, đối tượng
+		
+		+ Hệ quản trị cơ sở dữ liệu --> MySQL, SQL Server, Oracle
+		   --> Cung cấp ứng dụng để tạo ra CSDL cũng như truy vấn
+		   --> Cho phép tạo ra các CSDL
+		       + Dùng lệnh
+			   + Dùng tool để tạo
+		   --> Cung cấp ngôn ngữ truy vấn đến CSDL đó
+		       + MySQL, SQL Server, Oracle
+		   
+		+ Cơ sở dữ liệu
+		   --> Lưu trữ dữ liệu
+		+ Ngôn ngữ truy vấn
+		   --> Truy vấn dữ liệu
+      
