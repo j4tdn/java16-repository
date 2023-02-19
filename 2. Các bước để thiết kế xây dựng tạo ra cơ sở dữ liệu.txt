@@ -28,14 +28,19 @@ Phân tích và thiết kế cơ sở dữ liệu
 	    Khóa(chọn)           --> B3: Khóa chính
 	B2: Mối quan hệ          --> B3: Mối quan hệ 1-1 1-n n-n
 	                         --> Xử lý sao cho lưu trữ dự liệu chính xác
-							 
-							 
-							 
-							 
-	-- Cách ngắn gọn để thiết kế CSDL --
+	-- Các ngắn gọn để thiết kế cơ sở dữ liệu--
 	+ Xác định các bảng, thuộc tính
-	+ Mối quan hệ giữa các bảng
-	+ Khóa chính, khóa ngoại
+	+ Mối quan hệ giữa các bẳng
+	+ Khoá chính, khoá ngoại
 	
-	--> 100% CSDL structure --> English
-	Data: optional
+	--> 100% CSDL structure -->English
+	Data: optinal
+	
+	Convention:
+		+ Tên bảng: Viết hoa toàn bộ chữ cái
+		+ Tên cột: Viết hoa toàn bộ chữ cái
+		+ Các từ cách nhau bởi dấu _
+			T01_ITEM_GROUP
+				C01_ITEM_GROUP_ID
+				C02_ITEM_GROUP_NAME
+

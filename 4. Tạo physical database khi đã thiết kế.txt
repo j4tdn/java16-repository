@@ -1,0 +1,22 @@
+Sau khi đã thiết kế CSDL 
+--> Có 2 cách để tạo ra CSDL vật lý cho ứng dụng
+
+A. Cách 1
+ B1 Sử dụng MySQL Workbench --> Tạo ra mô hình ERD chứa các bảng, thuộc tính, mối quan hệ, khoá chính, khoá ngoại 
+ B2 Chuyển đổi từ mô hình ERD sang tập tin .sql chứa các câu lệnh tạo CSDL
+ B3 Thực thi, chạy tập tin SQL để tạo ra CSDL hoàn chỉnh
+	Ưu điểm: Nhanh 
+	Áp dụng khi học ở trường, dự án nhỏ
+ Nhược điểm:
+	: ERD --> .sql có thể sinh ra các câu lệnh thừa, sai 
+	: Nếu CSDL lớn có nhiều bảng --> Nếu bị sai thì phải làm/tạo lại từ đầu không thể thử dữ liệu cho từng bảng
+	:Tạo hết từ đầu có thể bị sai, thừa khong sử dụng trong ứng dụng
+. Cách 2
+ B1. Tự code ra câu lệnh SQL để tạo bảng, liên kết ràng buộc cho CSDL 
+ Ưu điểm: Làm tuần tự từng bước, đến chức năng nào cần mới tạo ra
+ 
+ Ưu điểm: Làm tuần tự từng bước , đến chức năng nào cần mới tạo ra 
+ Nhược điểm: Chậm, dùng lệnh khác mệt
+
+ Thực tế: Dự án sẽ làm theo cách 2 
+	  Làm chức năng nào cần bảng nào thì tạo thêm bảng đó 	
