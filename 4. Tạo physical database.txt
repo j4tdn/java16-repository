@@ -1,0 +1,11 @@
+Sau khi đã thiết kế csdl
+--> Có 2 cách để tạo ra csdl vật lý cho ứng dụng
+
+
+A. Cách 1:
+ + Sử dụng MySQL Wb --> Tạo ra mô hình ERD chứa các bảng,
+thuộc tính, mối quan hệ, khoá chính, khoá ngoại
+ + Chuyển đổi từ mô hình ERD sang tập tin .sql chứa các câu lệnh tạo CSDL
+ + Thực thi, chạy tập tin SQL để tạo ra CSDL hoàn chỉnh
+B. Cách 2:
+ + Tự code ra các câu lệnh SQL để tạo bảng, liên kết ràng buộc cho CSDL
