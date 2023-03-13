@@ -1,0 +1,25 @@
+--Answer 1
+
+relationship beewwen tables Student and Class is n-1
+
+-- Answer 2
+
+SELECT name , gender, Class.name
+FROM Student
+JOIN Class ON Student.class_id = Class.id
+
+-- Answer 3
+
+SELECT Class.teacher , COUNT(gender) as count_male_gender_in12A
+FROM Student
+JOIN Class ON Student.class_id = Class.id
+WHERE Student.gender = 'Male' AND Class.name = '12A'
+
+-- Answer 4
+
+SELECT name , Result.score 
+FROM Student 
+JOIN Result ON Student.id = Result.student_id
+JOIN Class ON Student.class_id = Class.id
+HAVING Class.name = '12B'
+
