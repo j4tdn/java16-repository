@@ -1,11 +1,13 @@
 package condition.loop;
 
+import java.util.Random;
 import java.util.random.*;
 
 public class Ex04SwitchCaseWithoutBreak {
 	public static void main(String[] args) {
-		int month = 1 + Random().nextInt(12);
-		System.out.println("Tháng" + month + "có");
+		Random rd = new Random();
+		int month = 1 + rd.nextInt(12);
+		System.out.print("Tháng " + month + " có: ");
 		
 		switch (month) {
 		case 1:

@@ -3,9 +3,11 @@ package view;
 import java.util.Scanner;
 
 public class Ex05MultipleException {
+	
+	private static Scanner ip = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		
-		private static Scanner ip = new Scanner(System.in);
 		System.out.println("x = " + findX());
 		
 		

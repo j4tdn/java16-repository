@@ -5,7 +5,7 @@ import java.util.Random;
 public class Ex03SwitchCase {
 	public static void main(String[] args) {
 		int month = 1 + new Random().nextInt(12);
-		System.out.println("tháng " + month + " có :");
+		System.out.print("tháng " + month + " có: ");
 		
 		switch (month) {
 		case 1:

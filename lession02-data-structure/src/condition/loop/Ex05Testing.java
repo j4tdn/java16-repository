@@ -1,9 +1,12 @@
 package condition.loop;
 
+import java.util.Scanner;
+
 public class Ex05Testing {
 	public static void main(String[] args) {
 		// Viết 1 hàm tìm Max của 2 số a và b int
 		System.out.println("max: " + max(2,4));
+		
 	}
 	
 	private static int max(int a, int b) {
@@ -18,4 +21,5 @@ public class Ex05Testing {
 		
 		return a > b ? a : b;
 	}
+	
 }

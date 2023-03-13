@@ -19,12 +19,16 @@ public class Ex02IfElseIf {
 		}
 		
 		// nếu điểm >= 8  ==> học lực giỏi
-		else ( point <= 10) {
+		else if ( point <= 10) {
 			System.out.println("Học lực giỏi");
+		} else {
+			System.out.println("Điểm không hợp lệ");
 		}
 		System.out.println("......");
 		
 		System.out.println("Finish...!!!");
 		
 		}
+	
+		
 }

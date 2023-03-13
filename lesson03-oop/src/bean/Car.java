@@ -15,7 +15,6 @@ public class Car {
 
 	public Car(int serial, String color) {
 		this.serial = serial;
-		
 		this.color = color;
 	}
 

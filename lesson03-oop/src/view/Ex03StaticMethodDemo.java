@@ -30,9 +30,9 @@ public class Ex03StaticMethodDemo {
 	private static int sum(int a, int b) {
 		return a+b;
 	}
-	// Hàm chỉ phụ thuộc vào đối tượng, không phụ thuộc vào tham số truyền vào
+	// Hàm chỉ phụ thuộc vào đối tượng đang gọi, không phụ thuộc vào tham số truyền vào
 	//==> cho hàm non-static
 	private int sub() {
-		return x-y;
+		return x - y;
 	}
 }

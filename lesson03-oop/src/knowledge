@@ -1,5 +1,5 @@
 1. Khái niệm static
-A. Static cho thuộc tính 
+A. Static cho thuộc tính(attributes)
 + Khi một thuộc tính không phụ thuộc vào bất kì đối tượng nào 
 + Các đối tượng đều có chung giá trị của thuộc tính này
 ==> thì cho thuộc tính đó là static
@@ -7,5 +7,14 @@ A. Static cho thuộc tính
 + Khi thuộc tính phụ thuộc/có giá trị riêng cho mỗi đối tượng 
 ==> thì cho thuộc tính đó là non-static
 
+VD: Car#model
+
+B. Static cho method(hàm)
++ Hàm chỉ phụ thuộc vào tham số truyền vào, không phụ thuộc vào đối tượng đang gọi
+==> Cho hàm static
+
++ Hàm chỉ phụ thuộc vào đối tượng, không phụ thuộc vào tham số truyền vào
+==> cho hàm non-static
+
 Lập trình hướng đối tượng (Object Oriented Programing – OOP) là 
-một phương pháp để thiết kế một chương trình bởi sử dụng các lớp và các đối tượng.
+một phương pháp để thiết kế một chương trình sử dụng các lớp và các đối tượng.

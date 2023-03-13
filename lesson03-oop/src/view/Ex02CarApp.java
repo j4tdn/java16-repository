@@ -12,7 +12,7 @@ public class Ex02CarApp {
 		Random rd = new Random();
 		String[] colors = {"Yellow", "Red", "Blue", "White", "Black"};
 		Car[] cars = new Car[100];
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < cars.length; i++) {
 			Car car = new Car(i, colors[rd.nextInt(colors.length)]);
 			car.model = "Audi";
 			cars[i] = car;
@@ -22,8 +22,6 @@ public class Ex02CarApp {
 		// Yêu cầu: Số lượng xe còn lại đổi model thành MG
 		
 		Car.model = "MG";
-		
-		
 		
 		System.out.println("=======================");
 		for (Car car:cars) {

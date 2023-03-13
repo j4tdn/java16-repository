@@ -2,7 +2,7 @@ package condition.loop;
 
 import java.util.Scanner;
 
-public class Ex08validateNumber {
+public class Ex08ValidateNumber {
 	public static void main(String[] args) {
 		// Enter and validate a number
 		// If number of wrong times exceed 3 --> Exit system

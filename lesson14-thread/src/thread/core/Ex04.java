@@ -23,10 +23,10 @@ public class Ex04 {
 		Thread t1 = new Thread(task1, "thread1");
 		t1.start();
 		
-		Thread t2 = new Thread(task1, "thread2");
+		Thread t2 = new Thread(task2, "thread2");
 		t2.start();
 		
-		Thread t3 = new Thread(task1, "thread3");
+		Thread t3 = new Thread(task3, "thread3");
 		t3.start();
 		
 	}

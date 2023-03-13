@@ -8,11 +8,15 @@
 --> cho ví dụ
 
 3. Hàm khởi tạo là gì
+Hàm khởi tạo là tạo ra 1 đối tượng hay 1 ô nhớ 
 
 4. Từ khóa this là gì
+Từ khóa this là từ khóa dùng để chỉ đến đối tượng hiện đang gọi đến hàm non-static
 
 5. Khác nhau giữa kiểu dữ liệu đối tượng 
 - Có sẵn của JAVA như String, Integer, Float và đối tượng tự tạo ra như Item, Employee, Student
+String, Integer, Float: chỉ chứa 1 thông tin
+Đối tượng tự tạo ra như Item, Student, Employee: chứa nhiều thông tin
 
 6. Giải thích từ khóa final, final có thể thay đổi giá trị không
 

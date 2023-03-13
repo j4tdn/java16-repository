@@ -8,22 +8,24 @@ public class Ex06Loop {
 		for (int i = 0; i < 10; i+=2 ) {
 			if (i % 4 == 0 ) {
 			
-			System.out.println(i + " ");
+			System.out.print(i + " ");
 		}
 		}
-		System.out.println("=============");
+		System.out.println("\n=============");
 		// 2nd --> using while
 		int i  = 0;
 		while(i < 10) {
 			if (i % 4 == 0 ) {
 				
-				System.out.println(i + " ");
+				System.out.print(i + " ");
 		}
 			i+=2;
 		}
-		System.out.println("=============");
+		System.out.println("\n=============");
+		
 		// 3nd --> viết chương trình nhập vào 1 số nguyên hợp lệ
 		// nếu nhập sai quá 3 lần thì sẽ thoát chương trình
+		
 		Scanner ip = new Scanner(System.in);
 		String numberAsText = " ";
 		
