@@ -1,0 +1,24 @@
+SELECT st.`NAME`,
+	   GENDER,
+       TEACHER
+  FROM STUDENT st
+  JOIN CLASS cl
+    ON st.CLASS_ID = cl.ID;
+
+SELECT TEACHER,
+	   COUNT(st.ID) TOTAL_AMOUNT_STUDENT
+  FROM STUDENT st
+  JOIN CLASS cl
+    ON st.CLASS_ID = cl.ID
+ WHERE cl.`NAME` = '12C';
+
+SELECT cl.`NAME`,
+	   COUNT(st.id) GOOD_STUDENT
+  FROM STUDENT st
+  JOIN CLASS cl
+    ON st.CLASS_ID = cl.ID
+ WHERE st.ID = (
+		SELECT STUDENT_ID 
+		  FROM RESULT
+		 WHERE `SUBJECT` IN ('Literature','Math')
+		   AND SCORE >= 8);
