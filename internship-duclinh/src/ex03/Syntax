@@ -1,0 +1,32 @@
+Which is relationship between tables Student and Result.
+Write 3 queries to:
+
+List name, gender and class name of all students.
+List teacher name and number of female student in class 12B.
+List the names of the students and their History scores in class 12C in order by the score from high to low.
+
+
+Answer 1 questions:
+++ là mối quan hệ một nhiều mỗi sinh viên có thể có nhiều kết quả student_id
+
+
+Answer 2 questions:
+SELECT name, gender, 
+(SELECT name 
+FROM Class WHERE id = Student.class_id)AS class_name
+FROM Student;
+
+Answer 3 questions:
+SELECT Class.teacher_name, COUNT(Student.id) AS female_count
+FROM Student, Class
+WHERE Student.gender = 'Female'
+AND Student.class_id = Class.id
+AND Class.name = '12B'
+GROUP BY Class.teacher_name;
+
+answer 4 questions:
+SELECT Student.name, Results.history_score
+FROM Student, Results
+WHERE Student.class_id = (SELECT id FROM Class WHERE name = '12C')
+AND Student.id = Results.student_id
+ORDER BY Results.history_score DESC;
