@@ -1,0 +1,22 @@
+
+-- Answer 1
+
+ Relationship between Student and Result is 1 to many.
+
+-- Answer 2
+
+SELECT student.name, student.gender, class.name
+FROM student
+JOIN class ON student.class_id = class.id;
+
+-- Answer 3
+
+SELECT class.teacher_name, COUNT(student.gender) as num_female_students
+FROM student
+JOIN class ON student.class_id = class.id
+WHERE student.gender = 'female' AND class.name = '12B'
+GROUP BY class.teacher_name;
+
+
+
+
