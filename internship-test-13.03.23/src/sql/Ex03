@@ -1,0 +1,24 @@
+-- 1. Which is relationship between tables Student and Class.
+-- ==> Student - Class : n - 1
+
+-- 2. List name, gender and class name of all students.
+select s.`name`, gender, class.`name`
+from student s
+join class
+on s.class_id = class.id;
+
+-- 3. List teacher name and number of male student in class 12A.
+select class.teacher, count(*)
+from student s
+join class
+on s.class_id = class.id
+where s.gender = 'male' and s.class_id = (select id from class where `name` = '12A');
+
+-- 4. List name and score of the students in class 12B.
+select s.`name`, res.subject, res.score
+from student s
+join result res
+on s.id = res.student_id
+order by s.id;
+
+
