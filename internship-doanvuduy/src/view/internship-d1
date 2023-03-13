@@ -1,0 +1,16 @@
+-- Answer 1
+Relationship between Class and Student is 1-n...
+-- Answer 2
+select Student.name , Student.gender , Class.name 
+from Student, Class 
+Where Student.class_id = Class.id;
+
+-- Answer 3
+select Class.teacher , count(Student.gender)
+from Student, Class 
+Where Student.class_id = Class.id, 
+		gender ='male';
+
+-- Answer 4
+select name , score from Student 
+where class_id =(select id from Class Where name ='12B');
