@@ -1,0 +1,41 @@
+Phân tích và thiết kế cơ sở dữ liệu
+
+--> B1: Mô hình quan niệm
+      + Xác định các đối tượng cần lưu trữ
+      + Xác định thuộc tính của đối tượng
+
+--> B2: Mô hình logic(cơ sở các đối tượng[ERD], cơ sở mẫu tin)
+      + Xác định mối quan hệ của các đối tượng
+	    . 1-1 1-n n-1 n-n --> a-b
+		. a,b số phần tử(đối tượng) của thực thể
+		      tối thiểu, tối đa tham gia vào mối quan hệ
+	  + Xác định khóa của mỗi đối tượng
+	  + Xác định KDL của thuộc tính trong mỗi đối tượng
+
+    *** Diagram, bảng thiết kế ***	  
+	  
+--> B3: Mô hình vật lý - cơ sở dữ liệu
+      + Xác định tên CSDL --> dùng lệnh tạo ra CSDL
+	  + Tạo ra các bảng(table) thuộc CSDL
+	    . Tạo cột(column) thuộc bảng
+		. Tạo khóa
+	  + Tạo mối quan hệ/liên kết/ràng buộc giữa các bảng
+	    . Xử lý mql để lưu trữ dữ liệu chính xác
+		
+		
+	B2: Đối tượng(thực thể)  --> B3: Table
+	B2: Thuộc tính(KDL)      --> B3: Column(KDL, Ràng buộc)
+	    Khóa(chọn)           --> B3: Khóa chính
+	B2: Mối quan hệ          --> B3: Mối quan hệ 1-1 1-n n-n
+	                         --> Xử lý sao cho lưu trữ dự liệu chính xác
+							 
+							 
+							 
+							 
+	-- Cách ngắn gọn để thiết kế CSDL --
+	+ Xác định các bảng, thuộc tính
+	+ Mối quan hệ giữa các bảng
+	+ Khóa chính, khóa ngoại
+	
+	--> 100% CSDL structure --> English
+	Data: optional

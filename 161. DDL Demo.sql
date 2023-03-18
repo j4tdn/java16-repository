@@ -1,0 +1,87 @@
+/*
+	Để thực thi lệnh --> có 2 cách 
+		+ Đặt con trỏ chuột vào vị trí giữa câu lện --> ctrl + enter
+        + Bôi đen đoạn lệnh cần chạy --> nhấn nút 'puzz'
+*/
+-- 1. Tạo cơ sở dữ liệu java16_shopping_test
+CREATE DATABASE JAVA16_SHOPPING_TEST CHAR SET utf8mb4;
+
+-- sử dụng database mặc định
+USE JAVA16_SHOPPING_TEST;
+
+-- 2. Tạo bảng MatHang, LoaiHang
+  --  + Tạo khóa chính, khóa ngoại trực tiếp trong lúc tạo bảng	
+CREATE TABLE ITEM
+(
+	ID				INT,
+    NAME			VARCHAR(30)		NOT NULL,
+    COLOR			VARCHAR(20)		NOT NULL,
+    BUY_PRICE		DOUBLE			NOT NULL,
+    SELL_PRICE		DOUBLE			NOT NULL,
+	METERIAL		VARCHAR(30)		NOT NULL,
+    ITEM_GROUP_ID	INT				NOT NULL,
+    PROVIDER_ID		INT				NOT NULL,
+    CONSTRAINT	PK_ITEM	PRIMARY KEY (ID),
+    CONSTRAINT	FK_ITEM_ITEM_GROUP	FOREIGN KEY (ITEM_GROUP_ID) REFERENCES ITEM_GROUP (ID)
+);
+CREATE TABLE ITEM_GROUP 
+(
+	ID				INT(5)			PRIMARY KEY,
+    NAME			VARCHAR(30)		NOT NULL,
+    IG_DESC			VARCHAR(300)	NOT NULL
+);
+
+-- 3. Thêm cột NgayTao kiểu DATE vào bảng LoaiHang
+ALTER TABLE ITEM_GROUP ADD NGAYTAO DATE DEFAULT(curdate()) NOT NULL;
+
+-- 4. Thay đổi tên tên cột NgayTao vừa thêm thành DATE_CREATED trong bảng LoaiHang
+ALTER TABLE ITEM_GROUP CHANGE NGAYTAO DATE_CREATED DATE DEFAULT(curdate()) NOT NULL;
+
+-- 5. Tạo bảng DonHang, MatHang
+   -- + Tạo khóa chính, khóa ngoại sau khi bảng đã tồn tại
+CREATE TABLE `ORDER` 
+(
+	ID				INT				PRIMARY KEY,			
+	ORDER_TIME		DATETIME		DEFAULT(current_timestamp()) NOT NULL,
+	TOTAL_OF_MONEY	DOUBLE			NOT NULL,
+	DELIVERY_FEE	DOUBLE			DEFAULT(0) NOT NULL,
+	DELIVERY_PLACE	TEXT			NOT NULL,
+	CUSTOMER_ID		INT				NOT NULL,
+	PAYMENT_TYPE_ID	INT				NOT NULL
+);
+CREATE TABLE PAYMENT_TYPE 
+(
+	ID				INT				PRIMARY KEY,
+    `DESC`			TEXT			NOT NULL
+);
+
+ALTER TABLE `ORDER` 
+ADD CONSTRAINT FK_ORDER_PAYMENT_TYPE
+FOREIGN KEY (PAYMENT_TYPE_ID) REFERENCES PAYMENT_TYPE(ID);
+
+CREATE TABLE PROVIDER
+(
+	ID				INT				PRIMARY KEY,
+	`NAME`			VARCHAR(30)		NOT NULL,
+	ADDRESS			VARCHAR(100)	NOT NULL,
+	PHONE			VARCHAR(10)		NOT NULL
+);
+-- 6. Tạo bảng ChiTietDonHang
+   -- + Lưu ý khóa chính nhiều cột
+  --  CONSTRAINT	PK_ITEM_DETAIL	PRIMARY KEY (ID, XXX);
+
+-- 7. Xóa cột DATE_CREATED vừa thêm trong bảng LoaiHang 
+ALTER TABLE ITEM_GROUP
+DROP COLUMN DATE_CREATED;
+-- 8. Xóa khóa ngoại từ bảng MatHang đến LoaiHang
+ALTER TABLE ITEM 
+DROP FOREIGN KEY FK_ITEM_ITEM_GROUP;
+
+ALTER TABLE ITEM
+ADD CONSTRAINT FK_ITEM_ITEM_GROUP 
+FOREIGN KEY (ITEM_GROUP_ID) REFERENCES ITEM_GROUP(ID)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+
+
