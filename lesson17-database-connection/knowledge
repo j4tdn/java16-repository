@@ -1,0 +1,22 @@
+JBDC JPA/Hibernate
+
+=> Truy vấn --> DML
+ + executeUpdate -> INSERT, UPDATE, DELETE
+ + executeQuery  -> SELECT
+ 
+ + sql injection, encrypt password
+ + batch update
+ + transaction
+ 
+ MVC
+ 
+ --- dao ---
+ interface	ItemGroupDao
+ class		JdbcItemGroupDao implements IemGroupDao
+ 
+ --- service ---
+ --- được gọi từ view
+ inteface	ItemGroupService
+ class 		IeamGroupServiceImpl implements ItemGroupService
+ 
+ 
