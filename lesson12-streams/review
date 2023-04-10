@@ -1,5 +1,0 @@
-1. Functional Interface là gì
-   + Là 1 interface chứa duy nhất 1 hàm trừu tượng
-   VD: Supplier<T>, Consumer<T>, Function<T, R>
-   
-   + Developer có thể tự tạo ra: custom functional interface

@@ -1,2 +1,0 @@
-1. Lớp con (Square, Rectangle) bắt buộc phải overrid phương thúc draw, calS từ Shape
-2. Hàm draw, calS bên trong Shape vô nghĩa nên mong muốn hàm draw, calS không có thân hàm
