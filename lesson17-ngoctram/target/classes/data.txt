@@ -1,0 +1,4 @@
+1, Áo N , MT1
+2, Quần N, MT2
+3, Mũ N , MT3
+4. Giày N, MT4
