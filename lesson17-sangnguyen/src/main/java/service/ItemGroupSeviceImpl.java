@@ -50,22 +50,14 @@ public class ItemGroupSeviceImpl implements ItemGroupService{
 	}
 	
 	@Override
-	public void save(ItemGroup ig) {
-		itemGroupDao.save(ig);
-		
+	public List<ItemGroup> getItemsInAYear(String year) {
+		// TODO Auto-generated method stub
+		return itemGroupDao.getItemsInAYear(year);
 	}
 	
 	@Override
-	public void update(ItemGroup ig) {
-		itemGroupDao.update(ig);	
-	}
-	
-	@Override
-	public void saveOrUpdate(ItemGroup ig) {
-		if (Optional.ofNullable(get(ig.getId())).isPresent()) {	
-			update(ig);
-		} else {
-			save(ig);
-		}
+	public List<ItemGroup> getAllItems() {
+		// TODO Auto-generated method stub
+		return itemGroupDao.getAllItems();
 	}
 }

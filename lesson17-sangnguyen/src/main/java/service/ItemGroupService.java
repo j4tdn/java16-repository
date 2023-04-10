@@ -13,9 +13,8 @@ public interface ItemGroupService {
 	
 	ItemGroup get(String name);
 	
-	void save(ItemGroup ig);
+	List<ItemGroup> getItemsInAYear(String year);
 	
-	void update(ItemGroup ig);
-	
-	void saveOrUpdate(ItemGroup ig);
+	List<ItemGroup> getAllItems();
+
 }

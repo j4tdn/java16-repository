@@ -17,6 +17,7 @@ public class ItemGroup {
 	private String name;
 	private String description;
 	private List<Item> items;
+	private int so_luong;
 	
 	public ItemGroup() {
 		// TODO Auto-generated constructor stub
@@ -27,6 +28,12 @@ public class ItemGroup {
 		this.id = id;
 		this.name = name;
 		this.description = description;
+	}
+	
+	public ItemGroup(int id, String name, int so_luong) {
+		this.id = id;
+		this.name = name;
+		this.so_luong = so_luong;
 	}
 	
 	public ItemGroup(Entry<ItemGroup, List<Item>> entry) {

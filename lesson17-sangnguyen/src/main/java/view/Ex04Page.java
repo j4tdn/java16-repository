@@ -4,7 +4,7 @@ import service.ItemService;
 import service.ItemServiceImpl;
 import utils.PrintUtils;
 
-public class ItemPage {
+public class Ex04Page {
 	
 	private static ItemService itemService;
 	
@@ -13,10 +13,6 @@ public class ItemPage {
 	}
 	
 	public static void main(String[] args) {
-		PrintUtils.generate("C1E items --> ", itemService.getAll());
-		
-		System.out.println("================== next ===================");
-		
-		PrintUtils.generate("C1E2 items by ig id --> ", itemService.getItems());
+		PrintUtils.generate("id --> ", itemService.getItems());
 	}
 }

@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import bean.ItemGroup;
@@ -14,6 +15,45 @@ public class JdbcItemGroupDao extends AbstractJdbcDao implements ItemGroupDao {
 				+ "         NAME "		+ ItemGroup.PROP_NAME	+ ",\n" 
 				+ "      	IG_DESC " 	+ ItemGroup.PROP_DESC	+ "\n"	
 				+ "  FROM ITEM_GROUP";
+	
+	private static final String GET_ITEMS_IN_A_YEAR = ""
+			+ "SELECT ig.id, ig.`NAME`, SUM(odd.AMOUNT) AS so_luong\n"
+			+ "	from ITEM_GROUP ig\n"
+			+ " JOIN ITEM it\n"
+			+ "   ON ig.id = it.ITEM_GROUP_ID\n"
+			+ "	JOIN ORDER_DETAIL odd\n"
+			+ "	  ON odd.ITEM_ID = it.ID\n"
+			+ "	JOIN `ORDER` od\n"
+			+ "   ON od.ID = odd.ORDER_ID\n"
+			+ "	WHERE YEAR(od.ORDER_TIME) = '?'\n"
+			+ "      GROUP BY ig.id;";
+	
+	@Override
+	public List<ItemGroup> getItemsInAYear(String year) {
+		List<ItemGroup> result = new ArrayList<>();
+		
+		try {
+			pst = conn.prepareStatement(GET_ITEMS_IN_A_YEAR);
+			pst.setString(1, year);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				try {
+					ItemGroup ig = new ItemGroup(rs.getInt(ItemGroup.PROP_ID),
+									   rs.getString(ItemGroup.PROP_NAME),
+									   rs.getInt("so_luong"));
+					result.add(ig);
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+		
+		}
 	
 	public List<ItemGroup> getAll() {
 		return getAll(GET_ALL, () -> transformer(rs));
@@ -70,39 +110,9 @@ public class JdbcItemGroupDao extends AbstractJdbcDao implements ItemGroupDao {
 	}
 	
 	@Override
-	public void save(ItemGroup ig) {
-		String sql  = "INSERT INTO ITEM_GROUP(ID, NAME, IG_DESC)\n"
-					+ "VALUES(?, ?, ?)";
-		try {
-			pst = conn.prepareStatement(sql);
-			pst.setInt(1, ig.getId());
-			pst.setString(2, ig.getName());
-			pst.setString(3, ig.getDescription());
-			pst.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			SqlUtils.close(pst);
-		}	
-	}
-	
-	@Override
-	public void update(ItemGroup ig) {
-		String sql  = "UPDATE ITEM_GROUP	 \n"
-					+ "		SET NAME 	= ?, \n"
-					+ "		IG_DESC 	= ?	 \n"
-					+ "	  WHERE ID	 	= ?";
-	try {
-		pst = conn.prepareStatement(sql);
-		pst.setString(1, ig.getName());
-		pst.setString(2, ig.getDescription());
-		pst.setInt(3, ig.getId());
-		pst.executeUpdate();
-	} catch (SQLException e) {
-		e.printStackTrace();
-	} finally {
-		SqlUtils.close(pst);
-	}	
+	public List<ItemGroup> getAllItems() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	public static ItemGroup transformer(ResultSet rs) {

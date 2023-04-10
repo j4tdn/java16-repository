@@ -7,11 +7,12 @@ import bean.ItemGroup;
 public interface ItemGroupDao {
 	List<ItemGroup> getAll();
 	
+	List<ItemGroup> getItemsInAYear(String year);
+	
+	List<ItemGroup> getAllItems();
+	
 	ItemGroup get(int id);
 	
 	ItemGroup get(String name);
 	
-	void save(ItemGroup ig);
-	
-	void update(ItemGroup ig);
 }
