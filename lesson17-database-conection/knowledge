@@ -1,0 +1,17 @@
+JDBC JPA/Hibernate
+
+==> Truy van --> DML
++ excuteUpdate -> INSERT, UPDATE, DELETE
++ excuteQuery  -> SELECT
+
++ sql injection, encrypt password
++ batch update
++ transaction
+
+MVC
+
+getAll()
+
+-- dao --
+interface ItemGroupDao
+class     JdbcItemGroupDao implements ItemGroupDao
