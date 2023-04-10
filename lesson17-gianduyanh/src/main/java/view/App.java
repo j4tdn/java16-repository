@@ -1,10 +1,16 @@
 package view;
 
 
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import bean.Item;
 import bean.ItemGroup;
+import bean.ItemGroupInsert;
 import bean.ItemService;
 import service.ItemgGroupService;
 
@@ -49,6 +55,41 @@ public class App {
 		}
 		
 		
+		Readfile("data.txt");
+		
+		boolean inserts = new  ItemgGroupService().add(Readfile("data.txt"));
+		
+		
+		
+		
 	}
+	public static List<ItemGroupInsert> Readfile(String fileName) {
+		List<ItemGroupInsert> itemgrinsert = new ArrayList<ItemGroupInsert>();
+        try {
+        	
+        	
+              File myObj = new File(fileName);
+              Scanner myReader = new Scanner(myObj);
+              while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                String[] dataSplit = data.split(",");
+               
+                ItemGroupInsert itemGroupInsert = new ItemGroupInsert(Integer.parseInt(dataSplit[0]),dataSplit[1], dataSplit[2]);
+                
+               
+                itemgrinsert.add(itemGroupInsert);
+                
+              }
+              myReader.close();
+            } catch (FileNotFoundException e) {
+              System.out.println("An error occurred.");
+              e.printStackTrace();
+            }
+
+
+        return itemgrinsert;
+    }
+	
+	
 
 }

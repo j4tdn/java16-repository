@@ -2,7 +2,9 @@ package service;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Time;
 import java.time.LocalDate;
@@ -12,9 +14,12 @@ import java.util.List;
 
 import bean.Item;
 import bean.ItemGroup;
+import bean.ItemGroupInsert;
 import bean.ItemService;
+import utils.SqlUtils;
 
 public class ItemgGroupService {
+	PreparedStatement prest;
 	
 	String DB_URL = "jdbc:mysql://localhost:3306/java16_shopping_test12";
 	String USER_NAME = "root";
@@ -163,6 +168,35 @@ public class ItemgGroupService {
 		}
 		return items1;
 	}
+	public boolean add(List<ItemGroupInsert> listIG) {
+        int result = 0;
+        String sql = "INSERT INTO item_group(ID, NAME, `DESC`) VALUES (?, ?, ?)";
+
+        try {
+        	try {
+				Class.forName("com.mysql.jdbc.Driver");
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			Connection conn = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
+            for (ItemGroupInsert itemGroup : listIG) {
+                prest = conn.prepareStatement(sql);
+                prest.setInt(1, itemGroup.getId());
+                prest.setString(2, itemGroup.getName());
+                prest.setString(3, itemGroup.getDecs());
+
+                result += prest.executeUpdate();
+            }
+            conn.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return result > 0 ? true : false;
+    }
 
 }
 

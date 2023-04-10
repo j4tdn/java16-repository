@@ -1,0 +1,4 @@
+100, Áo N , MT1
+200, Quần N, MT2
+300, Mũ N , MT3
+400, Giày N, MT4
