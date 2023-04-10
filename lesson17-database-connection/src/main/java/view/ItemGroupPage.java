@@ -17,8 +17,16 @@ public class ItemGroupPage {
 	
 	public static void main(String[] args) {
 		System.out.println("***___-------------___***");
+		ItemGroup igNew = new ItemGroup(6, "Nịt bụng", "Loại Hàng - Nịt Bụng");
+		itemGroupService.saveOrUpdate(igNew);
 		
-		List<ItemGroup> igAll = itemGroupService.getAll();
-		PrintUtils.generate("C1 igAll", igAll);
+		PrintUtils.generate("C1A igAll", itemGroupService.getAll());
+		
+		PrintUtils.generate("C1B igById", itemGroupService.get(2));
+		
+		PrintUtils.generate("C1C igByName", itemGroupService.get("Dép"));
+		
+		System.out.println("============== next ===============");
+		PrintUtils.generate("C1F ig grouping by ", itemGroupService.getItemGroups());
 	}
 }

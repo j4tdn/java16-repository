@@ -1,8 +1,17 @@
 JBDC JPA/Hibernate
 
 => Truy vấn --> DML
- + executeUpdate -> INSERT, UPDATE, DELETE
- + executeQuery  -> SELECT
+ + executeUpdate -> INSERT, UPDATE, DELETE --> void, affected rows
+ + executeQuery  -> SELECT				   --> ResultSet
+ 
+ Statement: Trước khi gọi executeQuery, executeUpdate
+ --> sql phải đầy đủ có thể chạy được trong WorkBench
+ * truyền tham số, + chuỗi vào sql khá khó 
+ 
+ PrepareStatement
+ --> sql k cần phải đầy đủ dữ liệu, sẽ được truyền dữ liệu sau thông qua setter và dấu ?
+ --> truyền tham số dễ dàng hơn
+ --> Sửa lỗi sql injection 
  
  + sql injection, encrypt password
  + batch update
