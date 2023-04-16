@@ -1,0 +1,27 @@
+JDBC JPA/Hibernate
+--> mostly use DML
++ executeUpdate => INSERT, UPDATE, DELETE => return void
++ executeQuery  => SELECT				  => return ResultSet
++ batch update 
++ transaction
++ sql inject, encrypt passwords
+
+
+Statement : truoc khi executeQuery, executeUpdate
+=> cau sql phai day du du lieu 
+=> kho truyen so, chuoi, ...
+
+PreparedStatement
+=> cau sql khong can du du lieu, du lieu se duoc truyen thong qua setter va dau ?
+=> truyen tham so de dang hon
+=> fix sql injection
+
+
+-- dao --
+interface ItemGroupDao
+class	  JdbcItemGroupDao implements ItemGroupDao
+
+-- service -- được gọi từ view, xử lý logic và gọi đến dao
+interface ItemGroupService
+class	  ItemGroupServiceImpl implements ItemGroupService
+
