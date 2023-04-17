@@ -18,6 +18,9 @@ public class ItemGroupPage {
 	public static void main(String[] args) {
 		System.out.println("***__------------__***");
 		System.out.println("============== next ===============");
+		// OK
 		PrintUtils.generate("2. count items by itemgroup -->",itemGroupService.countItemsByItemsGroup());
+	
+		// Tổng Hợp: 3/5 câu ok --> PASSED JDBC
 	}
 }
