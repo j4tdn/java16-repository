@@ -52,6 +52,9 @@ public class JdbcItemDao implements ItemDao {
 
 	@Override
 	public List<ItemDTO> getTop3Items(Integer year) {
+		// Em có thể trả về List<String> ở đây luôn chứ k cần List<ItemDto>
+		// Chỗ SELECT mình SELECT i.NAME thôi
+		// List<String>
 		List<ItemDTO> result = new ArrayList<ItemDTO>();
 		String sql = "SELECT i.ID, i.NAME, SUM(od.AMOUNT) AS SoLuong "
 				+ "FROM ORDER_DETAIL od"
@@ -65,6 +68,8 @@ public class JdbcItemDao implements ItemDao {
 			pst.setInt(1, year);
 			rs = pst.executeQuery();
 			while(rs.next()) {
+				// Xem comment chỗ đầu dòng của getTop3Items của a
+				// Rồi chỗ ni lấy result.add(rs.getString("NAME"));
 				ItemDTO item = new ItemDTO(rs.getInt("ID"), rs.getString("NAME"), rs.getInt("SoLuong"));
 				result.add(item);
 			}
@@ -78,6 +83,15 @@ public class JdbcItemDao implements ItemDao {
 	@Override
 	public List<ItemDTOByItemGroup> getItemsByIG() {
 		List<ItemDTOByItemGroup> result = new ArrayList<ItemDTOByItemGroup>();
+		// Đề yêu cầu là liệt kê mặt hàng có giá bán cao nhất trong 'từng' loại hàng
+		// Câu Query của em a chưa chạy nhưng a thấy chưa đúng
+		// Em đang làm là
+		// B1: Liệt kê giá bán cao nhất của từng loại hàng --> OK
+		// B2: Liệt kê mặt hàng có giá nằm trong giá bán cao nhất ở B1 --> SAI
+		
+		// VD: Loại Hàng A --> Mặt Hàng A1(300), A2(200)
+		// VD: Loại Hàng B --> Mặt Hàng B1(200), B2(100)
+		// --> B1 của em sẽ có thằng B1(200) --> và B2 sẽ có thằng A2 --> SAI
 		String sql = "select i.* from ITEM i\r\n"
 				+ "where i.SELL_PRICE in (\r\n"
 				+ "		SELECT MAX(i.SELLPRICE) AS HDN\r\n"
