@@ -7,6 +7,7 @@ public class ItemDtoByIG {
 	private String name;
 	private String color;
 	private ItemGroup itemGroup; 
+	// vnmese ???
 	private double GiaBan;
 	public ItemDtoByIG() {
 		

@@ -22,12 +22,18 @@ public class JdbcItemDao implements ItemDao {
 	private PreparedStatement pst;
 	private ResultSet rs;
 	private static final String GET_ITEMS_DATE = ""
-			 "SELECT item.ID MaMH, item.`NAME` TenMH, DATE_FORMAT(`order`.ORDER_TIME, '%H:%i:%s') ThoiGianDatHang\n"
+			// Thiếu dấu + đầu dòng
+			// Chỗ này để đơn giản lấy TIME e có thể cast sang time
+			// dùng date_format cũng được nhưng nó trả về STRING, VARCHAR
+			+ "SELECT item.ID MaMH, item.`NAME` TenMH, DATE_FORMAT(`order`.ORDER_TIME, '%H:%i:%s') ThoiGianDatHang\n"
 				+ "FROM item\n"
 				+ "JOIN order_detail ON order_detail.ITEM_ID = item.ID\n"
 				+ "JOIN `order` ON order_detail.ORDER_ID = `order`.ID\n"
+				// chưa đúng, chỗ này param của mình là Localdate, em phải cast ORDER_TIME sang DATE mới được
+				//  WHERE cast(`order`.ORDER_TIME AS DATE) = ?;
 				+ "WHERE `order`.ORDER_TIME = ?;";
 	private static final String GET_TOP3_ITEMS = ""
+			// class ItemAmountDto này đâu ra ?
 			+ "SELECT it.ID " + ItemAmountDto.PROP_ID +", \n"
 			+ "		it.NAME " + ItemAmountDto.PROP_NAME +", \n"
 			+ "        SUM(odd.AMOUNT) " + ItemAmountDto.PROP_AMOUNT +"\n"
@@ -49,6 +55,7 @@ public class JdbcItemDao implements ItemDao {
 			+ "    ON ig.ID = it.ITEM_GROUP_ID \n"
 			+ " GROUP BY ig.ID) \n"
 			+ " \n"
+			// Câu query gần đúng rồi, nhưng mapping class này ở đâu a ko thấy
 			+ "SELECT it.ID " + ItemSellPriceDto.PROP_ID + ", \n"
 			+ "	      it.NAME " + ItemSellPriceDto.PROP_NAME + ", \n"
 			+ "       it.ITEM_GROUP_ID " + ItemSellPriceDto.PROP_ITEM_GROUP_ID + ", \n"
@@ -61,6 +68,7 @@ public class JdbcItemDao implements ItemDao {
 		connection = DbConnection.getConnection();
 	}
 	@Override
+	// Code chạy được như kết quả không đúng
 	public List<ItemDto> getItems(LocalDate lDate) {
 		List<ItemDto> result = new ArrayList<>();
 		try {
@@ -83,6 +91,8 @@ public class JdbcItemDao implements ItemDao {
 		return null;
 	}
 	@Override
+	// Để yêu cầu lấy List<String> thì chỗ này lúc query e lấy list of string
+	// luôn, khỏi phải lấy list item xong mapping bên service mất công
 	public List<ItemDto> getTopThreeItemByYear(int year) {
 		List<ItemDto> result = new ArrayList<>();
 		try {
