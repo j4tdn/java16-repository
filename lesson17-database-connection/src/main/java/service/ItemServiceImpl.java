@@ -6,6 +6,7 @@ import java.util.List;
 import bean.Item;
 import dao.ItemDao;
 import dao.JdbcItemDao;
+import dto.ItemDto;
 
 public class ItemServiceImpl implements ItemService {
 	
@@ -28,6 +29,11 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public List<Item> getItems(LocalDate sellDate) {
 		return itemDao.getItems(sellDate);
+	}
+	
+	@Override
+	public List<ItemDto> statisticItemsPerItemGroup() {
+		return itemDao.statisticItemsPerItemGroup();
 	}
 
 }

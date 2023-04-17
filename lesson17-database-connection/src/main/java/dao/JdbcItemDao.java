@@ -7,6 +7,7 @@ import java.util.List;
 
 import bean.Item;
 import bean.ItemGroup;
+import dto.ItemDto;
 import utils.DateUtils;
 
 public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
@@ -48,7 +49,31 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 			+ "    ON od.ID = odd.ORDER_ID\n"
 			+ " WHERE CAST(od.ORDER_TIME AS DATE) = ?";
 	
-	
+	private static final String STATISTIC_ITEMS_PER_ITEM_GROUP = ""
+			+ "WITH ITEM_AMOUNT_CTE AS (\n"
+			+ "	SELECT it.ID,\n"
+			+ "		   it.`NAME`,\n"
+			+ "		   it.ITEM_GROUP_ID,\n"
+			+ "		   SUM(itd.AMOUNT) AMOUNT\n"
+			+ "	  FROM ITEM it\n"
+			+ "	  JOIN ITEM_DETAIL itd\n"
+			+ "		ON it.ID = itd.ITEM_ID\n"
+			+ "	 GROUP BY it.ID\n"
+			+ "),\n"
+			+ "-- Tìm số lượng lớn nhất trong từng loại hàng\n"
+			+ "ITEM_GROUP_MAX_AMOUNT_CTE AS (\n"
+			+ "	SELECT iacte.ITEM_GROUP_ID,\n"
+			+ "		   MAX(iacte.AMOUNT) MAX_AMOUNT\n"
+			+ "      FROM ITEM_AMOUNT_CTE iacte\n"
+			+ "	GROUP BY iacte.ITEM_GROUP_ID\n"
+			+ ")\n"
+			+ "SELECT ita_cte.ID     " + ItemDto.PROP_ID     + ",\n"
+			+ "       ita_cte.`NAME` " + ItemDto.PROP_NAME   + " ,\n"
+			+ "       ita_cte.AMOUNT " + ItemDto.PROP_AMOUNT + "\n"
+			+ "  FROM ITEM_AMOUNT_CTE ita_cte\n"
+			+ "  JOIN ITEM_GROUP_MAX_AMOUNT_CTE igm_cte\n"
+			+ "    ON ita_cte.ITEM_GROUP_ID = igm_cte.ITEM_GROUP_ID\n"
+			+ "   AND ita_cte.AMOUNT = igm_cte.MAX_AMOUNT";
 	
 	@Override
 	public List<Item> getAll() {
@@ -75,6 +100,26 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 						e.printStackTrace();
 					}
 				});
+	}
+	
+	
+	@Override
+	public List<ItemDto> statisticItemsPerItemGroup() {
+		return getElements(STATISTIC_ITEMS_PER_ITEM_GROUP,
+				() -> transformerItemDto(rs), pst -> {});
+	}
+	
+	private static ItemDto transformerItemDto(ResultSet rs) {
+		ItemDto itemDto = null;
+		try {
+			itemDto = new ItemDto(
+					rs.getInt(ItemDto.PROP_ID), 
+					rs.getString(ItemDto.PROP_NAME), 
+					rs.getInt(ItemDto.PROP_AMOUNT));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return itemDto;
 	}
 	
 	private static ItemGroup transformerItemGroup(ResultSet rs) {

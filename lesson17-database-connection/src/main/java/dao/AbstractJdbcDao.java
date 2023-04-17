@@ -24,19 +24,28 @@ public class AbstractJdbcDao {
 	public AbstractJdbcDao() {
 		conn = DbConnection.getConnection();
 	}
-	
+
 	<E> List<E> getAll(String sql, Supplier<E> supplier) {
-		return getElements(sql, supplier, pst -> {});
+		return getElements(sql, supplier, pst -> {
+		});
 	}
-	
-	
+
+	/**
+	 * Helper method for get elements
+	 * 
+	 * @param <E> generic type
+	 * @param sql given sql
+	 * @param supplier transformer for each row, from rs -> object
+	 * @param consumer consume to pass sql parameter
+	 * @return list of elements
+	 */
 	<E> List<E> getElements(String sql, Supplier<E> supplier, Consumer<PreparedStatement> consumer) {
 		final List<E> result = new ArrayList<>();
 		try {
 			pst = conn.prepareStatement(sql);
 			consumer.accept(pst);
 			rs = pst.executeQuery();
-			while(rs.next()) {
+			while (rs.next()) {
 				result.add(supplier.get());
 			}
 		} catch (SQLException e) {
@@ -46,7 +55,7 @@ public class AbstractJdbcDao {
 		}
 		return result;
 	}
-	
+
 	void setInt(int parameterIndex, int x) {
 		Objects.requireNonNull(pst, "pst cannot be null");
 		try {

@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import bean.Item;
+import dto.ItemDto;
 import dto.ItemGroupDto;
 
 public interface ItemDao {
@@ -12,4 +13,6 @@ public interface ItemDao {
 	List<Item> getItems();
 
 	List<Item> getItems(LocalDate sellDate);
+	
+	List<ItemDto> statisticItemsPerItemGroup();
 }
