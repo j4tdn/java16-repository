@@ -30,8 +30,10 @@ public class ItemgGroupService {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
+			// Tất cả chuyển qua dùng PrepareStatement nhé
 			Statement stmt = conn.createStatement();
 			// get data from table 'student'
+			// dữ liệu lấy chưa đủ theo yêu cầu
 			String query = "SELECT item_group.ID ID, item_group.`NAME` NAME, GROUP_CONCAT(item.NAME) ITEMS, SUM(item_detail.AMOUNT) AMOUNT\n"
 					+ "FROM item \n"
 					+ "JOIN item_group \n"
@@ -42,6 +44,8 @@ public class ItemgGroupService {
 			ResultSet rs = stmt.executeQuery(query);
 			while (rs.next()) {
 				
+				// get này mình truyền column name vào thay vì STT e nha
+				// code convention
 				Integer id = rs.getInt(1);
 				String name = rs.getString(2);
 				
@@ -62,17 +66,24 @@ public class ItemgGroupService {
 		return items1;
 	}
 	
+	// sao lại trả về List<ItemService>
+	// service là để xử lý logic mà Duy Anh
 	public List<ItemService> getItemService() {
 		List<ItemService> items1 = new ArrayList<ItemService>();
 		try {
+			// Tại sao không dùng DbConnection.getConnection() ???
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
 			Statement stmt = conn.createStatement();
 			// get data from table 'student'
+			// dữ liệu lấy về của ORDER_TIME là thời gian
+			// cần phải CAST sang TIME
 			String query = "select ITEM.ID, ITEM.`NAME`, `ORDER`.ORDER_TIME from `ORDER` \n"
 					+ "JOIN ORDER_DETAIL ON ORDER_DETAIL.ORDER_ID = `ORDER`.ID\n"
 					+ "JOIN ITEM ON ITEM.ID = ORDER_DETAIL.ITEM_ID\n"
 					+ "where cast(ORDER_TIME as DATE) = str_to_date('2023/03/06', '%Y/%m/%d');";
+			// ngày tháng năm phải là tham số truyền vào dạng
+			// localdate
 			ResultSet rs = stmt.executeQuery(query);
 			while (rs.next()) {
 				
@@ -96,6 +107,7 @@ public class ItemgGroupService {
 	}
 	
 	public List<String> getItemServiceTop3(Integer year) {
+		// code nhớ qua DA nghe :(
 		List<String> items1 = new ArrayList<String>();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -181,6 +193,7 @@ public class ItemgGroupService {
 			}
 			Connection conn = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
             for (ItemGroupInsert itemGroup : listIG) {
+            	// Tìm hiểu batch update
                 prest = conn.prepareStatement(sql);
                 prest.setInt(1, itemGroup.getId());
                 prest.setString(2, itemGroup.getName());
