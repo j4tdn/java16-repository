@@ -16,6 +16,7 @@ public class ItemPage {
 	private static Connection conn = null;
 	
 	public static Connection getConnection() {
+		// Phần connection này mình đã code bên package configuration rồi em :/
 		String DRIVER = "com.mysql.cj.jdbc.Driver";
 		String URL = "jdbc:mysql://localhost:3306/java16_shopping_test";
 		String USER = "root";
@@ -54,6 +55,10 @@ public class ItemPage {
 	public static void main(String[] args) {
 		ex01();
 		
-		
+		/* 
+		  Sorry Chiến - Nhưng a thấy Chiến chưa làm được câu 1 nữa :(
+		  Câu truy vấn cũng đang viết bị sai chưa đúng yêu cầu đề bài
+		  Kết luận: Failed in JDBC
+		*/
 	}
 }
