@@ -26,5 +26,12 @@ public class ItemPage {
 		PrintUtils.generate("C1G items by order time --> ",
 				itemService.getItems(LocalDate.of(2022, 01, 01)));
 		
+		
+		/* 
+		  Sorry Vũ - Nhưng a thấy Vũ chưa làm được câu 1 nữa :(
+		  Có truyền param là LocalDate ok nhưng lúc get về chưa đúng yêu cầu
+		  cũng như đang bị lỗi compile
+		  Kết luận: Failed in JDBC
+		*/
 	}
 }
