@@ -1,7 +1,6 @@
 package service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -11,6 +10,7 @@ import dao.ItemDao;
 import dao.ItemGroupDao;
 import dao.JdbcItemDao;
 import dao.JdbcItemGroupDao;
+import dto.ItemGroupDto;
 
 public class ItemGroupServiceImpl implements ItemGroupService {
 
@@ -37,6 +37,11 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 					.stream()
 					.map(ItemGroup::new)
 					.collect(Collectors.toList());
+	}
+	
+	@Override
+	public List<ItemGroupDto> countItemsByItemGroup() {
+		return itemGroupDao.countItemsByItemGroup();
 	}
 
 	@Override

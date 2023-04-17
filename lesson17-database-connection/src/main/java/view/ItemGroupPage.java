@@ -27,6 +27,7 @@ public class ItemGroupPage {
 		System.out.println("============== next ===============");
 		PrintUtils.generate("C1F ig grouping by ", itemGroupService.getItemGroups());
 		
-		
+		System.out.println("============== next ===============");
+		PrintUtils.generate("C1 count items by item group ", itemGroupService.countItemsByItemGroup());
 	}
 }
