@@ -1,10 +1,12 @@
 package dao;
 
 import java.sql.ResultSet;
+import java.time.LocalDate;
 import java.util.List;
 
 import bean.Item;
 import bean.ItemGroup;
+import dto.ItemDto;
 
 public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 	
@@ -31,10 +33,11 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 			+ "  FROM ITEM it \n"
 			+ "  JOIN ITEM_GROUP ig \n"
 			+ "    ON it.ITEM_GROUP_ID = ig.ID";
-	
+	/*
 	private static final String GET_ITEMS_BY_IG_ID = ""
 			+ GET_ALL_ITEMS + "\n"
 			+ "  WHERE ig.id = ?";
+	*/
 	
 	@Override
 	public List<Item> getAll() {
@@ -47,6 +50,11 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 				GET_ALL_ITEMS, 
 				() -> transformer(rs),
 				pst -> {});
+	}
+	
+	@Override
+	public List<Item> getItems(LocalDate sellDate) {
+		return null;
 	}
 	
 	private static Item transformer(ResultSet rs) {
@@ -68,5 +76,26 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 			e.printStackTrace();
 		}
 		return item;
+	}
+	
+
+	@Override
+	public List<ItemDto> statistisItemsPerItemGroup() {
+		return null;
+		
+
+	}
+	
+	private static ItemDto transsformerItemDto(ResultSet rs) {
+		ItemDto itemDto = null;
+		try {
+			itemDto = new ItemDto(
+			rs.getInt(ItemDto.PROP_ID),
+			rs.getString(ItemDto.PROP_NAME),
+			rs.getInt(ItemDto.PROP_AMOUNT));
+		} catch (Exception e) {
+			
+		}
+		return itemDto;
 	}
 }
