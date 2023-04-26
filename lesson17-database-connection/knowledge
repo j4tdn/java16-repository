@@ -1,0 +1,33 @@
+JDBC JPA/Hibernate
+
+==> Truy vấn --> DML
++ executeUpdate -> INSERT, UPDATE, DELETE --> int - affected rows
++ executeQuery  -> SELECT                 --> ResultSet
+
+Statement: Trước khi gọi executeQuery, executeUpdate
+ --> sql phải đầy đủ có thể chạy được trong workbench
+  * truyền tham số, + chuỗi vào sql khá khó
+ 
+PrepapedStamenet
+ --> sql ko cần phải đủ dư liệu, sẽ được truyền dữ liệu vào sau thông qua setter
+ và dấu ?
+ --> Truyền tham số dễ dàng hơn
+ --> Sửa lỗi sql injection
+
++ sql injection, encrypt password
++ batch update
++ transaction
+
+MVC
+
+getAll()
+
+--- dao ---
+interface ItemGroupDao
+class     JdbcItemgroupDao implements ItemGroupDao
+
+--- service ---
+--- được gọi từ view
+--- xử lý logic || && gọi đến dao
+interface ItemGroupService
+class     ItemGroupServiceImpl implements ItemGroupService
