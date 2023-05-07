@@ -1,0 +1,10 @@
+JDBC JPA/Hibernate
+
+==> Truy vấn --> DML
+
++ executeUpdate -> INSERT, UPDATE, DELETE
++ executeQuery -> SELECT
+
++ sql injection, encrypt, password
++ batch update 
++ transaction
