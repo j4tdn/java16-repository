@@ -13,6 +13,7 @@ import javax.xml.crypto.dsig.Transform;
 import bean.Item;
 import bean.ItemGroup;
 import configuration.DbConnection;
+import dto.ItemDto;
 import utils.SqlUtils;
 
 public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
@@ -36,7 +37,7 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 			+ "		  it.METERIAL	" + Item.PROP_METERIAL 		+ ", \n"
 			+ "		  ig.ID			" + PROP_ITEM_GROUP_ID 		+ ", \n"
 			+ "		  ig.NAME		" + PROP_ITEM_GROUP_NAME 	+ ", \n"
-			+ "		  ig.IG_DESC	" + PROP_ITEM_GROUP_DESC 	+ "  \n"
+			+ "		  ig.`DESC`	" + PROP_ITEM_GROUP_DESC 	+ "  \n"
 			+ "	FROM ITEM it \n"
 			+ "	JOIN ITEM_GROUP ig \n"
 			+ "		ON it.ITEM_GROUP_ID = ig.ID";
@@ -45,6 +46,32 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 			+ GET_ALL_ITEMS + "\n"
 			+ "WHERE ig.id = ?" ;
 	
+	private static final String STATISTIC_ITEM_PER_ITEM_GROUP = ""
+			+ "WITH ITEM_AMOUNT_CTE AS (\n"
+			+ "	SELECT 	it.ID,\n"
+			+ "			it.`NAME`,\n"
+			+ "            it.ITEM_GROUP_ID,\n"
+			+ "            SUM(itd.AMOUNT) AMOUNT\n"
+			+ "	FROM	ITEM it\n"
+			+ "    JOIN	ITEM_DETAIL itd\n"
+			+ "    ON 		it.ID = itd.ITEM_ID\n"
+			+ "    GROUP BY	it.ID\n"
+			+ "),\n"
+			+ "\n"
+			+ "ITEM_GROUP_MAX_AMOUNT_CTE AS (\n"
+			+ "	SELECT	iacte.ITEM_GROUP_ID,\n"
+			+ "			MAX(iacte.AMOUNT) MAX_AMOUNT\n"
+			+ "	  FROM	ITEM_AMOUNT_CTE iacte\n"
+			+ "    GROUP BY iacte.ITEM_GROUP_ID\n"
+			+ ")\n"
+			+ "\n"
+			+ "SELECT ita_cte.ID " + ItemDto.PROP_ID + ",\n"
+			+ "		  ita_cte.`NAME`" + ItemDto.PROP_NAME + ",\n"
+			+ "       ita_cte.AMOUNT.AMOUNT" + ItemDto.PROP_AMOUNT + ",\n"		
+			+ "  FROM ITEM_AMOUNT_CTE ita_cte	\n"
+			+ "  JOIN ITEM_GROUP_MAX_AMOUNT_CTE img_cte\n"
+			+ "    ON ita_cte.ITEM_GROUP_ID = igm_cte.ITEM_GROUP_ID\n"
+			+ "   AND ita_cte.AMOUNT = igm_cte.MAX_AMOUNT;";
 	
 	@Override
 	public List<Item> getAll() {
@@ -81,7 +108,24 @@ public class JdbcItemDao extends AbstractJdbcDao implements ItemDao{
 		}
 		return item;
 	}
-
+	public List<ItemDto> statisticItemsPerItemGroup() {
+		return getElements(STATISTIC_ITEM_PER_ITEM_GROUP,
+				() -> transformerItemDto(rs), pst -> {});
+	}
+	
+	public static ItemDto transformerItemDto(ResultSet rs) {
+		ItemDto itemDto = null;
+		try {
+			itemDto = new ItemDto(
+					rs.getInt(ItemDto.PROP_ID),
+					rs.getString(ItemDto.PROP_NAME),
+					rs.getInt(ItemDto.PROP_AMOUNT));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return itemDto;
+	}
 	@Override
 	public List<Item> getItems(LocalDate sellDate) {
 		// TODO Auto-generated method stub

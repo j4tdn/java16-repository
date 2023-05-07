@@ -18,5 +18,8 @@ public class ItemPage {
 		System.out.println("================== next ===================");
 		
 		PrintUtils.generate("C1E2 items by ig id --> ", itemService.getItems());
+		
+		System.out.println("================== next ===================");
+		PrintUtils.generate("Cau 3", itemService.statisticItemsPerItemGroup());
 	}
 }

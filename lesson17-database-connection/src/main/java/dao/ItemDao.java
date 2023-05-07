@@ -1,5 +1,6 @@
 package dao;
 
+import dto.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,4 +12,6 @@ public interface ItemDao {
 	List<Item> getItems();
 
 	List<Item> getItems(LocalDate sellDate);
+	
+	public List<ItemDto> statisticItemsPerItemGroup();
 }
