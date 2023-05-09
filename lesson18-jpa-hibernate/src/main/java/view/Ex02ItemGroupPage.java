@@ -2,6 +2,8 @@ package view;
 
 import service.ItemGroupService;
 import service.ItemGroupServiceImpl;
+import utils.FileUtils;
+
 import static utils.PrintUtils.*;
 
 import java.util.List;
@@ -23,6 +25,11 @@ public class Ex02ItemGroupPage {
 			itemGroupService.save(igToBeSaved);
 		});
 		
+		executeAndPrint("Câu 7: Thêm mới danh sách loại hàng(batch update)", () -> {
+			List<ItemGroup> dataToBeSaved = FileUtils.readLines("data.txt", ItemGroup::toEntity);
+			itemGroupService.save(dataToBeSaved);
+		});
+		
 		List<ItemGroup> groups = itemGroupService.getAll();
 		print("Câu 1: Liệt kê loại hàng", groups);
 		
@@ -32,5 +39,10 @@ public class Ex02ItemGroupPage {
 		print("Câu 2: Liệt kê loại hàng theo mã loại", itemGroupService.get(2));
 	
 		print("Câu 5: Thông kê số lượng mặt hàng theo từng loại hàng", itemGroupService.statistic());
+		
+		executeAndPrint("Câu 10: Thêm mới loại hàng với procedure", () -> {
+			int pRowCount = 4;
+			itemGroupService.saveNewestItemGroups(pRowCount);
+		});
 	}
 }

@@ -36,4 +36,25 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 		itemGroupDao.save(itemGroup);
 	}
 	
+	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		Objects.requireNonNull(itemGroups, "item group(s) should not be null !");
+		if (itemGroups.isEmpty()) {
+			return;
+		}
+		itemGroupDao.save(itemGroups);
+	}
+	
+	@Override
+	public void saveNewestItemGroups(int nextNItemGroups) {
+		if (nextNItemGroups > 0) {
+			itemGroupDao.saveNewestItemGroups(nextNItemGroups);
+		}
+	}
+	
+	@Override
+	public void demoHibernateCache() {
+		itemGroupDao.demoHibernateCache();
+	}
+	
 }

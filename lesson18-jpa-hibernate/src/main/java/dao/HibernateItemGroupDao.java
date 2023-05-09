@@ -1,9 +1,9 @@
 package dao;
 
+import java.sql.PreparedStatement;
 import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.transform.Transformers;
 import org.hibernate.type.IntegerType;
@@ -13,14 +13,18 @@ import persistence.ItemGroup;
 import persistence.ItemGroupDto;
 
 public class HibernateItemGroupDao extends HibernateAbstractDao implements ItemGroupDao{
+	
+	private static final int BATCH_SIZE = 10;
 
 	private static final String PARAM_ID = "pid";
 	private static final String PARAM_NAME = "pname";
 	private static final String PARAM_DESC = "pdesc";
+	private static final String PARAM_ROW_COUNT = "p_round_count";
 	
 	private static final String SQL_PARAM_ID = ":" + PARAM_ID;
 	private static final String SQL_PARAM_NAME = ":" + PARAM_NAME;
 	private static final String SQL_PARAM_DESC = ":" + PARAM_DESC;
+	private static final String SQL_PARAM_ROW_COUNT = ":" + PARAM_ROW_COUNT;
 	
 	private static final String GET_ALL_ITEM_GROUP = ""
 			+ "SELECT * FROM ITEM_GROUP";
@@ -41,7 +45,10 @@ public class HibernateItemGroupDao extends HibernateAbstractDao implements ItemG
 	
 	private static final String INSERT_ITEM_GROUP = ""
 			+ "INSERT INTO ITEM_GROUP(ID, NAME, `DESC`)\n"
-			+ "VALUES( " + SQL_PARAM_ID + " ,  " + SQL_PARAM_NAME + " , " + SQL_PARAM_DESC + " )";
+			+ "VALUES(?, ?, ?)";
+	
+	private static final String STORED_PROCEDURE_INSERT_ITEM_GROUP = ""
+			+ "CALL P_INSERT_ITEM_GROUPS( " + SQL_PARAM_ROW_COUNT  + " )";
 	
 	public List<ItemGroup> getAll() {
 		// B1: Lấy ra session factory, session
@@ -143,5 +150,75 @@ public class HibernateItemGroupDao extends HibernateAbstractDao implements ItemG
 		// Tổng kết --> truy vấn với transaction
 		executeInTransaction(session -> session.saveOrUpdate(itemGroup));
 	}
+	
+	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		// 980 elements need to be saved to database
+		// next 100 batch count --> execute batch
+		// remaining 80 --> execute batch
+		
+		// session --> connection --> jdbc
+		executeInTransaction(session -> {
+			session.doWork(connection -> {
+				try {
+					PreparedStatement pst = connection.prepareStatement(INSERT_ITEM_GROUP);
+					int batchCount = 0;
+					for (ItemGroup itemGroup: itemGroups) {
+						pst.setInt(1, itemGroup.getId());
+						pst.setString(2, itemGroup.getName());
+						pst.setString(3, itemGroup.getDescription());
+						pst.addBatch();
+						if (++batchCount % BATCH_SIZE == 0) {
+							pst.executeBatch();
+						}
+					}
+					pst.executeBatch();
+				} catch (Exception e) {
+					System.out.println("Exp --> " + e.getMessage());
+				}
+			});
+		});
+	}
+	
+	@Override
+	public void saveNewestItemGroups(int nextNItemGroups) {
+		executeInTransaction(session -> {
+			session.createNativeQuery(STORED_PROCEDURE_INSERT_ITEM_GROUP)
+				.setParameter(PARAM_ROW_COUNT, nextNItemGroups, IntegerType.INSTANCE)
+				.executeUpdate();
+		});
+	}
+	
+	@Override
+	public void demoHibernateCache() {
+		// Demo 1st level cache
+		Session session1 = openSession();
+		Session session2 = openSession();
+		
+		ItemGroup ig1 = session1.get(ItemGroup.class, 104); // Loading From Database
+		System.out.println("ig1 --> " + ig1);
+		
+		ItemGroup ig2 = session1.get(ItemGroup.class, 105); // Loading From Database
+		System.out.println("ig2 --> " + ig2);
+		
+		ItemGroup ig3 = session2.get(ItemGroup.class, 104); // Loading From Database
+		System.out.println("ig3 --> " + ig3);
+		
+		ItemGroup ig4 = session2.get(ItemGroup.class, 105); // Loading From Database
+		System.out.println("ig4 --> " + ig4);
+		
+		session1.evict(ig2);
+		session2.clear(); // ig3, ig4
+		
+		ItemGroup ig5 = session1.get(ItemGroup.class, 104); // Loading From 1st level cache of session 1
+		System.out.println("ig5 --> " + ig5);
+		
+		ItemGroup ig6 = session2.get(ItemGroup.class, 105); // Loading From Database
+		System.out.println("ig6 --> " + ig6);
+		
+		// Demo 2nd level cache
+		// Thực tế --> ít dùng --> Gửi video/hướng dẫn sau khi kiểm tra
+	}
+	
 
 }
