@@ -1,0 +1,24 @@
+package dao;
+
+import java.util.List;
+
+import persistence.Item;
+
+public class HibernateItemDao extends HibernateAbstractDao implements ItemDao {
+	
+	private static final String GET_ALL_ITEM = ""
+			+ "SELECT * FROM ITEM";
+	
+	
+	@Override
+	public List<Item> getAll() {
+		return openSession()
+				.createNativeQuery(GET_ALL_ITEM, Item.class)
+				.getResultList();
+	}
+	
+	@Override
+	public void saveOrUpdate(Item item) {
+		executeInTransaction(session -> session.saveOrUpdate(item));
+	}
+}

@@ -1,0 +1,27 @@
+JDBC
+--> SELECT: executeQuery
+--> INSEET/UPDATE/DELETE: executeUpdate
+
+Transaction: Phiên làm việc
++ Khuyến khích sử dụng 1 service/manager  thực hiện gọi đến nhiều câu lệnh truy vấn ở Dao
+--> đảm bảo thao tác 1 là thành công --> commit
+-->					 2 là thất bại --> rollback dữ liệu về như ban đầu
+
+
+JPA/Hibernate
+--> SELECT: (getResultList)execuateQuery
+--> INSERT/UPDATE/DELETE: executeUpdate --> required transaction
+
+Transaction: Phiên làm việc
++ Yêu cầu truy vấn liên quan đến cập nhật dữ liệu
+	--> phải đưa truy vấn đó vào trong 1 transaction
+	--> đảm bảo dữ liệu sẽ được rollback khi truy vấn gặp lỗi giữa chừng
+	
+	--> đặt ở tầng Dao
+	
+	
+===========================================================================
+Thực tế
+ + Transaction nên đặt ở tầng service/manager --> gọi đến 1 hoặc nhiều hàm xử lí ở Dao
+ + đảm bảo nếu 1 / N câu truy vấn lỗi  --> rollback
+ 
