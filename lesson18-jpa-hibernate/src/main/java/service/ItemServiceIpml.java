@@ -18,5 +18,9 @@ public class ItemServiceIpml implements ItemService {
 	public List<Item> getALl() {
 		return itemDao.getALl();
 	}
+	@Override
+	public void saveOrUpdate(Item item) {
+         itemDao.saveOrUpdate(item);		
+	}
 
 }

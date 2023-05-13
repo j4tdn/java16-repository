@@ -40,6 +40,19 @@ public class Item {
 	public Item() {
 		
 	}
+	
+
+	public Item(Integer id, String name, String color, Double buyPrice, Double sellPrice, String material,
+			ItemGroup itemGroup) {
+		this.id = id;
+		this.name = name;
+		this.color = color;
+		this.buyPrice = buyPrice;
+		this.sellPrice = sellPrice;
+		this.material = material;
+		this.itemGroup = itemGroup;
+	}
+
 
 	public Integer getId() {
 		return id;

@@ -14,5 +14,9 @@ public class HibernateItemDao extends HibernateAbtractDao implements ItemDao{
 		return openSession().createNativeQuery(GET_ALL_ITEMS, Item.class)
 				.getResultList();
 	}
+	@Override
+	public void saveOrUpdate(Item item) {
+ 		 executeInTransaction(session -> session.saveOrUpdate(item));
+	}
 
 }
