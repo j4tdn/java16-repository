@@ -42,5 +42,16 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 		}
 		itemGroupDao.save(itemGroups);
 	}
+	@Override
+	public void saveNewestItemGroups(int nextNItemGroups) {
+		if(nextNItemGroups > 0) {
+		itemGroupDao.saveNewestItemGroups(nextNItemGroups);
+	}
+	}
+	
+	@Override
+	public void demoHibernateCache() {
+		itemGroupDao.demoHibernateCache();
+	}
 
 }

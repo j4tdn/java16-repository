@@ -37,6 +37,11 @@ public class Ex02ItemGroupPage {
 			itemGroupService.save(dataToBeSaved);
 		});
 		
+		executeAndPrint("Câu 10: Thêm mới Loại Hàng(procedure)", () -> {
+			int pRowcount = 4;
+			itemGroupService.saveNewestItemGroups(pRowcount);
+		});
+		
 		List<ItemGroup> groups = itemGroupService.getAll();
 		
 		//câu 1: Liệt kê tất cả các loại hàng
@@ -50,6 +55,8 @@ public class Ex02ItemGroupPage {
 		print("cau 2", itemGroupService.get(2));
 		
 		print("câu 5: thống kê số lượng mặt hàng theo loại hàng", itemGroupService.statistic());
+	
+	    
 	}
 
 }

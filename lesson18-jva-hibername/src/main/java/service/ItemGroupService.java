@@ -15,4 +15,8 @@ public interface ItemGroupService {
 	void save(ItemGroup itemGroup);
 	
 	void save(List<ItemGroup> itemGroups);
+	
+	void saveNewestItemGroups(int nextNItemGroups);
+	
+	void demoHibernateCache();
 }

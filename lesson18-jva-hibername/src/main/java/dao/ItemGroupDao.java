@@ -15,5 +15,9 @@ public interface ItemGroupDao {
 	void save(ItemGroup itemGroup);
 	
 	void save (List<ItemGroup> itemGroups);//câu 7: batch update
+	
+	void saveNewestItemGroups(int nextNItemGroups);
+	
+	void demoHibernateCache();
 
 }
