@@ -1,0 +1,66 @@
+     CREATE DATABASE JAVA16_SCHOOL_TEST CHAR SET utf8mb4;
+-- Sử dụng database mặc định
+
+       USE JAVA16_SCHOOL_TEST;
+       
+CREATE TABLE STUDENT (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `NAME` VARCHAR(255) NOT NULL,
+  GENDER VARCHAR(10) NOT NULL,
+  CLASS_ID INT NOT NULL,
+  FOREIGN KEY (CLASS_ID) REFERENCES CLASS(ID)
+);
+CREATE TABLE CLASS (
+  ID INT NOT NULL PRIMARY KEY,
+  `NAME` VARCHAR(255) NOT NULL,
+  TEACHER VARCHAR(255) NOT NULL
+);
+CREATE TABLE RESULT (
+  STUDENT_ID INT NOT NULL,
+  `SUBJECT` VARCHAR(255) NOT NULL,
+  SCORE FLOAT NOT NULL,
+  PRIMARY KEY (STUDENT_ID),
+  FOREIGN KEY (STUDENT_ID) REFERENCES STUDENT(ID)
+);
+
+INSERT INTO STUDENT(ID, `NAME`, GENDER, CLASS_ID)
+VALUES(1, 'Dinh Thi Ngoc', 'Female', 2),
+      (2, 'Nguyen Thanh Hung', 'Male', 1),
+      (3, 'Tran Mai Hoa', 'Female', 2),
+      (4, 'Doan Quang Vinh', 'Male', 1),
+      (5, 'Cao Anh Dao', 'Female', 3),
+      (6, 'Tran Kim Tuyen', 'Male', 3);
+
+INSERT INTO CLASS(ID, `NAME`, TEACHER)
+VALUES(1, '12A', 'Ho Cong Trung'),
+      (2, '12B', 'Dang Tu Anh'),
+      (3, '12C', 'Nguyen Van Tam');
+      
+INSERT INTO RESULT(STUDENT_ID, `SUBJECT`, SCORE)
+VALUES(1, 'Math', 8),
+      (2, 'Literature', 7),
+      (3, 'History', 9.5),
+      (4, 'Math', 7.5),
+      (5, 'Literature', 6.9),
+      (6, 'History', 9.4);	
+      
+SELECT STUDENT.`NAME`, STUDENT.GENDER, CLASS.TEACHER
+FROM STUDENT
+JOIN CLASS ON STUDENT.CLASS_ID = CLASS.ID;
+
+SELECT CLASS.TEACHER, COUNT(STUDENT.ID) AS number_of_students
+FROM STUDENT
+JOIN CLASS ON STUDENT.CLASS_ID = CLASS.ID
+WHERE CLASS.`NAME` = '12C'
+GROUP BY CLASS.TEACHER;
+
+SELECT c.`NAME` AS class_name, COUNT(s.ID) AS number_of_students, s.`NAME` AS student_name
+FROM CLASS c
+JOIN STUDENT s ON c.ID = s.CLASS_ID
+JOIN RESULT r1 ON s.ID = r1.STUDENT_ID
+JOIN RESULT r2 ON s.ID = r2.STUDENT_ID
+WHERE r1.`SUBJECT` = 'Math' AND r1.SCORE >= 8
+AND r2.`SUBJECT` = 'Literature' AND r2.SCORE >= 8
+GROUP BY c.ID, s.ID;
+
+       
