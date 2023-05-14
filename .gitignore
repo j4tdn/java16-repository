@@ -1,6 +1,12 @@
 # Ignore .metadata folder
 .metadata
 
+<<<<<<< HEAD
+=======
+# Ignore _pasted_code_ folder
+_pasted_code_
+
+>>>>>>> 42a4dfbb (thanhnhat-hibernate 14.05.2023)
 # Ignore Eclipse configuration file
 *.project
 *.classpath
