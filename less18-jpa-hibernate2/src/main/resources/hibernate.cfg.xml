@@ -14,20 +14,21 @@
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
 		<property name="show_sql">true</property>
-		<property name="format_sql">false</property>
+		<property name="format_sql">true</property>
 
 		<!-- Set the current session context getCurrentSession -->
-		 <property name="current_session_context_class">thread</property>
+		<property name="current_session_context_class">thread</property>
 	
-		<!-- --><!-- 2nd level cache -->
-		<!-- <property name="hibernate.cache.use_second_level_cache">true</property>-->
+		<!-- 2nd level cache -->
+		<!-- <property name="hibernate.cache.use_second_level_cache">true</property>
 		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
-		<property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property>
+		<property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property>-->
 	
 		<!-- Entity Mapping -->
-		<!-- Difine for Entity mapping after configuration in Class -->
-		<mapping class="persistence.ItemGroup"/>
-	
-	</session-factory>
+		<!-- Define for Entity mapping after Configuration in Class-->
+		 <mapping class="persistence.ItemGroup"/>
+		 <mapping class="persistence.Item"/>
+		</session-factory>
+
 
 </hibernate-configuration>
