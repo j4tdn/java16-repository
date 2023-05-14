@@ -24,4 +24,14 @@ public class PrintUtils {
 		System.out.println("==__>> --------------------- <<__==\n");
 	}
 	
+	public static <T> void executeAndPrint(String prefix, Runnable runnable) {
+		System.out.println("\n" + prefix);
+		
+		System.out.println("==__ >> ------------ << __==");
+		
+		runnable.run();
+		
+		System.out.println("==__ >> ------------ << __==\n");
+	}
+	
 }

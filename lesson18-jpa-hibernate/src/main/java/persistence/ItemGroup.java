@@ -9,12 +9,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- * JPA: javax.persistence... --> type, annotation to mapping Hibernate
- * org.hibernate... --> type, method, annotation to mapping +
+ * JPA       : javax.persistence... --> type, annotation to mapping
+ * Hibernate : org.hibernate....    --> type, method, annotation to mapping + processing data
  * 
  * Holding properties to mapping/receiving data from table item_group
  * 
  * --> Entity
+ * 
+ * @author 
+ *
  */
 @Entity
 @Table(name = "item_group")
@@ -27,23 +30,30 @@ public class ItemGroup {
 	@Column(name = "NAME")
 	private String name;
 	
-	@Column(name = "DESC")
-	private String desc;
+	@Column(name = "`DESC`")
+	private String description;
 	
-	/**
-	 Từ @ManyToOne --> biết được nhiều item thuộc cùng 1 item group
+	/*
+	 Từ @ManyToOne  --> biết được nhiều item thuộc cùng 1 item group
 	 Bên @OneToMany --> dùng mappedBy = '' để group by items theo item group
-	 Giá trị của mappedBy là tên của thuộc tính đã mapping bên bảng @ManyToOne
+	 Giá trị của mappedBy là tên của thuộc tính đã mapping bên bảng @ManyToOne 
 	 
 	 Mặc định: lazy fetch
+	 
 	 */
 	@OneToMany(mappedBy = "itemGroup")
 	private List<Item> items;
-
+	
 	/**
-	 * JPA/Hibernate required constructor
+	 * JPA/Hibernate require constructor
 	 */
 	public ItemGroup() {
+	}
+	
+	public ItemGroup(Integer id, String name, String description) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
 	}
 
 	public Integer getId() {
@@ -62,12 +72,12 @@ public class ItemGroup {
 		this.name = name;
 	}
 
-	public String getDesc() {
-		return desc;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	public List<Item> getItems() {
@@ -77,9 +87,21 @@ public class ItemGroup {
 	public void setItems(List<Item> items) {
 		this.items = items;
 	}
-
+	
+	public static ItemGroup toEntity(String line) {
+		String[] tokens = line.split(", ");
+		ItemGroup ig = null;
+		if (tokens.length == 3) {
+			ig = new ItemGroup();
+			ig.setId(Integer.parseInt(tokens[0]));
+			ig.setName(tokens[1]);
+			ig.setDescription(tokens[2]);
+		}
+		return ig;
+	}
+	
 	@Override
 	public String toString() {
-		return "ItemGroup [id=" + id + ", name=" + name + ", desc=" + desc + "]";
+		return "ItemGroup [id=" + id + ", name=" + name + ", description=" + description + "]";
 	}
 }

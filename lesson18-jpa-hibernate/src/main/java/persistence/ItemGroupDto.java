@@ -1,24 +1,23 @@
 package persistence;
 
 /**
- * 
- * Entity --> Mapping DTO --> NO
+ * Entity --> Mapping
+ * DTO --> NO
  * 
  * --> while(rs.next()) --> manual mapping (JDBC)
- *
  */
 public class ItemGroupDto {
-
+	
 	public static final String PROP_ID = "id";
 	public static final String PROP_NAME = "name";
 	public static final String PROP_AMOUNT = "amount";
-
+	
 	private Integer id;
 	private String name;
 	private Integer amount;
-
+	
 	/**
-	 * JPA/Hibernate require constructor
+	 * JPQ/Hibernate require constructor
 	 */
 	public ItemGroupDto() {
 	}
