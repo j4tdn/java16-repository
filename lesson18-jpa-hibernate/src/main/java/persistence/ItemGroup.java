@@ -1,6 +1,7 @@
 package persistence;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -84,6 +85,18 @@ public class ItemGroup {
 
 	public void setItems(List<Item> items) {
 		this.items = items;
+	}
+	
+	public static ItemGroup toEntity(String line) {
+		String[] tokens = line.split(", ");
+		ItemGroup ig = null;
+		if (tokens.length == 3) {
+			ig = new ItemGroup();
+			ig.setId(Integer.parseInt(tokens[0]));
+			ig.setName(tokens[1]);
+			ig.setDescription(tokens[2]);
+		} 
+		return ig;
 	}
 
 	@Override

@@ -6,6 +6,7 @@ import persistence.Item;
 import persistence.ItemGroup;
 import service.ItemGroupService;
 import service.ItemGroupServiceImpl;
+import utils.FileUtils;
 import utils.PrintUtils;
 
 public class Ex02ItemGroupPage {
@@ -31,5 +32,15 @@ public class Ex02ItemGroupPage {
 			ItemGroup igToBeSaved = new ItemGroup(8, "JPA/Hibernate Test Save 08", "Test Save 08");
 			itemGroupService.save(igToBeSaved);
 		});
+		
+		PrintUtils.executeAndPrint("Câu 7: Thêm mới danh sách loại hàng: ", () -> {
+			List<ItemGroup> dataToBeSaved = FileUtils.readLines("data.txt", ItemGroup::toEntity);
+			itemGroupService.save(dataToBeSaved);
+		});
+		
+		PrintUtils.executeAndPrint("Câu 10: Thêm mới loại hàng với procedure: ", () -> {
+			int pRowCount = 4;
+//			itemGroupService.saveNewestItemGroups(pRowCount);
+			});
 	}
 }

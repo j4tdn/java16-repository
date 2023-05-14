@@ -13,4 +13,10 @@ public interface ItemGroupDao {
 	List<ItemGroupDto> statistic();
 	
 	void save(ItemGroup itemgroup);
+	
+	void save(List<ItemGroup> itemGroups);
+	
+	void saveNewestItemGroups(int nextNItemGroups);
+	
+	void demoHibernateCache();
 }
