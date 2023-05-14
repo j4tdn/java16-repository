@@ -83,7 +83,12 @@ SElECT 	cl.TEACHER,
  
  -- 3 --
  SELECT	rs.`SUBJECT`,
-		rs.STUDENT_ID
+		rs.STUDENT_ID,
+        cl.`NAME` AS 'CLASS NAME'
    FROM RESULT rs
+   JOIN STUDENT st
+     ON rs.STUDENT_ID = st.ID
+   JOIN CLASS cl
+     ON st.CLASS_ID = cl.id
   WHERE (rs.`SUBJECT` = 'Math' OR rs.`SUBJECT` = 'Literature') AND (rs.SCORE >= 8);	
 
