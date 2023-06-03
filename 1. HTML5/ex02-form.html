@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form-HTML</title>
+	<link rel="icon" href="images/world.png">
+
+
+    <style>
+    	#header{
+    		color: green;
+    	}
+    	table tr:last-child td{
+    		text-align: center;
+    		background-color: pink;
+    	}
+    </style>
+
+</head>
+<body>
+	<h2 id = "header"> Demo tags html Form</h2>
+
+	<hr>
+
+
+      <form action="">
+      	<table cellpadding="8" cellspacing="0">
+      	 <tbody>
+      		 <tr>
+      			<td><label>First Name: </label></td>
+      			<td><input type="text"></td>
+      		 </tr>
+      		 <tr>
+      		 	<td><label>Last Name: </label></td>
+      			<td><input type="text"></td>
+      		</tr>
+      		<tr>
+      			<td>Gender</td>
+      			<td>Male <input type="radio" checked name="gender-group">
+      				FeMale <input type="radio" name="gender-group">
+
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>Age</td>
+      			<td><input type="number" min="15" max="35"></td>
+      		</tr>
+      		<tr>
+      			<td>University</td>
+      			<td>
+      				<select>
+      					<option value="1">DUE</option>
+      					<option value="2">DTU</option>
+      					<option value="3">DUT</option>
+      					<option value="4">DKU</option>
+      				</select>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>Pro Skill</td>
+      			<td>
+      				JAVA <input type="checkbox" value="JAVA">
+      				PHP <input type="checkbox" value="PAP">
+      				C++ <input type="checkbox" value="C++">
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>Date Of Birth</td>
+      			<td>
+      				<input type="date">
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>Email</td>
+      			<td>
+      				<input type="email" required="">
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>Pass</td>
+      			<td>
+      				<input type="password" >
+      			</td>
+      		</tr>
+      		<tr>
+      			<td colspan="2">
+      				<input type="submit" value="Signup">
+      				<input type="reset" name="Clear">
+      			</td>
+      		</tr>
+
+      	  </tbody>
+      	</table>  	
+      </form>
+      
+	<hr>
+
+	<p id = "footer">
+		<p><b>&#128293; Design By &#127801; Java16 &#127801;  - &copy; Copyright 2023</p>
+	</p>
+</body>
+</html>

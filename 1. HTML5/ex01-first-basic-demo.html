@@ -1,0 +1,173 @@
+<!DOCTYPE> <!-- Special Tag Support HTML 5 -->
+<html>
+<!-- Double Tag: <tag></tag>
+     Single Tag:<tag>
+
+     	block: luôn chiếm hế dộ dài của hàng
+     	     : thẻ theo trước/sau nó bắt buộc phải xuống hàng - pỉntln
+        inline: chiếm đủ nội dung mà thẻ đang chứa
+     	      : print
+
+     	đơn vị đo lường
+     	<h1> 2rem: 32px
+     		 2em: 2 * parent's px
+     		    : 2 * rem(tag with parent element)
+
+     	<div 20px>
+     		<h1 2em></h1> - 40px
+     	</div>
+     	rem(root element): default = 16px
+        em(element): 
+
+ -->
+<head>
+	<h1 id = "big">HTML HOMEPAGE</h1>
+	
+	<title>Ex01 - My First Web Page</title>
+	<link rel="icon" href="images/world.png">
+	<meta charset="utf-8">
+
+	<style>
+		table thead {
+			background-color: violet;
+		}
+		table tbody tr:nth-child(2n + 1){
+			background-color: grey;
+		}
+		#big{
+			text-align: center;
+			color: red;
+		}
+		span#text-red{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<hr>
+	<!-- Anchor - Hyper Link -->
+    <a href="https://www.facebook.com/unstoppable23092002" target="_blank">MY NICK FACEBOOK</a>
+    <br>
+    <a href="https://j4tdn.github.io/java15-repository/" target="_blank"> Java15 Repo Deployment page</a>
+    <br>
+    <a href="ex01-demo.html" target="_blank"> Move to Ex01 Demo Page</a>
+    <br>
+    <a href="sub/ex01-sub-demo.html" target="_blank"> Move to Ex01 Sub Demo Page</a>
+    <br>
+    <a href="#tb-block">Move to Table Demo</a>
+    <br>
+    <a href="tel:+84398736184">Let Call Me</a>
+    <br>
+    <a href="mailto:hiihihi@gmail.com">Mail to hiihihihi</a>
+    <hr>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/L3rnSNOmFlM" title="Nhạc Lofi Chill"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr>
+
+	<!-- HEADING TAGS -->
+	<h1> This is HTML H1 Tag</h1>
+	<h2> This is HTML H2 Tag</h2>
+	<h3> This is HTML H3 Tag</h3>
+	<h4> This is HTML H4 Tag</h4>
+	<h5> This is HTML H5 Tag</h5>
+	<h6> This is HTML H6 Tag</h6>
+     
+     <hr>
+    
+	<!-- PARAGRAPH tag -->
+	<p>
+		<strong>Lorem50</strong> ipsum dolor sit amet consectetur adipisicing elit. <br>Quae deserunt exercitationem quia fuga, esse itaque ipsum, explicabo iste quaerat distinctio dolores delectus quidem ullam in tempore, pariatur porro dolore consequuntur numquam iusto necessitatibus commodi cum quis? Molestiae nemo unde aliquid neque voluptate quia doloribus, vel, officia recusandae adipisci facere consectetur.
+	</p>
+	<p>
+		<strong>Lorem120</strong> ipsum dolor sit amet consectetur adipisicing elit. Eos, error et, exercitationem ratione, asperiores nulla quas officiis sit nisi, saepe quo! Dolore laborum veniam, dignissimos fuga nam, laudantium quisquam vitae sunt perferendis ducimus delectus dolor, architecto autem? <span id = "text-red">Deleniti illum totam ratione hic commodi ut, aspernatur, explicabo, quaerat corporis cumque quia sequi impedit ea molestias exercitationem</span> quos, doloribus? Veritatis id consequuntur rem. Quia doloribus molestias officiis voluptate similique tenetur facere in aut sapiente alias corporis itaque impedit labore repellat reiciendis, cumque incidunt perferendis est iusto sequi voluptates expedita? Eum, provident vero laboriosam, aliquid dolores qui quos delectus numquam illum quisquam consequatur, tenetur repellat inventore iusto non sapiente velit temporibus? Delectus et, magnam sit soluta commodi necessitatibus dicta ipsam eligendi ullam neque.
+	</p>
+
+	<!-- [un] order list -->
+	<hr>
+	<h3>Lemonade Recipe</h3>
+	<ol>
+		<li>Combile sugar and water in a  saucepan</li>
+		<li>Heat an stir until the sugar dissolves</li>
+		<li>Add lemon juice and ice</li>
+	</ol>
+	<hr>
+	<img width="220" height="180" src="images/cake.jpg" alt="cake page">
+	<br>
+	<img width="220" height="180" src="images/cupcake.png" alt="cupcake page">
+	<br>
+	<video src="video/video.mp4" width="380" autoplay muted height="180" controls poster="images/candies.jpg"></video>
+	<br>
+
+ 
+
+	<hr>
+
+	<table border="1px" cellspacing="0px" cellpadding="8px" id = "tb-block">
+		<thead>
+			<tr>
+				<th rowspan="2">Name</th>
+				<th rowspan="2">Age</th>
+				<th rowspan="2">Eye color</th>
+				<th colspan="2">Phone</th>
+			
+			</tr>
+			<tr>
+				<th>Fax1</th>
+				<th>Fax2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Duc</td>
+				<td>18</td>
+				<td>Red</td>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Nam</td>
+				<td>16</td>
+				<td>Blue</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>Long</td>
+				<td>33</td>
+				<td>Green</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>Long</td>
+				<td>33</td>
+				<td>Green</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>Long</td>
+				<td>33</td>
+				<td>Green</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</tbody>
+		
+		
+	</table>
+
+	<div id = "footer">
+
+      <p><b>&#128293; Design By &#127801; Java16 &#127801;  - &copy; Copyright 2023</p>
+  
+      <br>
+	  <a href="#top">
+	  	<img src="images/scroll-top.png" align="move-top">
+	  </a>
+		
+	</div>
+
+
+
+</body>
+</html>
