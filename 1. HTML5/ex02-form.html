@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex02 - HTML Form</title>
+
+	<style>
+		#header {
+			color: green;
+		}
+
+		table tr:last-child td {
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<h2 id="header">Demo Tags with HTML form</h2>
+	
+	<hr>
+	
+	<form>
+		<table cellspacing="0" cellpadding="8">
+			<tr>
+				<td>First Name</td> 
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Last Name</td> 
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>
+					Male <input type="radio" checked name="gender-group">
+					Female <input type="radio" name="gender-group">
+				</td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="number" min="15" max="35"></td>
+			</tr>
+			<tr>
+				<td>University</td>
+				<td>
+					<select>
+						<option value="1">DUE</option>
+						<option value="2">DTU</option>
+						<option value="3">DUT</option>
+						<option value="4">DEE</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Pro Skills</td>
+				<td>
+					JAVA <input type="checkbox" value="JAVA">
+					PHP <input type="checkbox" value="PHP">
+					NODEJS <input type="checkbox" value="NODEJS">
+				</td>
+			</tr>
+			<tr>
+				<td>Date Of Birth</td>
+				<td><input type="date"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<!-- 
+						type=submit - submit form, reload page(default behavior)
+						button      - submit form, reload page(default behavior)
+
+						type=button - push button without default behavior
+					 -->
+					<button>Sign Up</button>
+					<input type="reset" value="Clear">
+				</td>
+			</tr>
+
+		</table>
+	</form>
+	
+	<hr>
+	
+	<p id="footer">&#127881; Design By &#127800; JAVA16 &#127800; - &copy; Copyright 2023</p>
+
+</body>
+</html>
+
+<!-- 
+	<tr>
+				<td></td>
+				<td></td>
+			</tr>
+	
+ -->
