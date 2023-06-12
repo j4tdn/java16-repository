@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex02 - HTML Form</title>
+
+	<style>
+		#header {
+			color:green;
+		}
+
+		table tr:last-child td {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h2 id="header">Demo Tags with HTML form</h2>
+
+	<hr>
+
+    <form>
+    	<table cellspacing="" cellpadding="8">
+    		<tr>
+    			<td><label>First Name:</label></td> 
+    			<td><input type="text"></td>
+    			
+    		</tr>
+    		<tr>
+    			<td><label>Last Name:</label></td>
+    		    <td><input type="text"></td>
+    		</tr>
+    		<tr>
+    			<td>Gender</td>
+    			<td>
+    				Male <input type="radio" checked name="gender-group"> 
+    				Female <input type="radio" name="gender-group">
+    			</td>
+    		<tr>
+    			<td>Age</td>
+    			<td><input type="number" min="15" max="35">
+    		</tr>
+    		<tr>
+    			<td>University</td>
+    			<td>
+    				<select>
+    					<option value="1">DUE</option>
+    					<option value="2">DTE</option>
+    					<option value="3">DUT</option>
+    					<option value="4">UED</option>
+    				</select>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>Pro Skills</td>
+    			<td>
+    				JAVA <input type="checkbox" value="JAVA">
+    				PHP <input type="checkbox" value="PHP">
+    				NODEJS <input type="checkbox" value="NODEJS">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>Date Of Birth</td>
+    			<td><input type="date" ></td>
+    		</tr>
+    		<tr>
+    			<td>Email</td>
+    			<td><input type="email" required></td>
+    		</tr>
+    		<tr>
+    			<td>Password</td>
+    			<td><input type="password" ></td>
+    		</tr>
+    		<tr>
+    			<td colspan="2">
+    				<!-- 
+    					type = submit -> submit form, reload page
+    					       button
+    					type = button -> push button without default behavior
+    				 -->
+    				<input type="submit" value="Sign Up">
+    				<input type="reset" value="Clear">
+    			</td>
+    		</tr>
+    	</table>
+    	
+    </form>
+
+    <hr>
+
+	<p id="footer">Design By JAVA16 - &copy; Copyright 2023</p>
+
+</body>
+</html>
+<!-- 
+<tr>
+    			<td></td>
+    			<td></td>
+    		</tr> -->

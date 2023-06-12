@@ -1,0 +1,360 @@
+/* css selector
+- tag name
+- attribute: class/id
++ class --> using for many tags
++ id: --> unique
+      --> page has one tag with that id only
+
+ */
+h1 {
+	color: green;
+}
+/*
+p {
+	color: blue;
+}
+*/
+
+.text-blue {
+	color: blue;
+}
+
+.fs-bg {
+	font-size: 1.5rem;
+}
+
+.fs-md {
+	font-size: 1.25rem;
+}
+
+.fs-st {
+	font-size: 1.125rem;
+}
+
+.font-df {
+	font-family: 'Tahoma', sans-serif;
+}
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+/*
+===============
+==font-family==
+===============
+*/
+.font-cst {
+	font-family: 'Corbel', sans-serif;
+}
+
+.font-gg {
+	font-family: 'Dancing Script', cursive;
+}
+
+/*
+===============
+=====STYLE=====
++ font-weight: 100-700, bold, nomal;
++ font-size: italic, normal --> line-height: Kpx;
++ font-style: italic, normal;
+
++ text-decoration: none, line-through, underline, overline;
++ text-transformers: Capitalize, uppercase, lowercase;
++ text-align: left, center, justify, right;
+
++ list-style-type: none, disc, circle
++ list-style-image: ul(path);
+
+===============
+*/
+.block {
+	margin-bottom: 20px;
+	height: 80px;
+}
+
+.block .logo,
+.block .block-md-ex03 {
+margin: 0px 20px 20px;
+}
+
+.logo {
+	width: 220px;
+	height: 80px;
+	border: 2px solid #ABD0BC;
+	border-radius: 10px;
+	background-color: #A6E22C;
+	text-align: center;
+	float: left;
+	box-sizing: border-box;
+}
+
+.logo .text {
+line-height: 80px;
+margin: 0;
+font-weight: 700;
+text-decoration: underline;
+}
+
+/*==================
+====PROP - FLOW ====
+
+float: left, right, none;
+clear: left, right, both;
+
+==================*/
+
+.block-1 {
+	width: 250px;
+	height: 250px;
+	border: 4px solid #000000;
+	background-color: #FF9900;
+}
+.block-2 {
+	width: 250px;
+	height: 250px;
+	border: 4px solid #FFFF00;
+	background-color: #0000BB;
+}
+
+.text-white {
+	font-size: 1.5rem;
+	color: #FFFFFF;
+}
+
+.block-md-ex03 {
+	width: 220px;
+	height: 80px;
+	border: 2px solid #ABD0BC;
+	background-color: orange;
+	border-radius: 10px;
+	float: left;
+
+	padding: 0 8px;
+	/*
+       border-box: kích thước đã bao gồm border + padding
+       content-box: kích thước chưa có border + padding;
+       --> border-width: mặc định - 1.6px;
+	*/
+	box-sizing: border-box;
+	
+}
+
+.block-md {
+	width: 220px;
+	height: 220px;
+	border: 2px solid #ABD0BC;
+	background-color: #A6E22C;
+	float: right;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+
+.lo200 {
+	font-size: 1.125rem;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+}
+
+.clear-fix {
+	clear: left;
+}
+
+/*
+====DEMO BACKGROUND====
+*/
+.block-lg {
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+
+	width: 480px;
+	height: 640px;
+	border: 2px solid #ABD0BC;
+	border-radius: 10px;
+	margin: 0 20px;
+
+	background-color: violet;
+	background-image: url(../images/cat.png);
+	background-size: cover;
+}
+
+/*=============
+E06
+=============*/
+
+.ex06-block-md {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #ececec;
+	box-sizing: border-box;
+}
+
+.ex06-bg-orange {
+	background-color: orange;
+}
+
+.ex06-bg-green {
+	background-color: green;
+}
+
+.ex06-bg-blue {
+	background-color: blue;
+	background: radial-gradient(
+		ellipse at center, 
+		#cc7676 0%,
+		#ef2828 25%,
+		#000000 50%,
+		#000000 75%,
+		#d71ee8 100%);
+	border-radius: 50%;
+}
+
+.ex06-block-b {
+	position: relative;
+	left: 200px;
+	top: 0;
+}
+.ex06-block-c {
+	position: relative;
+	left: 400px;
+	top: 0;
+}
+
+.ex06-parent-block {
+	border: 2px solid red;
+	margin: 0 auto;
+	width: 800px;
+	height: 600px;
+	position: relative;
+}
+
+.page-title {
+	margin: 6px 0;
+	box-sizing: border-box;
+}
+
+.page-title::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.page-title h1 {
+	float: left;
+	margin: 0;
+	color: #000000;
+}
+
+.page-title .search-form {
+	float: right;
+}
+
+.search-form label {
+	position: relative;
+	left: 30px;
+	top: 1px;
+}
+
+.search-form input[type='search'] {
+	padding: 2px 2px 2px 30px;
+	margin-right: 10px;
+}
+.search-form input[type='button'] {
+	padding: 2px 4px;
+	cursor: pointer;
+
+/*=============
+======E07======
+=============*/
+/*
+display
+  block: take care width - height (default: 100%)
+  inline: ignore width - height
+          size depend on content
+  inline-block: using value of width - height
+              : do not have break line
+  none
+visibility
+  hidden: same as display none, still keep page size
+*/
+
+}
+.ex07-display-parent {
+	float: left;
+}
+
+.ex07-display-parent>* {
+	display: inline-block;
+	margin: 20px 20px;
+}
+
+.gradient-block {
+	width: 320px;
+	height: 200px;
+	display: inline-block;
+	background: linear-gradient(
+		109deg, 
+		#ffffff 0%,
+		#ffffff 49%,
+		#000000 50%,
+		#000000 100%);
+	border: 2px solid #b2609d;
+}
+
+/*
+box-shadow: [inset], h-offset, v-offset, [blur], [spread], [color],
+*/
+.test-box-shadow {
+	box-shadow: inset 0 0 10px 10px orange;
+}
+
+.test-before-after::before {
+content: '\1F389'
+}
+
+.test-before-after::after {
+content: '-------';
+color: red;
+display: block;
+margin-top: 14px;
+}
+
+/*======================
+====Transform Transition
+======================*/
+
+.box {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000;
+	background-color: red;
+	text-align: center;
+	line-height: 200px;
+	font-size: 18px;
+	color: #eff;
+	margin: 100px;
+	border-radius: 20px 0;
+/*
+transition color 1s 3s ease-in-out
+*/
+	transition-delay: 1s;
+	transition-property: transform;
+	transition-duration: 2s;
+	transition-timing-function: ease-in-out;
+}
+
+.box:hover {
+	transform: rotate(360deg);
+	background-color: violet;
+	border-radius: 50%;
+}
+#footer {
+	color: #cecece;
+	position: absolute;
+	bottom: 10px;
+	right: 8px;
+}

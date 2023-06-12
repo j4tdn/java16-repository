@@ -1,0 +1,181 @@
+<!DOCTYPE> <!-- Special tag - Support HTML5 -->
+<html> 
+	<!-- 
+       Double Tag: <tag></tag>
+       Single Tag: <tag>
+
+       block: luôn chiếm hết độ dài của hàng
+            : thẻ theo trước/sau nó bắt buộc xuống hàng
+       inline: chiếm đủ nội dung mà thẻ đang chứa
+             : print
+       đơn vị đo lường
+       <h1> 2 rem: 32px
+       	    2 em : 2 * parent's px
+       	         : 2 * rem(tag with parent element)
+
+       	<div 20px>
+            <h1 em></h1> - 40px
+       	</div>
+
+       rem(root element): default = 16px  
+	 -->
+    <head>
+
+   	   <link rel="icon" href="images/world.png">
+   	   <title>Ex01 - My First Web Page</title>
+   	   <meta charset="utf-8">
+
+       <!-- intenal css, styling for ALL current HTML tag -->
+   	   <style>
+   	   	table thead {
+   	   		background-color: violet;
+   	   	}
+   	   	/*
+        + nth-child(an+b)
+        
+
+   	   	a: vòng lặp, cycle, sau a rows --> lặp lại style
+   	   	b: offset, vị trí sử dụng style (bắt đầu sử dụng style khi a # 0)
+   	   	nth-child(an+b)
+   	   	nth-child(b) --> a=0
+   	   	2n+1: bắt đầu ăn style từ dòng 1, lặp lại 2 dòng mỗi lần;
+   	   	first-child
+   	   	last-child
+   	   	*/
+   	   	table tbody tr:nth-child(2n+1) {
+   	   		background-color: grey;
+   	   	}
+   	   	span#aspernatur {
+   	   		color:red;
+   	   	}
+   	   </style>
+    </head>
+
+   <body>
+
+   	<h1 id=top>HTML - HOMEPAGE</h1>
+
+    	<hr>
+
+       <!-- Anchor - Hyper link -->
+       <a href="https://j4tdn.github.io/java15-repository/" target="_blank">Java15 Repo Deployment Page</a> <br> <br>
+       <a href="ex01-demo.html" target="_blank">Move to Ex01 Demo Page</a> <br> <br>
+       <a href="sub/ex01-sub-demo.html" target="_blank">Move to Ex01 Sub Demo Page</a> <br> <br>
+       <a href="#tb-block">Move to Table Demo</a><br> <br>
+       <a href="tel:0965681748">CALL ME: 0965681748</a><br> <br>
+       <a href="mailto:abc@gmail.com">Mailto: ABC</a>
+
+       <hr>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/t3wO9uCl0Cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       <hr>
+
+   	  <!-- HEADING tag -->
+   	  <h1>This is HTML H1 tag</h1>
+   	  <h2>This is HTML H2 tag</h2>
+   	  <h3>This is HTML H3 tag</h3>
+   	  <h4>This is HTML H4 tag</h4>
+   	  <h5>This is HTML H5 tag</h5>
+   	  <h6>This is HTML H6 tag</h6>
+
+   	  <hr> <!-- Horizontal line -->
+
+      <!-- Paragraph tag -->
+   	  <p><strong>Lorem</strong> ipsum dolor sit amet consectetur adipisicing elit. Sequi alias ea beatae et aliquam cum quis deserunt ipsa aliquid voluptatem veritatis dolorum explicabo dicta consequatur molestiae error, sapiente maxime exercitationem modi quaerat asperiores ipsum fugiat dolore obcaecati commodi. <br>
+   	  <em>Asperiores</em> aliquid voluptatem laudantium totam praesentium saepe officia facere et, recusandae mollitia.</p>
+
+   	  <p><strong>Lorem</strong> ipsum, dolor sit amet consectetur, adipisicing elit. Eum expedita dicta explicabo, numquam. Repudiandae, alias maiores beatae a, temporibus fugiat!</p>
+
+   	  <p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Totam facere consequatur eveniet. Quis voluptatum labore impedit nostrum voluptatibus itaque, dolor exercitationem, architecto enim placeat aperiam soluta cupiditate sint. Maxime deserunt deleniti excepturi sequi natus porro et eveniet, eum, explicabo sunt repellat quos nemo saepe dolor cumque laboriosam, provident hic minima quas architecto? Quo, suscipit, ut officia facere, harum id voluptatem quisquam corporis fugit facilis, obcaecati aliquid magni itaque veniam ipsum consequuntur vitae amet deserunt maiores ea nam eum non blanditiis sapiente neque. Aliquam placeat, qui nostrum inventore assumenda unde deleniti obcaecati esse consectetur fugiat veritatis excepturi possimus consequuntur, nam tenetur asperiores perspiciatis officia in deserunt! Asperiores magnam culpa tenetur eveniet rerum impedit facilis ullam repellendus pariatur fugit tempora <span id="aspernatur-id">aspernatur corporis</span> dignissimos, at laboriosam tempore corrupti odit reprehenderit veniam doloremque. Commodi tempora ratione odio doloribus ipsum ad adipisci omnis minus, impedit saepe dolore esse maxime. Sapiente libero obcaecati aperiam delectus voluptatibus asperiores quae nemo consequuntur. Quam eligendi, ducimus cum adipisci cupiditate qui incidunt alias laboriosam, voluptatibus excepturi dolore enim, vitae corporis vel explicabo, voluptates! Cum, accusantium nemo, minima non veritatis quo sint autem ex ipsam beatae temporibus incidunt ratione. Necessitatibus error pariatur quam fuga, voluptatibus aliquid soluta totam minus laborum, rem.</p>
+
+   	  <!-- Orderlist -->
+   	  <hr>
+   	  <h3>Lemonade Recipe</h3>
+   	  <ol>
+   	  	<li>Combile sugar and water in a saucepan</li>
+   	  	<li>Heat and stir until the sugar dissolves</li>
+   	  	<li>Add lemon juice and ice</li>
+   	  </ol>
+
+   	  <!-- Unorderlist -->
+   	  <h3>Lemonade Ingredients</h3>
+   	  <ul>
+   	  	<li>2 cups water</li>
+   	  	<li>1/2 cup sugar</li>
+   	  	<li>3 lemons</li>
+   	  	<li>Crushed ice</li>
+   	  </ul>
+
+   	  <!-- image default unit: px-->
+   	  <img src="images/cake.jpg" alt="Cake" height="180" width="220"> <br> <br> - <br> <br>
+   	  <img src="images/cupcake.png" alt="Cup Cake" height="180" width="220"> <br> <br> - <br> <br>
+
+   	  <video src="video/video.mp4" autoplay muted controls poster="images/candies.jpg" width="480" height="220"></video>
+
+      <!-- table -->
+   	  <hr>
+
+   	  <table border="1" cellspacing="0" cellpadding="8" id=tb-block>
+   	  	<thead>
+   	  		<tr>
+   	  			<th rowspan="2">Name</th>
+   	  			<th rowspan="2">Age</th>
+   	  			<th rowspan="2">Eye Color</th>
+   	  			<th colspan="2">Phone</th>
+   	  		</tr>
+   	  		<tr>
+   	  			<th>Fax 1</th>
+   	  			<th>Fax 2</th>
+   	  		</tr>
+   	  	</thead>
+   	  	<tbody>
+   	  		<tr>
+   	  			<td>Peter</td>
+   	  			<td>18</td>
+   	  			<td>Blue</td>
+   	  			<td>1</td>
+   	  			<td>2</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td>Kate</td>
+   	  			<td>28</td>
+   	  			<td>Green</td>
+   	  			<td>3</td>
+   	  			<td>4</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td>Oliver</td>
+   	  			<td>35</td>
+   	  			<td>Brown</td>
+   	  			<td>5</td>
+   	  			<td>6</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td>Laura</td>
+   	  			<td>25</td>
+   	  			<td>Green</td>
+   	  			<td>7</td>
+   	  			<td>8</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td>Sara</td>
+   	  			<td>38</td>
+   	  			<td>Red</td>
+   	  			<td>9</td>
+   	  			<td>10</td>
+   	  		</tr>
+   	  	</tbody>
+   	  </table>
+       <br> <hr> <br>
+
+       <div id="footer">
+       	<!-- Footer -->
+       	 <p><b>Design By JAVA16 - &copy; Copyright 2023</b></p>
+
+       <br>
+
+       <a href="#top">
+       	<img src="images/scroll-top.png" align="move-top">
+       </a>
+       </div>
+   </body>
+</html>
