@@ -1,0 +1,103 @@
+/*CSS selectors
+
+- tag name
+- attribute: class/id;
+-->class: using for many tags
+   id: unique
+       html page has one tag that id
+- một thẻ thì có thể dùng class +id
+- một class có thể chứa nhiều css
+
+*/
+
+
+
+h1{
+	color: green;
+
+}
+/*p{
+	color: blue;
+}*/
+
+.text-blue{
+	color: blue;
+}
+
+.fs-bg{
+	font-size: 1.5rem;
+}
+
+.fs-md{
+	font-size: 1.25rem;
+}
+.fs-st{
+	font-size: 1.125rem;
+}
+.mt-40{
+	margin-top: 40px;
+}
+/*FONT FML*/
+
+.font-df{
+	font-family: 'Tahoma', sans-serif;
+}
+.font-cst{
+	font-family: 'Corbel', sans-serif;
+}
+.font-gg{
+	font-family: 'Courgette', cursive;
+}
+
+/*STYLE*/
+.logo{
+	width:220px;
+	height: 80px; 
+	border: 2px solid #ABD0BC;
+	border-radius: 10px;
+	background-color: #A6E22C;
+	text-align: center;
+	float: left;
+
+	margin: 0 20px;
+}
+.block{
+	margin-bottom: 30px;
+}
+.logo .text {
+	line-height: 80px;
+	margin: 0;
+	font-weight: 1000;
+	text-decoration: underline;
+}
+
+/*PROP_FLOAT*/
+.block-md{
+	width: 220px;
+	height: 220px;
+	border: border:2px solid #ABC2AB;
+	background-color: #A6E22C;
+	float: left;
+
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+.block-md-ex03{
+	width: 220px;
+	height: 80px;
+	border: border:2px solid #ABC2AB;
+	background-color: orange;
+	border-radius: 10px;
+
+	float: left;
+	margin:0 20px;
+
+	padding: 0 8px;
+	box-sizing: border-box;
+}
+.clear-fix{
+	clear: left;
+}
+#footer{
+	color: #cecece
+}
