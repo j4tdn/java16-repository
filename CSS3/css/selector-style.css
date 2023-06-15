@@ -1,0 +1,17 @@
+.contact > a {
+	text-decoration: none;
+	color: green;
+}
+
+h1 + p {
+	color: red;
+
+}
+
+.coffee li:nth-child(2n) a{
+     color: #e2c58d;
+}
+
+.contact p:last-of-type{
+color: red;
+}

@@ -1,0 +1,43 @@
+header {
+	width: 100%;
+    /*100vh	*/
+    height: 66px;
+    background-color: #2b2b2b;
+}
+.wrapper {
+	width: 80%;
+    /*Horizontal-Alignment: center	*/
+    margin: 0 auto;
+    /*căn them chiều dọc và ngang; để auto mặc định căn ra giữa    */
+
+}
+.header-image {
+	float: left;
+	margin-top: calc((66px - 19px)/2);
+/*header height : 66px
+  image height: 19px
+	*/
+}
+
+.header-navication {
+	float: right;
+
+	font-family: corbel;
+	font-size: 24px;
+	text-transform: uppercase;
+    /*	uppercase: viết hoa*/
+    color: #fff;
+}
+/*cho HOME
+ABOUT
+SERVICE
+INVESTOR
+CONTACT nằm ngang */
+
+.header-navication ul li {
+	float: left;
+    /*chữ cách đều	*/
+	margin-left: 44px;
+    /*nằm giữa div	*/
+    line-height: 66px;
+}

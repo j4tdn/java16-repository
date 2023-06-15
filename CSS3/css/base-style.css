@@ -1,0 +1,346 @@
+/*
+	reset css --> reset all to default tag
+*/
+
+/*
+css selectors
+- tag name
+- attribute: class/id
+  + class --> using for many tags
+  + id --> unique
+       --> page has one tag with that id only
+- aggregate all of them  	
+*/
+h1 {
+	color: green;
+}
+
+/*
+p {
+	color: blue;
+}
+*/
+
+.text-blue {
+	color: blue;
+}
+
+.fs-bg {
+	font-size: 1.5rem;
+}
+
+.fs-md {
+	font-size: 1.25rem;
+}
+
+.fs-st {
+	font-size: 1.125rem;
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+/*===================
+=====font-family=====
+====================*/
+
+.font-df {
+	font-family: 'Tahoma', sans-serif;
+}
+
+.font-cst {
+	font-family: 'Corbel', sans-serif;
+}
+
+.font-gg {
+	font-family: 'Dancing Script', cursive;
+}
+
+/*===================
+========STYLE========
+
++ font-weight: 100-700, bold, normal;
++ font-style: italic, normal;
++ font-size: Kpx; --> line-height: Kpx;
+
++ text-decoration: none, line-through, underline, overline ;
++ text-transformer: capitalize, uppercase, lowercase;
++ text-align: left, right, center, justify;
+
++ list-style-type: none, disc, circel, decimal, alpha ...;
++ list-style-image: url(path);
++ list-style-position: ...;
+
+====================*/
+.block {
+	margin-bottom: 20px; 
+	height: 80px;
+}
+
+.block .logo,
+.block .block-md-ex03 {
+	margin: 0px 20px 20px;
+}
+
+.logo {
+	width: 220px;
+	height: 80px;
+	border: 2px solid #ABD0BC;
+	border-radius: 10px;
+	background-color: #A6E22C;
+	text-align: center;
+	float: left;
+	box-sizing: border-box;
+}
+
+.logo .text {
+	line-height: 80px;
+	margin: 0;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+/*====================
+==== PROP - FLOAT ====
+
+float: left, right, none;
+clear: left, right, both;
+
+======================*/
+
+.block-md-ex03 {
+	width: 220px;
+	height: 80px;
+	border: 2px solid #ABD0BC;
+	border-radius: 10px;
+	background-color: orange;
+	float: left;
+	padding: 0 8px;
+	/*
+		border-box: kích thước đã bao gồm border + padding
+		content-box: kích thước chưa có border + padding;
+
+		--> border-with: mặc địch = 1.6px;
+	*/
+	box-sizing: border-box;
+}
+
+.block-md {
+	width: 220px;
+	height: 220px;
+	border: 2px solid #ABD0BC;
+	background-color: #A6E22C;
+
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+
+.lo400 {
+	font-size: 1.125rem;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+}
+
+.clear-fix {
+	clear: both;
+}
+
+/*====================
+======= DEMO BG ======
+======================*/
+.block-lg-01 {
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+
+	width: 480px;
+	height: 640px;
+	border: 2px solid #ABD0BC;
+	border-radius: 10px; 
+	margin: 0 20px;
+
+	background-color: violet;
+	/*width: 1000, height: 1500*/
+	background-image: url(../images/cat.png);
+	/*aspect ratio 2:3
+	background-size: 160px;
+	background-repeat: no-repeat;
+	background-position: center;*/
+	background-size: cover;
+}
+
+/*====================
+======== EX06 ========
+======================*/
+
+.ex06-block-md {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #ececec;
+	box-sizing: border-box;
+}
+
+.ex06-bg-orange {
+	background-color: orange; 
+}
+
+.ex06-bg-green {
+	background-color: green; 	
+}
+
+.ex06-bg-blue {
+	background-color: blue; 
+	background: radial-gradient(
+		ellipse at center, 
+		#89841b 0%,
+		#eda12f 25%,
+		#a32ded 50%,
+		#609117 51%,
+		#6b5c15 75%,
+		#bf7167 100%);
+	border-radius: 50%;
+}
+
+.ex06-block-b {
+	position: relative;
+	left: 200px;
+	top: 0;
+}
+
+.ex06-block-c {
+	position: relative;
+	left: 400px;
+	top: 0;
+}
+
+.ex06-parent-block {
+	border: 2px solid red;
+	margin: 0 auto;
+	width: 800px;
+	height: 600px;
+	position: relative;
+}
+
+.page-title {
+	box-sizing: border-box;
+	padding: 6px 0;
+}
+
+/*explain later*/
+.page-title::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.page-title h1 {
+	float: left;
+	margin: 0;
+}
+
+.page-title .search-form {
+	float: right;
+}
+
+.search-form label {
+	position: relative;
+	left: 30px;
+	top: 1px;
+}
+
+.search-form input[type='search'] {
+	padding: 2px 2px 2px 30px;
+	margin-right: 10px;
+}
+
+.search-form input[type='button'] {
+	padding: 2px 4px;
+	cursor: pointer;
+}
+
+/*====================
+======== EX07 ========
+======================*/
+.ex07-display-parent>* {
+/*
+display	
+	block: using value of width(defailt 100%) height
+	inline: ignore with height
+	        size despends on content;
+	inline-block: using value of width height
+	            : do not have break line;
+	none
+
+visiblity
+	hidden: same as display nont
+	        but still keep page size
+
+*/
+	display: : none;
+	margin: 20px 40px;
+}
+
+.gradient-block {
+	width: 320px;
+	height: 200px;
+	background: linear-gradient(  104deg,   #FFFFFF 0%,  #FFFFFF 49%,  #000000 50%,  #b2609d 100%);
+	border: 2px solid #b2609d;
+	display: inline-block;
+}
+
+
+/*
+
+box-shadow: [inset], h-offset, v-offset, [blur], [spread], color
+
+*/
+
+.test-box-shadow {
+	box-shadow: 0 0 10px 10px orange;
+}
+.test-before-after::before{
+	content: '\1F495';
+  display: block;
+  color: red;
+  margin-top: 14px;
+}
+
+.box {
+	width: 200px;
+	height: 100px;
+	border: 1px solid #000;
+	background-color: red;
+	text-align: center;
+	line-height: 100px;
+	font-size: 18px;
+	color: #eff;
+	margin: 80px;
+	border-radius: 10px 10px ;
+
+/*	transform: rotate(90deg);*/
+transition-delay: 1s;
+transition-property: all;/*	 transform background-color;*/
+transition-duration: 2s;
+transition-timing-function: ease-in-out;
+
+}
+
+.box:hover{
+		transform: rotate(360deg);
+		background-color: violet;
+		border-radius: -50%;
+}
+
+
+/*====================
+======= FOOTER =======
+======================*/
+#footer {
+	color: #cecece
+	position: relative;
+
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE><!-- SPECIAL TAG - SUPPORT HTML5 -->
+<html>
+<!-- 
+block  : luôn chiếm hết độ dài của hàng, thẻ theo sau phải xuống hàng: giống println
+
+inline : chiếm đủ nội dung mà thẻ đang chứa: giống print
+
+đơn vị đo lường
+<h1> 2rem = 32px
+     2em  = 2 * parent's px
+          = 2 * rem(tag with parent element)
+<div 20px>
+   <h1 2em></h1> = 40px
+</div>
+
+rem(root element) : dafault = 16px
+ -->
+     <head>
+
+
+
+
+          <link rel="icon" href="images/world.png">
+          <title>Ex01 - My First Web Page</title>
+          <meta charset="utf-8">
+
+
+     </head>
+
+     <!-- internal css, styling for all curent HTML tags -->
+
+     <style type="text/css">
+          table thead{
+               background-color: violet;
+          }
+/* 
+   a: vòng lặp cycle, sau a row --> lặp lại style
+   b: offset, vị trí sử dụng style(bắt đầu sử dụng style khi b !=0);
+
+   nth-child(an+b)
+   nth-child(b) --> a=0
+
+   2n+1: bắt đầu ăn style từ row 1 và lặp lại 2 dòng 1 lần
+ */
+
+          table tbody tr:nth-child(2n+1){
+               background :gray;
+          }
+          span#vitae-id {
+         color: red;
+     }
+     
+     </style>
+
+     <body>
+
+          <h1 id="top">HTML - HOMEPAGE </h1>
+          <hr>
+
+          <a href="https://github.com/j4tdn/java16-repository" target="_blank">Java16 repo</a>  <br><br>
+          <a href="ex01-demo.html"target="_blank">Move to Ex01 Demo Page</a><br><br>
+          <a href="sub/ex01-sub-demo.html"target="_blank">Move to Ex01 Sub Demo Page</a><br><br>
+          <a href="#tb-block">Move To Table Demo</a><br><br>
+          <a href="tel:+09875675">CALL ME:09875675</a><br><br>
+          <a href="mailto:abc@gmail.com">Mail To - abc</a><br><br>
+
+          <hr>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/eAN-mJrd4Rs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          <hr>
+
+     	<!-- HEADING tags -->
+          <h1>This is HTML H1 tag</h1>
+          <h2>This is HTML H2 tag</h2>
+          <h3>This is HTML H3 tag</h3>         
+          <h4>This is HTML H4 tag</h4>
+          <h5>This is HTML H5 tag</h5>   
+          <h6>This is HTML H6 tag</h6>
+
+          <hr>   <!--  horizontal line    -->
+
+            <!-- PARAGRAP tag -->
+            <p><strong>Lorem50 ipsum</strong> dolor sit amet consectetur adipisicing elit. Molestias iste facere ducimus maiores dicta esse veritatis odio, odit dolor, illum dolore? Consectetur vero illum, recusandae id aliquid omnis hic quia blanditiis eveniet <br> 
+
+            <em>xuống hàng</em> ut debitis ipsam. Hic, ullam iusto in, velit facere voluptate amet quidem, inventore quia voluptas unde vitae aspernatur.
+            </p>
+
+            <p>
+                 Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Repudiandae facere beatae accusamus! Optio, cum labore eaque, asperiores sint nesciunt eum odio laborum quod culpa officia fugit quos explicabo quas autem. Fugiat soluta veritatis laudantium doloribus voluptas fuga nostrum voluptates unde quasi? Est ad aut, modi ullam repudiandae fugit inventore accusantium explicabo cum vero delectus perferendis vel harum optio eius molestiae quidem nostrum dolorum? Quod facilis cupiditate porro cumque odit qui, non at asperiores nihil numquam atque, accusantium ad fuga perspiciatis vel dolor totam quisquam, minus nobis, reprehenderit aliquid obcaecati. Temporibus aliquid voluptas voluptatibus veniam quia vel odit dicta aut dolores, distinctio qui aspernatur vero quos ex exercitationem consectetur quisquam adipisci deleniti error iste reprehenderit voluptatem ratione omnis. Eius impedit, at?
+            </p>
+
+            <p><strong>Lorem200</strong> ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsum earum atque quae maxime veritatis, asperiores. Quidem dicta cupiditate, reiciendis, eveniet perferendis autem sequi fuga ab hic quia optio est tempora, similique adipisci, odit incidunt! In quaerat harum tenetur officia eaque rerum, omnis iste, vitae possimus facere magni quod, tempore dignissimos asperiores, repellat iure dolor quae incidunt et! Sunt, voluptate. Nobis, dolorum, molestiae! Vitae magnam veniam inventore ducimus beatae iste soluta modi mollitia saepe, atque reiciendis tempore placeat nemo. Sequi rerum temporibus magnam fuga rem sunt blanditiis. Quo, dignissimos. Maxime ex pariatur, aperiam provident quaerat, repudiandae quidem aliquam ipsum ab exercitationem, illum a! Tenetur vitae, temporibus, inventore distinctio nisi nesciunt ipsum repudiandae molestias dolores atque deserunt maxime dolor sunt reiciendis facilis blanditiis unde ratione ipsam alias eius? Expedita, itaque excepturi distinctio veritatis perspiciatis omnis enim illo facere non ex? Sint, libero at, voluptatibus<span id="vitae-id"> labore voluptas minima</span>  ipsa aperiam quas nesciunt, nostrum dolor fugit ipsam, natus consectetur dicta rerum provident consequatur ea modi hic delectus. Possimus nam, dicta? Accusamus reprehenderit, quo placeat ducimus expedita, aut molestiae in doloremque voluptates itaque, vero facere. Officiis tempora veritatis recusandae ducimus rem ratione quam eum qui deserunt, reprehenderit? Aliquid animi quis sint qui nam asperiores.</p>
+
+          <!-- [un]order list -->
+          <h3>lemonnade recipe </h3>
+          <ol>
+               <li>Combile</li>
+               <li>Heat</li>
+               <li>Add</li>
+          </ol>
+
+          <!-- image -->
+          <img src="images/cake.jpg" alt="Page CAKE" width="220" height="180"><br><br> -
+          <video src="video/video.mp4 " controls autoplay muted poster="images/candies.jpg" width="280" height="220"></video>
+
+
+          <hr>
+
+          <table border="1" cellspacing="0" cellspacing="8" id="tb-block">
+               <thead>
+                    <tr>
+                         <th rowspan="2">Name</th>
+                         <th rowspan="2">Age</th>
+                         <th rowspan="2">Eye Color</th>
+                         <th colspan="2">Phone</th>
+                    </tr>
+                    <tr>
+                         <th>Fax 1</th>
+                         <th>Fax 2</th>
+                    </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                         <td>Peter</td>
+                         <td>18</td>
+                         <td>Blue</td>
+                         <td>12</td>
+                         <td>34</td>
+                    </tr>
+                     <tr>
+                         <td>Kate</td>
+                         <td>25</td>
+                         <td>Green</td>
+                         <td>16</td>
+                         <td>90</td>
+                    </tr> 
+                     <tr>
+                         <td>Oliver</td>
+                         <td>35</td>
+                         <td>Brown</td>
+                         <td>15</td>
+                         <td>37</td>
+                    </tr>  
+               </tbody>
+          </table>
+
+          <br> <hr><br>
+
+          <div id="footer">
+               <p><b>&#127801; Design By JAVA16 &#127801; - &copy; Copyright 2023</p>
+
+          <br>
+
+          <a href="#top">
+               <img src="images/scroll-top.png" alt="move-top">
+          </a>
+          </div>
+
+     
+     </body>
+
+</html>

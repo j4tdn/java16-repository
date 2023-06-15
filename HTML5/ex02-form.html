@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex02 HTML Form</title>
+
+    <style>
+    	#header{
+    		color: green;
+    	}
+    	table tr:last-child td{ 
+    		text-align:center;
+    	} 
+    </style>
+    <!-- trong thẻ table chọn tr-- trong cuối thẻ tr chọn td cuối cùng -->
+
+</head>
+<body>
+	<h2 id="header">Demo Tags with HTML Form</h2>
+
+	<hr>
+
+	<form>
+
+		<table cellspacing="0" cellpadding="8">
+			<tr>
+				<td>First Name</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="search"></td>
+			</tr>
+			    <td>Gender</td>
+			    <td>
+			    	Male <input type="radio" checked name="gender-group">
+			    	Female <input type="radio"name="gender-group">
+			    </td>
+			<tr>
+				<td>Age</td>
+				<td><input type="number" min="15" max="35"></td>
+			</tr>
+			<tr>
+				<td>University</td>
+				<td>
+					<select >
+						<option value="1">DUE</option>
+						<option value="2">DUT</option>
+						<option value="3">DTU</option>
+						<option value="4">DEE</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Pro Skills</td>
+				<td>JAVA <input type="checkbox" value="JAVA">
+				PHP <input type="checkbox" value="PHP">
+				NODEJS <input type="checkbox" value="NODEJS"></td>
+			</tr>
+			<tr>
+				<td>Date Of Birth</td>
+				<td><input type="date"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="Email" required></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="Password"></td>
+			</tr>
+			<tr>
+				<!-- type = submit: submit form, tải lại trang(reload page)
+				     type = button: push button không default behavior(reload page)
+
+				     đổi input =button thì giống input type = submit
+				 -->
+				<td colspan="2"><input type="submit" value="Sign Up">
+					<input type="reset" value="Clear"></td>
+			</tr>
+
+		</table>
+
+	</form>
+
+
+
+	<hr>
+
+	<p id="footer"><p><b>&#127801; Design By JAVA16 &#127801; - &copy; Copyright 2023</p><br></p>
+
+
+</body>
+</html>
