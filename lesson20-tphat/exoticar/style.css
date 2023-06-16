@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .menu {
+    width: 60%;
+}
+
+header .menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .menu ul li {
+    color: #fffdfd;
+    font-size: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.container .banner {
+    position: relative;
+
+}
+
+.container .banner .images {
+    width: 100%;
+    height: 100vh;
+}
+
+.container .banner .images img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.container .banner .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+}
+
+.container .banner .text h2 {
+    color: #fffefe;
+    font-size: 70px;
+}
+
+.container .banner .text p {
+    color: #e6e2e2;
+    font-size: 18px;
+}
+
+.container .banner .text .btn-success {
+    margin-top: 10px;
+}
+
+.container .banner .text .btn-success button {
+    padding: 15px 25px;
+    background-color: red;
+    color: #e6e2e2;
+}
+
+.container .content {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.container .content .content-left {
+    width: 50%;
+    padding: 20px 100px 50px 100px ;
+}
+
+.container .content h1 {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 50px 0px 50px;
+    position: relative;
+}
+
+.container .content h1::after {
+    width: 8%;
+    height: 2px;
+    background-color: #ea0d09;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+}
+
+.container .content h3 {
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.container .content p {
+    font-size: 17px;
+}
+
+.container .content .content-right .middler {
+    width: 200px;
+    height: 120%;
+    rotate: 5deg;
+    position: absolute;
+    top: -20px;
+    background-color: #000000;
+    z-index: -1;
+    left: -30px;
+
+}
+
+.container .content .content-right {
+    width: 50%;
+    padding: 20px 100px 50px 100px ;
+    position: relative;
+    background-color: #000000;
+    color: #ccc;
+}
+
+footer {
+    width: 100%;
+    height: 30%;
+    background-color: #111111;
+}
+
+footer .contact {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block {
+    width: 23%;
+    height: 100%;
+    padding: 30px;
+    color: white;
+}
+
+.block p {
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.block p::after {
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: #1c1c1c;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.block ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    color: #999999;
+    font-size: 13px;
+}
+
+.block-icon {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
