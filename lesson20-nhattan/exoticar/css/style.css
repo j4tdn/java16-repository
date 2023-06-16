@@ -1,0 +1,196 @@
+* {
+	font-family: Corbel;
+	font-size: 1.125rem;
+}
+
+body {
+	margin: 8px;
+}
+
+ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+#header {
+	width: 100%;
+	height: 66px;
+	background-color: #312E2B;
+	position: fixed;
+	top: 0px;
+}
+
+.wrapper {
+	width: 86%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.exlogo {
+	float: left;
+	height: 100%;
+	line-height: 80px;
+}
+
+.menu {
+	float: right;
+	margin: 0;
+	list-style-type: none;
+	padding-left: 0;
+	line-height: 66px;
+}
+
+.menu li {
+	float: left;
+	margin-left: 44px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.banner {
+	width: 100%;
+	height: 781px;
+	background-image: url("../images/banner.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+}
+
+.text-content {
+	position: absolute;
+	top: 50%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#rectangle {
+	position: relative;
+	width: 169px;
+	height: 48px;
+	background-color: #ca0500;
+	top: 354px;
+	left: 633px;
+}
+
+.content {
+	width: 169px;
+	height: 48px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 47px;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: "Helvetica Neue";
+	text-align: center;
+}
+
+.body {
+	width: 100%;
+	height: 760px;
+	background: linear-gradient(104deg, #ffffff 51%,#207cca 51%,#282828 51%,#282828 51%)
+}
+
+.group-left {
+	margin-top: 40px;
+	margin-left: 128px;
+	width: 30%;
+	float: left;
+}
+
+.body h1 {
+	font-size: 36px;
+	line-height: 24px;
+}
+
+.body h2 {
+	font-size: 22px;
+	line-height: 24px;
+	font-style: italic;
+}
+
+.body p {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.group-left h1 {
+	color: #000000;
+}
+
+.group-left h2 {
+	color: #000000;
+}
+
+.group-left p {
+	color: #000000;
+	opacity: 50%;
+}
+
+.group-right {
+	margin-top: 40px;
+	margin-right: 128px;
+	width: 30%;
+	float: right;
+}
+
+.group-right h1 {
+	color: #fff;
+}
+
+.group-right h2 {
+	color: #fff;
+}
+
+.group-right p {
+	color: #fff;
+}
+
+.footer {
+	display: flex;
+	background: #000;
+	height: 200px;
+	padding: 20px 135px;
+}
+
+.footer-col { 
+ 	width: 25%;
+ }
+
+.footer-title { 
+ 	color: #fff;
+ 	font-size: 18px;
+ 	text-transform: uppercase;
+
+ }
+
+.footer-line { 
+ 	width: 70%;
+ 	height: 1px;
+ 	background: #ccc;
+ 	margin: 18px 0;
+ }
+
+.footer-link { 
+	font-size: 20px;
+	color: #ccc;
+	line-height: 35px;
+ }
+
+.footer-groupicon {
+	display: flex;
+}
+
+.footer-icon {
+	width: 36px;
+	height: 36px;
+	background: #222;
+	color: #fff;
+	border-radius: 50%;
+	margin-right: 10px;
+	text-align: center;
+	justify-content: center;
+	line-height: 36px;
+	margin-bottom: 20px;
+}
