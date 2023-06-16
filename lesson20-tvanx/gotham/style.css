@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    background-color: #f6c61c;
+}
+
+.menu {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu-left,
+.menu-right {
+    width: 35%;
+    height: 100%;
+}
+
+.menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu ul li {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    list-style-type: none;
+
+}
+
+.logo {
+    width: 30%;
+    text-align: center;
+}
+
+/* body */
+.container {
+    width: 100%;
+    height: max-content;
+    /* height: 100%; */
+}
+
+.main-body {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.body-left {
+    width: 76%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+
+.body-left h1 {
+    font-size: 22px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.block {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.block img {
+    width: 90%;
+    margin-right: 0.7%;
+}
+
+.block-content {
+    padding: 0 10px;
+}
+
+.block-content .title {
+    font-size: 26px;
+    letter-spacing: 1.8px;
+    margin-bottom: 8px;
+}
+
+.block-content .date {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.block-content .nd {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.type {
+    color: #f6c61c;
+}
+
+.block-content .action {
+    display: flex;
+    color: #ccc;
+}
+
+.block-button {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.block-button .button {
+    margin-top: 20px;
+    width: 20%;
+    height: 40%;
+    border-radius: 5px;
+    border: 1px solid #f6c61c;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 13px 0;
+    letter-spacing: 1px;
+}
+
+.body-right {
+    width: 24%;
+    height: 100%;
+}
+
+.main-right {
+    width: 84%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.search {
+    width: 100%;
+    height: 5%;
+    margin-top: 95px;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.search input {
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+    padding: 5px 30px;
+    border: 1px solid #ccc;
+}
+
+.search i {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+}
+
+.schedule {
+    width: 100%;
+    height: 33%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+/* schedule */
+ul {
+    list-style-type: none;
+}
+
+.month {
+    padding: 10px 12px;
+    width: 100%;
+
+    position: relative;
+}
+
+.month ul li {
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    color: #ccc;
+    position: absolute;
+    top: 8px;
+    left: 11px;
+}
+
+.month .next {
+    color: #ccc;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+}
+
+.day{
+    width: 100%;
+    height: 180px;
+    font-weight: 200;
+    border-collapse: collapse;
+}
+.day tr th{
+    font-weight: 200;
+}
+.day .letter{
+    background-color: #ddd;
+}
+.day .letter th{
+    border-left: 1px solid white;
+}
+.day .number th{
+    border: 1px solid #ccc;
+}
+.blur{
+    color: #ccc;
+}
+.active{
+    background-color: #f6c61c;
+    color: white;
+}
+
+.main-right h1{
+    font-size: 21px;
+    position: relative;
+}
+.main-right h1::after{
+    content: " ";
+    width: 39%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+.main-right .day-blur{
+    font-size: 15px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.main-right .title{
+    font-size: 18px;
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    background-color: #f6c61c;
+   
+}
+footer .containerft{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer ul{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer ul li{
+    font-weight: 600;
+}
+
+.block-icon{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    margin-top: 15px;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: #f6c61c;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
