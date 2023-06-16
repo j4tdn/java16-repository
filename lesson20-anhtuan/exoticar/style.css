@@ -5,19 +5,19 @@
     box-sizing: border-box;
 }
 
-html,body{
+html, body{
     width: 100%;
     height: 100%;
 }
 /* header */
-header{
+header {
     width: 100%;
     height: 10%;
     background-color: black;
     display: flex;
 }
 
-.logo{
+.logo {
     width: 35%;
     height: 100%;
     display: flex;
@@ -25,20 +25,20 @@ header{
     align-items: center;
 }
 
-.navigation{
+.navigation {
     width: 65%;
     height: 100%;
     color: white;
     
 }
-.navigation ul{
+.navigation ul {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.navigation ul li{
+.navigation ul li {
     width: 17%;
     height: 100%;
     list-style-type: none;
@@ -51,16 +51,16 @@ header{
     align-items: center;
 }
 
-.navigation ul li:hover{
+.navigation ul li:hover {
     background-color: #ccc;
 }
 
 /* body */
-.container{
+.container {
     width: 100%;
     height: 190%;
 }
-.banner{
+.banner {
     width: 100%;
     height: 48%;
     background-image: url(./image/banner.png);
@@ -69,60 +69,60 @@ header{
     padding-top: 17%;
 }
 
-.banner h1{
+.banner h1 {
     text-transform: uppercase;
     color: white;
     font-size: 3.6rem;
     margin-bottom: 10px;
 }
-.banner p{
+.banner p {
     color: white;
     font-size: 20px;
     font-weight: 100;
     margin-bottom: 10px;
 }
 
-.banner .button{
+.banner .button {
     width: 11%;
     height: 12%;
     background-color: #ca0500;
     margin: 0 auto;
     padding-top: 14px;
 }
-.banner .button p{
+.banner .button p {
     font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.content{
+.content {
     width: 100%;
     height: 53%;
     overflow: hidden;
     display: flex;
 
 }
-.layout{
+.layout {
     width: 100%;
     height: 100%;
     
 }
-.left{
+.left {
     width: 50%;
     height: 100%;
 }
 .content-left,
-.content-right{
+.content-right {
     width: 70%;
     margin: 0 auto;
 }
-.content h1{
+.content h1 {
     font-size: 40px;
     font-weight: 100;
     margin: 50px 0px 50px;
     position: relative;
 }
-.content h1::after{
+.content h1::after {
     width: 8%;
     height: 2px;
     background-color: #ca0500;
@@ -131,21 +131,21 @@ header{
     left: 0;
     bottom: -25px;
 }
-.content h3{
+.content h3 {
     font-size: 25px;
     font-weight: 100;
     margin-bottom: 30px;
 }
-.content p{
+.content p {
     font-size: 17px;
 }
 
-.right{
+.right {
     width: 50%;
     height: 100%;
     position: relative;
 }
-.layout-right{
+.layout-right {
     width: 200%;
     height: 150%;
     background-color: #1c1c1c;
@@ -155,17 +155,17 @@ header{
     top: 0;
 }
 
-.content-right{
+.content-right {
     color: white;
 }
 
 /* footer */
-footer{
+footer {
     width: 100%;
     height: 30%;
     background-color: #111111;
 }
-footer .contact{
+footer .contact {
     width: 80%;
     height: 100%;
     margin: 0 auto;
@@ -173,19 +173,19 @@ footer .contact{
     justify-content: space-around;
 }
 
-.block{
+.block {
     width: 23%;
     height: 100%;
     padding: 30px;
     color: white;
 }
-.block p{
+.block p {
     text-transform: uppercase;
     position: relative;
     margin-bottom: 20px;
 }
 
-.block p::after{
+.block p::after {
     content: " ";
     width: 100%;
     height: 2px;
@@ -195,18 +195,18 @@ footer .contact{
     left: 0;
 }
 
-.block ul li{
+.block ul li {
     list-style-type: none;
     margin-bottom: 10px;
     color: #999999;
     font-size: 13px;
 }
-.block-icon{
+.block-icon {
     width: 100%;
     height: 50%;
     display: flex;
 }
-.icon{
+.icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
