@@ -1,0 +1,130 @@
+/* Navigation */
+
+nav {
+	height: 7rem;
+	background-color: #F1BB45;
+	width: 100%;
+	
+}
+
+.logo-box {
+	height: 100%;
+	float: left;
+	
+}
+
+.logo {
+	height: 40%;
+	padding-left: 5rem;
+    width: 40%;
+    margin-top: 30px;
+
+}
+
+.nav-links {
+	position: absolute;
+	top: -20px;
+	right: -105px;
+	width: 125%;
+	list-style: none;
+	text-align: center;
+    
+}
+
+.nav-links li {
+	display: inline-block;	
+	font-size: 1.0rem;
+	position: relative;
+	margin-top: 2%;
+    margin-left: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.nav-links li a:link,
+.nav-links li a:visited {
+	color: #000;
+	display: inline-block;
+	text-decoration: none;
+	padding: 1rem 0;
+	transition: all 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+	background-color: #F1BB45;
+	color: #fff;
+}
+
+/* Main */
+main {
+    display: flex;
+}
+h2{
+    margin-left: 40px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 30px;
+}
+main .content {
+    margin-top: 40px;
+}
+
+article {
+    padding-top: 20px;
+    width: 870px;
+    display: flex;
+    padding-bottom: 80px;
+}
+
+article .post-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+}
+
+article .post-item {
+    display:  inline-flex ;
+    gap: 25px;
+}
+
+article .post-item i {
+    font-size: 10px;
+}
+
+article .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article .notes{
+    font-size: 15px;
+    color: #ccc;
+}
+
+article .post-item-tag {
+    display: inline;
+}
+
+article .btnMA {
+    width: 200px;
+    height: 50px;
+    border-color: #F1BB45;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+main .line {
+    border-style: inset;
+}
+
+
+

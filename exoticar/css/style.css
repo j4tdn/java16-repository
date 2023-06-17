@@ -1,0 +1,127 @@
+
+/* Navigation */
+
+nav {
+	height: 7rem;
+	background-color: #000;
+
+
+	width: 100%;
+	z-index: 999;
+}
+
+.logo-box {
+	height: 100%;
+	float: left;
+	
+}
+
+.logo {
+	height: 40%;
+	padding-left: 5rem;
+    width: 40%;
+    margin-top: 30px;
+
+}
+
+.nav-links {
+	position: absolute;
+	top: 3;
+	right: 5px;
+	width: 85%;
+	list-style: none;
+	text-align: center;
+}
+
+.nav-links li {
+	display: inline-block;
+	
+	
+	font-size: 1.0rem;
+	position: relative;
+	margin-top: 2%;
+    margin-left: 100px;
+}
+
+
+
+.nav-links li a:link,
+.nav-links li a:visited {
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 1rem 0;
+	transition: all 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+	background-color: #F1BB45;
+	color: #fff;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .text-overlay h1 {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    width: 1000px;
+  }
+  .text-overlay p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    width: 1000px;
+    margin-top: -30px;
+  }
+  .text-overlay button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 28rem;
+  }
+.ima{
+    width: initial;
+}
+
+/* Main */
+main{
+	margin: 70px ;
+	box-sizing: border-box;
+}
+h2{
+	font-size: 36px;
+	margin-bottom: 15px;
+}
+.D1.left{
+	display:block;
+	float:left;
+	font-size: 25px;
+}
+.D2.right{
+	display:block;
+	float: right;
+	color: white;
+	font-size: 25px;
+}
+footer{
+	height:150px;
+	background-color: #000;
+}
