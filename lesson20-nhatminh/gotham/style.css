@@ -1,0 +1,285 @@
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+}
+
+a,
+a::after,
+a::before {
+  color: #000;
+}
+
+a:hover {
+  color: #d22;
+}
+
+/* Common Properties */
+
+.bar__customize {
+  height: 67px;
+  background-color: #f7c61d;
+}
+.outside__wrapper {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+.bar__customize .outside__wrapper {
+  display: flex;
+  align-items: center;
+}
+/* HEADER */
+.navbar__wrapper {
+  justify-content: space-around;
+}
+.navbar--flex {
+  display: flex;
+  height: 100%;
+}
+.navbar--flex.navbar__right {
+  justify-content: flex-end;
+}
+.navbar--flex.navbar__left {
+  justify-content: flex-start;
+}
+.navbar--flex .item__container {
+  display: flex;
+  height: 100%;
+}
+.navbar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 120px;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+  font-weight: 600;
+}
+.navbar__item:hover {
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+}
+
+/* MAIN */
+/* Left */
+.main__wrapper {
+  display: flex;
+  gap: 20px;
+}
+.main__left {
+  flex: 4;
+}
+.recent-articles {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.article__wrapper {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.category,
+.article-end,
+.comments {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #e3b002;
+}
+
+.article-right .title {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.meta {
+  margin: 0.5rem 0;
+}
+.published-date,
+.publisher {
+  color: #888;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.content {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+.more-articles {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.more-articles a {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid #e3b002;
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out;
+}
+
+.more-articles a:hover {
+  background-color: #000;
+  color: white;
+}
+/* Divider */
+.main__divider {
+  height: auto;
+  border-left: 1px solid #e5e5e5;
+}
+/* Right */
+
+.aside__container {
+  flex: 1;
+  margin-bottom: 60px;
+}
+
+.search-box {
+  position: relative;
+  margin: 60px 0;
+}
+
+.search-icon {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+}
+
+.search-text {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.calendar {
+  width: 100%;
+}
+
+#current-date {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#not-current-month {
+}
+
+.calendar .calendar-top {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid #e5e5e5;
+}
+
+.calendar .calendar-body table {
+  width: 100%;
+}
+
+.calendar .calendar-body table th {
+  background-color: #e7e7e7;
+  height: 26px;
+  color: #888;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #e5e5e5;
+}
+
+.calendar .calendar-body table td {
+  height: 32px;
+  color: #888;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #e5e5e5;
+}
+
+.popular-news > * {
+  margin: 15px 0;
+}
+
+.popular-news .title {
+  font-size: 18px;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.popular-news .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #e5e5e5;
+  margin-left: 10px;
+}
+
+.popular-news .meta {
+  color: #888;
+  margin: 8px 0;
+}
+.clear-fix {
+  clear: both;
+}
+/* FOOTER */
+.footer__wrapper {
+  justify-content: space-between;
+}
+.copy-right {
+  color: #a78613;
+  font-size: 13px;
+}
+
+.footer-nav {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.footer__link {
+  font-weight: 500;
+  height: auto;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+}
+.footer__link:hover {
+  color: white;
+  background-color: #000;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social__link {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #e3b002;
+  text-align: center;
+  margin: 0px 10px;
+  line-height: 45px;
+  transition: all 0.15s ease-in-out;
+}
+.social__link:hover {
+  color: black;
+}
