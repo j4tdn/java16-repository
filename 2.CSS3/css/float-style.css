@@ -1,0 +1,73 @@
+* {
+	font-family: Corbel;
+	font-size: 1.125rem;
+	text-decoration: none;
+	color: #000;
+}
+
+body {
+	margin: 8px;
+	margin-top: 66px;
+}
+
+#header {
+	width: 100%;
+	height: 66px;
+	background-color: #312E2B;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.wrapper {
+	width: 86%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.exlogo {
+	float: left;
+	height: 100%;
+	line-height: 80px;
+}
+
+.menu {
+	float: right;
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+	line-height: 66px;
+}
+
+.menu li {
+	float: left;
+	margin-left: 44px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.menu a {
+	color: #ddf;
+}
+
+.menu a:hover {
+	color: #F92447;
+}
+
+.menu a:hover::before {
+	content: '';
+    display: block;
+    height: 2px;
+    background: darkred;
+    position: relative;
+    top: 16px;
+}
+
+.menu a:hover::after {
+	content: '\1F495';
+	display: block;
+	position: relative;
+	top: -46px;
+	text-align: center;
+}

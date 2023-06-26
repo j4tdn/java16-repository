@@ -1,0 +1,176 @@
+<!DOCTYPE html> <!-- Special Tag - Support HTML 5 -->
+<html>
+	<!-- 
+		Double Tag: <tag></tag>
+		Single Tag: <tag>
+
+		block: luôn chiếm hết độ dài của hàng
+			 : thẻ theo trước/sau nó bắt buộc phải xuống hàng - println
+		
+		inline: chiếm đủ phần nội dung mà thẻ đang chứa
+				= print
+
+		đơn vị đo lường
+		<h1> 2rem:
+			 2em : 2 * parent's  px
+			 	 : 2 * rem(tag ưith parent element)
+		<div 20px>
+			<h1 2em></h1> - 40px
+		</div>
+				 	 
+		rem(root element): default = 16px
+	 -->
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="images/world.png">
+		<title>Ex01 - My First Web Page</title>
+
+		<!-- 	internal css, styling for ALL current HTML tags -->
+		<style>
+			table thead {
+				background-color: violet;
+			}
+			/*
+				+ nth-child(an + b)
+				a = 0  ==> nth-child(b)
+						 b: row duy nhất sử dụng style;
+				a != 0 ==> nth-child(an + b)
+						 a: cycle
+						 b: row start;
+
+				+ first-child
+				+ last-child 
+			*/
+			table tbody tr:nth-child(2n +1) {
+				background: grey;
+			}
+
+			span{
+				color: red;
+			} 
+		</style>
+	</head>
+
+	<body>
+		<h1 id="top">HTML - HOMEPAGE</h1>
+
+		<hr>
+
+		<!-- Anchor Hyper Link -->
+		<a href="https://j4tdn.github.io/java15-repository/" target="_blank">Java15 Repo deployment page</a> <br> <br>
+		<a href="ex01-demo.html" target="_blank">Move to Ex01 Demo Page</a> <br> <br>
+		<a href="sub/ex01-sub-demo.html" target="_blank">Move to Ex01 Sub Demo Page</a> <br> <br>
+		<a href="#tb-block">Move Table Demo</a> <br> <br>
+		<a href="tel:+0347672501"> CALL ME: 0347672501</a> <br> <br>
+		<a href="mailto:abc@gmail.com">Mail to - ABC </a>
+
+		<hr>
+
+
+
+		<hr>
+
+		<!-- HEADING tags -->
+		<h1>This is HTML H1 tag</h1>
+		<h2>This is HTML H2 tag</h1>
+		<h3>This is HTML H3 tag</h1>
+		<h4>This is HTML H4 tag</h1>
+		<h5>This is HTML H5 tag</h1>
+		<h6>This is HTML H6 tag</h1>
+
+		<hr> <!-- horizontal line -->
+
+		<!-- PARAGRAPH tag -->
+		<p><strong>Lorem50</strong> ipsum dolor sit amet consectetur adipisicing elit. Doloribus sunt nemo adipisci rem molestias, dignissimos, eligendi iste perspiciatis asperiores quam eum est odio saepe id voluptatibus nam vel voluptate repudiandae tenetur consectetur.<br> 
+
+		<em>Sit</em> provident, soluta eveniet repellendus velit! Optio et animi nam. Ipsum architecto sit odit. Qui, a beatae rem.</p>
+
+		<p><strong>Lorem120</strong> ipsum dolor, sit amet, consectetur adipisicing elit. Optio deleniti nesciunt laborum atque possimus! Cumque veniam eius minima, temporibus, inventore minus vitae consequuntur aut, corrupti cupiditate ea suscipit quia velit, soluta aliquam! Repudiandae impedit voluptatibus maxime totam laboriosam velit delectus iusto, cupiditate sunt eos in odio esse dolor sint est quos minus quasi provident molestias pariatur sit praesentium. Soluta, tempore? Omnis unde labore incidunt ullam dicta. Laboriosam ducimus pariatur asperiores eos deserunt provident nostrum rerum laborum aspernatur voluptatum ab velit ullam officiis ad ipsam tempore, blanditiis maiores quis, veniam expedita corporis odit vel repellendus accusantium. Error quidem aut, quod architecto molestiae! Voluptatem illum, dignissimos libero odio officia deleniti dolorum eveniet dolore dolorem maxime cum eos quam molestiae quo, tempore amet?</p>
+
+		<p><strong>Lorem200</strong> ipsum dolor sit amet consectetur adipisicing elit. Ex debitis ipsam dolorum corrupti provident, voluptatibus. Dicta, provident numquam, dolorum quis minus doloremque! Quibusdam repellat inventore in necessitatibus laboriosam optio earum nostrum ratione non, reprehenderit cum animi. Quia praesentium, aliquam, dignissimos nemo incidunt, enim nisi consectetur perspiciatis voluptates quam doloribus? Eum, odit amet quaerat a, possimus magnam mollitia nam atque beatae commodi ipsa provident! Hic magnam ad, ea. Harum dolor at eaque non excepturi, reprehenderit, dicta eligendi quis consequatur consequuntur deserunt accusantium ipsa sapiente, expedita exercitationem laboriosam illum quos. Quibusdam impedit iure quisquam modi amet repudiandae sapiente consequuntur provident cumque repellendus officiis architecto non neque perferendis, qui ab. Dolor assumenda, consequatur magnam error perferendis beatae consectetur tempora labore impedit dolorem eum. Laborum ea quidem obcaecati corporis, commodi fugit sit illo saepe, voluptatem libero eligendi <span>eaque, maiores temporibus,</span> quisquam ipsum vitae magni voluptatibus. Ut nam nostrum nobis reiciendis accusamus ipsa nisi, fugit velit quod eos, enim delectus unde ab provident a blanditiis corrupti repellat iste facere, quisquam recusandae harum repellendus, totam. Eligendi accusantium, minima. Non autem, fugit laudantium assumenda quaerat harum accusamus repudiandae vero sunt molestiae quas iure dolorem! Nemo harum, ad animi dignissimos voluptate autem consequuntur voluptatum dolorem unde aspernatur repellendus.</p>
+
+		<!--  [un] order list -->
+		<hr>
+
+		<h3> Lemonade Recipe</h3>
+		<ol>
+			<li>Combile sugar and water in a saucepan</li>
+			<li>Heat an stir until the sugar dissolves</li>
+			<li>Add lemon juice and ice </li>
+		</ol>
+
+		<!-- image default unit: px-->
+		<img src="images/cake.jpg" atl="Page CAKE" width="220" height="180"> <br> <br> - <br> <br>
+		<img src="images/cupcake.png" alt="Page CUPCAKE" width="220" height="180"> <br> <br> - <br> <br>
+		<video src="video/video.mp4" autoplay muted controls poster="images/candies.jpg" width="580" height="220"></video>
+
+		<hr>
+
+		<table border="1" cellspacing="0" cellpadding="8" id="tb-block">
+			<thead>
+				<tr>
+					<th rowspan="2">Name</th>
+					<th rowspan="2">Age</th>
+					<th rowspan="2">Eye Color</th>
+					<th colspan="2">Phone</th>
+				</tr>
+				<tr>
+					<th>Fax 1</th>
+					<th>Fax 2</th>
+				</tr>	
+			</thead>
+			<tbody>
+				<tr>
+					<td>Peter</td>
+					<td>18</td>
+					<td>Blue</td>
+					<td>1</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>Kate</td>
+					<td>25</td>
+					<td>Green</td>
+					<td>3</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>Oliver</td>
+					<td>28</td>
+					<td>Brown</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>Pto</td>
+					<td>25</td>
+					<td>Green</td>
+					<td>7</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td>Sam</td>
+					<td>28</td>
+					<td>Brown</td>
+					<td>9</td>
+					<td>10</td>
+				</tr>	
+			</tbody>	
+		</table>
+
+		<br> <hr> <br>
+
+		<div id="footer">
+			<p><b>&#127881; Design By &#127800; Java16 &#127800; - &copy; Copyright 2023 </b></p>
+			<br>
+			<a href="#top">
+				<img src="images/scroll-top.png" align="move-top">
+			</a>
+		</div>
+
+		
+	</body>
+</html>
+
