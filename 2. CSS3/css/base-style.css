@@ -368,7 +368,7 @@ box-shadow: [inset], h-offset, v-offset, [blur], [spread], color
 ======================*/
 #footer {
 	color: #cecece;
-	position: absolute;
+	position: fixed;
 	bottom: 10px;
 	left: 8px;
 }
