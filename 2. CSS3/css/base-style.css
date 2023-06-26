@@ -354,7 +354,7 @@ transition color 1s 3s ease-in-out
 }
 #footer {
 	color: #cecece;
-	position: absolute;
+	position: fixed;
 	bottom: 10px;
 	right: 8px;
 }

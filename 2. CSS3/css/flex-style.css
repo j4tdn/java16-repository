@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.f-container-1 {
+	border: 1px solid orange;
+	width: 1200px;
+	height: 800px;
+	margin: 40px auto;
+
+	/*
+	===Demo flex====
+	display: flex;
+	flex-direction: row, row-reverse; column, column-reversed;
+	justify-content: flex-start,flex-end,center;
+	               : default: main axis;
+	align-item: flex-start,flex-end, center, stretch, baseline
+
+	*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.f-container-1 .f-item {
+	height: 220px;
+
+	font-size: 2rem;
+	opacity: 0.6;
+}
+
+.f-container-1 .f-item:nth-child(1) {
+	width: 180px;
+	background-color: red;
+}
+
+.f-container-1 .f-item:nth-child(2) {
+	width: 220px;
+	background-color: green;
+	align-self: center;
+}
+
+.f-container-1 .f-item:nth-child(3) {
+	width: 300px;
+	background-color: blue;
+	align-self: flex-end;
+}
+
+/*==========
+CONTAINTER 2
+============*/
+
+.f-container-2 {
+	border: 1px solid red;
+	width: 1200px;
+	height: 800px;
+	margin: 40px auto;
+
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.f-container-2 .f-item {
+	height: 220px;
+
+	font-size: 2rem;
+	opacity: 0.6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.f-container-2 .f-item:nth-child(1) {
+	width: 400px;
+	background-color: red;
+	order: 2;
+}
+
+.f-container-2 .f-item:nth-child(2) {
+	width: 440px;
+	background-color: green;
+	order: 1;
+}
+
+.f-container-2 .f-item:nth-child(3) {
+	width: 480px;
+	background-color: blue;
+	order: 0;
+}
+
+
+/*CONTAINER 3*/
+.f-container-3 {
+	border: 1px solid red;
+	width: 1200px;
+	height: 800px;
+	margin: 40px auto;
+
+	display: flex;
+}
+
+.f-container-3 .f-item {
+	height: 220px;
+
+	font-size: 2rem;
+	opacity: 0.6;
+	min-width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.f-container-3 .f-item:nth-child(1) {
+	background-color: red;
+
+	/*overice width/height*/
+	flex-basis: 100px;
+}
+
+.f-container-3 .f-item:nth-child(2) {
+	background-color: green;
+}
+
+.f-container-3 .f-item:nth-child(3) {
+	background-color: blue;
+}
