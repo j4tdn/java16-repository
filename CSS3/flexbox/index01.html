@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index01 - FlexBox</title>
+	<style type="text/css">
+		.container{
+			display: flex;
+			flex-direction: row;
+			gap: 0.5rem;
+			justify-content: space-around;
+		}
+
+		.item{
+			width: 120px;
+			height: 120px;
+			background: orange;
+
+			color: #000;
+			font-size: 22px;
+
+			/*text-align: center;
+			line-height: 120px;*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #333;
+           /*margin: 1px;*/
+           /*thay thế bởi grap*/
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+	</div>
+
+</body>
+</html>

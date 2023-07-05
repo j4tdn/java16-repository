@@ -1,0 +1,28 @@
+.ex06-block-md{
+	width: 300px;
+	height: 300px;
+	border: 2px solid #ececec;
+	text-align: center;
+	line-height: 300px;
+	margin: 100px;
+	padding-right: 30px;
+}
+.ex06-bg-orange{
+	background-color: orange;
+}
+.ex06-bg-green{
+	background-color: green;
+}
+.ex06-bg-blue{
+	background-color: blue;
+}
+body {
+	padding: 20px 20px;
+}
+
+.container {
+	width: 200px;
+	height: 200px;
+/*	background: linear-gradient(90deg,yellow, green);*/
+	background: radial-gradient(yellow,green,blue);
+}
