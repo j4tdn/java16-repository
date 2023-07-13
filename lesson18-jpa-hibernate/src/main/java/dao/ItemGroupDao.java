@@ -11,4 +11,6 @@ public interface ItemGroupDao {
 	ItemGroup get(int id);
 	
 	List<ItemGroupDto> statistic();
+	
+	void save(ItemGroup itemGroup);
 }

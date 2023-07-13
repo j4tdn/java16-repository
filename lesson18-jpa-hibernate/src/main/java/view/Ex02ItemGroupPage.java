@@ -18,8 +18,14 @@ public class Ex02ItemGroupPage {
 	}
 	
 	public static void main(String[] args) {
+		executeAndPrint("Câu 6: Thêm mới Loại Hàng", () -> {
+			ItemGroup igToBeSaved = new ItemGroup(7, "JPA/Hibernate Test Save 01", "Test Save 01");
+			itemGroupService.save(igToBeSaved);
+		});
+
+		
 		List<ItemGroup> groups = itemGroupService.getAll();
-		print("Câu 1: Liệt kê loại hàng", itemGroupService.getAll());
+		print("Câu 1: Liệt kê loại hàng", groups);
 		
 		List<Item> firstIgItems = groups.get(0).getItems();
 		print("Mặt hàng của loại hàng đầu tiên ", firstIgItems);

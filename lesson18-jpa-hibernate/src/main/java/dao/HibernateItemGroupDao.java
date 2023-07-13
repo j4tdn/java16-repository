@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.transform.Transformers;
 import org.hibernate.type.IntegerType;
@@ -14,7 +15,13 @@ import persistence.ItemGroupDto;
 public class HibernateItemGroupDao extends HibernateAstractDao implements ItemGroupDao{
 	
 	private static final String PARAM_ID = "pid";
+	private static final String PARAM_NAME = "pname";
+	private static final String PARAM_DESC = "pdesc";
+	
+	
 	private static final String SQL_PARAM_ID = ":" + PARAM_ID;
+	private static final String SQL_PARAM_NAME = ":" + PARAM_NAME;
+	private static final String SQL_PARAM_DESC = ":" + PARAM_DESC;
 	
 	private static final String GET_ALL_ITEM_GROUP = ""
 			+ "SELECT * FROM ITEM_GROUP";
@@ -32,6 +39,10 @@ public class HibernateItemGroupDao extends HibernateAstractDao implements ItemGr
 			+ "  JOIN ITEM_DETAIL id \n"
 			+ "       ON it.ID = id.ITEM_ID\n"
 			+ " GROUP BY ig.ID";
+	
+	private static final String INSERT_ITEM_GROUP = ""
+			+ "INSERT INTO ITEM_GROUP(ID, NAME, `DESC` )\n"
+			+ "VALUES ( " + SQL_PARAM_ID + " ,  " + SQL_PARAM_NAME + " , " + SQL_PARAM_DESC + " );";
 	
 	public List<ItemGroup> getAll() {
 		// B1: Lấy ra session factory , session
@@ -55,17 +66,18 @@ public class HibernateItemGroupDao extends HibernateAstractDao implements ItemGr
 	
 	@Override
 	public ItemGroup get(int id) {
-		// Cách 1 --> native query
 		Session session = openSession();
-		
-		NativeQuery<ItemGroup>query = 
-				session.createNativeQuery(GET_ITEM, ItemGroup.class);
+		// Cách 1 --> native query
+		/*
+		NativeQuery<ItemGroup>query = session.createNativeQuery(GET_ITEM, ItemGroup.class);
 		
 		query.setParameter(PARAM_ID, id , IntegerType.INSTANCE);
 		
-		// Cách 2 --> built - in function of hibernate 
-		
 		return query.uniqueResult();
+		*/
+		// Cách 2 --> built - in function of hibernate
+		// Áp dụng cho entity  --> get(eId) , save(entity) , update(entity),remove(entity)
+		return session.get(ItemGroup.class, id);
 	}
 	
 	@Override
@@ -78,13 +90,50 @@ public class HibernateItemGroupDao extends HibernateAstractDao implements ItemGr
 		NativeQuery<?> query = session.createNativeQuery(STATISTIC);
 		
 		// B3: Nếu có thì set parameter
+		
 		// B4: Mapping kết quả khi thực hiện native query vào KDL trả về(dto)
 		// --> jpa/hibernate --> transformer
-		query.addScalar(ItemGroupDto.PROP_ID, IntegerType.INSTANCE);
-		query.addScalar(ItemGroupDto.PROP_NAME,StringType.INSTANCE);
-		query.addScalar(ItemGroupDto.PROP_AMOUNT,IntegerType.INSTANCE);
-		query.setResultTransformer(Transformers.aliasToBean(ItemGroupDto.class));
+		query.addScalar(ItemGroupDto.PROP_ID, IntegerType.INSTANCE)
+			 .addScalar(ItemGroupDto.PROP_NAME,StringType.INSTANCE)
+			 .addScalar(ItemGroupDto.PROP_AMOUNT,IntegerType.INSTANCE)
+			 .setResultTransformer(Transformers.aliasToBean(ItemGroupDto.class));
 		
-		return (List<ItemGroupDto>)query.getResultList();
+		return safeList(query);
+	}
+	
+	@Override
+	public void save(ItemGroup itemGroup) {
+		Session session = openSession();
+		
+		// before --> khởi tạo transaction
+		Transaction transaction = session.beginTransaction();
+		
+		try {
+			// Thực hiện truy vấn insert/update/delete
+			// Cách 1 --> native query
+			/*NativeQuery<?> query = session.createNativeQuery(INSERT_ITEM_GROUP);
+			
+			query.setParameter(PARAM_ID, itemGroup.getId(), IntegerType.INSTANCE)
+				 .setParameter(PARAM_NAME, itemGroup.getName(), StringType.INSTANCE)
+				 .setParameter(PARAM_DESC, itemGroup.getDescription(), StringType.INSTANCE);
+			
+			int affectedRows = query.executeUpdate();
+			
+			System.out.println(">> LOG: affected rows --> " + affectedRows);*/
+			
+			// Cách 2 --> built - in function of hibernate
+			session.saveOrUpdate(itemGroup);
+			
+			// after --> commit transaction nếu thực hiện thành công 
+			transaction.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+			// after --> commit transaction nếu thực hiện thất bại
+			transaction.rollback();
+		}
+
+		
+	
 	}
 }

@@ -39,6 +39,7 @@ public class ItemGroup {
 	 Từ @ManyToOne 	--> biết được nhiều item thuộc cùng 1 item group
 	 Bên @OneToMany --> dùng mappedBy = '' để group by items theo item group
 	 Giá trị của mappedBy là tên của thuộc tính đã mapping bên bảng @ManyToOne
+	 
 	 Mặc định : lazy fetch
 	 */
 	
@@ -50,6 +51,13 @@ public class ItemGroup {
 	 */
 	
 	public ItemGroup() {
+	}
+	
+	public ItemGroup(Integer id, String name, String description) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
 	}
 
 	public Integer getId() {
