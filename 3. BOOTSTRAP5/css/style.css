@@ -1,0 +1,28 @@
+/*
+#page-main >* {
+	width: 49%;
+	height: 100px;
+	box-sizing: border-box;
+	display: inline-block;
+	text-align: center;
+	border-radius: 400px;
+
+}
+.block-1{
+	background-color: violet;
+}
+.block-2{
+	background-color: orange;
+}
+
+@media(max-width: 1000px)
+{
+	#page-main >* {
+	width: 100%;
+ }
+}*/
+.bt-bock{
+	height: 120px;
+	background:violet;
+	border: 1px solid #e8ce92;
+}
