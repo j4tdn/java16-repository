@@ -1,0 +1,24 @@
+.hr-line {
+	width: 100%;
+	height: 4px;
+	background: green;
+	margin: 40px 0;
+}
+.hh1{
+   text-align: center;
+   color: red;
+}
+* {
+	font-size: 20px;
+}
+li{
+	margin: 20px 0;
+}
+button{
+	cursor: pointer;
+	padding: 4px 8px;
+}
+button:hover{
+	background:violet;
+	border: solid 1px orange ; 
+}
