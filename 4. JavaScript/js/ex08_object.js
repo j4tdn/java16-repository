@@ -55,3 +55,4 @@ class Employee {
 
 let e1 = new Employee(1, 'E1', 100);
 e1.showInfo();
+// phat
