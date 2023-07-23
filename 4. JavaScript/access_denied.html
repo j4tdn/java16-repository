@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Access Denied</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<style>
+		body{
+			background-color: black;
+			color: white;
+			}
+
+		h1 {
+			color: red;
+		}
+
+		h6{
+			color: red;
+			text-decoration: underline;
+		}
+
+		.custom {
+			margin:auto;
+			width:50%;
+		}
+
+		.text-blue {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="w3-display-middle">
+		<h1 class="w3-jumbo w3-animate-top w3-center">
+			<code>Access Denied</code>
+		</h1>
+		
+		<div class="hr-line"></div>
+
+		<hr class="w3-border-white w3-animate-left custom">
+		<h3 class="w3-center w3-animate-right">
+			You don't have permission to view this site.
+		</h3>
+		<h3 class="w3-center w3-animate-right">
+			Redirect to <a class="text-blue" href="index.html">HomePage</a> after <span class="remaining-time text-blue">...</span> seconds
+		</h3>
+		<h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+		<h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+	</div>
+
+	<script>
+		let timing = 5;
+		
+		let timingLabel = document.querySelector('.remaining-time');
+		timingLabel.textContent = timing;
+
+		let runningInterval = setInterval(function() {
+			timing--;
+			timingLabel.textContent = timing;
+			if (timing === 0) {
+				// redirect to home page
+				window.location.href = 'index.html';
+				clearInterval(runningInterval);
+			}
+		}, 1000);
+
+	</script>
+</body>
+</html>

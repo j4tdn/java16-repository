@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Let's Travel</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header id="page-header">
+		<nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+		  <div class="container">
+		    
+		    <!-- brand -->
+		    <a class="navbar-brand" href="#">Let's Travel</a>
+		    
+		    <!-- toggler icon -->
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+
+		    <!-- navigation items left-->
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="#">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">About Us</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Traveller Recommend
+		          </a>
+		          <ul class="dropdown-menu">
+		          	<li><a class="dropdown-item" href="#">Sai Gon</a></li>
+		          	<li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item" href="#">Quang Nam</a></li>
+		            <li><a class="dropdown-item" href="#">Da Nang</a></li>
+		            <li><a class="dropdown-item" href="#">Hue</a></li>
+		          </ul>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link disabled">Contact Us</a>
+		        </li>
+		      </ul>
+
+		      <!-- navigation items form-->
+		      <form class="d-flex" role="search">
+		        <input class="form-control me-2" type="search" placeholder="Phone Number" aria-label="Search">
+		        <button class="btn btn-outline-success text-nowrap" type="submit">Call me</button>
+		      </form>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+
+	<main id="page-main" class="pt-4">
+		<div class="container">
+			<!-- slider -->
+			<div id="carouselExampleCaptions" class="carousel slide">
+			  
+			  <!-- order -->
+			  <div class="carousel-indicators">
+			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			  </div>
+			  
+			  <!-- content -->
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img src="images/slider-1.jpg" class="d-block w-100" alt="...">
+			      <div class="carousel-caption d-none d-md-block">
+			        <h5>First slide label</h5>
+			        <p>Some representative placeholder content for the first slide.</p>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img src="images/slider-2.jpg" class="d-block w-100" alt="...">
+			      <div class="carousel-caption d-none d-md-block">
+			        <h5>Second slide label</h5>
+			        <p>Some representative placeholder content for the second slide.</p>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img src="images/slider-3.jpg" class="d-block w-100" alt="...">
+			      <div class="carousel-caption d-none d-md-block">
+			        <h5>Third slide label</h5>
+			        <p>Some representative placeholder content for the third slide.</p>
+			      </div>
+			    </div>
+			  </div>
+			  
+			  <!-- button left -->
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+			  </button>
+			  
+			  <!-- button right -->
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+			  </button>
+			</div>
+		</div>
+
+		<!-- posts -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-4 mt-4">
+					<div class="card">
+					  <img src="images/img-1.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Card title 1</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="#" class="btn btn-primary">Details</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 mt-4">
+					<div class="card">
+					  <img src="images/img-2.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Card title 2</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="#" class="btn btn-primary">Details</a>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-lg-4 mt-4">
+					<div class="card">
+					  <img src="images/img-3.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Card title 3</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="#" class="btn btn-primary">Details</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 mt-4">
+					<div class="card">
+					  <img src="images/img-4.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Card title 1</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="#" class="btn btn-primary">Details</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 mt-4">
+					<div class="card">
+					  <img src="images/img-5.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Card title 2</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="#" class="btn btn-primary">Details</a>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-lg-4 mt-4">
+					<div class="card">
+					  <img src="images/img-6.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">Card title 3</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="#" class="btn btn-primary">Details</a>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer id="page-footer" class="bg-dark border-bottom border-bottom-dark mt-4 p-3">
+		<div class="container">
+			<div class="d-flex justify-content-between">
+				<p class="text text-secondary">©2033, All Rights Reserved</p>
+				<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact Us</button>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Modal List -->
+	<!-- Modal Contact Us -->
+	<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h1>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      
+	      <div class="modal-body">
+	      	<form>
+			  <div class="mb-3">
+			    <label for="contactUsForm" class="form-label">Your name</label>
+			    <input type="text" class="form-control" id="contactUsForm">
+			  </div>
+			  
+			  <div class="mb-3">
+			    <label for="contactUsForm" class="form-label">Phone number</label>
+			    <input type="number" class="form-control" id="contactUsForm">
+			  </div>
+			  
+			  <div class="mb-3">
+			    <label for="contactUsForm" class="form-label">Message</label>
+			    <textarea  class="form-control" id="contactUsForm"></textarea>
+			  </div>
+			</form>
+	      </div>
+	      
+	      <div class="modal-footer d-flex justify-content-start">
+	        <button type="button" class="btn btn-primary">Submit</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
