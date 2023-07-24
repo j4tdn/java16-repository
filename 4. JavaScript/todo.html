@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LESSON 22 - Test Todo App Demo</title>
+	<link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+
+	<p class="error-message invisible"> 
+		Task content cannot be empty !!! Please text something ...
+	</p>
+	<div class="todo-block">
+		<div class="todo-header">
+			<h1 class="title">Todo App</h1>
+		</div>
+		<div class="todo-body">
+			<form class="form-add">
+				<input class="new-task-conent" type="text" placeholder="Write task You want to complete">
+				<input class="btn-add" type="button" value="+">
+			</form>
+			<ul class="tasks">
+				<li>
+					<div class="cbx-done">
+						<input type="checkbox" >
+					</div>
+					<p class="content">Task 1</p>
+					<button class="btn-remove">x</button>
+				</li>
+				<li>
+					<div class="cbx-done">
+						<input type="checkbox" >
+					</div>
+					<p class="content">Task 2</p>
+					<button class="btn-remove">x</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="js/ex10_todo_script.js"></script>
+
+</body>
+</html>
