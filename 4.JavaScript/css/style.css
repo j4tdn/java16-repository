@@ -1,0 +1,24 @@
+* {
+	font-size: 22px;
+}
+
+li {
+	margin: 20px 0;
+}
+
+button {
+	cursor: pointer;
+	padding: 4px 8px;
+}
+
+button:hover {
+	background: orange;
+	border: 1px solid orange;
+}
+
+.hr-line {
+	width: 100%;
+	height: 2px;
+	background: green;
+	margin: 40px 0;
+}
