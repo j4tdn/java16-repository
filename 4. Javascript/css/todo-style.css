@@ -1,0 +1,78 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.error-mes{
+	color: red;
+	padding-top: 50px;
+	text-align: center;
+}
+.todo-block{
+	width: 25%;
+
+	margin: 50px auto;
+
+	border: 2px solid red;
+}
+
+.todo-header{
+	color: #000;
+	text-transform: uppercase;
+	background:#3F94D6;
+	text-align: center;
+	padding: 24px 0;
+}
+form, .tasks li{
+	width: 100%;
+	border-bottom: 1px solid #CCD6DA;
+	display: flex;
+	height: 40px;
+}
+.form-add input[type = 'text']{
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: inline-block;
+
+}
+.form-add input[type = 'button']{
+    width: 20%;
+    height: 100%;
+    border: none;
+    display: inline-block;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.tasks li .cbx-done{
+	width: 10%;
+	background:#BBDEFB;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.tasks li .content{
+	width: 70%;
+	line-height: 40px;
+	padding-left: 8px;
+}
+.tasks li .btn-remove{
+	width: 20%;
+	border: none;
+	color: #f10;
+	font-size: 24px;
+    background: #BBDEFB;
+	cursor: pointer;
+
+}
+
+.tasks li .btn-remove:hover{
+        font-weight: bold;
+}
+.form-add input[type = 'button']:hover{
+	font-weight: bold;
+}
