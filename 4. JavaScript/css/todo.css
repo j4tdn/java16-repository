@@ -88,3 +88,7 @@ form, .tasks li {
 .tasks li .btn-remove:hover {
 	font-weight: bold;
 }
+
+.task-done {
+	text-decoration: line-through;
+}
