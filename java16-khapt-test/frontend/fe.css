@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header img {
+    width: 200px;
+    margin-left: 200px;
+}
+
+.header input {
+    position: absolute;
+    right: 45%;
+    top: 20px
+}
+
+.navbar ul li {
+    text-decoration: none;
+    display: inline;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.778);
+}
+
+.navbar ul li:last-child {
+    border: none;
+    margin-left: 100px;
+    font-size: 12px;
+}
+
+.navbar {
+    background-color: #0051ba;
+    color: white;
+}
+
+/* slide */
+
+.slide-container {
+    display: flex;
+    margin: 0;
+    margin-top: -15px;
+}
+
+.slide {
+    flex: 0 0 100%;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
