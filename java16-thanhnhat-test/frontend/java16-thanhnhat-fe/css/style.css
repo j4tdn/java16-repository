@@ -1,0 +1,70 @@
+.site-header {
+	display: block;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	display: block;
+	margin: 0 5rem;
+}
+
+.header {
+	margin: 0;
+	padding-top: 19px;
+	padding-bottom: 14px;
+	height: 8rem;
+}
+
+.logo img{
+	width: 180px;
+	height: 90px;
+	float: left;
+}
+
+.search-bar input{
+	width: 300px;
+	height: 40px;
+	margin-left: 15rem;
+}
+
+label {
+	position: relative;
+    left: -30px;
+    top: 0px;
+}
+.nav-bar {
+	background: #0051ba;
+	width: 100%;
+	height: 2rem;
+}
+.nav-left {
+	margin-left: 3rem;
+}
+
+.nav-left li {
+	list-style-type: none;
+	float: left;
+	margin-left: 0.4rem;
+}
+.nav-left ul span {
+	margin: 0 0.4rem;
+}
+
+.nav-left li a, .nav-right p a,  .nav-left ul span{
+	color: #fff;
+	font-size: 0.8rem;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+.nav-right p a {
+	float: right;
+}
+
+.slider {
+  height: 580px;
+  width: 100%
+}
+.slide {
+}
