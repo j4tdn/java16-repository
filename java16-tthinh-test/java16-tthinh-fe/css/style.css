@@ -1,0 +1,105 @@
+.search-box input[type="text"] {
+  padding-right: 30px;
+}
+
+.search-box button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: #ccc url('path/to/search-icon.png') center no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+	width:200px;
+	height: 100px;
+	margin-left: 100px;
+	margin-top: 20px;
+	float: left;
+}
+
+.search-box {
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+.category{
+	width: 100%;
+	margin: 0 auto;
+}
+.inline-list {
+	clear: both;
+  	list-style: none;
+  	background-color: blue;
+  	text-align: center;
+}
+
+.inline-list li {
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 0 10px;
+  color: white;
+}
+
+.collection h2 {
+	text-align: center;
+}
+
+.collection {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.product h2 {
+	text-align: center;
+}
+
+.footer-top ul{
+	list-style: none;
+}
+
+.department {
+	border-bottom: 1pix solid #eee;
+	display: block;
+	margin-top:40px;
+	margin-bottom: 10px;
+	padding: 50px;
+}
+.department > .row > div > ul > li {
+	margin-bottom: 5px;
+} 
+
+.department > .row > div > ul > li > a {
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0;
+}
+
+.footer-mid ul{
+	list-style: none;
+}
+
+.information {
+	border-bottom: 1pix solid #eee;
+	display: block;
+	margin-top:40px;
+	margin-bottom: 10px;
+	padding: 50px;
+}
+.information > .row > div > ul > li {
+	margin-bottom: 5px;
+} 
+
+.information > .row > div > ul > li > a {
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0;
+} 
