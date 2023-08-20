@@ -5,6 +5,9 @@ CREATE TABLE IF NOT EXISTS KHACHHANG(
 	MaKH VARCHAR(50) PRIMARY KEY ,
     TenKH VARCHAR(50) NOT NULL ,
     DiaChi VARCHAR(50) NOT NULL , 
+    -- SĐT ko cần check > 0
+    -- Bài của Duy Anh và Chiến rất giống nhau
+    -- Duy Anh nộp sau ko biết có cope code ko ???
     SoDT INT CHECK(SoDT > 0),
     MaSoThue INT CHECK(MaSoThue > 0 )
 );
@@ -92,6 +95,7 @@ INSERT INTO CHITIET_SUDUNGDV(MaHD,MaDV,SoLuong) VALUES('HD006','DV04',30);
 INSERT INTO CHITIET_SUDUNGDV(MaHD,MaDV,SoLuong) VALUES('HD006','DV05',40);
 SELECT * FROM CHITIET_SUDUNGDV;
 -- CAU 3.
+-- Chưa đúng
 SELECT
 PHONG.MaPhong,
 COUNT(HOADON.MaHD) AS SoLanSuDung
@@ -99,7 +103,12 @@ FROM PHONG
 JOIN HOADON ON PHONG.MaPhong = HOADON.MaPhong
 WHERE HOADON.ThoiGianBatDauSD BETWEEN STR_TO_DATE('02/01/2014', '%m/%d/%Y') AND STR_TO_DATE('02/28/2015', '%m/%d/%Y')
 GROUP BY PHONG.MaPhong;
+
 -- CAU 4.
+-- Chưa đúng
+-- Limit 2 có nghĩa là em sau khi tìm được MaDV, Thang --> Tổng số lượng rổi ORDER BY
+-- Em limit 2 là nó sẽ lấy 2 MaDV, Thang có số lượng nhiều nhất
+-- Còn đề bài là cứ mỗi tháng nếu có thì lấy ra 2 dịch vụ được dùng nhiều nhất
 SELECT
 EXTRACT(YEAR_MONTH FROM HOADON.ThoiGianBatDauSD) AS Thang,
 CHITIET_SUDUNGDV.MaDV,
@@ -113,5 +122,7 @@ GROUP BY Thang, CHITIET_SUDUNGDV.MaDV
 HAVING SUM(CHITIET_SUDUNGDV.SoLuong) > 0
 ORDER BY Thang, TongSoLuong DESC
 LIMIT 2;
+
 -- CAU 5.
+-- ok
 SELECT * FROM PHONG WHERE MaPhong like 'VIP%';
