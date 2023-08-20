@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+// Tốt
+// Nhớ tạo class phải đặt trong package
+
 public class Demo {
 	public static void main(String[] args) {
 		try {
@@ -42,7 +45,22 @@ public class Demo {
 	                try {
 	                    Integer value = Integer.parseInt(number);
 	                    numbers.add(value);
-	                } catch (Exception e) {}
+	                } catch (Exception e) {
+                        // Chỗ này bị exception vì có trường hợp ví dụ
+                        // "abb56nn5" --> cắt abb đầu tiên phía bên trái sẽ return chuỗi rỗng
+                        // mà chuỗi rỗng thì ko thể Integer.parseInt được
+                        // Để sửa thì e có thể if thêm phát như phía dưới chứ k cần try catch
+
+                        /*
+                         for (String number : numberAsStr) {
+                            if (!number.isEmpty()) {
+                                numbers.add(Integer.parseInt(number));
+                            }
+                         } 
+
+                         */
+
+                    }
 	            }
 	        }
 	        System.out.println(numbers);

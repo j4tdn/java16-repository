@@ -48,6 +48,8 @@ CREATE TABLE CHITIET_SUDUNGDV(
     MaDV VARCHAR(50) ,
     SoLuong INT ,
     PRIMARY KEY (MaHD , MaDV)
+
+    -- E thiếu tạo liên kết khóa ngoại với bảng Hóa Đơn, Dịch Vụ
 );
 -- DATABASE 
 INSERT INTO KHACHHANG(MaKH,TenKH,DiaChi,SoDT,MaSoThue) VALUES('KH001','Tran Van Nam','Hai Chau',0905123456,12345678);
@@ -93,6 +95,12 @@ INSERT INTO CHITIET_SUDUNGDV(MaHD,MaDV,SoLuong) VALUES('HD002','DV03',2);
 INSERT INTO CHITIET_SUDUNGDV(MaHD,MaDV,SoLuong) VALUES('HD003','DV04',1);
 SELECT * FROM CHITIET_SUDUNGDV;
 -- CAU 3.
+-- A hiểu cách mà Chiến đang làm, nhưng chưa đúng với yêu cầu
+-- Sử dụng nhiều nhất có nghĩa là thời gian sử dụng phòng đó nhiều nhất
+-- Nhiều theo nghĩa số ngày, giờ, phút giây
+
+-- Còn cách em đang làm là kiểu theo số lần sử dụng
+-- Cơ bản ok - Accept
 WITH Phong_SoLanSuDung AS(
 	SELECT *,
 		   count(MaPhong) SoLanSuDung
@@ -102,15 +110,22 @@ WITH Phong_SoLanSuDung AS(
 		OR CAST(ThoiGianKetThucSD AS DATE) BETWEEN '2014-02-01'
 	   AND '2015-02-31'
 	 GROUP BY MaPhong
-), SoLanSuDungNhieuNhat AS (
+), 
+
+SoLanSuDungNhieuNhat AS (
 	SELECT max(SoLanSuDung) SoLanNhieuNhat
       FROM Phong_SoLanSuDung
-) SELECT *
+) 
+
+SELECT *
 	FROM Phong_SoLanSuDung ps
     JOIN SoLanSuDungNhieuNhat nn
       ON ps.SoLanSuDung = nn.SoLanNhieuNhat;
 
 -- CAU 4.
+-- Chưa đúng
+-- Phải group by theo mã dịch vụ, tháng/năm --> Tổng số lượng của dịch vụ
+-- Trong 1 nhóm lấy ra 2 phần tử nhiều nhất
 SELECT *,
 	   sum(SoLuong) TongSoLuong
   FROM DichVu dv
@@ -125,5 +140,7 @@ SELECT *,
    GROUP BY dv.MaDV
    ORDER BY TongSoLuong DESC
    LIMIT 2;
+
 -- CAU 5.
+-- ok
 SELECT * FROM PHONG WHERE MaPhong like 'VIP%';
