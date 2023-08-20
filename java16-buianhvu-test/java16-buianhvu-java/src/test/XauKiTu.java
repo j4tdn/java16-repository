@@ -3,6 +3,7 @@ package test;
 import java.io.*;
 import java.util.*;
 
+// Tên class không được đặt tiếng việt
 public class XauKiTu {
     public static void main(String[] args) {
         try {
@@ -15,6 +16,9 @@ public class XauKiTu {
                 String s = br.readLine();
                 int num = 0;
                 boolean isNumber = false;
+                // Cách làm này của em khá tốt
+                // Nhưng e có thể dùng string function để tách số khỏe hơn
+                // --> string.split('[a-z]+')
                 for (int j = 0; j < s.length(); j++) {
                     char c = s.charAt(j);
                     if (Character.isDigit(c)) {

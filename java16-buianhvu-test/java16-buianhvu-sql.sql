@@ -1,4 +1,6 @@
-﻿CREATE TABLE KHACHHANG (
+﻿// Em thiếu tạo và use database
+
+CREATE TABLE KHACHHANG (
     MaKH NVARCHAR(50) PRIMARY KEY,
     TenKH NVARCHAR(50),
     DiaChi NVARCHAR(100),
@@ -45,6 +47,8 @@ CREATE TABLE CHITIET_SUDUNGDV (
     SoLuong INT,
     FOREIGN KEY (MaHD) REFERENCES HOADON(MaHD),
     FOREIGN KEY (MaDV) REFERENCES DICHVU(MaDV)
+
+    // Em quên tạo khóa cihnhs cho bảng CHITIET_SUDUNGDV
 );
 
 -- Chèn dữ liệu mẫu cho bảng KHACHHANG
@@ -100,6 +104,10 @@ VALUES
     ('HD005', 'DV04', 1);
 
 -- Câu 3 
+-- Em thấy trong bảng HoaDon, mỗi hóa đơn sẽ là hóa đơn cho phòng nào
+-- Thông qua đó mình biết được phòng đó sử dụng được mấy ngày, giờ, phút
+-- Em phải group by theo mã phòng và sum(thời gian kết thức - thời gian bắt đầu) ra giờ, phút
+-- Sau đó sắp xếp mới được
 SELECT
     P.MaPhong,
     COUNT(HD.MaHD) AS SoLanSuDung
@@ -116,6 +124,7 @@ ORDER BY
 
 
 -- Câu 4
+-- Rất tốt em
 WITH SuDungDichVu AS (
     SELECT
         MONTH(HD.ThoiGianBatDauSD) AS Thang,
@@ -157,6 +166,7 @@ ORDER BY
 
 
 -- Câu 5 
+-- ok
 SELECT *
 FROM PHONG
 WHERE MaPhong LIKE 'VIP%';
