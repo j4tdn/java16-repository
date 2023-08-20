@@ -95,8 +95,15 @@ VALUES
 ("HD002", "DV03", 2);
 
 -- cau 3
+-- Chưa đúng
 SELECT
     P.MaPhong,
+    -- A hiểu cách mà Trung đang làm, nhưng chưa đúng với yêu cầu
+    -- Sử dụng nhiều nhất có nghĩa là thời gian sử dụng phòng đó nhiều nhất
+    -- Nhiều theo nghĩa số ngày, giờ, phút giây
+
+    -- Còn cách em đang làm là kiểu theo số lần sử dụng
+    -- Với chỉ đang sắp xếp chứ chưa có tìm ra đúng yêu cầu
     COUNT(HD.MaHD) AS SoLanSuDung
 FROM PHONG P
 JOIN HOADON HD ON P.MaPhong = HD.MaPhong
@@ -105,6 +112,8 @@ GROUP BY P.MaPhong
 ORDER BY SoLanSuDung DESC;
 
 -- cau 4
+-- Em phải group by theo MaDV, Thang/Nam
+-- Rồi trong mỗi nhóm tìm 2 thằng có số lượng nhiều nhất mới đúng
 SELECT R.Thang,
     DV.TenDV,
     DV.DonViTinh,
@@ -122,6 +131,7 @@ SELECT R.Thang,
    ORDER BY TongSoLuong DESC;
 
 -- cau 5
+-- OK
 SELECT *
 FROM Phong 
 WHERE MaPhong LIKE 'VIP%';

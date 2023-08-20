@@ -12,6 +12,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+// Khá tốt em
+// Một số lỗi convention a skip
 public class Ex01 {
 	public static void main(String[] args) {
         String inputFilePath = "D:\\Java16\\5. FrontEnd\\java16-haductrung-test\\java16-haductrung-java\\java16-haductrung-java\\input.txt";
