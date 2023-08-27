@@ -18,10 +18,14 @@ public class Exercise {
 	public static void main(String[] args) {
 		File file = new File(pathnameIn);
 		
+		// có thể dụng hàm có sẵn Files.readAllLines từ java
+		// hàm này là vì lúc học a hướng dẫn từ đầu cho các bạn quen thôi
+		// chứ dùng của Java có sẵn cho khỏe
 		List<String> lines = FileUtils.read(file);
 		
 		lines.remove(0);
 		
+		// cách làm ngắn gọi, được đó em
 		List<String> result = lines.stream()
 								.map(Exercise::getNumbers)
 								.flatMap(Collection::stream)

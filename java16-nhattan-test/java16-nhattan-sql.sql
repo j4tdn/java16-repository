@@ -100,6 +100,10 @@ VALUES ('HD001', 'DV01', 5),
 	   ("HD005", "DV02", 3);
 
 -- Câu 3: Liệt kê các phòng karaoke được sử dụng nhiều nhất từ 02.2014 đến 02.2015 (0.5 điểm)
+-- A hiểu cách làm nhưng mà chưa đúng
+-- Cách e làm là số lần sử dụng nhiều nhất, còn để bài thì đúng ra phải là thời gian sử dụng nhiều nhất
+-- Ví dụ phòng 1 dùng 5 lần mà 1 lần 1 tiếng, phòng 2 dùng 2 lần mà 1 lần 8 tiếng thì phòng 2 dùng nhiều hơn
+-- Có thể đề chưa nói rõ, anyway accepted
 WITH Phong_SoLanSuDung AS(
 	SELECT *,
 		   count(MaPhong) SoLanSuDung
@@ -118,6 +122,9 @@ WITH Phong_SoLanSuDung AS(
       ON ps.SoLanSuDung = nn.SoLanNhieuNhat;
 
 -- Câu 4: Liệt kê 2 dịch vụ được sử dụng nhiều nhất trong mỗi tháng từ 01.2014 đến 12.2014
+-- chưa đúng
+-- kết quả câu này sẽ là hiển thị ra 2 dịch vụ được dùng nhiều nhất trong tất cả các tháng
+-- yêu cầu: mỗi tháng show ra 2 dịch vụ được dùng nhiều nhất
 (0.5 điểm)
 SELECT *,
 	   sum(SoLuong) TongSoLuong
@@ -136,6 +143,7 @@ SELECT *,
 
 -- Câu 5: Liệt kê thông tin của các phòng karaoke có mã phòng bắt đầu bằng cụm từ "VIP" (0.5
 -- điểm)
+-- ok
 SELECT *
   FROM Phong
  WHERE MaPhong LIKE 'VIP%';
