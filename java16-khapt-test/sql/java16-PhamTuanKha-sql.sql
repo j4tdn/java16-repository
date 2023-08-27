@@ -112,6 +112,10 @@ values ('HD001','DV01',5),
        ('HD006','DV05',40);
 
 -- Cau 3
+-- A hiểu cách làm nhưng mà chưa đúng
+-- Cách e làm là số lần sử dụng nhiều nhất, còn để bài thì đúng ra phải là thời gian sử dụng nhiều nhất
+-- Ví dụ phòng 1 dùng 5 lần mà 1 lần 1 tiếng, phòng 2 dùng 2 lần mà 1 lần 8 tiếng thì phòng 2 dùng nhiều hơn
+-- Có thể đề chưa nói rõ, anyway accepted
 SELECT
     PHONG.MaPhong,
     COUNT(HOADON.MaHD) AS SoLanSuDung
@@ -121,6 +125,9 @@ WHERE HOADON.ThoiGianBatDauSD BETWEEN STR_TO_DATE('02/01/2014', '%m/%d/%Y') AND 
 GROUP BY PHONG.MaPhong;
 
 -- Cau 4
+-- chưa đúng
+-- kết quả câu này sẽ là hiển thị ra 2 dịch vụ được dùng nhiều nhất trong tất cả các tháng
+-- yêu cầu: mỗi tháng show ra 2 dịch vụ được dùng nhiều nhất
 SELECT
     EXTRACT(YEAR_MONTH FROM HOADON.ThoiGianBatDauSD) AS Thang,
     CHITIET_SUDUNGDV.MaDV,
@@ -136,6 +143,7 @@ ORDER BY Thang, TongSoLuong DESC
 LIMIT 2;
 
 -- Cau 5
+-- ok
 SELECT * FROM PHONG
 WHERE PHONG.MaPhong LIKE 'VIP%';
 

@@ -10,6 +10,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("src\\input.txt"));
         int n = Integer.parseInt(reader.readLine().trim());
+
+        // Sử dụng Files.readAllLines để đọc file
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             String tmp = reader.readLine().trim();
@@ -29,7 +31,10 @@ public class Main {
         writer.close();
     }
 
+    // code chạy ra kết quả nhưng cách làm chưa tốt, còn dài
+    // thay extractNumbers bằng split("[^0-9]+")
     public static List<Integer> extractNumbers(String s) {
+        // List new ArrayList
         ArrayList<Integer> numbers = new ArrayList<>();
         StringBuilder currentNumber = new StringBuilder();
         for (char c : s.toCharArray()) {
